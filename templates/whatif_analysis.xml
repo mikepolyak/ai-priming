@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<whatif_analysis version="1.0">
+    <metadata>
+        <title>What-if Analysis Template</title>
+        <description>Template for analyzing potential impacts of proposed changes</description>
+        <version>1.0.0</version>
+        <last_updated>2024-11-16</last_updated>
+    </metadata>
+
+    <analysis_components>
+        <impact_assessment>
+            <direct_impacts>
+                <category name="resource_changes">
+                    <items>
+                        <item>
+                            <resource_type></resource_type>
+                            <change_type><!-- create|modify|delete --></change_type>
+                            <current_state></current_state>
+                            <proposed_state></proposed_state>
+                            <impact_level><!-- high|medium|low --></impact_level>
+                        </item>
+                    </items>
+                </category>
+                
+                <category name="configuration_changes">
+                    <items>
+                        <item>
+                            <config_item></config_item>
+                            <current_value></current_value>
+                            <proposed_value></proposed_value>
+                            <impact_level><!-- high|medium|low --></impact_level>
+                        </item>
+                    </items>
+                </category>
+
+                <category name="security_impacts">
+                    <items>
+                        <item>
+                            <security_aspect></security_aspect>
+                            <current_posture></current_posture>
+                            <proposed_changes></proposed_changes>
+                            <risk_level><!-- high|medium|low --></risk_level>
+                        </item>
+                    </items>
+                </category>
+            </direct_impacts>
+
+            <dependency_analysis>
+                <upstream_dependencies>
+                    <dependency>
+                        <resource_name></resource_name>
+                        <impact_description></impact_description>
+                        <mitigation_steps></mitigation_steps>
+                    </dependency>
+                </upstream_dependencies>
+
+                <downstream_dependencies>
+                    <dependency>
+                        <resource_name></resource_name>
+                        <impact_description></impact_description>
+                        <mitigation_steps></mitigation_steps>
+                    </dependency>
+                </downstream_dependencies>
+            </dependency_analysis>
+        </impact_assessment>
+
+        <rollback_plan>
+            <prerequisites>
+                <item>Required backup states</item>
+                <item>Snapshot requirements</item>
+                <item>Resource state preservation</item>
+            </prerequisites>
+
+            <steps>
+                <step id="1">
+                    <action></action>
+                    <verification></verification>
+                    <fallback></fallback>
+                </step>
+            </steps>
+
+            <validation_checks>
+                <check>
+                    <description></description>
+                    <success_criteria></success_criteria>
+                    <remediation></remediation>
+                </check>
+            </validation_checks>
+        </rollback_plan>
+
+        <testing_strategy>
+            <pre_deployment_tests>
+                <test>
+                    <name></name>
+                    <description></description>
+                    <expected_outcome></expected_outcome>
+                    <validation_steps></validation_steps>
+                </test>
+            </pre_deployment_tests>
+
+            <post_deployment_tests>
+                <test>
+                    <name></name>
+                    <description></description>
+                    <expected_outcome></expected_outcome>
+                    <validation_steps></validation_steps>
+                </test>
+            </post_deployment_tests>
+
+            <monitoring_requirements>
+                <metric>
+                    <name></name>
+                    <threshold></threshold>
+                    <alert_conditions></alert_conditions>
+                </metric>
+            </monitoring_requirements>
+        </testing_strategy>
+    </analysis_components>
+
+    <implementation_guidance>
+        <phases>
+            <phase name="preparation">
+                <tasks>
+                    <task>
+                        <description></description>
+                        <prerequisites></prerequisites>
+                        <completion_criteria></completion_criteria>
+                    </task>
+                </tasks>
+            </phase>
+
+            <phase name="implementation">
+                <tasks>
+                    <task>
+                        <description></description>
+                        <steps></steps>
+                        <verification></verification>
+                    </task>
+                </tasks>
+            </phase>
+
+            <phase name="validation">
+                <tasks>
+                    <task>
+                        <description></description>
+                        <success_criteria></success_criteria>
+                        <rollback_trigger></rollback_trigger>
+                    </task>
+                </tasks>
+            </phase>
+        </phases>
+
+        <communication_plan>
+            <stakeholders>
+                <stakeholder>
+                    <role></role>
+                    <notification_points></notification_points>
+                    <approval_requirements></approval_requirements>
+                </stakeholder>
+            </stakeholders>
+
+            <notifications>
+                <event>
+                    <trigger></trigger>
+                    <message_template></message_template>
+                    <recipients></recipients>
+                </event>
+            </notifications>
+        </communication_plan>
+    </implementation_guidance>
+
+    <compliance_considerations>
+        <regulatory_requirements>
+            <requirement>
+                <regulation></regulation>
+                <impact_analysis></impact_analysis>
+                <compliance_measures></compliance_measures>
+            </requirement>
+        </regulatory_requirements>
+
+        <policy_requirements>
+            <requirement>
+                <policy></policy>
+                <impact_analysis></impact_analysis>
+                <compliance_measures></compliance_measures>
+            </requirement>
+        </policy_requirements>
+    </compliance_considerations>
+
+    <documentation_requirements>
+        <sections>
+            <section name="change_documentation">
+                <required_content>
+                    <item>Detailed description of changes</item>
+                    <item>Impact analysis results</item>
+                    <item>Testing results</item>
+                    <item>Rollback procedures</item>
+                </required_content>
+            </section>
+
+            <section name="operational_documentation">
+                <required_content>
+                    <item>Updated configuration details</item>
+                    <item>Modified procedures</item>
+                    <item>New monitoring requirements</item>
+                </required_content>
+            </section>
+        </sections>
+    </documentation_requirements>
+</whatif_analysis>

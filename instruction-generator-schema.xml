@@ -54,6 +54,22 @@
                 <command>Ask about command system design</command>
                 <rule>Ask about rule system creation</rule>
                 <template>Ask about response template design</template>
+                <whatif>
+                    <description>Analyze potential impacts of proposed changes</description>
+                    <syntax>?whatif @file [proposed_change]</syntax>
+                    <response_template>
+                        <section>Impact Analysis</section>
+                        <section>Resource Changes</section>
+                        <section>Dependencies Affected</section>
+                        <section>Rollback Plan</section>
+                        <section>Recommended Testing</section>
+                    </response_template>
+                    <examples>
+                        <example>?whatif @network.tf Add new subnet to existing VNet</example>
+                        <example>?whatif @storage.tf Change replication strategy to GRS</example>
+                        <example>?whatif @security.tf Enable advanced threat protection</example>
+                    </examples>
+                </whatif>
             </commands>
         </questions>
 
@@ -77,6 +93,66 @@
             </commands>
         </generation>
     </commands>
+	
+    <example_commands>
+        <question>
+            <syntax>?module @file [Query]</syntax>
+            <examples>
+                <example>?module @main.tf How does the module handle both new and existing private endpoints?</example>
+                <example>?config @settings.json What are the default values for new resources?</example>
+            </examples>
+        </question>
+        <error>
+            <syntax>!error @file [Error message]</syntax>
+            <examples>
+                <example>!error @adf-uat.tf\n[Error: Invalid syntax]</example>
+                <example>!error @network.tf\n[Error: Missing configuration]</example>
+            </examples>
+        </error>
+        <modification>
+            <syntax>#modify-config @file [Description of modification]</syntax>
+            <examples>
+                <example>#modify-config @adf-prod.tf Update storage account security settings</example>
+                <example>#modify-config @main.tf Enable logging for all services</example>
+            </examples>
+        </modification>
+        <prerequisite>
+            <syntax>?prereq @file [Request prerequisites]</syntax>
+            <examples>
+                <example>?prereq @adf-uat.tf List required Azure resources and GitHub configurations</example>
+                <example>?prereq @infra.tf What dependencies must be resolved before deployment?</example>
+            </examples>
+        </prerequisite>
+        <whatif>
+            <syntax>?whatif @file [proposed_change]</syntax>
+            <examples>
+                <example>?whatif @network.tf Add new subnet to existing VNet</example>
+                <example>?whatif @security.tf Enable advanced threat protection</example>
+            </examples>
+        </whatif>
+    </example_commands>
+
+    <example_response>
+        <error_resolution>
+            <1_analysis>Explain the error and its root cause</1_analysis>
+            <2_solution>Provide a detailed solution in the artifact</2_solution>
+            <3_explanation>Explain the changes applied</3_explanation>
+            <4_verification>Suggest steps to verify the solution</4_verification>
+        </error_resolution>
+        <configuration_change>
+            <1_context>Explain the reason for the changes</1_context>
+            <2_changes>Show configuration changes in the artifact</2_changes>
+            <3_impact>Highlight the impact on existing resources</3_impact>
+            <4_next_steps>Provide guidance on implementing the changes</4_next_steps>
+        </configuration_change>
+        <whatif_analysis>
+            <1_impact_summary>Overview of potential changes and their scope</1_impact_summary>
+            <2_resource_changes>Detailed list of affected resources</2_resource_changes>
+            <3_dependencies>Analysis of impacted dependencies</3_dependencies>
+            <4_rollback_plan>Steps to revert changes if needed</4_rollback_plan>
+            <5_testing_recommendations>Suggested validation procedures</5_testing_recommendations>
+        </whatif_analysis>
+    </example_response>	
 
     <rules>
         <rule id="1">
@@ -117,6 +193,10 @@
         
         <rule id="10">
             Version control and update mechanisms must be specified
+        </rule>
+        
+        <rule id="11">
+            What-if analysis must cover impact, dependencies, and rollback scenarios
         </rule>
     </rules>
 
@@ -187,6 +267,14 @@
             <step>Integration definition</step>
             <step>Validation and testing</step>
         </instruction_generation>
+        
+        <whatif_analysis>
+            <step>Impact assessment</step>
+            <step>Resource change analysis</step>
+            <step>Dependency mapping</step>
+            <step>Rollback planning</step>
+            <step>Test scenario development</step>
+        </whatif_analysis>
     </response_templates>
 
     <validation_checklist>
@@ -198,6 +286,7 @@
         <item>Integration points are clearly defined</item>
         <item>Error handling procedures are complete</item>
         <item>Version control mechanism is specified</item>
+        <item>What-if analysis templates are comprehensive</item>
     </validation_checklist>
 
     <template_patterns>
@@ -216,6 +305,10 @@
         <pattern>
             <name>templates.xml</name>
             <description>Template for response pattern design</description>
+        </pattern>
+        <pattern>
+            <name>whatif_analysis.xml</name>
+            <description>Template for what-if analysis scenarios</description>
         </pattern>
     </template_patterns>
 </instruction_generator_expert>

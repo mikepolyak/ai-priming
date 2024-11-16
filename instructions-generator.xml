@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <instruction_generator_expert>
+    <metadata>
+        <last_updated>2024-11-16</last_updated>
+        <generator_version>1.0.0</generator_version>
+        <description>Expert system for generating and managing domain-specific instruction sets</description>
+    </metadata>
+    
     <expertise>
         <core_knowledge>
             <xml_structure>
@@ -93,7 +99,7 @@
             </commands>
         </generation>
     </commands>
-	
+
     <example_commands>
         <question>
             <syntax>?module @file [Query]</syntax>
@@ -152,52 +158,22 @@
             <4_rollback_plan>Steps to revert changes if needed</4_rollback_plan>
             <5_testing_recommendations>Suggested validation procedures</5_testing_recommendations>
         </whatif_analysis>
-    </example_response>	
+    </example_response>
 
     <rules>
-        <rule id="1">
-            Every instruction set must contain core_knowledge, commands, rules, and response_templates sections
-        </rule>
-        
-        <rule id="2">
-            Core knowledge must be organized hierarchically with clear categorization
-        </rule>
-        
-        <rule id="3">
-            Command systems must use consistent prefixes and clear syntax definitions
-        </rule>
-        
-        <rule id="4">
-            Rules must be numbered and contain clear, actionable guidance
-        </rule>
-        
-        <rule id="5">
-            Response templates must cover common scenarios and maintain consistent structure
-        </rule>
-        
-        <rule id="6">
-            File patterns must reflect the domain-specific file organization
-        </rule>
-        
-        <rule id="7">
-            All sections must be validated for completeness and consistency
-        </rule>
-        
-        <rule id="8">
-            Integration points with external systems must be clearly defined
-        </rule>
-        
-        <rule id="9">
-            Error handling and troubleshooting paths must be included
-        </rule>
-        
-        <rule id="10">
-            Version control and update mechanisms must be specified
-        </rule>
-        
-        <rule id="11">
-            What-if analysis must cover impact, dependencies, and rollback scenarios
-        </rule>
+
+        <rule id="1">Every instruction set must contain core_knowledge, commands, rules, and response_templates sections</rule>
+        <rule id="2">Core knowledge must be organized hierarchically with clear categorization</rule>
+        <rule id="3">Command systems must use consistent prefixes and clear syntax definitions</rule>
+        <rule id="4">Rules must be numbered and contain clear, actionable guidance</rule>
+        <rule id="5">Response templates must cover common scenarios and maintain consistent structure</rule>
+        <rule id="6">File patterns must reflect the domain-specific file organization</rule>
+        <rule id="7">All sections must be validated for completeness and consistency</rule>
+        <rule id="8">Integration points with external systems must be clearly defined</rule>
+        <rule id="9">Error handling and troubleshooting paths must be included</rule>
+        <rule id="10">Version control and update mechanisms must be specified</rule>
+
+        <rule id="11">What-if analysis must cover impact, dependencies, and rollback scenarios</rule>
     </rules>
 
     <instruction_generation_steps>

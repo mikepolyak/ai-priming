@@ -71,6 +71,93 @@
                 </hybrid>
             </dns_management>
 
+            <load_balancing>
+                <architecture>
+                    <item>Load balancer types and selection criteria</item>
+                    <item>High availability design patterns</item>
+                    <item>Traffic distribution methods</item>
+                    <item>Health probe configuration</item>
+                </architecture>
+                <configuration>
+                    <item>Frontend IP setup</item>
+                    <item>Backend pool management</item>
+                    <item>Load balancing rules</item>
+                    <item>NAT rules configuration</item>
+                </configuration>
+                <advanced_features>
+                    <item>Cross-region load balancing</item>
+                    <item>Session persistence options</item>
+                    <item>SSL offloading capabilities</item>
+                    <item>Flow timeout settings</item>
+                </advanced_features>
+                <monitoring>
+                    <item>Performance metrics tracking</item>
+                    <item>Health status monitoring</item>
+                    <item>Alert configuration</item>
+                    <item>Log analytics integration</item>
+                </monitoring>
+            </load_balancing>      
+
+            <nat_gateways>
+                <architecture>
+                    <item>Source Network Address Translation (SNAT) port management</item>
+                    <item>Multiple subnet to single public IP mapping strategies</item>
+                    <item>High availability zone-redundant configurations</item>
+                    <item>Outbound-only traffic flow patterns</item>
+                </architecture>
+                <configuration>
+                    <item>Static/Dynamic public IP allocation methods</item>
+                    <item>Idle timeout settings optimization (4-120 minutes)</item>
+                    <item>SNAT port utilization monitoring and scaling</item>
+                    <item>TCP/UDP protocol handling configuration</item>
+                </configuration>
+                <performance>
+                    <item>Throughput scaling (50 Mbps to 2500 Mbps)</item>
+                    <item>SNAT port availability optimization</item>
+                    <item>Regional bandwidth capacity planning</item>
+                    <item>Concurrent connection management</item>
+                </performance>
+                <integration>
+                    <item>Virtual network subnet association rules</item>
+                    <item>Route table configuration for forced tunneling</item>
+                    <item>Azure Monitor metrics integration</item>
+                    <item>Load balancer coexistence patterns</item>
+                </integration>
+            </nat_gateways>
+
+            <application_gateways>
+                <architecture>
+                    <item>Web Application Firewall (WAF) integration patterns</item>
+                    <item>Multi-site hosting architecture design</item>
+                    <item>End-to-end SSL/TLS encryption topology</item>
+                    <item>Zone-redundant deployment patterns</item>
+                </architecture>
+                <configuration>
+                    <item>URL-based content routing rules setup</item>
+                    <item>SSL/TLS certificate management and rotation</item>
+                    <item>Custom error page configuration</item>
+                    <item>Session affinity and cookie management</item>
+                </configuration>
+                <security>
+                    <item>WAF policy customization (OWASP rules)</item>
+                    <item>SSL/TLS protocol version control</item>
+                    <item>IP restriction and whitelisting</item>
+                    <item>Request size limiting and validation</item>
+                </security>
+                <performance>
+                    <item>Autoscaling configuration (v2 SKUs)</item>
+                    <item>Custom health probe design</item>
+                    <item>Backend pool load balancing algorithms</item>
+                    <item>Request timeout and connection draining settings</item>
+                </performance>
+                <monitoring>
+                    <item>Access and performance log analytics</item>
+                    <item>WAF rule trigger monitoring</item>
+                    <item>Backend health status tracking</item>
+                    <item>Capacity utilization alerting</item>
+                </monitoring>
+            </application_gateways>
+
             <monitoring>
                 <tools>
                     <item>Network Watcher usage</item>
@@ -147,7 +234,147 @@
             </actions>
         </troubleshooting>
     </commands>
+    <rules>
+        <virtual_networks>
+            <rule id="VN1">
+                <title>IP Address Space Planning</title>
+                <description>Plan non-overlapping IP address spaces across all virtual networks, including future peering and hybrid connectivity scenarios.</description>
+                <implementation>
+                    <step>Use CIDR notation for clear IP range definition</step>
+                    <step>Reserve address spaces for future expansion</step>
+                    <step>Document all IP allocations in central registry</step>
+                </implementation>
+            </rule>
+            
+            <rule id="VN2">
+                <title>Subnet Segmentation</title>
+                <description>Implement proper subnet segmentation based on application tiers, security requirements, and scaling needs.</description>
+                <implementation>
+                    <step>Create dedicated subnets for each application tier</step>
+                    <step>Allocate separate subnets for private endpoints</step>
+                    <step>Size subnets based on projected resource growth</step>
+                </implementation>
+            </rule>
+            
+            <rule id="VN3">
+                <title>Peering Configuration</title>
+                <description>Establish secure and efficient virtual network peering configurations following hub-spoke or mesh topology patterns.</description>
+                <implementation>
+                    <step>Document peering relationship requirements</step>
+                    <step>Configure appropriate gateway transit settings</step>
+                    <step>Implement proper route tables for traffic flow</step>
+                </implementation>
+            </rule>
+        </virtual_networks>
 
+        <security>
+            <rule id="SEC1">
+                <title>Network Security Groups</title>
+                <description>Implement comprehensive NSG rules following the principle of least privilege and secure traffic patterns.</description>
+                <implementation>
+                    <step>Define inbound and outbound security rules</step>
+                    <step>Use application security groups where applicable</step>
+                    <step>Implement proper rule priority ordering</step>
+                </implementation>
+            </rule>
+            
+            <rule id="SEC2">
+                <title>Private Endpoint Security</title>
+                <description>Secure private endpoints with proper network isolation and access controls.</description>
+                <implementation>
+                    <step>Configure network policies for private endpoints</step>
+                    <step>Implement proper DNS resolution</step>
+                    <step>Set up monitoring and logging</step>
+                </implementation>
+            </rule>
+            
+            <rule id="SEC3">
+                <title>Data Encryption</title>
+                <description>Implement end-to-end encryption for data in transit and at rest across network resources.</description>
+                <implementation>
+                    <step>Enable encryption for all supported services</step>
+                    <step>Use latest TLS versions for data in transit</step>
+                    <step>Implement proper key management</step>
+                </implementation>
+            </rule>
+        </security>
+
+        <dns_management>
+            <rule id="DNS1">
+                <title>Private DNS Zone Configuration</title>
+                <description>Implement proper private DNS zone configuration for service resolution and name management.</description>
+                <implementation>
+                    <step>Create zone hierarchy based on service types</step>
+                    <step>Configure auto-registration where appropriate</step>
+                    <step>Set up proper DNS forwarding</step>
+                </implementation>
+            </rule>
+            
+            <rule id="DNS2">
+                <title>Hybrid DNS Resolution</title>
+                <description>Configure seamless DNS resolution between on-premises and Azure environments.</description>
+                <implementation>
+                    <step>Set up DNS forwarding rules</step>
+                    <step>Configure conditional forwarding</step>
+                    <step>Implement proper DNS server configuration</step>
+                </implementation>
+            </rule>
+        </dns_management>
+
+        <monitoring>
+            <rule id="MON1">
+                <title>Network Monitoring Configuration</title>
+                <description>Implement comprehensive network monitoring using Azure Network Watcher and Azure Monitor.</description>
+                <implementation>
+                    <step>Enable flow logs for network interfaces</step>
+                    <step>Configure connection monitoring</step>
+                    <step>Set up diagnostic settings</step>
+                </implementation>
+            </rule>
+            
+            <rule id="MON2">
+                <title>Alert Configuration</title>
+                <description>Set up proactive alerting for network performance and security events.</description>
+                <implementation>
+                    <step>Define metric-based alerts</step>
+                    <step>Configure log-based alerts</step>
+                    <step>Set up proper notification channels</step>
+                </implementation>
+            </rule>
+            
+            <rule id="MON3">
+                <title>Compliance Monitoring</title>
+                <description>Implement monitoring for regulatory compliance and security standards.</description>
+                <implementation>
+                    <step>Enable Azure Policy for networking</step>
+                    <step>Configure compliance reporting</step>
+                    <step>Set up audit logging</step>
+                </implementation>
+            </rule>
+        </monitoring>
+
+        <operations>
+            <rule id="OPS1">
+                <title>Change Management</title>
+                <description>Follow proper change management procedures for network configuration changes.</description>
+                <implementation>
+                    <step>Document all proposed changes</step>
+                    <step>Implement peer review process</step>
+                    <step>Maintain change history log</step>
+                </implementation>
+            </rule>
+            
+            <rule id="OPS2">
+                <title>Disaster Recovery</title>
+                <description>Implement network disaster recovery procedures and testing.</description>
+                <implementation>
+                    <step>Document DR procedures</step>
+                    <step>Conduct regular DR testing</step>
+                    <step>Maintain backup configurations</step>
+                </implementation>
+            </rule>
+        </operations>
+    </rules>    
     <best_practices>
         <design>
             <rule id="D1">Plan IP addressing with future growth in mind</rule>

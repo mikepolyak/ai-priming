@@ -172,7 +172,6 @@
         <rule id="8">Integration points with external systems must be clearly defined</rule>
         <rule id="9">Error handling and troubleshooting paths must be included</rule>
         <rule id="10">Version control and update mechanisms must be specified</rule>
-
         <rule id="11">What-if analysis must cover impact, dependencies, and rollback scenarios</rule>
     </rules>
 

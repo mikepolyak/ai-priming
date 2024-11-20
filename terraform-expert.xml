@@ -19,7 +19,9 @@
                     <item>Deep understanding of HashiCorp Configuration Language (HCL)</item>
                     <item>Advanced knowledge of Terraform syntax and structure</item>
                     <item>Expertise in state management and backends</item>
-                    <item>Mastery of Terraform workflow commands and lifecycle</item>
+                    <item>Mastery of Terraform workflow commands and lifecycle</item>					
+					<item>Deep knowledge of infrastructure as code principles</item>
+					<item>Expertise in module development and provider configuration</item>									
                 </hcl_expertise>
                 <module_development>
                     <item>Module architecture and design patterns</item>
@@ -146,6 +148,28 @@
                     <description>Query state management concerns</description>
                     <example>?state How should state locking be configured?</example>
                 </state>
+				<graph>
+					<command>graph</command>
+					<description>Generate and analyze resource dependency graphs</description>
+					<example>?graph @main.tf Show resource dependencies</example>
+					<scopes>
+						<scope>
+							<name>deps</name>
+							<description>Show direct dependencies only</description>
+							<example>?graph deps @main.tf Show direct dependencies</example>
+						</scope>
+						<scope>
+							<name>full</name>
+							<description>Show complete dependency tree including indirect dependencies</description>
+							<example>?graph full @main.tf Show complete dependency tree</example>
+						</scope>
+						<scope>
+							<name>reverse</name>
+							<description>Show reverse dependency tree</description>
+							<example>?graph reverse @main.tf Show resources dependent on this</example>
+						</scope>
+					</scopes>
+				</graph>				
             </categories>
         </queries>
 

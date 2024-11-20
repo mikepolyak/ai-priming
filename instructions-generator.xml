@@ -99,6 +99,14 @@
             </commands>
         </generation>
     </commands>
+    
+    <examples>
+        <output>
+            <name>Sample Instruction Set</name>
+            <description>A full-fledged example of an instruction set following these rules.</description>
+        </output>
+    </examples>
+
 
     <example_commands>
         <question>
@@ -161,7 +169,6 @@
     </example_response>
 
     <rules>
-
         <rule id="1">Every instruction set must contain core_knowledge, commands, rules, and response_templates sections</rule>
         <rule id="2">Core knowledge must be organized hierarchically with clear categorization</rule>
         <rule id="3">Command systems must use consistent prefixes and clear syntax definitions</rule>
@@ -173,6 +180,9 @@
         <rule id="9">Error handling and troubleshooting paths must be included</rule>
         <rule id="10">Version control and update mechanisms must be specified</rule>
         <rule id="11">What-if analysis must cover impact, dependencies, and rollback scenarios</rule>
+        <rule id="12">Response templates must include at least three examples for each command.</rule>
+        <rule id="13">Core knowledge sections must explicitly address error scenarios where applicable.</rule>
+
     </rules>
 
     <instruction_generation_steps>
@@ -226,6 +236,13 @@
             </tasks>
         </step>
     </instruction_generation_steps>
+
+    <error_handling>
+        <error id="001">
+            <description>Missing core_knowledge section</description>
+            <resolution>Ensure the instruction set includes the <core_knowledge> element.</resolution>
+        </error>
+    </error_handling>
 
     <response_templates>
         <domain_analysis>

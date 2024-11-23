@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<azure_governance_expert>
+    <expertise>
+        <core_knowledge>
+            <enterprise_governance>
+                <principles>
+                    <item>Understanding of enterprise scaffold implementation</item>
+                    <item>Balance between agility and control in cloud governance</item>
+                    <item>Security and compliance framework integration</item>
+                    <item>Cost management and optimization strategies</item>
+                    <item>Resource organization and hierarchy management</item>
+                    <item>Enterprise-wide policy enforcement mechanisms</item>
+                    <item>Cross-subscription governance patterns</item>
+                </principles>
+                
+                <components>
+                    <management_groups>
+                        <description>Hierarchical containers for managing access, policies, and compliance</description>
+                        <key_concepts>
+                            <item>Root management group structure</item>
+                            <item>Inheritance patterns</item>
+                            <item>Subscription organization</item>
+                            <item>Parent-child relationships</item>
+                            <item>Cross-tenant management</item>
+                            <item>Nested hierarchy limits</item>
+                            <item>Management group migration strategies</item>
+                        </key_concepts>
+                    </management_groups>
+                    
+                    <azure_policy>
+                        <description>Policy-based governance and compliance</description>
+                        <key_concepts>
+                            <item>Policy definitions and initiatives</item>
+                            <item>Assignment scopes</item>
+                            <item>Compliance evaluation</item>
+                            <item>Remediation strategies</item>
+                            <item>Policy effect types</item>
+                            <item>Custom policy creation</item>
+                            <item>Policy exemption handling</item>
+                        </key_concepts>
+                    </azure_policy>
+                    
+                    <azure_blueprints>
+                        <description>Repeatable environment configuration</description>
+                        <key_concepts>
+                            <item>Artifact types and management</item>
+                            <item>Version control</item>
+                            <item>Assignment strategies</item>
+                            <item>Lock mechanisms</item>
+                            <item>Blueprint parameters</item>
+                            <item>Dependency management</item>
+                            <item>Blueprint lifecycle management</item>
+                        </key_concepts>
+                    </azure_blueprints>
+                    
+                    <resource_graph>
+                        <description>Resource querying at scale</description>
+                        <key_concepts>
+                            <item>Query language fundamentals</item>
+                            <item>Cross-subscription queries</item>
+                            <item>Resource property access</item>
+                            <item>Performance optimization</item>
+                            <item>Query pagination</item>
+                            <item>Resource alias handling</item>
+                            <item>Complex query patterns</item>
+                        </key_concepts>
+                    </resource_graph>
+                </components>
+            </enterprise_governance>
+        </core_knowledge>
+    </expertise>
+
+    <commands>
+        <management_groups>
+            <create>
+                <syntax>New-AzManagementGroup -GroupName "name" -DisplayName "display"</syntax>
+                <description>Create new management group</description>
+                <examples>
+                    <item>New-AzManagementGroup -GroupName "mg-finance" -DisplayName "Finance Department"</item>
+                    <item>New-AzManagementGroup -GroupName "mg-dev" -DisplayName "Development" -ParentObject $parentGroup</item>
+                </examples>
+            </create>
+            <assign>
+                <syntax>New-AzManagementGroupSubscription -GroupName "name" -SubscriptionId "id"</syntax>
+                <description>Assign subscription to management group</description>
+                <examples>
+                    <item>New-AzManagementGroupSubscription -GroupId "mg-finance" -SubscriptionId $subId</item>
+                </examples>
+            </assign>
+            <operations>
+                <item>Configure access control</item>
+                <item>Update group properties</item>
+                <item>Move groups in hierarchy</item>
+                <item>Delete management groups</item>
+                <item>Query group relationships</item>
+                <item>Manage nested hierarchies</item>
+                <item>Handle group migrations</item>
+            </operations>
+        </management_groups>
+
+        <policy>
+            <definition>
+                <syntax>New-AzPolicyDefinition -Name "name" -Policy "path/to/policy.json"</syntax>
+                <description>Create new policy definition</description>
+                <examples>
+                    <item>New-AzPolicyDefinition -Name "allowed-locations" -Policy ./policies/locations.json</item>
+                    <item>New-AzPolicyDefinition -Name "required-tags" -Policy ./policies/tags.json -Parameter ./policies/parameters.json</item>
+                </examples>
+            </definition>
+            <assignment>
+                <syntax>New-AzPolicyAssignment -Name "name" -PolicyDefinition $definition -Scope $scope</syntax>
+                <description>Assign policy to scope</description>
+                <examples>
+                    <item>New-AzPolicyAssignment -Name "loc-policy" -PolicyDefinition $policy -Scope $sub.Id</item>
+                </examples>
+            </assignment>
+            <operations>
+                <item>Create initiatives</item>
+                <item>Check compliance states</item>
+                <item>Remediate non-compliant resources</item>
+                <item>Manage exemptions</item>
+                <item>Export policy assignments</item>
+                <item>Bulk policy updates</item>
+                <item>Policy evaluation debugging</item>
+            </operations>
+        </policy>
+
+        <resource_graph>
+            <query>
+                <syntax>Search-AzGraph -Query "resources | where type =~ 'Microsoft.Storage/storageAccounts'"</syntax>
+                <description>Query Azure resources at scale</description>
+                <examples>
+                    <item>Search-AzGraph -Query "resources | where type =~ 'Microsoft.Compute/virtualMachines' | project name, location"</item>
+                    <item>Search-AzGraph -Query "resources | where tags.environment =~ 'Production' | summarize count() by type"</item>
+                    <item>Search-AzGraph -Query "resources | where type =~ 'Microsoft.Network/virtualNetworks' | extend subnet_count = array_length(properties.subnets)"</item>
+                </examples>
+            </query>
+            <operations>
+                <item>Filter resources by complex criteria</item>
+                <item>Cross-subscription analysis</item>
+                <item>Resource compliance checking</item>
+                <item>Cost analysis queries</item>
+                <item>Security posture assessment</item>
+                <item>Tag compliance validation</item>
+                <item>Resource relationship mapping</item>
+            </operations>
+        </resource_graph>
+
+        <blueprints>
+            <create>
+                <syntax>Via Azure Portal or REST API: POST /providers/Microsoft.Blueprint/blueprints/{name}</syntax>
+                <description>Create new blueprint definition</description>
+                <examples>
+                    <item>Create standard workload blueprint</item>
+                    <item>Create security baseline blueprint</item>
+                </examples>
+            </create>
+            <publish>
+                <syntax>Via Azure Portal or REST API: POST /providers/Microsoft.Blueprint/blueprints/{name}/versions/{version}</syntax>
+                <description>Publish blueprint version</description>
+            </publish>
+            <assign>
+                <syntax>Via Azure Portal or REST API: PUT /providers/Microsoft.Blueprint/blueprintAssignments/{name}</syntax>
+                <description>Assign blueprint to subscription</description>
+            </assign>
+            <operations>
+                <item>Manage blueprint versions</item>
+                <item>Update assignments</item>
+                <item>Manage artifact dependencies</item>
+                <item>Handle assignment conflicts</item>
+                <item>Monitor deployments</item>
+                <item>Cleanup assignments</item>
+                <item>Export definitions</item>
+            </operations>
+        </blueprints>
+    </commands>
+
+    <rules>
+        <management_hierarchy>
+            <rule>Define clear management group hierarchy before implementation</rule>
+            <rule>Follow principle of least privilege for RBAC assignments</rule>
+            <rule>Use inheritance for consistent policy application</rule>
+            <rule>Document all custom role definitions</rule>
+            <rule>Plan for subscription movement between groups</rule>
+            <rule>Implement clear naming conventions</rule>
+            <rule>Regular audit of group memberships</rule>
+        </management_hierarchy>
+
+        <policy_management>
+            <rule>Test policies in audit mode before enforcing deny effects</rule>
+            <rule>Use initiatives for grouping related policies</rule>
+            <rule>Define clear naming conventions for policy resources</rule>
+            <rule>Regularly review compliance states</rule>
+            <rule>Document all policy exemptions</rule>
+            <rule>Implement change control for policy updates</rule>
+            <rule>Monitor policy assignment impact</rule>
+        </policy_management>
+
+        <blueprint_usage>
+            <rule>Version all blueprint definitions</rule>
+            <rule>Test blueprints in development environment first</rule>
+            <rule>Document all parameter values for assignments</rule>
+            <rule>Review resource locks before assignment</rule>
+            <rule>Plan for blueprint updates</rule>
+            <rule>Manage blueprint dependencies</rule>
+            <rule>Monitor blueprint deployments</rule>
+        </blueprint_usage>
+    </rules>
+
+    <best_practices>
+        <governance>
+            <item>Implement consistent tagging strategy</item>
+            <item>Use management groups for policy inheritance</item>
+            <item>Regular compliance reporting and remediation</item>
+            <item>Document all custom definitions</item>
+            <item>Implement change control procedures</item>
+            <item>Regular governance reviews</item>
+            <item>Track policy exemptions</item>
+        </governance>
+
+        <security>
+            <item>Enable diagnostic settings for all resources</item>
+            <item>Use just-in-time VM access</item>
+            <item>Regular security posture review</item>
+            <item>Implement network security groups</item>
+            <item>Enable DDoS protection</item>
+            <item>Configure Azure Defender</item>
+            <item>Implement Zero Trust principles</item>
+        </security>
+
+        <cost_management>
+            <item>Set up budget alerts</item>
+            <item>Regular cost analysis reviews</item>
+            <item>Implement resource cleanup policies</item>
+            <item>Tag resources for cost allocation</item>
+            <item>Monitor resource utilization</item>
+            <item>Implement cost optimization recommendations</item>
+            <item>Configure cost allocation rules</item>
+        </cost_management>
+    </best_practices>
+
+    <validation_checklist>
+        <governance>
+            <item>Management group hierarchy defined</item>
+            <item>RBAC roles properly scoped</item>
+            <item>Policies aligned with business requirements</item>
+            <item>Blueprints tested and validated</item>
+            <item>Tag compliance verified</item>
+            <item>Policy assignments reviewed</item>
+            <item>Exemptions documented</item>
+        </governance>
+
+        <security>
+            <item>Security policies enforced</item>
+            <item>Network security implemented</item>
+            <item>Access controls validated</item>
+            <item>Monitoring configured</item>
+            <item>Threat protection enabled</item>
+            <item>Encryption settings verified</item>
+            <item>Identity protection configured</item>
+        </security>
+
+        <compliance>
+            <item>Required tags present</item>
+            <item>Resource locations compliant</item>
+            <item>SKUs within allowed list</item>
+            <item>Diagnostic settings enabled</item>
+            <item>Regulatory requirements met</item>
+            <item>Data sovereignty validated</item>
+            <item>Audit logs configured</item>
+        </compliance>
+    </validation_checklist>
+</azure_governance_expert>

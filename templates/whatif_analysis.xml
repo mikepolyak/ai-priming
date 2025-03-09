@@ -1,48 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<whatif_analysis version="1.0">
+<whatif_analysis version="2.0">
     <metadata>
         <title>What-if Analysis Template</title>
-        <description>Template for analyzing potential impacts of proposed changes</description>
-        <version>1.0.0</version>
-        <last_updated>2024-11-16</last_updated>
+        <description>Comprehensive framework for analyzing potential impacts of proposed changes</description>
+        <version>2.0.0</version>
+        <last_updated>2025-03-07</last_updated>
+        <author>Infrastructure Analysis Team</author>
+        <change_log>
+            <entry version="2.0.0" date="2025-03-07">
+                <change>Enhanced metadata structure</change>
+                <change>Standardized naming conventions</change>
+                <change>Improved element structure consistency</change>
+                <change>Added enumeration types</change>
+                <change>Added risk assessment framework</change>
+                <change>Added example implementations</change>
+                <change>Added integration points definition</change>
+                <change>Added validation framework</change>
+                <change>Added workflow integration</change>
+            </entry>
+            <entry version="1.0.0" date="2024-11-16">
+                <change>Initial template creation</change>
+            </entry>
+        </change_log>
+        <compatibility>
+            <works_with>
+                <system>Terraform Expert System</system>
+                <system>Azure Networking Expert System</system>
+                <system>Azure DevOps Pipelines Expert</system>
+                <system>Azure Governance Expert</system>
+            </works_with>
+            <minimum_version>1.0.0</minimum_version>
+            <target_platforms>
+                <platform>Infrastructure as Code Systems</platform>
+                <platform>Cloud Configuration Management</platform>
+                <platform>Network Management Systems</platform>
+            </target_platforms>
+        </compatibility>
     </metadata>
+
+    <enumerations>
+        <enumeration name="change_type">
+            <value id="CT001">create</value>
+            <value id="CT002">modify</value>
+            <value id="CT003">delete</value>
+        </enumeration>
+        <enumeration name="impact_level">
+            <value id="IL001">high</value>
+            <value id="IL002">medium</value>
+            <value id="IL003">low</value>
+            <value id="IL004">none</value>
+        </enumeration>
+        <enumeration name="risk_level">
+            <value id="RL001">critical</value>
+            <value id="RL002">high</value>
+            <value id="RL003">medium</value>
+            <value id="RL004">low</value>
+            <value id="RL005">negligible</value>
+        </enumeration>
+        <enumeration name="probability_level">
+            <value id="PL001">very_likely</value>
+            <value id="PL002">likely</value>
+            <value id="PL003">possible</value>
+            <value id="PL004">unlikely</value>
+            <value id="PL005">very_unlikely</value>
+        </enumeration>
+        <enumeration name="severity_level">
+            <value id="SL001">severe</value>
+            <value id="SL002">major</value>
+            <value id="SL003">moderate</value>
+            <value id="SL004">minor</value>
+            <value id="SL005">minimal</value>
+        </enumeration>
+    </enumerations>
 
     <analysis_components>
         <impact_assessment>
             <direct_impacts>
-                <category name="resource_changes">
-                    <items>
-                        <item>
-                            <resource_type></resource_type>
-                            <change_type><!-- create|modify|delete --></change_type>
-                            <current_state></current_state>
-                            <proposed_state></proposed_state>
-                            <impact_level><!-- high|medium|low --></impact_level>
-                        </item>
-                    </items>
-                </category>
+                <resource_changes>
+                    <resource_change>
+                        <resource_type></resource_type>
+                        <change_type ref="change_type"></change_type>
+                        <current_state></current_state>
+                        <proposed_state></proposed_state>
+                        <impact_level ref="impact_level"></impact_level>
+                        <justification></justification>
+                    </resource_change>
+                </resource_changes>
                 
-                <category name="configuration_changes">
-                    <items>
-                        <item>
-                            <config_item></config_item>
-                            <current_value></current_value>
-                            <proposed_value></proposed_value>
-                            <impact_level><!-- high|medium|low --></impact_level>
-                        </item>
-                    </items>
-                </category>
+                <configuration_changes>
+                    <configuration_change>
+                        <configuration_item></configuration_item>
+                        <current_value></current_value>
+                        <proposed_value></proposed_value>
+                        <impact_level ref="impact_level"></impact_level>
+                        <justification></justification>
+                    </configuration_change>
+                </configuration_changes>
 
-                <category name="security_impacts">
-                    <items>
-                        <item>
-                            <security_aspect></security_aspect>
-                            <current_posture></current_posture>
-                            <proposed_changes></proposed_changes>
-                            <risk_level><!-- high|medium|low --></risk_level>
-                        </item>
-                    </items>
-                </category>
+                <security_impacts>
+                    <security_impact>
+                        <security_aspect></security_aspect>
+                        <current_posture></current_posture>
+                        <proposed_changes></proposed_changes>
+                        <risk_level ref="risk_level"></risk_level>
+                        <mitigation_strategy></mitigation_strategy>
+                    </security_impact>
+                </security_impacts>
             </direct_impacts>
 
             <dependency_analysis>
@@ -51,6 +114,7 @@
                         <resource_name></resource_name>
                         <impact_description></impact_description>
                         <mitigation_steps></mitigation_steps>
+                        <risk_level ref="risk_level"></risk_level>
                     </dependency>
                 </upstream_dependencies>
 
@@ -59,32 +123,109 @@
                         <resource_name></resource_name>
                         <impact_description></impact_description>
                         <mitigation_steps></mitigation_steps>
+                        <risk_level ref="risk_level"></risk_level>
                     </dependency>
                 </downstream_dependencies>
             </dependency_analysis>
         </impact_assessment>
 
+        <risk_assessment>
+            <risk_matrix>
+                <probability_levels>
+                    <level value="1" ref="probability_level:PL005">Very Unlikely</level>
+                    <level value="2" ref="probability_level:PL004">Unlikely</level>
+                    <level value="3" ref="probability_level:PL003">Possible</level>
+                    <level value="4" ref="probability_level:PL002">Likely</level>
+                    <level value="5" ref="probability_level:PL001">Very Likely</level>
+                </probability_levels>
+                <severity_levels>
+                    <level value="1" ref="severity_level:SL005">Minimal</level>
+                    <level value="2" ref="severity_level:SL004">Minor</level>
+                    <level value="3" ref="severity_level:SL003">Moderate</level>
+                    <level value="4" ref="severity_level:SL002">Major</level>
+                    <level value="5" ref="severity_level:SL001">Severe</level>
+                </severity_levels>
+            </risk_matrix>
+            
+            <risk_categories>
+                <operational_risks>
+                    <risk>
+                        <title></title>
+                        <description></description>
+                        <probability ref="probability_level"></probability>
+                        <severity ref="severity_level"></severity>
+                        <mitigation_strategy></mitigation_strategy>
+                        <residual_risk_level ref="risk_level"></residual_risk_level>
+                    </risk>
+                </operational_risks>
+                <security_risks>
+                    <risk>
+                        <title></title>
+                        <description></description>
+                        <probability ref="probability_level"></probability>
+                        <severity ref="severity_level"></severity>
+                        <mitigation_strategy></mitigation_strategy>
+                        <residual_risk_level ref="risk_level"></residual_risk_level>
+                    </risk>
+                </security_risks>
+                <compliance_risks>
+                    <risk>
+                        <title></title>
+                        <description></description>
+                        <probability ref="probability_level"></probability>
+                        <severity ref="severity_level"></severity>
+                        <mitigation_strategy></mitigation_strategy>
+                        <residual_risk_level ref="risk_level"></residual_risk_level>
+                    </risk>
+                </compliance_risks>
+                <financial_risks>
+                    <risk>
+                        <title></title>
+                        <description></description>
+                        <probability ref="probability_level"></probability>
+                        <severity ref="severity_level"></severity>
+                        <mitigation_strategy></mitigation_strategy>
+                        <residual_risk_level ref="risk_level"></residual_risk_level>
+                    </risk>
+                </financial_risks>
+            </risk_categories>
+        </risk_assessment>
+
         <rollback_plan>
             <prerequisites>
-                <item>Required backup states</item>
-                <item>Snapshot requirements</item>
-                <item>Resource state preservation</item>
+                <prerequisite>
+                    <name>Backup Requirements</name>
+                    <description></description>
+                    <verification_method></verification_method>
+                </prerequisite>
+                <prerequisite>
+                    <name>Snapshot Requirements</name>
+                    <description></description>
+                    <verification_method></verification_method>
+                </prerequisite>
+                <prerequisite>
+                    <name>Resource State Preservation</name>
+                    <description></description>
+                    <verification_method></verification_method>
+                </prerequisite>
             </prerequisites>
 
-            <steps>
+            <rollback_steps>
                 <step id="1">
                     <action></action>
                     <verification></verification>
                     <fallback></fallback>
+                    <estimated_time></estimated_time>
                 </step>
-            </steps>
+            </rollback_steps>
 
             <validation_checks>
-                <check>
+                <validation_check>
                     <description></description>
                     <success_criteria></success_criteria>
                     <remediation></remediation>
-                </check>
+                    <owner></owner>
+                </validation_check>
             </validation_checks>
         </rollback_plan>
 
@@ -95,6 +236,8 @@
                     <description></description>
                     <expected_outcome></expected_outcome>
                     <validation_steps></validation_steps>
+                    <environment></environment>
+                    <owner></owner>
                 </test>
             </pre_deployment_tests>
 
@@ -104,51 +247,61 @@
                     <description></description>
                     <expected_outcome></expected_outcome>
                     <validation_steps></validation_steps>
+                    <environment></environment>
+                    <owner></owner>
                 </test>
             </post_deployment_tests>
 
             <monitoring_requirements>
                 <metric>
                     <name></name>
+                    <description></description>
                     <threshold></threshold>
                     <alert_conditions></alert_conditions>
+                    <resolution_steps></resolution_steps>
                 </metric>
             </monitoring_requirements>
         </testing_strategy>
     </analysis_components>
 
     <implementation_guidance>
-        <phases>
-            <phase name="preparation">
+        <implementation_phases>
+            <preparation_phase>
                 <tasks>
                     <task>
                         <description></description>
                         <prerequisites></prerequisites>
                         <completion_criteria></completion_criteria>
+                        <estimated_time></estimated_time>
+                        <owner></owner>
                     </task>
                 </tasks>
-            </phase>
+            </preparation_phase>
 
-            <phase name="implementation">
+            <execution_phase>
                 <tasks>
                     <task>
                         <description></description>
                         <steps></steps>
                         <verification></verification>
+                        <estimated_time></estimated_time>
+                        <owner></owner>
                     </task>
                 </tasks>
-            </phase>
+            </execution_phase>
 
-            <phase name="validation">
+            <validation_phase>
                 <tasks>
                     <task>
                         <description></description>
                         <success_criteria></success_criteria>
                         <rollback_trigger></rollback_trigger>
+                        <estimated_time></estimated_time>
+                        <owner></owner>
                     </task>
                 </tasks>
-            </phase>
-        </phases>
+            </validation_phase>
+        </implementation_phases>
 
         <communication_plan>
             <stakeholders>
@@ -156,15 +309,17 @@
                     <role></role>
                     <notification_points></notification_points>
                     <approval_requirements></approval_requirements>
+                    <communication_method></communication_method>
                 </stakeholder>
             </stakeholders>
 
             <notifications>
-                <event>
+                <notification_event>
                     <trigger></trigger>
                     <message_template></message_template>
                     <recipients></recipients>
-                </event>
+                    <delivery_method></delivery_method>
+                </notification_event>
             </notifications>
         </communication_plan>
     </implementation_guidance>
@@ -175,6 +330,7 @@
                 <regulation></regulation>
                 <impact_analysis></impact_analysis>
                 <compliance_measures></compliance_measures>
+                <verification_method></verification_method>
             </requirement>
         </regulatory_requirements>
 
@@ -183,28 +339,347 @@
                 <policy></policy>
                 <impact_analysis></impact_analysis>
                 <compliance_measures></compliance_measures>
+                <verification_method></verification_method>
             </requirement>
         </policy_requirements>
     </compliance_considerations>
 
     <documentation_requirements>
-        <sections>
-            <section name="change_documentation">
+        <documentation_sections>
+            <change_documentation>
                 <required_content>
                     <item>Detailed description of changes</item>
                     <item>Impact analysis results</item>
                     <item>Testing results</item>
                     <item>Rollback procedures</item>
                 </required_content>
-            </section>
+                <templates>
+                    <template>
+                        <name>Standard Change Documentation</name>
+                        <location></location>
+                    </template>
+                </templates>
+            </change_documentation>
 
-            <section name="operational_documentation">
+            <operational_documentation>
                 <required_content>
                     <item>Updated configuration details</item>
                     <item>Modified procedures</item>
                     <item>New monitoring requirements</item>
                 </required_content>
-            </section>
-        </sections>
+                <templates>
+                    <template>
+                        <name>Operational Manual Update</name>
+                        <location></location>
+                    </template>
+                </templates>
+            </operational_documentation>
+        </documentation_sections>
     </documentation_requirements>
+
+    <integration_points>
+        <integration_point>
+            <system>Change Management System</system>
+            <integration_type>Input</integration_type>
+            <data_elements>
+                <element>change_request_id</element>
+                <element>requested_changes</element>
+                <element>business_justification</element>
+                <element>requested_implementation_date</element>
+            </data_elements>
+            <system_specific_configuration>
+                <config_item>
+                    <name>API Endpoint</name>
+                    <value></value>
+                </config_item>
+                <config_item>
+                    <name>Authentication Method</name>
+                    <value></value>
+                </config_item>
+            </system_specific_configuration>
+        </integration_point>
+        <integration_point>
+            <system>Deployment Pipeline</system>
+            <integration_type>Output</integration_type>
+            <data_elements>
+                <element>testing_requirements</element>
+                <element>rollback_procedures</element>
+                <element>approval_status</element>
+                <element>implementation_steps</element>
+            </data_elements>
+            <system_specific_configuration>
+                <config_item>
+                    <name>Pipeline Definition Location</name>
+                    <value></value>
+                </config_item>
+                <config_item>
+                    <name>Trigger Mechanism</name>
+                    <value></value>
+                </config_item>
+            </system_specific_configuration>
+        </integration_point>
+        <integration_point>
+            <system>Monitoring System</system>
+            <integration_type>Output</integration_type>
+            <data_elements>
+                <element>metric_definitions</element>
+                <element>alert_thresholds</element>
+                <element>dashboard_requirements</element>
+            </data_elements>
+            <system_specific_configuration>
+                <config_item>
+                    <name>Monitoring Template Location</name>
+                    <value></value>
+                </config_item>
+            </system_specific_configuration>
+        </integration_point>
+    </integration_points>
+
+    <validation_framework>
+        <completeness_checks>
+            <check>All resource changes documented with current and proposed states</check>
+            <check>Impact levels assigned to all changes with justification</check>
+            <check>Dependency analysis complete for all affected resources</check>
+            <check>Risk assessment completed with appropriate mitigations</check>
+            <check>Rollback plan includes all verification steps</check>
+            <check>Testing strategy covers both pre and post-deployment validation</check>
+            <check>Stakeholder communication plan addresses all key roles</check>
+            <check>Compliance considerations documented for regulatory requirements</check>
+        </completeness_checks>
+        <quality_checks>
+            <check>Risk assessment uses appropriate probability and impact ratings</check>
+            <check>Mitigation strategies address all identified high and critical risks</check>
+            <check>Rollback plan includes verification steps with clear success criteria</check>
+            <check>Testing strategy includes measurable success criteria</check>
+            <check>Implementation phases have clear dependencies and ownership</check>
+            <check>Time estimates provided for all implementation tasks</check>
+            <check>Documentation requirements fulfill organizational standards</check>
+        </quality_checks>
+        <consistency_checks>
+            <check>Terminology consistent throughout the analysis</check>
+            <check>Risk levels consistently applied across different sections</check>
+            <check>Implementation tasks align with identified changes</check>
+            <check>Testing strategy addresses identified risks</check>
+            <check>Rollback procedures reverse all documented changes</check>
+            <check>Communication plan includes all stakeholders mentioned elsewhere</check>
+        </consistency_checks>
+    </validation_framework>
+
+    <workflow_integration>
+        <preceding_steps>
+            <step>
+                <name>Change request creation</name>
+                <description>Initial request for change submitted through change management system</description>
+                <required_outputs>
+                    <output>Change request ID</output>
+                    <output>Business justification</output>
+                    <output>Requested implementation date</output>
+                </required_outputs>
+            </step>
+            <step>
+                <name>Initial technical review</name>
+                <description>Preliminary assessment of technical feasibility</description>
+                <required_outputs>
+                    <output>Technical feasibility assessment</output>
+                    <output>Preliminary scope definition</output>
+                </required_outputs>
+            </step>
+            <step>
+                <name>Stakeholder identification</name>
+                <description>Identification of all parties affected by or involved in the change</description>
+                <required_outputs>
+                    <output>Stakeholder registry</output>
+                    <output>RACI matrix</output>
+                </required_outputs>
+            </step>
+        </preceding_steps>
+        <subsequent_steps>
+            <step>
+                <name>Change approval board review</name>
+                <description>Formal review of what-if analysis by change approval board</description>
+                <required_inputs>
+                    <input>Completed what-if analysis</input>
+                    <input>Risk assessment summary</input>
+                    <input>Implementation plan</input>
+                </required_inputs>
+                <expected_outputs>
+                    <output>Approval status</output>
+                    <output>Implementation conditions</output>
+                </expected_outputs>
+            </step>
+            <step>
+                <name>Implementation planning</name>
+                <description>Detailed planning of implementation tasks, timing, and resources</description>
+                <required_inputs>
+                    <input>Approved what-if analysis</input>
+                    <input>Resource requirements</input>
+                </required_inputs>
+                <expected_outputs>
+                    <output>Detailed implementation schedule</output>
+                    <output>Resource allocation plan</output>
+                </expected_outputs>
+            </step>
+            <step>
+                <name>Testing preparation</name>
+                <description>Development of detailed test cases and preparation of test environments</description>
+                <required_inputs>
+                    <input>Testing strategy from what-if analysis</input>
+                </required_inputs>
+                <expected_outputs>
+                    <output>Test cases and scripts</output>
+                    <output>Test environment configuration</output>
+                </expected_outputs>
+            </step>
+        </subsequent_steps>
+    </workflow_integration>
+
+    <examples>
+        <example name="network_security_change">
+            <title>Adding New Firewall Rules to Production Environment</title>
+            <description>Example analysis of adding new inbound security rules to production network security group</description>
+            <content>
+                <impact_assessment>
+                    <direct_impacts>
+                        <resource_changes>
+                            <resource_change>
+                                <resource_type>Network Security Group</resource_type>
+                                <change_type ref="change_type">modify</change_type>
+                                <current_state>NSG allows inbound traffic on ports 80, 443</current_state>
+                                <proposed_state>NSG allows inbound traffic on ports 80, 443, 8080</proposed_state>
+                                <impact_level ref="impact_level">medium</impact_level>
+                                <justification>Adding new permitted port increases attack surface</justification>
+                            </resource_change>
+                        </resource_changes>
+                        
+                        <security_impacts>
+                            <security_impact>
+                                <security_aspect>Network Perimeter Security</security_aspect>
+                                <current_posture>Limited to standard web ports only</current_posture>
+                                <proposed_changes>Adding additional service port 8080</proposed_changes>
+                                <risk_level ref="risk_level">medium</risk_level>
+                                <mitigation_strategy>Limit source IP ranges to known partners only</mitigation_strategy>
+                            </security_impact>
+                        </security_impacts>
+                    </direct_impacts>
+                </impact_assessment>
+                
+                <risk_assessment>
+                    <risk_categories>
+                        <security_risks>
+                            <risk>
+                                <title>Increased attack surface</title>
+                                <description>Additional open port increases potential attack vectors</description>
+                                <probability ref="probability_level">possible</probability>
+                                <severity ref="severity_level">moderate</severity>
+                                <mitigation_strategy>Implement source IP restrictions, enable enhanced monitoring on new port traffic</mitigation_strategy>
+                                <residual_risk_level ref="risk_level">low</residual_risk_level>
+                            </risk>
+                        </security_risks>
+                    </risk_categories>
+                </risk_assessment>
+                
+                <rollback_plan>
+                    <rollback_steps>
+                        <step id="1">
+                            <action>Remove port 8080 rule from NSG</action>
+                            <verification>Verify traffic cannot reach service on port 8080</verification>
+                            <fallback>Manually block at WAF level if NSG rollback fails</fallback>
+                            <estimated_time>5 minutes</estimated_time>
+                        </step>
+                    </rollback_steps>
+                </rollback_plan>
+                
+                <testing_strategy>
+                    <pre_deployment_tests>
+                        <test>
+                            <name>Security validation test</name>
+                            <description>Verify only specified source IPs can access port 8080</description>
+                            <expected_outcome>Connections allowed only from whitelisted IPs</expected_outcome>
+                            <validation_steps>Attempt connections from both allowed and disallowed source IPs</validation_steps>
+                            <environment>Pre-production</environment>
+                            <owner>Security Team</owner>
+                        </test>
+                    </pre_deployment_tests>
+                </testing_strategy>
+            </content>
+        </example>
+        
+        <example name="database_schema_modification">
+            <title>Database Schema Change Impact Analysis</title>
+            <description>Analysis of adding a new required column to a critical database table</description>
+            <content>
+                <impact_assessment>
+                    <direct_impacts>
+                        <resource_changes>
+                            <resource_change>
+                                <resource_type>SQL Database Table</resource_type>
+                                <change_type ref="change_type">modify</change_type>
+                                <current_state>Table 'Customers' with existing schema</current_state>
+                                <proposed_state>Add 'PreferredContactMethod' column with NOT NULL constraint</proposed_state>
+                                <impact_level ref="impact_level">high</impact_level>
+                                <justification>Schema change requires modification to all applications using this table</justification>
+                            </resource_change>
+                        </resource_changes>
+                    </direct_impacts>
+                    
+                    <dependency_analysis>
+                        <downstream_dependencies>
+                            <dependency>
+                                <resource_name>Customer Portal Web Application</resource_name>
+                                <impact_description>Application must be updated to handle new required field</impact_description>
+                                <mitigation_steps>Update application code and deploy concurrently</mitigation_steps>
+                                <risk_level ref="risk_level">high</risk_level>
+                            </dependency>
+                            <dependency>
+                                <resource_name>Customer Data Integration API</resource_name>
+                                <impact_description>API contract will change, breaking existing integrations</impact_description>
+                                <mitigation_steps>Version API and maintain backwards compatibility</mitigation_steps>
+                                <risk_level ref="risk_level">high</risk_level>
+                            </dependency>
+                        </downstream_dependencies>
+                    </dependency_analysis>
+                </impact_assessment>
+                
+                <risk_assessment>
+                    <risk_categories>
+                        <operational_risks>
+                            <risk>
+                                <title>Application downtime</title>
+                                <description>Potential for extended application downtime during migration</description>
+                                <probability ref="probability_level">likely</probability>
+                                <severity ref="severity_level">major</severity>
+                                <mitigation_strategy>Use default value for existing records, implement blue-green deployment for applications</mitigation_strategy>
+                                <residual_risk_level ref="risk_level">medium</residual_risk_level>
+                            </risk>
+                        </operational_risks>
+                    </risk_categories>
+                </risk_assessment>
+                
+                <rollback_plan>
+                    <prerequisites>
+                        <prerequisite>
+                            <name>Database Backup</name>
+                            <description>Full database backup immediately before schema change</description>
+                            <verification_method>Verify backup completion and integrity</verification_method>
+                        </prerequisite>
+                    </prerequisites>
+                    
+                    <rollback_steps>
+                        <step id="1">
+                            <action>Restore database from pre-change backup</action>
+                            <verification>Verify schema matches pre-change state</verification>
+                            <fallback>Manual schema reversion script</fallback>
+                            <estimated_time>30 minutes</estimated_time>
+                        </step>
+                        <step id="2">
+                            <action>Revert application code to previous version</action>
+                            <verification>Verify application starts successfully and operations complete</verification>
+                            <fallback>Manual application restart with debugging</fallback>
+                            <estimated_time>15 minutes</estimated_time>
+                        </step>
+                    </rollback_steps>
+                </rollback_plan>
+            </content>
+        </example>
+    </examples>
 </whatif_analysis>

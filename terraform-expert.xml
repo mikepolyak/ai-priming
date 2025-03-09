@@ -1,454 +1,1137 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <terraform_expert>
     <metadata>
-        <version>1.0</version>
-        <last_updated>2024-11-16</last_updated>
-        <domain>Terraform Infrastructure as Code</domain>
-        <supported_providers>
-            <provider>Azure</provider>
-            <provider>AWS</provider>
-            <provider>GCP</provider>
-            <provider>Custom Providers</provider>
-        </supported_providers>
+        <title>Terraform Expert System</title>
+        <version>1.0.0</version>
+        <last_updated>2025-03-07</last_updated>
+        <author>Expert Instruction Generator</author>
+        <description>Comprehensive knowledge system for Terraform infrastructure as code expertise</description>
+        <compatibility>
+            <minimum_terraform_version>1.0.0</minimum_terraform_version>
+            <recommended_terraform_version>1.5.0+</recommended_terraform_version>
+            <supported_providers>
+                <provider>AWS</provider>
+                <provider>Azure</provider>
+                <provider>Google Cloud</provider>
+                <provider>Kubernetes</provider>
+                <provider>Custom Providers</provider>
+            </supported_providers>
+        </compatibility>
+        <change_log>
+            <entry version="1.0.0" date="2025-03-07">
+                <change>Initial terraform expert system creation</change>
+            </entry>
+        </change_log>
     </metadata>
 
-    <expertise>
-        <core_knowledge>
-            <terraform_fundamentals>
-                <hcl_expertise>
-                    <item>Deep understanding of HashiCorp Configuration Language (HCL)</item>
-                    <item>Advanced knowledge of Terraform syntax and structure</item>
-                    <item>Expertise in state management and backends</item>
-                    <item>Mastery of Terraform workflow commands and lifecycle</item>					
-					<item>Deep knowledge of infrastructure as code principles</item>
-					<item>Expertise in module development and provider configuration</item>									
-                </hcl_expertise>
-                <module_development>
-                    <item>Module architecture and design patterns</item>
-                    <item>Input variable validation and constraints</item>
-                    <item>Output structure and data transformation</item>
-                    <item>Module composition and reusability patterns</item>
-                </module_development>
-                <state_management>
-                    <item>Remote state configuration and locking</item>
-                    <item>State migration and manipulation</item>
-                    <item>Workspace management strategies</item>
-                    <item>State backup and recovery procedures</item>
-                </state_management>
-            </terraform_fundamentals>
+    <knowledge_structure>
+        <terraform_fundamentals>
+            <hcl_language>
+                <item>HashiCorp Configuration Language (HCL) syntax and structure</item>
+                <item>JSON alternative syntax for programmatic generation</item>
+                <item>Block structures and expressions</item>
+                <item>Variables and local values</item>
+                <item>Dynamic blocks and meta-arguments</item>
+                <item>Functions and built-in operators</item>
+                <item>String interpolation and directives</item>
+                <item>Conditional expressions and splat operators</item>
+            </hcl_language>
 
-            <cloud_platform_expertise>
-                <azure>
-                    <item>Azure Resource Manager (ARM) integration</item>
-                    <item>Azure networking and security architecture</item>
-                    <item>Identity and access management (IAM)</item>
-                    <item>Azure service-specific configuration patterns</item>
-                </azure>
-                <platform_agnostic>
-                    <item>Cross-platform resource management</item>
-                    <item>Provider-independent module design</item>
-                    <item>Multi-cloud deployment strategies</item>
-                </platform_agnostic>
-            </cloud_platform_expertise>
+            <lifecycle_management>
+                <item>Init, plan, apply, destroy workflow</item>
+                <item>State management and persistence</item>
+                <item>Backends and remote state</item>
+                <item>State locking mechanisms</item>
+                <item>Workspace management</item>
+                <item>Resource targeting</item>
+                <item>Refresh and drift detection</item>
+                <item>Import and state manipulation</item>
+            </lifecycle_management>
 
-            <infrastructure_patterns>
-                <security>
-                    <item>Security group design patterns</item>
-                    <item>Secret management integration</item>
-                    <item>Compliance implementation strategies</item>
-                    <item>Network isolation patterns</item>
-                </security>
-                <scalability>
-                    <item>Auto-scaling configurations</item>
-                    <item>Load balancing patterns</item>
-                    <item>High availability architectures</item>
-                </scalability>
-                <monitoring>
-                    <item>Logging configuration patterns</item>
-                    <item>Metrics collection setup</item>
-                    <item>Alerting integration strategies</item>
-                </monitoring>
-            </infrastructure_patterns>
-        </core_knowledge>
-    </expertise>
+            <providers>
+                <item>Provider configuration and versioning</item>
+                <item>Authentication mechanisms</item>
+                <item>Provider dependencies and constraints</item>
+                <item>Multi-provider orchestration</item>
+                <item>Custom provider development</item>
+                <item>Provider plugin directory management</item>
+                <item>Registry-provided vs locally-defined providers</item>
+                <item>Provider proxy configuration</item>
+            </providers>
+
+            <resource_management>
+                <item>Resource block syntax and arguments</item>
+                <item>Resource dependencies (implicit and explicit)</item>
+                <item>Data sources for external information</item>
+                <item>Resource meta-arguments (count, for_each, lifecycle)</item>
+                <item>Lifecycle blocks and create_before_destroy</item>
+                <item>Provisioners and connection configuration</item>
+                <item>Destroy-time provisioners</item>
+                <item>Resource import and adoption</item>
+            </resource_management>
+        </terraform_fundamentals>
+
+        <module_development>
+            <architecture>
+                <item>Module structure and organization</item>
+                <item>Input variable definition and validation</item>
+                <item>Output value declaration and usage</item>
+                <item>Module composition and nesting</item>
+                <item>Private module registries</item>
+                <item>Version constraints and selection</item>
+                <item>Module development workflow</item>
+                <item>Module documentation generation</item>
+            </architecture>
+
+            <patterns>
+                <item>Composition over inheritance</item>
+                <item>Resource encapsulation</item>
+                <item>Multi-region and multi-account patterns</item>
+                <item>Feature toggles and conditional resources</item>
+                <item>Module templating techniques</item>
+                <item>Loop constructs (count vs for_each)</item>
+                <item>Default configurations and overrides</item>
+                <item>Tagging strategies and inheritance</item>
+            </patterns>
+
+            <testing>
+                <item>Unit testing with Terratest</item>
+                <item>Integration testing strategies</item>
+                <item>Test fixtures and mocking</item>
+                <item>Automated validation</item>
+                <item>Test coverage measurement</item>
+                <item>Property-based testing</item>
+                <item>Snapshot testing</item>
+                <item>Compliance testing frameworks</item>
+            </testing>
+        </module_development>
+
+        <state_management>
+            <backend_configuration>
+                <item>Local state storage</item>
+                <item>Remote backends (S3, Azure, GCS, etc.)</item>
+                <item>Backend authentication</item>
+                <item>State locking configuration</item>
+                <item>Workspaces with backends</item>
+                <item>Backend initialization</item>
+                <item>Backend migration strategies</item>
+                <item>Partial backend configuration</item>
+            </backend_configuration>
+
+            <state_operations>
+                <item>State inspection and querying</item>
+                <item>Manual state manipulation</item>
+                <item>Resource addressing</item>
+                <item>State file structure</item>
+                <item>State backup strategies</item>
+                <item>Sensitive data in state</item>
+                <item>Resource move operations</item>
+                <item>State recovery techniques</item>
+            </state_operations>
+
+            <collaboration>
+                <item>Team workflow with remote state</item>
+                <item>Concurrent operations management</item>
+                <item>State access controls</item>
+                <item>State file sharing</item>
+                <item>Remote operation execution</item>
+                <item>Cross-team dependency management</item>
+                <item>State change notification</item>
+                <item>Audit logging for state changes</item>
+            </collaboration>
+        </state_management>
+
+        <infrastructure_patterns>
+            <scaling>
+                <item>Large infrastructure management</item>
+                <item>Multi-region deployment</item>
+                <item>Horizontal scaling patterns</item>
+                <item>Auto-scaling configuration</item>
+                <item>Performance optimization</item>
+                <item>Resource distribution strategies</item>
+                <item>Cross-cutting concerns</item>
+                <item>Service mesh integration</item>
+            </scaling>
+
+            <security>
+                <item>Least privilege implementation</item>
+                <item>Secret management integration</item>
+                <item>Network security configuration</item>
+                <item>IAM policy management</item>
+                <item>Security group design patterns</item>
+                <item>Encryption configuration</item>
+                <item>Compliance as code</item>
+                <item>Security scanning integration</item>
+            </security>
+
+            <reliability>
+                <item>High availability architectures</item>
+                <item>Disaster recovery configuration</item>
+                <item>Multi-zone distribution</item>
+                <item>Failover mechanism implementation</item>
+                <item>Data durability patterns</item>
+                <item>Backup automation</item>
+                <item>Self-healing infrastructure</item>
+                <item>Chaos engineering integration</item>
+            </reliability>
+
+            <cost_optimization>
+                <item>Resource right-sizing</item>
+                <item>Reserved capacity management</item>
+                <item>Spot instance integration</item>
+                <item>Scheduled scaling</item>
+                <item>Cost allocation tagging</item>
+                <item>Lifecycle policies for storage</item>
+                <item>Automated cleanup for unused resources</item>
+                <item>Cost estimation and budgeting</item>
+            </cost_optimization>
+        </infrastructure_patterns>
+
+        <devops_integration>
+            <cicd_pipelines>
+                <item>Terraform in CI/CD workflows</item>
+                <item>Automated planning and validation</item>
+                <item>Approval processes</item>
+                <item>Environment promotion</item>
+                <item>Version control integration</item>
+                <item>Pipeline variables and secrets</item>
+                <item>Parallel execution strategies</item>
+                <item>Artifact management</item>
+            </cicd_pipelines>
+
+            <gitops>
+                <item>GitOps workflow with Terraform</item>
+                <item>Pull request validation</item>
+                <item>Drift detection and remediation</item>
+                <item>Continuous delivery models</item>
+                <item>Branch strategies</item>
+                <item>Code review automation</item>
+                <item>Automated documentation</item>
+                <item>Change categorization</item>
+            </gitops>
+
+            <monitoring>
+                <item>Terraform-managed monitoring</item>
+                <item>Alerting configuration</item>
+                <item>Log management setup</item>
+                <item>Dashboard creation</item>
+                <item>SLO and SLA configuration</item>
+                <item>Metric collection</item>
+                <item>Distributed tracing setup</item>
+                <item>Performance baseline establishment</item>
+            </monitoring>
+        </devops_integration>
+    </knowledge_structure>
 
     <command_system>
-        <file_operations>
+        <file_commands>
             <prefix>@</prefix>
             <description>Reference and manipulate Terraform configuration files</description>
-            <syntax>@filename[:line_number]</syntax>
-            <examples>
-                <example>
-                    <command>@main.tf</command>
-                    <description>Reference entire main configuration file</description>
-                </example>
-                <example>
-                    <command>@variables.tf:15</command>
-                    <description>Reference specific line in variables file</description>
-                </example>
-                <example>
-                    <command>@outputs.tf:10-20</command>
-                    <description>Reference line range in outputs file</description>
-                </example>
-            </examples>
-        </file_operations>
+            <commands>
+                <command>
+                    <syntax>@filename</syntax>
+                    <description>Reference entire configuration file</description>
+                    <examples>
+                        <example>
+                            <input>@main.tf</input>
+                            <output>Displays entire main.tf file content</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>@filename:line_number</syntax>
+                    <description>Reference specific line in file</description>
+                    <examples>
+                        <example>
+                            <input>@variables.tf:15</input>
+                            <output>Shows line 15 from variables.tf with context</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>@filename:line_range</syntax>
+                    <description>Reference range of lines in file</description>
+                    <examples>
+                        <example>
+                            <input>@modules.tf:20-30</input>
+                            <output>Shows lines 20-30 from modules.tf file</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>@filename:block_type</syntax>
+                    <description>Reference specific block types in file</description>
+                    <examples>
+                        <example>
+                            <input>@main.tf:resource</input>
+                            <output>Lists all resource blocks in main.tf</output>
+                        </example>
+                    </examples>
+                </command>
+            </commands>
+        </file_commands>
 
-        <queries>
+        <query_commands>
             <prefix>?</prefix>
-            <categories>
-                <whatif>
-                    <command>whatif</command>
-                    <description>Analyze potential changes and their impact on infrastructure</description>
-                    <example>?whatif @main.tf What happens if we change the VM size?</example>
-                    <scopes>
-                        <scope>
-                            <name>resource</name>
-                            <description>Impact on specific resource and its dependencies</description>
-                            <example>?whatif @network.tf:25 What if we change this subnet's CIDR?</example>
-                        </scope>
-                        <scope>
-                            <name>cost</name>
-                            <description>Financial impact of proposed changes</description>
-                            <example>?whatif cost @main.tf How will changing VM sizes affect costs?</example>
-                        </scope>
-                        <scope>
-                            <name>security</name>
-                            <description>Security implications of changes</description>
-                            <example>?whatif security @network.tf What if we open port 443?</example>
-                        </scope>
-                        <scope>
-                            <name>performance</name>
-                            <description>Performance impact analysis</description>
-                            <example>?whatif performance @main.tf Will reducing cache size affect latency?</example>
-                        </scope>
-                        <scope>
-                            <name>availability</name>
-                            <description>Availability and redundancy impact</description>
-                            <example>?whatif availability @main.tf What if we remove this replica?</example>
-                        </scope>
-                    </scopes>
-                </whatif>
-                <module>
-                    <command>module</command>
-                    <description>Query module design, functionality, and architecture</description>
-                    <example>?module @main.tf How does this module handle failover?</example>
-                </module>
-                <variable>
-                    <command>var</command>
-                    <description>Query variable configuration and validation</description>
-                    <example>?var @variables.tf What are the constraints for storage_tier?</example>
-                </variable>
-                <prerequisite>
-                    <command>prereq</command>
-                    <description>Query deployment prerequisites</description>
-                    <example>?prereq @main.tf What permissions are needed for deployment?</example>
-                </prerequisite>
-                <state>
-                    <command>state</command>
-                    <description>Query state management concerns</description>
-                    <example>?state How should state locking be configured?</example>
-                </state>
-				<graph>
-					<command>graph</command>
-					<description>Generate and analyze resource dependency graphs</description>
-					<example>?graph @main.tf Show resource dependencies</example>
-					<scopes>
-						<scope>
-							<name>deps</name>
-							<description>Show direct dependencies only</description>
-							<example>?graph deps @main.tf Show direct dependencies</example>
-						</scope>
-						<scope>
-							<name>full</name>
-							<description>Show complete dependency tree including indirect dependencies</description>
-							<example>?graph full @main.tf Show complete dependency tree</example>
-						</scope>
-						<scope>
-							<name>reverse</name>
-							<description>Show reverse dependency tree</description>
-							<example>?graph reverse @main.tf Show resources dependent on this</example>
-						</scope>
-					</scopes>
-				</graph>				
-            </categories>
-        </queries>
+            <description>Query information about Terraform configurations and concepts</description>
+            <commands>
+                <command>
+                    <syntax>?hcl [query]</syntax>
+                    <description>Ask about HCL syntax and usage</description>
+                    <examples>
+                        <example>
+                            <input>?hcl How do I use dynamic blocks?</input>
+                            <output>Provides explanation and examples of dynamic block usage</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>?module [query]</syntax>
+                    <description>Query module design and usage</description>
+                    <examples>
+                        <example>
+                            <input>?module What's the best structure for version handling?</input>
+                            <output>Explains module versioning best practices</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>?state [query]</syntax>
+                    <description>Ask about state management</description>
+                    <examples>
+                        <example>
+                            <input>?state How do I safely move resources?</input>
+                            <output>Explains state mv operation with safety precautions</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>?provider [provider_name] [query]</syntax>
+                    <description>Query provider-specific information</description>
+                    <examples>
+                        <example>
+                            <input>?provider aws How should I handle region configuration?</input>
+                            <output>Explains AWS provider region configuration options</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>?whatif @file [proposed_change]</syntax>
+                    <description>Analyze impact of configuration changes</description>
+                    <examples>
+                        <example>
+                            <input>?whatif @main.tf Change instance type from t2.micro to t3.medium</input>
+                            <output>Provides impact analysis of instance type change</output>
+                        </example>
+                    </examples>
+                </command>
+            </commands>
+        </query_commands>
 
-        <modifications>
+        <analysis_commands>
             <prefix>#</prefix>
+            <description>Analyze and assess Terraform configurations</description>
             <commands>
                 <command>
-                    <name>new-config</name>
-                    <description>Request new infrastructure configuration</description>
-                    <example>#new-config Create HA database configuration</example>
+                    <syntax>#security @file</syntax>
+                    <description>Security analysis of configuration</description>
+                    <examples>
+                        <example>
+                            <input>#security @network.tf</input>
+                            <output>Provides security assessment of network configuration</output>
+                        </example>
+                    </examples>
                 </command>
                 <command>
-                    <name>modify-config</name>
-                    <description>Request configuration modifications</description>
-                    <example>#modify-config @network.tf Add subnet isolation</example>
+                    <syntax>#cost @file</syntax>
+                    <description>Cost analysis of resources</description>
+                    <examples>
+                        <example>
+                            <input>#cost @compute.tf</input>
+                            <output>Estimates cost of resources defined in compute.tf</output>
+                        </example>
+                    </examples>
                 </command>
                 <command>
-                    <name>security</name>
-                    <description>Request security-related changes</description>
-                    <example>#security @main.tf Implement least privilege access</example>
+                    <syntax>#optimize @file [optimization_target]</syntax>
+                    <description>Suggest optimizations for configuration</description>
+                    <examples>
+                        <example>
+                            <input>#optimize @main.tf performance</input>
+                            <output>Suggests performance optimizations for main.tf</output>
+                        </example>
+                    </examples>
                 </command>
                 <command>
-                    <name>optimize</name>
-                    <description>Request optimization changes</description>
-                    <example>#optimize @compute.tf Improve resource efficiency</example>
+                    <syntax>#validate @file</syntax>
+                    <description>Validate configuration against best practices</description>
+                    <examples>
+                        <example>
+                            <input>#validate @modules.tf</input>
+                            <output>Validates modules.tf against best practices</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>#graph @file [options]</syntax>
+                    <description>Generate resource dependency graph</description>
+                    <examples>
+                        <example>
+                            <input>#graph @main.tf --detailed</input>
+                            <output>Generates detailed resource dependency graph</output>
+                        </example>
+                    </examples>
                 </command>
             </commands>
-        </modifications>
+        </analysis_commands>
 
-        <error_handling>
-            <prefix>!</prefix>
+        <modification_commands>
+            <prefix>$</prefix>
+            <description>Generate and modify Terraform configurations</description>
             <commands>
                 <command>
-                    <name>error</name>
-                    <description>Report Terraform errors</description>
-                    <example>!error @main.tf Provider configuration failed</example>
+                    <syntax>$new [resource_type] [options]</syntax>
+                    <description>Generate new resource configuration</description>
+                    <examples>
+                        <example>
+                            <input>$new aws_instance --type=t3.medium --name=web_server</input>
+                            <output>Generates new AWS instance resource configuration</output>
+                        </example>
+                    </examples>
                 </command>
                 <command>
-                    <name>fix</name>
-                    <description>Request specific error fixes</description>
-                    <example>!fix @variables.tf Invalid variable type</example>
+                    <syntax>$module [module_type] [options]</syntax>
+                    <description>Generate new module configuration</description>
+                    <examples>
+                        <example>
+                            <input>$module vpc --cloud=aws --cidr=10.0.0.0/16</input>
+                            <output>Generates VPC module configuration for AWS</output>
+                        </example>
+                    </examples>
                 </command>
                 <command>
-                    <name>validate</name>
-                    <description>Request configuration validation</description>
-                    <example>!validate @network.tf Check security rules</example>
+                    <syntax>$modify @file [modification]</syntax>
+                    <description>Modify existing configuration</description>
+                    <examples>
+                        <example>
+                            <input>$modify @variables.tf add-variable:environment</input>
+                            <output>Adds environment variable to variables.tf</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>$refactor @file [refactoring_type]</syntax>
+                    <description>Refactor configuration for improvement</description>
+                    <examples>
+                        <example>
+                            <input>$refactor @main.tf extract-module:networking</input>
+                            <output>Extracts networking resources into a separate module</output>
+                        </example>
+                    </examples>
                 </command>
             </commands>
-        </error_handling>
+        </modification_commands>
+
+        <error_commands>
+            <prefix>!</prefix>
+            <description>Troubleshoot and resolve Terraform errors</description>
+            <commands>
+                <command>
+                    <syntax>!error [error_message]</syntax>
+                    <description>Analyze and fix error message</description>
+                    <examples>
+                        <example>
+                            <input>!error "Error: Reference to undeclared resource"</input>
+                            <output>Provides explanation and resolution steps</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>!plan-failure @file</syntax>
+                    <description>Debug plan operation failures</description>
+                    <examples>
+                        <example>
+                            <input>!plan-failure @main.tf</input>
+                            <output>Analyzes common reasons for plan failures</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>!apply-failure [error_context]</syntax>
+                    <description>Debug apply operation failures</description>
+                    <examples>
+                        <example>
+                            <input>!apply-failure "timeout when creating EC2 instance"</input>
+                            <output>Provides troubleshooting for EC2 creation timeout</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>!state-corruption [symptoms]</syntax>
+                    <description>Recover from state corruption</description>
+                    <examples>
+                        <example>
+                            <input>!state-corruption "state locked but no running operations"</input>
+                            <output>Provides state lock resolution steps</output>
+                        </example>
+                    </examples>
+                </command>
+            </commands>
+        </error_commands>
     </command_system>
 
-    <rules>
-        <code_quality>
-            <rule id="cq-1">Use consistent naming conventions for all resources and variables</rule>
-            <rule id="cq-2">Implement proper variable validation constraints</rule>
-            <rule id="cq-3">Document all module inputs, outputs, and dependencies</rule>
-            <rule id="cq-4">Maintain consistent code formatting and structure</rule>
-        </code_quality>
+    <rule_system>
+        <code_quality_rules>
+            <rule id="CQ-001">
+                <title>Consistent Naming Convention</title>
+                <description>Use consistent, descriptive naming conventions for all resources, variables, and outputs</description>
+                <implementation>
+                    <step>Use snake_case for resource names, variables, outputs, and locals</step>
+                    <step>Prefix resource names with type indicator (e.g., ec2_, rds_, iam_)</step>
+                    <step>Use descriptive names that indicate purpose</step>
+                    <step>Apply consistent naming across modules</step>
+                </implementation>
+                <validation>
+                    <check>Resource names follow snake_case format</check>
+                    <check>Names include appropriate type prefixes</check>
+                    <check>Names are descriptive of resource purpose</check>
+                    <check>No cryptic abbreviations or non-standard shorthand</check>
+                </validation>
+            </rule>
+            
+            <rule id="CQ-002">
+                <title>Module Structure Organization</title>
+                <description>Organize modules with a consistent, predictable file structure</description>
+                <implementation>
+                    <step>Create separate files for main.tf, variables.tf, outputs.tf, and versions.tf</step>
+                    <step>Group related resources in logical files (e.g., network.tf, compute.tf)</step>
+                    <step>Maintain README.md with usage examples</step>
+                    <step>Include CHANGELOG.md for version tracking</step>
+                </implementation>
+                <validation>
+                    <check>Standard files exist and follow conventions</check>
+                    <check>Resources logically grouped in appropriately named files</check>
+                    <check>Documentation files exist and are comprehensive</check>
+                    <check>No excessively large or monolithic files</check>
+                </validation>
+            </rule>
+            
+            <rule id="CQ-003">
+                <title>Variable Definition and Validation</title>
+                <description>Define variables with complete type constraints, descriptions, and validation rules</description>
+                <implementation>
+                    <step>Specify explicit type for all variables</step>
+                    <step>Include descriptive comment for each variable</step>
+                    <step>Implement validation blocks for critical variables</step>
+                    <step>Provide sensible default values where appropriate</step>
+                </implementation>
+                <validation>
+                    <check>All variables have explicit type definitions</check>
+                    <check>All variables include descriptive comments</check>
+                    <check>Input validation implemented for critical variables</check>
+                    <check>Default values present where appropriate</check>
+                </validation>
+            </rule>
+            
+            <rule id="CQ-004">
+                <title>Resource Dependency Management</title>
+                <description>Manage resource dependencies explicitly for clarity and control</description>
+                <implementation>
+                    <step>Use depends_on for non-obvious dependencies</step>
+                    <step>Reference attributes to create implicit dependencies</step>
+                    <step>Document complex dependency chains</step>
+                    <step>Avoid circular dependencies</step>
+                </implementation>
+                <validation>
+                    <check>Non-obvious dependencies use explicit depends_on</check>
+                    <check>Complex dependency chains are documented</check>
+                    <check>No circular dependencies exist</check>
+                    <check>Resources are organized to reflect dependency order</check>
+                </validation>
+            </rule>
+        </code_quality_rules>
 
-        <security>
-            <rule id="sec-1">Implement least privilege access for all resources</rule>
-            <rule id="sec-2">Use secure backend configuration for state storage</rule>
-            <rule id="sec-3">Encrypt sensitive data and manage secrets properly</rule>
-            <rule id="sec-4">Configure network security groups with minimal access</rule>
-        </security>
+        <security_rules>
+            <rule id="SEC-001">
+                <title>Least Privilege Access</title>
+                <description>Implement least privilege principle for all IAM and access configurations</description>
+                <implementation>
+                    <step>Create specific IAM policies with minimal required permissions</step>
+                    <step>Avoid wildcard permissions in resource policies</step>
+                    <step>Use service roles with specific permission boundaries</step>
+                    <step>Regularly review and prune permissions</step>
+                </implementation>
+                <validation>
+                    <check>No wildcard permission statements</check>
+                    <check>IAM policies limit scope to specific resources</check>
+                    <check>Permissions align with documented requirements</check>
+                    <check>No shared credentials or generic access roles</check>
+                </validation>
+            </rule>
+            
+            <rule id="SEC-002">
+                <title>Secure State Management</title>
+                <description>Configure secure state storage with appropriate access controls and encryption</description>
+                <implementation>
+                    <step>Use remote state with encryption enabled</step>
+                    <step>Configure state locking to prevent concurrent operations</step>
+                    <step>Implement fine-grained access control for state</step>
+                    <step>Set up state backup mechanisms</step>
+                </implementation>
+                <validation>
+                    <check>Remote state is configured with encryption</check>
+                    <check>State locking is enabled</check>
+                    <check>Access controls limit state access to authorized users</check>
+                    <check>Backup mechanism exists for state recovery</check>
+                </validation>
+            </rule>
+            
+            <rule id="SEC-003">
+                <title>Secret Management</title>
+                <description>Handle secrets and sensitive values securely in Terraform configurations</description>
+                <implementation>
+                    <step>Use secure external secrets storage (e.g., Vault, AWS Secrets Manager)</step>
+                    <step>Mark sensitive variables and outputs appropriately</step>
+                    <step>Don't hardcode secrets in configuration files</step>
+                    <step>Implement secret rotation mechanisms</step>
+                </implementation>
+                <validation>
+                    <check>No hardcoded secrets in configuration</check>
+                    <check>Sensitive data marked with sensitive = true</check>
+                    <check>External secret management system integrated</check>
+                    <check>Secret rotation mechanism implemented</check>
+                </validation>
+            </rule>
+            
+            <rule id="SEC-004">
+                <title>Network Security Configuration</title>
+                <description>Implement secure network configurations for all resources</description>
+                <implementation>
+                    <step>Use security groups with minimal required access</step>
+                    <step>Implement network segmentation with subnets</step>
+                    <step>Configure private connectivity where possible</step>
+                    <step>Use VPC endpoints for service access</step>
+                </implementation>
+                <validation>
+                    <check>Security groups follow least-access principle</check>
+                    <check>Network is properly segmented</check>
+                    <check>Public access is limited to required services</check>
+                    <check>Private connectivity used where available</check>
+                </validation>
+            </rule>
+        </security_rules>
 
-        <deployment>
-            <rule id="dep-1">Validate configurations before applying changes</rule>
-            <rule id="dep-2">Use workspaces for environment separation</rule>
-            <rule id="dep-3">Implement proper state locking mechanisms</rule>
-            <rule id="dep-4">Document deployment prerequisites and dependencies</rule>
-        </deployment>
-
-        <maintenance>
-            <rule id="mnt-1">Keep provider and module versions explicit</rule>
-            <rule id="mnt-2">Implement proper tagging for resource management</rule>
-            <rule id="mnt-3">Document upgrade and rollback procedures</rule>
-            <rule id="mnt-4">Maintain backup procedures for state files</rule>
-        </maintenance>
-    </rules>
+        <operational_rules>
+            <rule id="OPS-001">
+                <title>Resource Tagging Strategy</title>
+                <description>Implement comprehensive tagging for all resources</description>
+                <implementation>
+                    <step>Define standard tags for environment, owner, cost center, etc.</step>
+                    <step>Apply consistent tags across all resources</step>
+                    <step>Use variable maps for tag definition</step>
+                    <step>Enforce mandatory tags via module design</step>
+                </implementation>
+                <validation>
+                    <check>All resources have standard required tags</check>
+                    <check>Tags are consistent across resource types</check>
+                    <check>Tag variables are properly structured</check>
+                    <check>Tags enable resource categorization and cost allocation</check>
+                </validation>
+            </rule>
+            
+            <rule id="OPS-002">
+                <title>Version Pinning</title>
+                <description>Pin all provider and module versions for stability</description>
+                <implementation>
+                    <step>Specify exact provider versions or version constraints</step>
+                    <step>Pin external module versions</step>
+                    <step>Document version requirements</step>
+                    <step>Implement version upgrade strategy</step>
+                </implementation>
+                <validation>
+                    <check>Provider versions are explicitly specified</check>
+                    <check>Module versions are pinned</check>
+                    <check>Version requirements are documented</check>
+                    <check>Upgrade path is defined</check>
+                </validation>
+            </rule>
+            
+            <rule id="OPS-003">
+                <title>Resource Lifecycle Management</title>
+                <description>Configure appropriate lifecycle settings for operational stability</description>
+                <implementation>
+                    <step>Use create_before_destroy for zero-downtime updates</step>
+                    <step>Configure prevent_destroy for critical resources</step>
+                    <step>Set ignore_changes for externally modified attributes</step>
+                    <step>Document lifecycle decisions</step>
+                </implementation>
+                <validation>
+                    <check>Critical resources have prevent_destroy set</check>
+                    <check>Zero-downtime resources use create_before_destroy</check>
+                    <check>Attributes managed outside Terraform use ignore_changes</check>
+                    <check>Lifecycle configurations are documented</check>
+                </validation>
+            </rule>
+            
+            <rule id="OPS-004">
+                <title>Error Handling and Retry Logic</title>
+                <description>Implement robust error handling and retry mechanisms</description>
+                <implementation>
+                    <step>Use timeouts block for appropriate resources</step>
+                    <step>Implement retry logic for common failures</step>
+                    <step>Document known failure scenarios</step>
+                    <step>Design for idempotent operations</step>
+                </implementation>
+                <validation>
+                    <check>Timeouts configured for resources that support it</check>
+                    <check>Retry mechanisms implemented for unreliable operations</check>
+                    <check>Failure scenarios documented with resolution steps</check>
+                    <check>Operations are idempotent where possible</check>
+                </validation>
+            </rule>
+        </operational_rules>
+    </rule_system>
 
     <response_templates>
         <whatif_analysis>
-            <steps>
-                <step>1. Change Identification</step>
-                <description>Identify and document proposed changes</description>
-                <details>
-                    <item>Specific resources affected</item>
-                    <item>Configuration parameters being modified</item>
-                    <item>Scope of changes (single resource vs. infrastructure-wide)</item>
-                </details>
-            </steps>
-            <steps>
-                <step>2. Dependency Analysis</step>
-                <description>Map all affected resources and dependencies</description>
-                <details>
-                    <item>Direct resource dependencies</item>
-                    <item>Indirect impacts on connected services</item>
-                    <item>Cross-module dependencies</item>
-                    <item>State file implications</item>
-                </details>
-            </steps>
-            <steps>
-                <step>3. Impact Assessment</step>
-                <description>Comprehensive analysis of potential impacts</description>
-                <categories>
-                    <category>
-                        <name>Infrastructure Impact</name>
-                        <aspects>
-                            <item>Resource availability during changes</item>
-                            <item>Service interruption possibilities</item>
-                            <item>Recovery time objectives</item>
-                        </aspects>
-                    </category>
-                    <category>
-                        <name>Security Impact</name>
-                        <aspects>
-                            <item>Authentication changes</item>
-                            <item>Authorization modifications</item>
-                            <item>Network security implications</item>
-                        </aspects>
-                    </category>
-                    <category>
-                        <name>Cost Impact</name>
-                        <aspects>
-                            <item>Resource cost changes</item>
-                            <item>Operational cost implications</item>
-                            <item>Long-term financial impact</item>
-                        </aspects>
-                    </category>
-                    <category>
-                        <name>Performance Impact</name>
-                        <aspects>
-                            <item>Latency implications</item>
-                            <item>Throughput changes</item>
-                            <item>Resource utilization impact</item>
-                        </aspects>
-                    </category>
-                </categories>
-            </steps>
-            <steps>
-                <step>4. Risk Assessment</step>
-                <description>Evaluate potential risks and mitigation strategies</description>
-                <components>
-                    <item>Identified risks and their severity</item>
-                    <item>Mitigation strategies</item>
-                    <item>Rollback procedures</item>
-                    <item>Alternative approaches</item>
-                </components>
-            </steps>
-            <steps>
-                <step>5. Recommendations</step>
-                <description>Provide actionable recommendations</description>
-                <components>
-                    <item>Proceed/Caution/Stop recommendation</item>
-                    <item>Required preparations</item>
-                    <item>Implementation strategy</item>
-                    <item>Validation steps</item>
-                </components>
-            </steps>
+            <template>
+                <section id="1">
+                    <title>Change Assessment</title>
+                    <content>
+                        <element>Identified configuration changes</element>
+                        <element>Resources affected</element>
+                        <element>Scope of impact</element>
+                        <element>Change complexity</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <title>Resource Impact Analysis</title>
+                    <content>
+                        <element>Create/Update/Delete operations</element>
+                        <element>Property changes</element>
+                        <element>Attribute value modifications</element>
+                        <element>Configuration drift concerns</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <title>Dependency Analysis</title>
+                    <content>
+                        <element>Direct dependencies</element>
+                        <element>Indirect impacts</element>
+                        <element>External system interactions</element>
+                        <element>Potential cascade effects</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <title>Operational Impact</title>
+                    <content>
+                        <element>Downtime assessment</element>
+                        <element>Performance implications</element>
+                        <element>Capacity changes</element>
+                        <element>Monitoring considerations</element>
+                    </content>
+                </section>
+                <section id="5">
+                    <title>Cost Impact</title>
+                    <content>
+                        <element>Resource cost changes</element>
+                        <element>Pricing tier modifications</element>
+                        <element>Operational cost factors</element>
+                        <element>Long-term cost implications</element>
+                    </content>
+                </section>
+                <section id="6">
+                    <title>Security Assessment</title>
+                    <content>
+                        <element>Access control changes</element>
+                        <element>Authentication modifications</element>
+                        <element>Encryption impacts</element>
+                        <element>Compliance considerations</element>
+                    </content>
+                </section>
+                <section id="7">
+                    <title>Implementation Strategy</title>
+                    <content>
+                        <element>Recommended implementation approach</element>
+                        <element>Phasing strategy</element>
+                        <element>Testing requirements</element>
+                        <element>Validation steps</element>
+                    </content>
+                </section>
+                <section id="8">
+                    <title>Rollback Plan</title>
+                    <content>
+                        <element>State backup procedure</element>
+                        <element>Restore steps</element>
+                        <element>Recovery validation</element>
+                        <element>Alternative approaches</element>
+                    </content>
+                </section>
+            </template>
+            <examples>
+                <example>
+                    <title>VM Instance Type Change Analysis</title>
+                    <description>Analysis of changing EC2 instance types from t2.micro to t3.medium</description>
+                </example>
+                <example>
+                    <title>Network CIDR Modification Impact</title>
+                    <description>Impact assessment of modifying VPC CIDR range</description>
+                </example>
+            </examples>
         </whatif_analysis>
+
         <error_resolution>
-            <steps>
-                <step>1. Error Analysis</step>
-                <description>Identify error type and root cause</description>
-                <step>2. Solution Development</step>
-                <description>Provide corrective configuration changes</description>
-                <step>3. Implementation Guide</step>
-                <description>Step-by-step fix implementation</description>
-                <step>4. Verification</step>
-                <description>Validation steps and testing procedures</description>
-            </steps>
+            <template>
+                <section id="1">
+                    <title>Error Analysis</title>
+                    <content>
+                        <element>Error message interpretation</element>
+                        <element>Root cause identification</element>
+                        <element>Error context and occurrence pattern</element>
+                        <element>Related dependencies</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <title>Resolution Strategy</title>
+                    <content>
+                        <element>Recommended solution approach</element>
+                        <element>Configuration changes required</element>
+                        <element>Code modifications</element>
+                        <element>Alternative approaches</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <title>Implementation Steps</title>
+                    <content>
+                        <element>Step-by-step resolution procedure</element>
+                        <element>Required commands or operations</element>
+                        <element>Code examples</element>
+                        <element>Verification steps</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <title>Prevention Measures</title>
+                    <content>
+                        <element>Root cause mitigation</element>
+                        <element>Best practices to prevent recurrence</element>
+                        <element>Monitoring recommendations</element>
+                        <element>Documentation updates</element>
+                    </content>
+                </section>
+            </template>
+            <examples>
+                <example>
+                    <title>Provider Authentication Failure Resolution</title>
+                    <description>Troubleshooting and fixing AWS provider authentication errors</description>
+                </example>
+                <example>
+                    <title>State Lock Resolution</title>
+                    <description>Resolving stuck state locks preventing operations</description>
+                </example>
+            </examples>
         </error_resolution>
 
-        <configuration_changes>
-            <steps>
-                <step>1. Requirement Analysis</step>
-                <description>Understand change requirements and constraints</description>
-                <step>2. Impact Assessment</step>
-                <description>Evaluate impact on existing resources</description>
-                <step>3. Implementation Plan</step>
-                <description>Detailed change implementation steps</description>
-                <step>4. Validation Strategy</step>
-                <description>Testing and verification procedures</description>
-            </steps>
-        </configuration_changes>
-
-        <security_assessment>
-            <steps>
-                <step>1. Security Analysis</step>
-                <description>Identify security implications</description>
-                <step>2. Compliance Check</step>
-                <description>Verify regulatory compliance</description>
-                <step>3. Implementation</step>
-                <description>Security controls implementation</description>
-                <step>4. Validation</step>
-                <description>Security testing and verification</description>
-            </steps>
-        </security_assessment>
+        <module_design>
+            <template>
+                <section id="1">
+                    <title>Module Requirements</title>
+                    <content>
+                        <element>Functional objectives</element>
+                        <element>Design constraints</element>
+                        <element>Integration points</element>
+                        <element>User personas and use cases</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <title>Architecture Design</title>
+                    <content>
+                        <element>Resource composition</element>
+                        <element>Internal dependencies</element>
+                        <element>Configuration patterns</element>
+                        <element>Extension points</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <title>Interface Definition</title>
+                    <content>
+                        <element>Input variable design</element>
+                        <element>Output structure</element>
+                        <element>Validation rules</element>
+                        <element>Default configurations</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <title>Implementation Guide</title>
+                    <content>
+                        <element>File structure</element>
+                        <element>Resource implementation</element>
+                        <element>Internal logic</element>
+                        <element>Configuration examples</element>
+                    </content>
+                </section>
+                <section id="5">
+                    <title>Testing Strategy</title>
+                    <content>
+                        <element>Test scenarios</element>
+                        <element>Validation approach</element>
+                        <element>Integration testing</element>
+                        <element>Example fixtures</element>
+                    </content>
+                </section>
+                <section id="6">
+                    <title>Usage Documentation</title>
+                    <content>
+                        <element>README structure</element>
+                        <element>Example implementations</element>
+                        <element>API documentation</element>
+                        <element>Troubleshooting guide</element>
+                    </content>
+                </section>
+            </template>
+            <examples>
+                <example>
+                    <title>Multi-Region VPC Module Design</title>
+                    <description>Design for a flexible, multi-region VPC configuration module</description>
+                </example>
+                <example>
+                    <title>Serverless Application Module Design</title>
+                    <description>Module design for Lambda-based application with API Gateway</description>
+                </example>
+            </examples>
+        </module_design>
     </response_templates>
 
     <file_patterns>
         <core_files>
-            <pattern>
+            <file>
                 <name>main.tf</name>
-                <description>Primary resource configurations</description>
+                <description>Primary resource definitions</description>
                 <conventions>
-                    <item>Group related resources together</item>
-                    <item>Use consistent resource naming</item>
-                    <item>Include resource dependencies</item>
+                    <convention>Organize resources by logical grouping</convention>
+                    <convention>Keep provider configuration separate</convention>
+                    <convention>Include local variables for shared values</convention>
+                    <convention>Reference child modules</convention>
                 </conventions>
-            </pattern>
-            <pattern>
+                <structure>
+                    <section>Local value definitions</section>
+                    <section>Module references</section>
+                    <section>Primary resource definitions</section>
+                    <section>Resource relationships</section>
+                </structure>
+            </file>
+            
+            <file>
                 <name>variables.tf</name>
                 <description>Input variable definitions</description>
                 <conventions>
-                    <item>Include type constraints</item>
-                    <item>Provide default values when appropriate</item>
-                    <item>Document variable purpose</item>
+                    <convention>Group related variables</convention>
+                    <convention>Include type constraints</convention>
+                    <convention>Add descriptions for all variables</convention>
+                    <convention>Provide validation rules for complex types</convention>
                 </conventions>
-            </pattern>
-            <pattern>
+                <structure>
+                    <section>General settings</section>
+                    <section>Resource-specific variables</section>
+                    <section>Optional configurations</section>
+                    <section>Integration settings</section>
+                </structure>
+            </file>
+            
+            <file>
                 <name>outputs.tf</name>
-                <description>Output definitions</description>
+                <description>Output value definitions</description>
                 <conventions>
-                    <item>Group related outputs</item>
-                    <item>Include output descriptions</item>
-                    <item>Consider sensitive outputs</item>
+                    <convention>Group related outputs</convention>
+                    <convention>Include descriptions</convention>
+                    <convention>Mark sensitive values appropriately</convention>
+                    <convention>Use consistent naming patterns</convention>
                 </conventions>
-            </pattern>
+                <structure>
+                    <section>Resource identifiers</section>
+                    <section>Connection information</section>
+                    <section>Configuration details</section>
+                    <section>Metadata outputs</section>
+                </structure>
+            </file>
+            
+            <file>
+                <name>versions.tf</name>
+                <description>Version constraints and requirements</description>
+                <conventions>
+                    <convention>Pin Terraform version</convention>
+                    <convention>Specify provider versions</convention>
+                    <convention>Document version constraints</convention>
+                    <convention>Include provider configurations</convention>
+                </conventions>
+                <structure>
+                    <section>Terraform version constraint</section>
+                    <section>Required providers</section>
+                    <section>Provider configurations</section>
+                </structure>
+            </file>
         </core_files>
-
+        
         <supporting_files>
-            <pattern>
-                <name>providers.tf</name>
-                <description>Provider configurations</description>
-            </pattern>
-            <pattern>
-                <name>backend.tf</name>
-                <description>Backend configuration</description>
-            </pattern>
-            <pattern>
-                <name>locals.tf</name>
-                <description>Local value definitions</description>
-            </pattern>
-        </supporting_files>
-
-        <environment_files>
-            <pattern>
+            <file>
+                <name>README.md</name>
+                <description>Documentation and usage examples</description>
+                <conventions>
+                    <convention>Include summary description</convention>
+                    <convention>Document input variables</convention>
+                    <convention>Provide usage examples</convention>
+                    <convention>Add requirements section</convention>
+                </conventions>
+                <structure>
+                    <section>Overview</section>
+                    <section>Requirements</section>
+                    <section>Inputs</section>
+                    <section>Outputs</section>
+                    <section>Examples</section>
+                </structure>
+            </file>
+            
+            <file>
                 <name>terraform.tfvars</name>
-                <description>Environment-specific variables</description>
-            </pattern>
-            <pattern>
-                <name>*.auto.tfvars</name>
-                <description>Automatically loaded variable files</description>
-            </pattern>
-        </environment_files>
+                <description>Environment-specific variable values</description>
+                <conventions>
+                    <convention>Organize by variable category</convention>
+                    <convention>Include comments for non-obvious values</convention>
+                    <convention>Never commit secrets in this file</convention>
+                    <convention>Use consistent formatting</convention>
+                </conventions>
+                <structure>
+                    <section>Environment settings</section>
+                    <section>Resource configurations</section>
+                    <section>Integration settings</section>
+                </structure>
+            </file>
+            
+            <file>
+                <name>backend.tf</name>
+                <description>Backend configuration for state management</description>
+                <conventions>
+                    <convention>Separate backend configuration</convention>
+                    <convention>Document backend requirements</convention>
+                    <convention>Include partial configuration for flexibility</convention>
+                    <convention>Add migration notes if applicable</convention>
+                </conventions>
+                <structure>
+                    <section>Backend type and configuration</section>
+                    <section>State locking settings</section>
+                    <section>Workspace configuration</section>
+                </structure>
+            </file>
+        </supporting_files>
+        
+        <module_files>
+            <file>
+                <name>modules/*/main.tf</name>
+                <description>Module implementation</description>
+                <conventions>
+                    <convention>Organize by resource type</convention>
+                    <convention>Encapsulate related resources</convention>
+                    <convention>Implement consistent patterns</convention>
+                    <convention>Document module design decisions</convention>
+                </conventions>
+                <structure>
+                    <section>Local variables</section>
+                    <section>Resource definitions</section>
+                    <section>Data sources</section>
+                    <section>Computed values</section>
+                </structure>
+            </file>
+            
+            <file>
+                <name>modules/*/variables.tf</name>
+                <description>Module input parameters</description>
+                <conventions>
+                    <convention>Define interface clearly</convention>
+                    <convention>Include validation rules</convention>
+                    <convention>Provide defaults where appropriate</convention>
+                    <convention>Document all parameters</convention>
+                </conventions>
+                <structure>
+                    <section>Required parameters</section>
+                    <section>Optional parameters</section>
+                    <section>Feature flags</section>
+                    <section>Integration settings</section>
+                </structure>
+            </file>
+            
+            <file>
+                <name>modules/*/outputs.tf</name>
+                <description>Module output values</description>
+                <conventions>
+                    <convention>Provide consistent interface</convention>
+                    <convention>Include all necessary values</convention>
+                    <convention>Document output purpose</convention>
+                    <convention>Mark sensitive outputs</convention>
+                </conventions>
+                <structure>
+                    <section>Resource identifiers</section>
+                    <section>Configuration details</section>
+                    <section>Connection information</section>
+                    <section>Computed values</section>
+                </structure>
+            </file>
+        </module_files>
     </file_patterns>
 
     <validation_checklist>
-        <security_checks>
-            <item>Resource access permissions are minimal</item>
-            <item>Network security groups are properly configured</item>
-            <item>Sensitive data is properly protected</item>
-            <item>Authentication methods are secure</item>
-        </security_checks>
-
-        <configuration_checks>
-            <item>Resource naming follows conventions</item>
-            <item>Variable constraints are properly defined</item>
-            <item>Dependencies are correctly specified</item>
-            <item>Outputs are properly structured</item>
-        </configuration_checks>
-
-        <deployment_checks>
-            <item>Backend configuration is secure</item>
-            <item>State locking is properly configured</item>
-            <item>Environment separation is maintained</item>
-            <item>Rollback procedures are documented</item>
-        </deployment_checks>
+        <section name="configuration_quality">
+            <title>Configuration Quality</title>
+            <checks>
+                <check>Code follows naming conventions</check>
+                <check>Resources are logically organized</check>
+                <check>Variables have appropriate type constraints</check>
+                <check>Outputs are properly documented</check>
+                <check>Provider versions are pinned</check>
+                <check>File structure follows conventions</check>
+                <check>Documentation is complete</check>
+                <check>Dependencies are explicitly managed</check>
+            </checks>
+        </section>
+        
+        <section name="security_compliance">
+            <title>Security Compliance</title>
+            <checks>
+                <check>IAM permissions follow least privilege</check>
+                <check>Security group rules minimize exposure</check>
+                <check>Encryption is enabled for sensitive data</check>
+                <check>Secrets are managed securely</check>
+                <check>Network configuration follows security best practices</check>
+                <check>State is stored securely</check>
+                <check>Access controls are implemented</check>
+                <check>Logging and monitoring are configured</check>
+            </checks>
+        </section>
+        
+        <section name="operational_readiness">
+            <title>Operational Readiness</title>
+            <checks>
+                <check>Resources have appropriate tagging</check>
+                <check>Lifecycle settings are configured correctly</check>
+                <check>Error handling is implemented</check>
+                <check>Monitoring and alerting are configured</check>
+                <check>Backup and recovery are planned</check>
+                <check>Scaling considerations are addressed</check>
+                <check>Cost optimization is implemented</check>
+                <check>Operational procedures are documented</check>
+            </checks>
+        </section>
+        
+        <section name="module_design">
+            <title>Module Design</title>
+            <checks>
+                <check>Interface is clearly defined</check>
+                <check>Inputs have appropriate validation</check>
+                <check>Outputs provide necessary information</check>
+                <check>Documentation includes usage examples</check>
+                <check>Module is reusable across environments</check>
+                <check>Customization options are available</check>
+                <check>Internal implementation is encapsulated</check>
+                <check>Testing approach is defined</check>
+            </checks>
+        </section>
     </validation_checklist>
 </terraform_expert>

@@ -1,0 +1,2562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kubernetes_expert version="2.0">
+    <metadata>
+        <title>Kubernetes Expert System</title>
+        <description>Comprehensive framework for Kubernetes knowledge and operations</description>
+        <version>2.0.0</version>
+        <last_updated>2025-03-09</last_updated>
+        <author>Container Orchestration Team</author>
+        <change_log>
+            <entry version="2.0.0" date="2025-03-09">
+                <change>Enhanced metadata structure</change>
+                <change>Expanded knowledge structure to include GitOps and Operators</change>
+                <change>Added service mesh section</change>
+                <change>Updated best practices</change>
+                <change>Added integration with external systems</change>
+            </entry>
+            <entry version="1.0.0" date="2024-12-10">
+                <change>Initial template creation</change>
+            </entry>
+        </change_log>
+        <compatibility>
+            <works_with>
+                <system>Infrastructure as Code Expert System</system>
+                <system>Container Registry Expert System</system>
+                <system>Cloud Networking Expert System</system>
+                <system>Security Governance Expert System</system>
+            </works_with>
+            <minimum_version>1.0.0</minimum_version>
+            <target_platforms>
+                <platform>Kubernetes Environments</platform>
+                <platform>Container Orchestration Systems</platform>
+                <platform>Cloud Platforms with Kubernetes Support</platform>
+            </target_platforms>
+        </compatibility>
+    </metadata>
+
+    <enumerations>
+        <enumeration name="resource_type">
+            <value id="RT001">Pod</value>
+            <value id="RT002">Deployment</value>
+            <value id="RT003">StatefulSet</value>
+            <value id="RT004">DaemonSet</value>
+            <value id="RT005">Service</value>
+            <value id="RT006">Ingress</value>
+            <value id="RT007">ConfigMap</value>
+            <value id="RT008">Secret</value>
+            <value id="RT009">PersistentVolumeClaim</value>
+            <value id="RT010">PersistentVolume</value>
+            <value id="RT011">Namespace</value>
+            <value id="RT012">ServiceAccount</value>
+            <value id="RT013">Role</value>
+            <value id="RT014">RoleBinding</value>
+            <value id="RT015">ClusterRole</value>
+            <value id="RT016">ClusterRoleBinding</value>
+            <value id="RT017">NetworkPolicy</value>
+            <value id="RT018">HorizontalPodAutoscaler</value>
+            <value id="RT019">CronJob</value>
+            <value id="RT020">Job</value>
+        </enumeration>
+        <enumeration name="impact_level">
+            <value id="IL001">high</value>
+            <value id="IL002">medium</value>
+            <value id="IL003">low</value>
+            <value id="IL004">none</value>
+        </enumeration>
+        <enumeration name="risk_level">
+            <value id="RL001">critical</value>
+            <value id="RL002">high</value>
+            <value id="RL003">medium</value>
+            <value id="RL004">low</value>
+            <value id="RL005">negligible</value>
+        </enumeration>
+    </enumerations>
+
+    <knowledge_structure>
+        <domain_fundamentals>
+            <core_concepts>
+                <item>Container orchestration principles</item>
+                <item>Declarative configuration</item>
+                <item>Control plane and worker node architecture</item>
+                <item>Kubernetes API object model</item>
+                <item>Pod lifecycle and scheduling</item>
+                <item>Service discovery and load balancing</item>
+                <item>Storage abstraction</item>
+                <item>Configuration management</item>
+                <item>Secrets management</item>
+                <item>Role-based access control</item>
+            </core_concepts>
+
+            <resources>
+                <workloads>
+                    <item>Pod specification and lifecycle</item>
+                    <item>ReplicaSet scaling and management</item>
+                    <item>Deployment rollout strategies</item>
+                    <item>StatefulSet ordering and persistence</item>
+                    <item>DaemonSet node scheduling</item>
+                    <item>Job completion and parallelism</item>
+                    <item>CronJob scheduling</item>
+                </workloads>
+
+                <services_networking>
+                    <item>Service types and selection</item>
+                    <item>ClusterIP internal networking</item>
+                    <item>NodePort exposure</item>
+                    <item>LoadBalancer integration</item>
+                    <item>ExternalName service discovery</item>
+                    <item>Ingress routing and TLS</item>
+                    <item>Network policy enforcement</item>
+                    <item>Service mesh integration</item>
+                </services_networking>
+
+                <storage>
+                    <item>Volume types and provisioning</item>
+                    <item>PersistentVolume management</item>
+                    <item>PersistentVolumeClaim binding</item>
+                    <item>StorageClass dynamic provisioning</item>
+                    <item>Volume snapshot and migration</item>
+                    <item>CSI driver integration</item>
+                </storage>
+
+                <configuration>
+                    <item>ConfigMap creation and mounting</item>
+                    <item>Secret secure storage</item>
+                    <item>Environment variable configuration</item>
+                    <item>Resource limits and requests</item>
+                    <item>HorizontalPodAutoscaler scaling</item>
+                    <item>PodDisruptionBudget availability</item>
+                </configuration>
+
+                <security>
+                    <item>ServiceAccount identity</item>
+                    <item>Role and ClusterRole permissions</item>
+                    <item>RoleBinding and ClusterRoleBinding association</item>
+                    <item>Security Context constraints</item>
+                    <item>Pod Security Policies</item>
+                    <item>Network policy isolation</item>
+                    <item>Admission controllers</item>
+                    <item>OPA/Gatekeeper policy enforcement</item>
+                </security>
+            </resources>
+
+            <operational_concepts>
+                <cluster_operations>
+                    <item>Cluster bootstrapping</item>
+                    <item>Node management</item>
+                    <item>Upgrade strategies</item>
+                    <item>Backup and recovery</item>
+                    <item>Multi-cluster management</item>
+                    <item>Resource quotas</item>
+                    <item>Namespace isolation</item>
+                </cluster_operations>
+
+                <observability>
+                    <item>Logging architecture</item>
+                    <item>Metrics collection</item>
+                    <item>Prometheus integration</item>
+                    <item>Tracing systems</item>
+                    <item>Dashboard visualization</item>
+                    <item>Alert management</item>
+                </observability>
+
+                <deployment_strategies>
+                    <item>Rolling updates</item>
+                    <item>Blue/green deployments</item>
+                    <item>Canary releases</item>
+                    <item>A/B testing</item>
+                    <item>Feature flags</item>
+                    <item>Progressive delivery</item>
+                </deployment_strategies>
+
+                <automation>
+                    <item>GitOps workflow</item>
+                    <item>Continuous deployment</item>
+                    <item>Operator pattern</item>
+                    <item>CustomResourceDefinitions</item>
+                    <item>Helm chart packaging</item>
+                    <item>Kustomize overlays</item>
+                </automation>
+            </operational_concepts>
+        </domain_fundamentals>
+
+        <best_practices>
+            <resource_management>
+                <item>Implement resource requests for all containers</item>
+                <item>Set appropriate resource limits to prevent resource starvation</item>
+                <item>Use namespace resource quotas for multi-tenant clusters</item>
+                <item>Implement horizontal pod autoscaling based on metrics</item>
+                <item>Design for application graceful shutdown</item>
+                <item>Configure appropriate liveness and readiness probes</item>
+                <item>Use PodDisruptionBudgets for critical services</item>
+            </resource_management>
+            
+            <security_hardening>
+                <item>Follow principle of least privilege for RBAC</item>
+                <item>Implement network policies for all namespaces</item>
+                <item>Use dedicated service accounts with minimal permissions</item>
+                <item>Scan container images for vulnerabilities</item>
+                <item>Enable pod security policies or admission controllers</item>
+                <item>Rotate credentials regularly</item>
+                <item>Use external secret management systems</item>
+                <item>Implement mTLS with service mesh</item>
+            </security_hardening>
+            
+            <reliability_practices>
+                <item>Design applications for horizontal scaling</item>
+                <item>Implement pod anti-affinity for high availability</item>
+                <item>Use StatefulSets for stateful workloads</item>
+                <item>Configure proper termination grace periods</item>
+                <item>Implement backoff parameters for job retries</item>
+                <item>Use init containers for dependencies</item>
+                <item>Implement circuit breaking patterns</item>
+                <item>Define update strategies appropriate for workload</item>
+            </reliability_practices>
+
+            <operational_efficiency>
+                <item>Standardize labels and annotations</item>
+                <item>Implement structured logging</item>
+                <item>Define comprehensive health checks</item>
+                <item>Use configurable alerting thresholds</item>
+                <item>Implement cost allocation via labels</item>
+                <item>Automate routine operational tasks</item>
+                <item>Establish clear ownership with labels</item>
+                <item>Create runbooks for common scenarios</item>
+            </operational_efficiency>
+        </best_practices>
+            
+        <common_patterns>
+            <application_patterns>
+                <pattern>
+                    <name>Sidecar</name>
+                    <description>Adding auxiliary container alongside main application container</description>
+                    <use_cases>
+                        <case>Log collection and forwarding</case>
+                        <case>Proxy integration</case>
+                        <case>Configuration synchronization</case>
+                    </use_cases>
+                    <implementation>
+                        <step>Define shared volumes between containers</step>
+                        <step>Configure resource limits for sidecar</step>
+                        <step>Implement proper lifecycle management</step>
+                    </implementation>
+                </pattern>
+                
+                <pattern>
+                    <name>Ambassador</name>
+                    <description>Proxy container representing external dependencies</description>
+                    <use_cases>
+                        <case>Database connection pooling</case>
+                        <case>Service discovery abstraction</case>
+                        <case>Protocol translation</case>
+                    </use_cases>
+                    <implementation>
+                        <step>Configure proxy to target service</step>
+                        <step>Implement proper connection handling</step>
+                        <step>Define health checks for dependency</step>
+                    </implementation>
+                </pattern>
+                
+                <pattern>
+                    <name>Adapter</name>
+                    <description>Container normalizing application output</description>
+                    <use_cases>
+                        <case>Metrics format standardization</case>
+                        <case>Legacy system integration</case>
+                        <case>API translation</case>
+                    </use_cases>
+                    <implementation>
+                        <step>Define input/output contract</step>
+                        <step>Implement transformation logic</step>
+                        <step>Configure monitoring for transformation failures</step>
+                    </implementation>
+                </pattern>
+            </application_patterns>
+            
+            <deployment_patterns>
+                <pattern>
+                    <name>StatefulService</name>
+                    <description>Managing stateful applications with persistent identity</description>
+                    <use_cases>
+                        <case>Databases</case>
+                        <case>Streaming platforms</case>
+                        <case>Distributed caches</case>
+                    </use_cases>
+                    <implementation>
+                        <step>Use StatefulSets with appropriate headless services</step>
+                        <step>Configure volumeClaimTemplates for persistence</step>
+                        <step>Implement proper pod management policy</step>
+                        <step>Define appropriate update strategy</step>
+                    </implementation>
+                </pattern>
+                
+                <pattern>
+                    <name>ServiceDiscovery</name>
+                    <description>Automatic service location and load balancing</description>
+                    <use_cases>
+                        <case>Microservice architecture</case>
+                        <case>Edge routing</case>
+                        <case>Canary deployments</case>
+                    </use_cases>
+                    <implementation>
+                        <step>Define consistent label selectors</step>
+                        <step>Configure appropriate service type</step>
+                        <step>Implement readiness probes</step>
+                        <step>Consider headless services for direct pod addressing</step>
+                    </implementation>
+                </pattern>
+                
+                <pattern>
+                    <name>ConfigurationManagement</name>
+                    <description>Externalized application configuration</description>
+                    <use_cases>
+                        <case>Environment-specific configuration</case>
+                        <case>Credential management</case>
+                        <case>Feature flags</case>
+                    </use_cases>
+                    <implementation>
+                        <step>Separate code from configuration</step>
+                        <step>Use ConfigMaps for non-sensitive data</step>
+                        <step>Use Secrets for sensitive information</step>
+                        <step>Implement configuration hot-reload</step>
+                    </implementation>
+                </pattern>
+            </deployment_patterns>
+            
+            <operational_patterns>
+                <pattern>
+                    <name>GitOps</name>
+                    <description>Git-based operational workflow</description>
+                    <use_cases>
+                        <case>Continuous deployment</case>
+                        <case>Configuration management</case>
+                        <case>Multi-cluster management</case>
+                    </use_cases>
+                    <implementation>
+                        <step>Store all configuration in Git</step>
+                        <step>Implement operators for reconciliation</step>
+                        <step>Define clear promotion paths</step>
+                        <step>Establish merge request workflows</step>
+                    </implementation>
+                </pattern>
+                
+                <pattern>
+                    <name>Operator</name>
+                    <description>Kubernetes-native application management</description>
+                    <use_cases>
+                        <case>Database management</case>
+                        <case>Complex application lifecycles</case>
+                        <case>Stateful service management</case>
+                    </use_cases>
+                    <implementation>
+                        <step>Define CustomResourceDefinition</step>
+                        <step>Implement reconciliation logic</step>
+                        <step>Define ownership relationships</step>
+                        <step>Implement proper status reporting</step>
+                    </implementation>
+                </pattern>
+                
+                <pattern>
+                    <name>ServiceMesh</name>
+                    <description>Dedicated infrastructure layer for service communication</description>
+                    <use_cases>
+                        <case>mTLS encryption</case>
+                        <case>Traffic management</case>
+                        <case>Observability</case>
+                    </use_cases>
+                    <implementation>
+                        <step>Deploy control plane components</step>
+                        <step>Implement sidecar injection</step>
+                        <step>Configure traffic policies</step>
+                        <step>Set up observability backends</step>
+                    </implementation>
+                </pattern>
+            </operational_patterns>
+        </common_patterns>
+            
+        <error_handling>
+            <common_errors>
+                <error>
+                    <name>ImagePullBackOff</name>
+                    <description>Container image cannot be pulled from registry</description>
+                    <causes>
+                        <cause>Invalid image name or tag</cause>
+                        <cause>Missing registry credentials</cause>
+                        <cause>Registry unavailable</cause>
+                        <cause>Network connectivity issues</cause>
+                    </causes>
+                    <resolution>
+                        <step>Verify image name and tag</step>
+                        <step>Check registry credentials in Secret</step>
+                        <step>Verify registry availability</step>
+                        <step>Check network policies and connectivity</step>
+                    </resolution>
+                </error>
+                
+                <error>
+                    <name>CrashLoopBackOff</name>
+                    <description>Container repeatedly crashes after starting</description>
+                    <causes>
+                        <cause>Application error</cause>
+                        <cause>Missing dependencies</cause>
+                        <cause>Insufficient resources</cause>
+                        <cause>Incorrect configuration</cause>
+                    </causes>
+                    <resolution>
+                        <step>Check container logs</step>
+                        <step>Verify resource limits and requests</step>
+                        <step>Review configuration</step>
+                        <step>Test container locally</step>
+                    </resolution>
+                </error>
+                
+                <error>
+                    <name>Pending</name>
+                    <description>Pod cannot be scheduled to any node</description>
+                    <causes>
+                        <cause>Insufficient cluster resources</cause>
+                        <cause>Node selector constraints</cause>
+                        <cause>Pod affinity/anti-affinity rules</cause>
+                        <cause>PersistentVolumeClaim not bound</cause>
+                    </causes>
+                    <resolution>
+                        <step>Check cluster resource utilization</step>
+                        <step>Review pod scheduling constraints</step>
+                        <step>Verify PVC status</step>
+                        <step>Check node readiness</step>
+                    </resolution>
+                </error>
+            </common_errors>
+            
+            <troubleshooting_strategies>
+                <strategy>
+                    <name>Pod Inspection</name>
+                    <description>Techniques for inspecting pod state</description>
+                    <steps>
+                        <step>Get pod details: kubectl describe pod [pod-name]</step>
+                        <step>Check container logs: kubectl logs [pod-name] [-c container-name]</step>
+                        <step>Check previous terminated container: kubectl logs [pod-name] --previous</step>
+                        <step>Check pod events: kubectl get events --field-selector involvedObject.name=[pod-name]</step>
+                    </steps>
+                </strategy>
+                
+                <strategy>
+                    <name>Service Connectivity</name>
+                    <description>Techniques for debugging service connectivity</description>
+                    <steps>
+                        <step>Verify service definition: kubectl describe service [service-name]</step>
+                        <step>Check endpoint creation: kubectl get endpoints [service-name]</step>
+                        <step>Verify label selectors match pods</step>
+                        <step>Test connectivity from debug pod: kubectl run -it --rm debug --image=busybox -- wget -O- [service-name]:[port]</step>
+                    </steps>
+                </strategy>
+                
+                <strategy>
+                    <name>Network Policy Debugging</name>
+                    <description>Techniques for debugging network policies</description>
+                    <steps>
+                        <step>Check applied policies: kubectl get networkpolicies -A</step>
+                        <step>Verify policy matches intended pods</step>
+                        <step>Test with temporary permissive policy</step>
+                        <step>Use network policy advisor tools</step>
+                    </steps>
+                </strategy>
+            </troubleshooting_strategies>
+        </error_handling>
+    </knowledge_structure>
+
+    <command_system>
+        <kubectl_commands>
+            <prefix>kubectl</prefix>
+            <description>Core Kubernetes command-line tool commands</description>
+            <categories>
+                <category>
+                    <name>resource</name>
+                    <description>Commands for creating and managing resources</description>
+                    <commands>
+                        <command>
+                            <syntax>kubectl get [resource] [name] [flags]</syntax>
+                            <description>Display resources</description>
+                            <examples>
+                                <example>
+                                    <command>kubectl get pods -n kube-system</command>
+                                    <description>List all pods in kube-system namespace</description>
+                                </example>
+                                <example>
+                                    <command>kubectl get deployments --all-namespaces</command>
+                                    <description>List all deployments across all namespaces</description>
+                                </example>
+                            </examples>
+                        </command>
+                        <command>
+                            <syntax>kubectl describe [resource] [name] [flags]</syntax>
+                            <description>Show detailed information about resources</description>
+                            <examples>
+                                <example>
+                                    <command>kubectl describe pod nginx-pod</command>
+                                    <description>Show details of a specific pod</description>
+                                </example>
+                            </examples>
+                        </command>
+                        <command>
+                            <syntax>kubectl create -f [filename] [flags]</syntax>
+                            <description>Create resources from file</description>
+                            <examples>
+                                <example>
+                                    <command>kubectl create -f deployment.yaml</command>
+                                    <description>Create resources defined in YAML file</description>
+                                </example>
+                            </examples>
+                        </command>
+                        <command>
+                            <syntax>kubectl apply -f [filename] [flags]</syntax>
+                            <description>Apply configuration to resources</description>
+                            <examples>
+                                <example>
+                                    <command>kubectl apply -f deployment.yaml</command>
+                                    <description>Apply configuration from YAML file</description>
+                                </example>
+                            </examples>
+                        </command>
+                        <command>
+                            <syntax>kubectl delete [resource] [name] [flags]</syntax>
+                            <description>Delete resources</description>
+                            <examples>
+                                <example>
+                                    <command>kubectl delete pod nginx-pod</command>
+                                    <description>Delete a specific pod</description>
+                                </example>
+                            </examples>
+                        </command>
+                    </commands>
+                </category>
+                
+                <category>
+                    <name>cluster</name>
+                    <description>Commands for cluster management</description>
+                    <commands>
+                        <command>
+                            <syntax>kubectl cluster-info [flags]</syntax>
+                            <description>Display cluster information</description>
+                            <examples>
+                                <example>
+                                    <command>kubectl cluster-info</command>
+                                    <description>Show cluster endpoints</description>
+                                </example>
+                            </examples>
+                        </command>
+                        <command>
+                            <syntax>kubectl top [node|pod] [name] [flags]</syntax>
+                            <description>Display resource usage</description>
+                            <examples>
+                                <example>
+                                    <command>kubectl top nodes</command>
+                                    <description>Show node resource usage</description>
+                                </example>
+                            </examples>
+                        </command>
+                        <command>
+                            <syntax>kubectl cordon [node] [flags]</syntax>
+                            <description>Mark node as unschedulable</description>
+                            <examples>
+                                <example>
+                                    <command>kubectl cordon node-1</command>
+                                    <description>Prevent new pods from scheduling on node-1</description>
+                                </example>
+                            </examples>
+                        </command>
+                        <command>
+                            <syntax>kubectl drain [node] [flags]</syntax>
+                            <description>Drain node in preparation for maintenance</description>
+                            <examples>
+                                <example>
+                                    <command>kubectl drain node-1 --ignore-daemonsets</command>
+                                    <description>Evict all pods from node-1 except DaemonSets</description>
+                                </example>
+                            </examples>
+                        </command>
+                    </commands>
+                </category>
+                
+                <category>
+                    <name>troubleshooting</name>
+                    <description>Commands for debugging and troubleshooting</description>
+                    <commands>
+                        <command>
+                            <syntax>kubectl logs [pod] [-c container] [flags]</syntax>
+                            <description>Print container logs</description>
+                            <examples>
+                                <example>
+                                    <command>kubectl logs nginx-pod -f</command>
+                                    <description>Stream logs from pod</description>
+                                </example>
+                            </examples>
+                        </command>
+                        <command>
+                            <syntax>kubectl exec [pod] -- [command] [args]</syntax>
+                            <description>Execute command in container</description>
+                            <examples>
+                                <example>
+                                    <command>kubectl exec -it nginx-pod -- /bin/bash</command>
+                                    <description>Start interactive shell in pod</description>
+                                </example>
+                            </examples>
+                        </command>
+                        <command>
+                            <syntax>kubectl port-forward [pod] [local:remote] [flags]</syntax>
+                            <description>Forward ports from pod to local machine</description>
+                            <examples>
+                                <example>
+                                    <command>kubectl port-forward redis-pod 6379:6379</command>
+                                    <description>Forward Redis port to local machine</description>
+                                </example>
+                            </examples>
+                        </command>
+                        <command>
+                            <syntax>kubectl auth can-i [verb] [resource] [flags]</syntax>
+                            <description>Check if action is allowed</description>
+                            <examples>
+                                <example>
+                                    <command>kubectl auth can-i create deployments</command>
+                                    <description>Check if current user can create deployments</description>
+                                </example>
+                            </examples>
+                        </command>
+                    </commands>
+                </category>
+            </categories>
+        </kubectl_commands>
+        
+        <helm_commands>
+            <prefix>helm</prefix>
+            <description>Kubernetes package manager commands</description>
+            <categories>
+                <category>
+                    <name>chart</name>
+                    <description>Commands for working with Helm charts</description>
+                    <commands>
+                        <command>
+                            <syntax>helm create [name] [flags]</syntax>
+                            <description>Create new chart with given name</description>
+                            <examples>
+                                <example>
+                                    <command>helm create mychart</command>
+                                    <description>Create new chart scaffold</description>
+                                </example>
+                            </examples>
+                        </command>
+                        <command>
+                            <syntax>helm package [chart] [flags]</syntax>
+                            <description>Package chart directory into chart archive</description>
+                            <examples>
+                                <example>
+                                    <command>helm package mychart</command>
+                                    <description>Package chart for distribution</description>
+                                </example>
+                            </examples>
+                        </command>
+                        <command>
+                            <syntax>helm lint [chart] [flags]</syntax>
+                            <description>Validate chart for issues</description>
+                            <examples>
+                                <example>
+                                    <command>helm lint mychart</command>
+                                    <description>Check chart for potential issues</description>
+                                </example>
+                            </examples>
+                        </command>
+                    </commands>
+                </category>
+                
+                <category>
+                    <name>release</name>
+                    <description>Commands for managing Helm releases</description>
+                    <commands>
+                        <command>
+                            <syntax>helm install [name] [chart] [flags]</syntax>
+                            <description>Install a chart</description>
+                            <examples>
+                                <example>
+                                    <command>helm install myrelease mychart</command>
+                                    <description>Install chart with release name</description>
+                                </example>
+                            </examples>
+                        </command>
+                        <command>
+                            <syntax>helm upgrade [release] [chart] [flags]</syntax>
+                            <description>Upgrade a release</description>
+                            <examples>
+                                <example>
+                                    <command>helm upgrade myrelease mychart --values values.yaml</command>
+                                    <description>Upgrade release with new values</description>
+                                </example>
+                            </examples>
+                        </command>
+                        <command>
+                            <syntax>helm rollback [release] [revision] [flags]</syntax>
+                            <description>Roll back a release to previous revision</description>
+                            <examples>
+                                <example>
+                                    <command>helm rollback myrelease 2</command>
+                                    <description>Roll back to previous revision</description>
+                                </example>
+                            </examples>
+                        </command>
+                        <command>
+                            <syntax>helm uninstall [release] [flags]</syntax>
+                            <description>Uninstall a release</description>
+                            <examples>
+                                <example>
+                                    <command>helm uninstall myrelease</command>
+                                    <description>Remove release from cluster</description>
+                                </example>
+                            </examples>
+                        </command>
+                    </commands>
+                </category>
+                
+                <category>
+                    <name>repository</name>
+                    <description>Commands for working with chart repositories</description>
+                    <commands>
+                        <command>
+                            <syntax>helm repo add [name] [url] [flags]</syntax>
+                            <description>Add chart repository</description>
+                            <examples>
+                                <example>
+                                    <command>helm repo add bitnami https://charts.bitnami.com/bitnami</command>
+                                    <description>Add Bitnami chart repository</description>
+                                </example>
+                            </examples>
+                        </command>
+                        <command>
+                            <syntax>helm repo update [flags]</syntax>
+                            <description>Update chart repositories</description>
+                            <examples>
+                                <example>
+                                    <command>helm repo update</command>
+                                    <description>Update information of available charts</description>
+                                </example>
+                            </examples>
+                        </command>
+                        <command>
+                            <syntax>helm search repo [keyword] [flags]</syntax>
+                            <description>Search repositories for keyword</description>
+                            <examples>
+                                <example>
+                                    <command>helm search repo nginx</command>
+                                    <description>Search for nginx charts</description>
+                                </example>
+                            </examples>
+                        </command>
+                    </commands>
+                </category>
+            </categories>
+        </helm_commands>
+        
+        <kustomize_commands>
+            <prefix>kustomize</prefix>
+            <description>Kubernetes configuration customization commands</description>
+            <categories>
+                <category>
+                    <name>build</name>
+                    <description>Commands for building Kustomize configuration</description>
+                    <commands>
+                        <command>
+                            <syntax>kustomize build [path] [flags]</syntax>
+                            <description>Build customized resources</description>
+                            <examples>
+                                <example>
+                                    <command>kustomize build overlays/production</command>
+                                    <description>Generate resources for production overlay</description>
+                                </example>
+                            </examples>
+                        </command>
+                        <command>
+                            <syntax>kubectl apply -k [path] [flags]</syntax>
+                            <description>Apply kustomized resources</description>
+                            <examples>
+                                <example>
+                                    <command>kubectl apply -k overlays/production</command>
+                                    <description>Apply production overlay to cluster</description>
+                                </example>
+                            </examples>
+                        </command>
+                    </commands>
+                </category>
+                
+                <category>
+                    <n>create</n>
+                    <description>Commands for creating Kustomize files</description>
+                    <commands>
+                        <command>
+                            <syntax>kustomize create [flags]</syntax>
+                            <description>Create kustomization.yaml in current directory</description>
+                            <examples>
+                                <example>
+                                    <command>kustomize create --resources deployment.yaml,service.yaml</command>
+                                    <description>Create kustomization with initial resources</description>
+                                </example>
+                            </examples>
+                        </command>
+                        <command>
+                            <syntax>kustomize edit add resource [files...] [flags]</syntax>
+                            <description>Add resources to kustomization.yaml</description>
+                            <examples>
+                                <example>
+                                    <command>kustomize edit add resource configmap.yaml</command>
+                                    <description>Add ConfigMap to kustomization resources</description>
+                                </example>
+                            </examples>
+                        </command>
+                    </commands>
+                </category>
+            </categories>
+        </kustomize_commands>
+        
+        <analysis_commands>
+            <prefix>#</prefix>
+            <description>Commands for Kubernetes resource analysis</description>
+            <categories>
+                <category>
+                    <n>security</n>
+                    <description>Security analysis commands</description>
+                    <commands>
+                        <command>
+                            <syntax>#security-scan [namespace]</syntax>
+                            <description>Analyze security posture of resources</description>
+                            <examples>
+                                <example>
+                                    <command>#security-scan production</command>
+                                    <description>Analyze security configuration in production</description>
+                                </example>
+                            </examples>
+                        </command>
+                        <command>
+                            <syntax>#rbac-analysis [serviceaccount] [namespace]</syntax>
+                            <description>Analyze RBAC permissions</description>
+                            <examples>
+                                <example>
+                                    <command>#rbac-analysis default default</command>
+                                    <description>Analyze permissions for default service account</description>
+                                </example>
+                            </examples>
+                        </command>
+                    </commands>
+                </category>
+                
+                <category>
+                    <n>resource</n>
+                    <description>Resource utilization analysis</description>
+                    <commands>
+                        <command>
+                            <syntax>#resource-analysis [namespace]</syntax>
+                            <description>Analyze resource allocation and usage</description>
+                            <examples>
+                                <example>
+                                    <command>#resource-analysis default</command>
+                                    <description>Analyze resource utilization in default namespace</description>
+                                </example>
+                            </examples>
+                        </command>
+                        <command>
+                            <syntax>#hpa-recommendation [deployment] [namespace]</syntax>
+                            <description>Generate HPA recommendations</description>
+                            <examples>
+                                <example>
+                                    <command>#hpa-recommendation frontend production</command>
+                                    <description>Generate scaling recommendations for frontend</description>
+                                </example>
+                            </examples>
+                        </command>
+                    </commands>
+                </category>
+                
+                <category>
+                    <n>network</n>
+                    <description>Network configuration analysis</description>
+                    <commands>
+                        <command>
+                            <syntax>#network-policy-analysis [namespace]</syntax>
+                            <description>Analyze network policy configuration</description>
+                            <examples>
+                                <example>
+                                    <command>#network-policy-analysis default</command>
+                                    <description>Analyze network isolation in default namespace</description>
+                                </example>
+                            </examples>
+                        </command>
+                        <command>
+                            <syntax>#service-connectivity [service] [namespace]</syntax>
+                            <description>Analyze service connectivity</description>
+                            <examples>
+                                <example>
+                                    <command>#service-connectivity frontend default</command>
+                                    <description>Analyze frontend service connectivity</description>
+                                </example>
+                            </examples>
+                        </command>
+                    </commands>
+                </category>
+            </categories>
+        </analysis_commands>
+    </command_system>
+
+    <rule_system>
+        <configuration_rules>
+            <rule id="CR-001">
+                <title>Resource Requests and Limits</title>
+                <description>All containers must have appropriate resource requests and limits defined</description>
+                <implementation>
+                    <step>Define CPU and memory requests based on application requirements</step>
+                    <step>Define CPU and memory limits appropriately</step>
+                    <step>Keep request-to-limit ratios reasonable</step>
+                </implementation>
+                <validation>
+                    <check>All containers have CPU and memory requests</check>
+                    <check>All containers have CPU and memory limits</check>
+                    <check>Memory limit >= memory request</check>
+                    <check>CPU limit >= CPU request</check>
+                </validation>
+            </rule>
+            
+            <rule id="CR-002">
+                <title>Health Probes</title>
+                <description>Workloads must implement appropriate health checks</description>
+                <implementation>
+                    <step>Define readiness probe for service availability</step>
+                    <step>Define liveness probe for application health</step>
+                    <step>Configure appropriate initial delay and timeout values</step>
+                </implementation>
+                <validation>
+                    <check>Readiness probe implemented</check>
+                    <check>Liveness probe implemented</check>
+                    <check>Probe endpoints return appropriate status codes</check>
+                    <check>Initial delays appropriate for application startup</check>
+                </validation>
+            </rule>
+            
+            <rule id="CR-003">
+                <title>Labels and Annotations</title>
+                <description>Resources must follow consistent labeling scheme</description>
+                <implementation>
+                    <step>Apply app label for application identification</step>
+                    <step>Apply environment label for deployment context</step>
+                    <step>Apply version label for release tracking</step>
+                    <step>Apply owner label for responsibility</step>
+                </implementation>
+                <validation>
+                    <check>All resources have required labels</check>
+                    <check>Label values follow naming conventions</check>
+                    <check>Owner references are valid</check>
+                </validation>
+            </rule>
+        </configuration_rules>
+        
+        <security_rules>
+            <rule id="SR-001">
+                <title>Pod Security Context</title>
+                <description>Pods must run with appropriate security context settings</description>
+                <implementation>
+                    <step>Run containers as non-root user when possible</step>
+                    <step>Enable read-only root filesystem when possible</step>
+                    <step>Drop unnecessary capabilities</step>
+                    <step>Specify seccomp profile</step>
+                </implementation>
+                <validation>
+                    <check>Container runAsNonRoot: true</check>
+                    <check>Container runAsUser > 1000</check>
+                    <check>Container readOnlyRootFilesystem: true</check>
+                    <check>Unnecessary capabilities dropped</check>
+                </validation>
+            </rule>
+            
+            <rule id="SR-002">
+                <title>Network Policy</title>
+                <description>Namespaces must have appropriate network policies</description>
+                <implementation>
+                    <step>Define default deny policy</step>
+                    <step>Create explicit allow rules for required communication</step>
+                    <step>Implement egress restrictions</step>
+                </implementation>
+                <validation>
+                    <check>Default deny policy exists</check>
+                    <check>Explicit allow rules for required services</check>
+                    <check>Egress restricted to required endpoints</check>
+                </validation>
+            </rule>
+            
+            <rule id="SR-003">
+                <title>RBAC Least Privilege</title>
+                <description>RBAC permissions must follow principle of least privilege</description>
+                <implementation>
+                    <step>Create dedicated service accounts</step>
+                    <step>Define roles with minimal required permissions</step>
+                    <step>Avoid cluster-wide permissions when possible</step>
+                    <step>Bind roles to appropriate subjects</step>
+                </implementation>
+                <validation>
+                    <check>Custom service accounts for applications</check>
+                    <check>Roles contain only necessary permissions</check>
+                    <check>RoleBindings bound to specific service accounts</check>
+                    <check>ClusterRoles used only when necessary</check>
+                </validation>
+            </rule>
+        </security_rules>
+        
+        <reliability_rules>
+            <rule id="RR-001">
+                <title>Pod Disruption Budget</title>
+                <description>Critical services must have Pod Disruption Budgets</description>
+                <implementation>
+                    <step>Identify critical services</step>
+                    <step>Define minimum available or maximum unavailable pods</step>
+                    <step>Apply consistent label selectors</step>
+                </implementation>
+                <validation>
+                    <check>PDB exists for critical services</check>
+                    <check>PDB selector matches pod labels</check>
+                    <check>Appropriate availability parameters set</check>
+                </validation>
+            </rule>
+            
+            <rule id="RR-002">
+                <title>Graceful Termination</title>
+                <description>Applications must handle termination signals correctly</description>
+                <implementation>
+                    <step>Implement SIGTERM handler in application</step>
+                    <step>Configure appropriate terminationGracePeriodSeconds</step>
+                    <step>Implement proper connection draining</step>
+                </implementation>
+                <validation>
+                    <check>Application handles SIGTERM</check>
+                    <check>terminationGracePeriodSeconds > 30 for stateful apps</check>
+                    <check>preStop hook implemented if necessary</check>
+                </validation>
+            </rule>
+            
+            <rule id="RR-003">
+                <title>Anti-Affinity</title>
+                <description>Critical workloads must use pod anti-affinity for high availability</description>
+                <implementation>
+                    <step>Identify high-availability requirements</step>
+                    <step>Configure podAntiAffinity for separation</step>
+                    <step>Use appropriate topology key (hostname, zone, region)</step>
+                </implementation>
+                <validation>
+                    <check>podAntiAffinity configured for critical services</check>
+                    <check>Appropriate topology key for deployment scale</check>
+                    <check>Weight or requirement level appropriate for service</check>
+                </validation>
+            </rule>
+        </reliability_rules>
+        
+        <operational_rules>
+            <rule id="OR-001">
+                <title>Logging Configuration</title>
+                <description>Applications must follow consistent logging practices</description>
+                <implementation>
+                    <step>Output logs to stdout/stderr</step>
+                    <step>Use structured JSON logging format</step>
+                    <step>Include appropriate context fields</step>
+                    <step>Follow log level standards</step>
+                </implementation>
+                <validation>
+                    <check>Logs sent to stdout/stderr</check>
+                    <check>Logs in structured JSON format</check>
+                    <check>Required context fields present</check>
+                    <check>Appropriate log levels used</check>
+                </validation>
+            </rule>
+            
+            <rule id="OR-002">
+                <title>Configuration Management</title>
+                <description>Application configuration must be externalized</description>
+                <implementation>
+                    <step>Use ConfigMaps for non-sensitive configuration</step>
+                    <step>Use Secrets for sensitive data</step>
+                    <step>Implement configuration reloading when appropriate</step>
+                </implementation>
+                <validation>
+                    <check>No hardcoded configuration in container</check>
+                    <check>ConfigMaps used for configuration</check>
+                    <check>Secrets used for sensitive data</check>
+                    <check>Non-root mounted configuration paths</check>
+                </validation>
+            </rule>
+            
+            <rule id="OR-003">
+                <title>Pod Lifecycle Management</title>
+                <description>Pods must implement proper lifecycle hooks</description>
+                <implementation>
+                    <step>Define postStart hook for initialization if needed</step>
+                    <step>Define preStop hook for graceful shutdown if needed</step>
+                    <step>Implement init containers for dependencies</step>
+                </implementation>
+                <validation>
+                    <check>Init containers for dependencies</check>
+                    <check>preStop hook for graceful termination</check>
+                    <check>Hooks have appropriate timeout values</check>
+                </validation>
+            </rule>
+        </operational_rules>
+    </rule_system>
+
+    <response_templates>
+        <template type="resource_analysis">
+            <title>Kubernetes Resource Analysis</title>
+            <description>Framework for analyzing Kubernetes resource configuration</description>
+            <structure>
+                <section id="1">
+                    <n>Resource Overview</n>
+                    <content>
+                        <element>Resource type and name</element>
+                        <element>Namespace</element>
+                        <element>Creation time and age</element>
+                        <element>Owner references</element>
+                        <element>Labels and annotations</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <n>Configuration Assessment</n>
+                    <content>
+                        <element>Resource requests and limits</element>
+                        <element>Health probe configuration</element>
+                        <element>Security context settings</element>
+                        <element>Volume configuration</element>
+                        <element>Network configuration</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <n>Compliance Check</n>
+                    <content>
+                        <element>Rule violations</element>
+                        <element>Best practice deviations</element>
+                        <element>Security concerns</element>
+                        <element>Reliability issues</element>
+                        <element>Operational gaps</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <n>Recommendations</n>
+                    <content>
+                        <element>Resource optimization</element>
+                        <element>Security improvements</element>
+                        <element>Reliability enhancements</element>
+                        <element>Operational efficiency</element>
+                        <element>Implementation steps</element>
+                    </content>
+                </section>
+            </structure>
+            <examples>
+                <example>
+                    <title>Deployment Resource Analysis</title>
+                    <description>Analysis of frontend deployment configuration</description>
+                </example>
+                <example>
+                    <title>StatefulSet Resource Analysis</title>
+                    <description>Analysis of database StatefulSet configuration</description>
+                </example>
+            </examples>
+        </template>
+        
+        <template type="error_troubleshooting">
+            <title>Kubernetes Error Troubleshooting</title>
+            <description>Framework for diagnosing and resolving Kubernetes errors</description>
+            <structure>
+                <section id="1">
+                    <n>Error Identification</n>
+                    <content>
+                        <element>Error message or symptom</element>
+                        <element>Affected resources</element>
+                        <element>Error category</element>
+                        <element>Severity assessment</element>
+                        <element>Related events</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <n>Root Cause Analysis</n>
+                    <content>
+                        <element>Resource state examination</element>
+                        <element>Log analysis</element>
+                        <element>Event correlation</element>
+                        <element>Configuration review</element>
+                        <element>Component interaction</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <n>Resolution Steps</n>
+                    <content>
+                        <element>Immediate mitigation</element>
+                        <element>Configuration changes</element>
+                        <element>Resource manipulation</element>
+                        <element>Verification steps</element>
+                        <element>Rollback procedure</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <n>Prevention Recommendations</n>
+                    <content>
+                        <element>Best practice alignment</element>
+                        <element>Monitoring improvements</element>
+                        <element>Rule implementation</element>
+                        <element>Process enhancement</element>
+                        <element>Documentation updates</element>
+                    </content>
+                </section>
+            </structure>
+            <examples>
+                <example>
+                    <title>Pod Pending Status Troubleshooting</title>
+                    <description>Resolving pod scheduling failure</description>
+                </example>
+                <example>
+                    <title>Service Connection Failure</title>
+                    <description>Diagnosing service connectivity issues</description>
+                </example>
+            </examples>
+        </template>
+        
+        <template type="deployment_strategy">
+            <title>Kubernetes Deployment Strategy</title>
+            <description>Framework for designing application deployment approaches</description>
+            <structure>
+                <section id="1">
+                    <n>Application Requirements</n>
+                    <content>
+                        <element>Availability requirements</element>
+                        <element>Downtime tolerance</element>
+                        <element>Stateful considerations</element>
+                        <element>Rollback capabilities</element>
+                        <element>Testing requirements</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <n>Strategy Selection</n>
+                    <content>
+                        <element>Recommended strategy type</element>
+                        <element>Alternative approaches</element>
+                        <element>Trade-off analysis</element>
+                        <element>Resource implications</element>
+                        <element>Operational complexity</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <n>Implementation Guide</n>
+                    <content>
+                        <element>Resource configuration</element>
+                        <element>Deployment parameters</element>
+                        <element>Testing procedures</element>
+                        <element>Monitoring considerations</element>
+                        <element>Rollback procedures</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <n>Validation Plan</n>
+                    <content>
+                        <element>Success criteria</element>
+                        <element>Validation tests</element>
+                        <element>Performance verification</element>
+                        <element>User impact assessment</element>
+                        <element>Post-deployment checks</element>
+                    </content>
+                </section>
+            </structure>
+            <examples>
+                <example>
+                    <title>Stateless API Deployment Strategy</title>
+                    <description>Rolling update strategy for API service</description>
+                </example>
+                <example>
+                    <title>Database Deployment Strategy</title>
+                    <description>Blue/green deployment for database migration</description>
+                </example>
+            </examples>
+        </template>
+        
+        <template type="security_assessment">
+            <title>Kubernetes Security Assessment</title>
+            <description>Framework for evaluating Kubernetes security posture</description>
+            <structure>
+                <section id="1">
+                    <n>Scope Definition</n>
+                    <content>
+                        <element>Assessment boundaries</element>
+                        <element>Included resources</element>
+                        <element>Security focus areas</element>
+                        <element>Risk sensitivity</element>
+                        <element>Compliance requirements</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <n>Security Analysis</n>
+                    <content>
+                        <element>Authentication and authorization</element>
+                        <element>Network security</element>
+                        <element>Pod security</element>
+                        <element>Secret management</element>
+                        <element>Supply chain security</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <n>Findings and Risks</n>
+                    <content>
+                        <element>Identified vulnerabilities</element>
+                        <element>Configuration weaknesses</element>
+                        <element>Compliance violations</element>
+                        <element>Risk assessment</element>
+                        <element>Threat scenarios</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <n>Remediation Plan</n>
+                    <content>
+                        <element>Prioritized recommendations</element>
+                        <element>Implementation steps</element>
+                        <element>Resource requirements</element>
+                        <element>Validation procedures</element>
+                        <element>Long-term security strategy</element>
+                    </content>
+                </section>
+            </structure>
+            <examples>
+                <example>
+                    <title>Cluster Security Assessment</title>
+                    <description>Comprehensive security evaluation of Kubernetes cluster</description>
+                </example>
+                <example>
+                    <title>Application Security Review</title>
+                    <description>Security assessment of application deployment</description>
+                </example>
+            </examples>
+        </template>
+    </response_templates>
+
+    <implementation_guidance>
+        <deployment_patterns>
+            <pattern>
+                <n>Microservice Architecture</n>
+                <description>Implementing microservices on Kubernetes</description>
+                <components>
+                    <component>
+                        <n>Service Definition</n>
+                        <implementation>
+                            <step>Define service boundaries</step>
+                            <step>Design API contracts</step>
+                            <step>Determine service dependencies</step>
+                            <step>Plan data ownership</step>
+                        </implementation>
+                    </component>
+                    <component>
+                        <n>Service Implementation</n>
+                        <implementation>
+                            <step>Create Deployment for service instances</step>
+                            <step>Define appropriate Service for discovery</step>
+                            <step>Configure ConfigMaps for configuration</step>
+                            <step>Set up Secrets for credentials</step>
+                        </implementation>
+                    </component>
+                    <component>
+                        <n>Cross-Cutting Concerns</n>
+                        <implementation>
+                            <step>Implement service mesh for traffic management</step>
+                            <step>Configure distributed tracing</step>
+                            <step>Set up centralized logging</step>
+                            <step>Implement metrics collection</step>
+                        </implementation>
+                    </component>
+                </components>
+                <examples>
+                    <example>
+                        <title>E-commerce Microservices</title>
+                        <description>Breaking down e-commerce application into microservices</description>
+                    </example>
+                </examples>
+            </pattern>
+            
+            <pattern>
+                <n>StatefulService</n>
+                <description>Deploying stateful applications</description>
+                <components>
+                    <component>
+                        <n>Storage Configuration</n>
+                        <implementation>
+                            <step>Define appropriate StorageClass</step>
+                            <step>Configure volumeClaimTemplates</step>
+                            <step>Set up backup and restore mechanisms</step>
+                            <step>Define data retention policies</step>
+                        </implementation>
+                    </component>
+                    <component>
+                        <n>StatefulSet Definition</n>
+                        <implementation>
+                            <step>Configure pod management policy</step>
+                            <step>Define update strategy</step>
+                            <step>Set up headless service</step>
+                            <step>Configure init containers for data initialization</step>
+                        </implementation>
+                    </component>
+                    <component>
+                        <n>High Availability</n>
+                        <implementation>
+                            <step>Implement anti-affinity rules</step>
+                            <step>Set up PodDisruptionBudget</step>
+                            <step>Configure appropriate readiness checks</step>
+                            <step>Implement proper backup procedures</step>
+                        </implementation>
+                    </component>
+                </components>
+                <examples>
+                    <example>
+                        <title>Replicated Database</title>
+                        <description>Deploying replicated database with StatefulSets</description>
+                    </example>
+                </examples>
+            </pattern>
+            
+            <pattern>
+                <n>GitOps Workflow</n>
+                <description>Implementing GitOps for Kubernetes deployment</description>
+                <components>
+                    <component>
+                        <n>Repository Structure</n>
+                        <implementation>
+                            <step>Organize repository by environment</step>
+                            <step>Separate application from infrastructure</step>
+                            <step>Define promotion workflow</step>
+                            <step>Implement validation checks</step>
+                        </implementation>
+                    </component>
+                    <component>
+                        <n>Operator Selection</n>
+                        <implementation>
+                            <step>Choose appropriate GitOps operator</step>
+                            <step>Configure reconciliation frequency</step>
+                            <step>Set up repository access</step>
+                            <step>Define access controls</step>
+                        </implementation>
+                    </component>
+                    <component>
+                        <n>Change Management</n>
+                        <implementation>
+                            <step>Implement pull request workflow</step>
+                            <step>Configure automated validation</step>
+                            <step>Define approval processes</step>
+                            <step>Implement drift detection</step>
+                        </implementation>
+                    </component>
+                </components>
+                <examples>
+                    <example>
+                        <title>Multi-Environment GitOps</title>
+                        <description>Managing dev, staging, production with GitOps</description>
+                    </example>
+                </examples>
+            </pattern>
+        </deployment_patterns>
+        
+        <monitoring_instrumentation>
+            <component>
+                <n>Metrics Collection</n>
+                <description>Implementing comprehensive metrics collection</description>
+                <implementation>
+                    <step>Deploy Prometheus for metrics collection</step>
+                    <step>Configure ServiceMonitor or PodMonitor resources</step>
+                    <step>Add annotations for scraping configuration</step>
+                    <step>Implement application-specific metrics</step>
+                    <step>Configure alerting rules</step>
+                </implementation>
+                <best_practices>
+                    <practice>Use consistent naming convention for metrics</practice>
+                    <practice>Include appropriate labels for dimension querying</practice>
+                    <practice>Implement RED metrics (requests, errors, duration)</practice>
+                    <practice>Implement USE metrics (utilization, saturation, errors)</practice>
+                    <practice>Configure appropriate retention periods</practice>
+                </best_practices>
+            </component>
+            
+            <component>
+                <n>Logging Pipeline</n>
+                <description>Implementing centralized logging</description>
+                <implementation>
+                    <step>Configure applications for stdout/stderr logging</step>
+                    <step>Deploy log collection DaemonSet</step>
+                    <step>Configure log aggregation and storage</step>
+                    <step>Implement log indexing and search</step>
+                    <step>Set up log retention policies</step>
+                </implementation>
+                <best_practices>
+                    <practice>Use structured logging format (JSON)</practice>
+                    <practice>Include consistent correlation IDs</practice>
+                    <practice>Add appropriate context in log entries</practice>
+                    <practice>Implement appropriate log levels</practice>
+                    <practice>Consider log data compliance requirements</practice>
+                </best_practices>
+            </component>
+            
+            <component>
+                <n>Distributed Tracing</n>
+                <description>Implementing end-to-end request tracing</description>
+                <implementation>
+                    <step>Deploy tracing backend (Jaeger, etc.)</step>
+                    <step>Instrument applications for trace context propagation</step>
+                    <step>Configure sampling rates</step>
+                    <step>Integrate service mesh tracing</step>
+                    <step>Implement trace visualization</step>
+                </implementation>
+                <best_practices>
+                    <practice>Use W3C Trace Context standard</practice>
+                    <practice>Implement appropriate sampling based on traffic</practice>
+                    <practice>Add span attributes for query context</practice>
+                    <practice>Configure appropriate trace retention</practice>
+                    <practice>Correlate traces with logs and metrics</practice>
+                </best_practices>
+            </component>
+            
+            <component>
+                <n>Dashboarding</n>
+                <description>Creating comprehensive monitoring dashboards</description>
+                <implementation>
+                    <step>Deploy dashboard solution (Grafana, etc.)</step>
+                    <step>Create cluster state dashboards</step>
+                    <step>Configure application dashboards</step>
+                    <step>Set up SLO/SLA dashboards</step>
+                    <step>Implement cost monitoring dashboards</step>
+                </implementation>
+                <best_practices>
+                    <practice>Use consistent dashboard structure</practice>
+                    <practice>Include overview and drill-down views</practice>
+                    <practice>Add appropriate time range selectors</practice>
+                    <practice>Include documentation within dashboards</practice>
+                    <practice>Version control dashboard definitions</practice>
+                </best_practices>
+            </component>
+        </monitoring_instrumentation>
+        
+        <network_configuration>
+            <component>
+                <n>Service Mesh</n>
+                <description>Implementing service mesh for traffic management</description>
+                <implementation>
+                    <step>Select appropriate service mesh implementation</step>
+                    <step>Deploy control plane components</step>
+                    <step>Configure proxy injection</step>
+                    <step>Implement traffic policies</step>
+                    <step>Set up telemetry collection</step>
+                </implementation>
+                <best_practices>
+                    <practice>Start with focused scope before expanding</practice>
+                    <practice>Implement gradual adoption strategy</practice>
+                    <practice>Configure appropriate resource limits for proxies</practice>
+                    <practice>Use canary deployments for policy changes</practice>
+                    <practice>Maintain upgrade strategy for mesh components</practice>
+                </best_practices>
+            </component>
+            
+            <component>
+                <n>Ingress Configuration</n>
+                <description>Implementing external traffic routing</description>
+                <implementation>
+                    <step>Select appropriate Ingress controller</step>
+                    <step>Configure TLS termination</step>
+                    <step>Implement path-based routing</step>
+                    <step>Configure authentication and authorization</step>
+                    <step>Set up rate limiting and throttling</step>
+                </implementation>
+                <best_practices>
+                    <practice>Use annotation standardization</practice>
+                    <practice>Implement proper TLS certificate management</practice>
+                    <practice>Configure appropriate timeouts and retries</practice>
+                    <practice>Implement cross-origin resource sharing policies</practice>
+                    <practice>Set up proper monitoring and alerting</practice>
+                </best_practices>
+            </component>
+            
+            <component>
+                <n>Network Policies</n>
+                <description>Implementing network security</description>
+                <implementation>
+                    <step>Implement default deny policies</step>
+                    <step>Configure explicit allow rules</step>
+                    <step>Define namespace isolation</step>
+                    <step>Configure egress controls</step>
+                    <step>Implement monitoring for policy violations</step>
+                </implementation>
+                <best_practices>
+                    <practice>Start with monitoring mode before enforcement</practice>
+                    <practice>Use consistent labeling for policy selection</practice>
+                    <practice>Implement explicit policies for each namespace</practice>
+                    <practice>Document communication patterns in policies</practice>
+                    <practice>Test policies thoroughly before enforcement</practice>
+                </best_practices>
+            </component>
+            
+            <component>
+                <n>DNS Configuration</n>
+                <description>Implementing robust DNS resolution</description>
+                <implementation>
+                    <step>Configure appropriate DNS service</step>
+                    <step>Set up DNS policies</step>
+                    <step>Implement caching configuration</step>
+                    <step>Configure DNS for external service discovery</step>
+                    <step>Set up monitoring for DNS performance</step>
+                </implementation>
+                <best_practices>
+                    <practice>Configure appropriate cache sizes</practice>
+                    <practice>Implement appropriate TTL values</practice>
+                    <practice>Monitor DNS query errors and latency</practice>
+                    <practice>Configure pod DNS policies appropriately</practice>
+                    <practice>Scale DNS services based on cluster size</practice>
+                </best_practices>
+            </component>
+        </network_configuration>
+        
+        <security_implementation>
+            <component>
+                <n>Secret Management</n>
+                <description>Implementing secure secret handling</description>
+                <implementation>
+                    <step>Evaluate external secret management solutions</step>
+                    <step>Configure secret encryption at rest</step>
+                    <step>Implement secret rotation mechanisms</step>
+                    <step>Set up secret access policies</step>
+                    <step>Configure secret mounting in pods</step>
+                </implementation>
+                <best_practices>
+                    <practice>Use external secret management when possible</practice>
+                    <practice>Implement least privilege for secret access</practice>
+                    <practice>Rotate secrets regularly</practice>
+                    <practice>Avoid storing secrets in container images</practice>
+                    <practice>Implement secret versioning when appropriate</practice>
+                </best_practices>
+            </component>
+            
+            <component>
+                <n>Authentication and Authorization</n>
+                <description>Implementing secure access controls</description>
+                <implementation>
+                    <step>Configure identity provider integration</step>
+                    <step>Implement RBAC for access control</step>
+                    <step>Configure service accounts appropriately</step>
+                    <step>Set up authentication proxy when needed</step>
+                    <step>Implement audit logging</step>
+                </implementation>
+                <best_practices>
+                    <practice>Follow principle of least privilege</practice>
+                    <practice>Use dedicated service accounts for workloads</practice>
+                    <practice>Implement short-lived credentials</practice>
+                    <practice>Regular audit of RBAC permissions</practice>
+                    <practice>Implement multi-factor authentication for humans</practice>
+                </best_practices>
+            </component>
+            
+            <component>
+                <n>Pod Security</n>
+                <description>Implementing secure pod configurations</description>
+                <implementation>
+                    <step>Configure security context settings</step>
+                    <step>Implement Pod Security Standards</step>
+                    <step>Set up admission controllers</step>
+                    <step>Configure container vulnerability scanning</step>
+                    <step>Implement runtime security monitoring</step>
+                </implementation>
+                <best_practices>
+                    <practice>Run containers as non-root users</practice>
+                    <practice>Use read-only root filesystems when possible</practice>
+                    <practice>Drop unnecessary capabilities</practice>
+                    <practice>Implement seccomp profiles</practice>
+                    <practice>Use admission controllers to enforce policies</practice>
+                </best_practices>
+            </component>
+            
+            <component>
+                <n>Supply Chain Security</n>
+                <description>Implementing secure CI/CD practices</description>
+                <implementation>
+                    <step>Configure image signing and verification</step>
+                    <step>Implement vulnerability scanning in CI pipeline</step>
+                    <step>Set up secure image registries</step>
+                    <step>Configure admission control for image validation</step>
+                    <step>Implement artifact provenance verification</step>
+                </implementation>
+                <best_practices>
+                    <practice>Use minimal base images</practice>
+                    <practice>Pin image references to digests</practice>
+                    <practice>Implement scanning at multiple pipeline stages</practice>
+                    <practice>Define and enforce security gates</practice>
+                    <practice>Implement Software Bill of Materials (SBOM)</practice>
+                </best_practices>
+            </component>
+        </security_implementation>
+    </implementation_guidance>
+
+    <examples>
+        <example name="microservice_deployment">
+            <title>Microservice Application Deployment</title>
+            <description>Example of deploying a microservice architecture on Kubernetes</description>
+            <content>
+                <namespace>
+                    <yaml>
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: microservice-demo
+  labels:
+    app: microservice-demo
+    environment: production
+    </yaml>
+                </namespace>
+                
+                <frontend_service>
+                    <yaml>
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: microservice-demo
+  labels:
+    app: frontend
+    component: ui
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: frontend
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: frontend
+        component: ui
+    spec:
+      containers:
+      - name: frontend
+        image: example/frontend:1.0.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 200m
+            memory: 256Mi
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 10
+          periodSeconds: 5
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 15
+          periodSeconds: 20
+        env:
+        - name: API_URL
+          valueFrom:
+            configMapKeyRef:
+              name: frontend-config
+              key: api_url
+        securityContext:
+          runAsNonRoot: true
+          runAsUser: 1000
+          readOnlyRootFilesystem: true
+      securityContext:
+        fsGroup: 1000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+  namespace: microservice-demo
+  labels:
+    app: frontend
+    component: ui
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: frontend
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: frontend-ingress
+  namespace: microservice-demo
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: app.example.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: frontend
+            port:
+              number: 80
+  tls:
+  - hosts:
+    - app.example.com
+    secretName: app-tls-cert
+                    </yaml>
+                </frontend_service>
+                
+                <backend_service>
+                    <yaml>
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-service
+  namespace: microservice-demo
+  labels:
+    app: api-service
+    component: backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: api-service
+  template:
+    metadata:
+      labels:
+        app: api-service
+        component: backend
+    spec:
+      containers:
+      - name: api
+        image: example/api:1.0.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            cpu: 200m
+            memory: 256Mi
+          limits:
+            cpu: 500m
+            memory: 512Mi
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 10
+          periodSeconds: 5
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 15
+          periodSeconds: 20
+        env:
+        - name: DB_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: api-config
+              key: db_host
+        - name: DB_USER
+          valueFrom:
+            secretKeyRef:
+              name: db-credentials
+              key: username
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: db-credentials
+              key: password
+        securityContext:
+          runAsNonRoot: true
+          runAsUser: 1000
+          readOnlyRootFilesystem: true
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 100
+            podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                - key: app
+                  operator: In
+                  values:
+                  - api-service
+              topologyKey: "kubernetes.io/hostname"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: api-service
+  namespace: microservice-demo
+  labels:
+    app: api-service
+    component: backend
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: api-service
+                    </yaml>
+                </backend_service>
+                
+                <database_service>
+                    <yaml>
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: database
+  namespace: microservice-demo
+  labels:
+    app: database
+    component: storage
+spec:
+  serviceName: database
+  replicas: 1
+  selector:
+    matchLabels:
+      app: database
+  template:
+    metadata:
+      labels:
+        app: database
+        component: storage
+    spec:
+      containers:
+      - name: postgres
+        image: postgres:13.3
+        ports:
+        - containerPort: 5432
+          name: postgres
+        resources:
+          requests:
+            cpu: 500m
+            memory: 1Gi
+          limits:
+            cpu: 1000m
+            memory: 2Gi
+        env:
+        - name: POSTGRES_USER
+          valueFrom:
+            secretKeyRef:
+              name: db-credentials
+              key: username
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: db-credentials
+              key: password
+        - name: POSTGRES_DB
+          value: appdb
+        volumeMounts:
+        - name: data
+          mountPath: /var/lib/postgresql/data
+  volumeClaimTemplates:
+  - metadata:
+      name: data
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      storageClassName: standard
+      resources:
+        requests:
+          storage: 10Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: database
+  namespace: microservice-demo
+  labels:
+    app: database
+    component: storage
+spec:
+  clusterIP: None
+  ports:
+  - port: 5432
+    targetPort: 5432
+    protocol: TCP
+    name: postgres
+  selector:
+    app: database
+                    </yaml>
+                </database_service>
+                
+                <network_policies>
+                    <yaml>
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: default-deny
+  namespace: microservice-demo
+spec:
+  podSelector: {}
+  policyTypes:
+  - Ingress
+  - Egress
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: frontend-policy
+  namespace: microservice-demo
+spec:
+  podSelector:
+    matchLabels:
+      app: frontend
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - ipBlock:
+        cidr: 0.0.0.0/0
+    ports:
+    - protocol: TCP
+      port: 8080
+  egress:
+  - to:
+    - podSelector:
+        matchLabels:
+          app: api-service
+    ports:
+    - protocol: TCP
+      port: 80
+  - to:
+    - namespaceSelector:
+        matchLabels:
+          kubernetes.io/metadata.name: kube-system
+      podSelector:
+        matchLabels:
+          k8s-app: kube-dns
+    ports:
+    - protocol: UDP
+      port: 53
+    - protocol: TCP
+      port: 53
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: api-policy
+  namespace: microservice-demo
+spec:
+  podSelector:
+    matchLabels:
+      app: api-service
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app: frontend
+    ports:
+    - protocol: TCP
+      port: 8080
+  egress:
+  - to:
+    - podSelector:
+        matchLabels:
+          app: database
+    ports:
+    - protocol: TCP
+      port: 5432
+  - to:
+    - namespaceSelector:
+        matchLabels:
+          kubernetes.io/metadata.name: kube-system
+      podSelector:
+        matchLabels:
+          k8s-app: kube-dns
+    ports:
+    - protocol: UDP
+      port: 53
+    - protocol: TCP
+      port: 53
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: database-policy
+  namespace: microservice-demo
+spec:
+  podSelector:
+    matchLabels:
+      app: database
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app: api-service
+    ports:
+    - protocol: TCP
+      port: 5432
+  egress:
+  - to:
+    - namespaceSelector:
+        matchLabels:
+          kubernetes.io/metadata.name: kube-system
+      podSelector:
+        matchLabels:
+          k8s-app: kube-dns
+    ports:
+    - protocol: UDP
+      port: 53
+    - protocol: TCP
+      port: 53
+                    </yaml>
+                </network_policies>
+                
+                <config_and_secrets>
+                    <yaml>
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: frontend-config
+  namespace: microservice-demo
+data:
+  api_url: "http://api-service"
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: api-config
+  namespace: microservice-demo
+data:
+  db_host: "database"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: db-credentials
+  namespace: microservice-demo
+type: Opaque
+data:
+  username: YWRtaW4=  # admin
+  password: cGFzc3dvcmQxMjM=  # password123
+                    </yaml>
+                </config_and_secrets>
+                
+                <hpa_pdb>
+                    <yaml>
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: frontend-hpa
+  namespace: microservice-demo
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: frontend
+  minReplicas: 3
+  maxReplicas: 10
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 80
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: api-hpa
+  namespace: microservice-demo
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: api-service
+  minReplicas: 3
+  maxReplicas: 10
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 80
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: frontend-pdb
+  namespace: microservice-demo
+spec:
+  minAvailable: 2
+  selector:
+    matchLabels:
+      app: frontend
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: api-pdb
+  namespace: microservice-demo
+spec:
+  minAvailable: 2
+  selector:
+    matchLabels:
+      app: api-service
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: db-pdb
+  namespace: microservice-demo
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app: database
+                    </yaml>
+                </hpa_pdb>
+            </content>
+            <best_practices>
+                <tip>Implement resource requests and limits for all containers</tip>
+                <tip>Use readiness and liveness probes for health checking</tip>
+                <tip>Implement network policies for micro-segmentation</tip>
+                <tip>Use pod anti-affinity for high availability</tip>
+                <tip>Implement HPA for automatic scaling</tip>
+                <tip>Use PDBs to ensure availability during maintenance</tip>
+                <tip>Store sensitive data in Secrets, configuration in ConfigMaps</tip>
+                <tip>Run containers as non-root users with restricted permissions</tip>
+                <tip>Use StatefulSets for stateful workloads</tip>
+                <tip>Implement proper label selectors for service discovery</tip>
+            </best_practices>
+        </example>
+        
+        <example name="gitops_implementation">
+            <title>GitOps Implementation with Flux</title>
+            <description>Example of implementing GitOps workflow with Flux CD</description>
+            <content>
+                <flux_installation>
+                    <yaml>
+# Install Flux CLI and bootstrap repository
+# On local machine:
+$ flux check --pre
+$ flux bootstrap github \
+  --owner=example-org \
+  --repository=k8s-gitops \
+  --personal \
+  --path=clusters/production
+                    </yaml>
+                </flux_installation>
+                
+                <repository_structure>
+                    <tree>
+k8s-gitops/
+├── base/
+│   ├── kustomization.yaml
+│   ├── namespaces/
+│   │   ├── kustomization.yaml
+│   │   ├── monitoring.yaml
+│   │   └── applications.yaml
+│   ├── monitoring/
+│   │   ├── kustomization.yaml
+│   │   ├── prometheus/
+│   │   ├── grafana/
+│   │   └── alertmanager/
+│   └── applications/
+│       ├── kustomization.yaml
+│       ├── frontend/
+│       ├── backend/
+│       └── database/
+└── clusters/
+    ├── dev/
+    │   ├── kustomization.yaml
+    │   └── flux-system/
+    ├── staging/
+    │   ├── kustomization.yaml
+    │   └── flux-system/
+    └── production/
+        ├── kustomization.yaml
+        ├── flux-system/
+        ├── monitoring-patch.yaml
+        └── applications-patch.yaml
+                    </tree>
+                </repository_structure>
+                
+                <cluster_kustomization>
+                    <yaml>
+# clusters/production/kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../base/namespaces
+  - ../../base/monitoring
+  - ../../base/applications
+patches:
+  - path: monitoring-patch.yaml
+  - path: applications-patch.yaml
+                    </yaml>
+                </cluster_kustomization>
+                
+                <application_source>
+                    <yaml>
+# base/applications/frontend/kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - deployment.yaml
+  - service.yaml
+  - ingress.yaml
+  - config.yaml
+
+# base/applications/frontend/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: applications
+  labels:
+    app: frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: example/frontend:1.0.0
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 200m
+            memory: 256Mi
+                    </yaml>
+                </application_source>
+                
+                <environment_patch>
+                    <yaml>
+# clusters/production/applications-patch.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: applications
+spec:
+  replicas: 5
+  template:
+    spec:
+      containers:
+      - name: frontend
+        image: example/frontend:1.0.0
+        resources:
+          requests:
+            cpu: 200m
+            memory: 256Mi
+          limits:
+            cpu: 500m
+            memory: 512Mi
+                    </yaml>
+                </environment_patch>
+                
+                <flux_source>
+                    <yaml>
+# Define source for application container images
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageRepository
+metadata:
+  name: frontend
+  namespace: flux-system
+spec:
+  image: example/frontend
+  interval: 1m0s
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImagePolicy
+metadata:
+  name: frontend
+  namespace: flux-system
+spec:
+  imageRepositoryRef:
+    name: frontend
+  policy:
+    semver:
+      range: 1.0.x
+                    </yaml>
+                </flux_source>
+                
+                <flux_automation>
+                    <yaml>
+# Enable automated updates based on new images
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageUpdateAutomation
+metadata:
+  name: apps
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  git:
+    checkout:
+      ref:
+        branch: main
+    commit:
+      author:
+        email: fluxbot@example.com
+        name: Flux Bot
+      messageTemplate: 'Update image: {{ .Updated.Image }}:{{ .Updated.Tag }}'
+    push:
+      branch: main
+  update:
+    path: ./clusters
+    strategy: Setters
+                    </yaml>
+                </flux_automation>
+                
+                <kustomization_controller>
+                    <yaml>
+# Define how Flux should sync the repository
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: applications
+  namespace: flux-system
+spec:
+  interval: 10m0s
+  path: ./clusters/production
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  validation: client
+  healthChecks:
+  - apiVersion: apps/v1
+    kind: Deployment
+    name: frontend
+    namespace: applications
+  timeout: 5m0s
+                    </yaml>
+                </kustomization_controller>
+            </content>
+            <best_practices>
+                <tip>Use separate directories for different environments</tip>
+                <tip>Keep base configurations separate from environment-specific overlays</tip>
+                <tip>Use strategic patches for environment customization</tip>
+                <tip>Define health checks to verify successful deployments</tip>
+                <tip>Set up image update automation with semantic versioning</tip>
+                <tip>Implement progressive deployment strategies</tip>
+                <tip>Use commits to track changes in configuration</tip>
+                <tip>Implement branch protection and require PR reviews</tip>
+                <tip>Configure notifications for deployment status</tip>
+                <tip>Use readiness gates to control promotion between environments</tip>
+            </best_practices>
+        </example>
+    </examples>
+
+    <glossary>
+        <term>
+            <name>Pod</name>
+            <definition>The smallest deployable unit in Kubernetes that can contain one or more containers sharing network and storage.</definition>
+        </term>
+        <term>
+            <name>Deployment</name>
+            <definition>A Kubernetes resource that manages a replicated application and enables declarative updates.</definition>
+        </term>
+        <term>
+            <name>StatefulSet</name>
+            <definition>A workload API object used to manage stateful applications with stable, unique network identifiers and persistent storage.</definition>
+        </term>
+        <term>
+            <name>Service</name>
+            <definition>An abstract way to expose an application running on a set of Pods as a network service.</definition>
+        </term>
+        <term>
+            <name>Ingress</name>
+            <definition>A Kubernetes resource that manages external access to services in a cluster, typically HTTP/HTTPS traffic.</definition>
+        </term>
+        <term>
+            <name>ConfigMap</name>
+            <definition>A Kubernetes resource for storing non-confidential configuration data as key-value pairs.</definition>
+        </term>
+        <term>
+            <name>Secret</name>
+            <definition>A Kubernetes resource for storing sensitive information such as passwords, tokens, or keys.</definition>
+        </term>
+        <term>
+            <name>PersistentVolume</name>
+            <definition>A storage resource in the cluster provisioned by an administrator or dynamically.</definition>
+        </term>
+        <term>
+            <name>PersistentVolumeClaim</name>
+            <definition>A request for storage by a user that can be fulfilled by a PersistentVolume.</definition>
+        </term>
+        <term>
+            <name>Namespace</name>
+            <definition>A mechanism for isolating groups of resources within a single cluster.</definition>
+        </term>
+        <term>
+            <name>ServiceAccount</name>
+            <definition>An identity for processes running in pods that can be used to authenticate to the Kubernetes API.</definition>
+        </term>
+        <term>
+            <name>RBAC</name>
+            <definition>Role-Based Access Control, a method of regulating access to resources based on roles.</definition>
+        </term>
+        <term>
+            <name>NetworkPolicy</name>
+            <definition>A specification of how groups of pods are allowed to communicate with each other and other network endpoints.</definition>
+        </term>
+        <term>
+            <name>HorizontalPodAutoscaler</name>
+            <definition>A Kubernetes resource that automatically scales the number of pods in a deployment or statefulset based on observed metrics.</definition>
+        </term>
+        <term>
+            <name>PodDisruptionBudget</name>
+            <definition>A resource that limits the number of pods of a replicated application that can be down simultaneously.</definition>
+        </term>
+        <term>
+            <name>GitOps</name>
+            <definition>A paradigm where the entire system is described declaratively in Git, and changes to the system are made through Git operations.</definition>
+        </term>
+        <term>
+            <name>Operator</name>
+            <definition>A method of packaging, deploying, and managing a Kubernetes application using custom resources and controllers.</definition>
+        </term>
+        <term>
+            <name>Service Mesh</name>
+            <definition>A dedicated infrastructure layer for facilitating service-to-service communications between services or microservices.</definition>
+        </term>
+        <term>
+            <name>Custom Resource Definition</name>
+            <definition>An extension of the Kubernetes API that defines custom resources.</definition>
+        </term>
+        <term>
+            <name>Init Container</name>
+            <definition>A container that runs before app containers in a pod and completes before app containers start.</definition>
+        </term>
+    </glossary>
+</kubernetes_expert>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<terraform_expert>
+<terraform_expert version="2.0">
     <metadata>
         <title>Terraform Expert System</title>
-        <version>1.0.0</version>
-        <last_updated>2025-03-07</last_updated>
-        <author>Expert Instruction Generator</author>
-        <description>Comprehensive knowledge system for Terraform infrastructure as code expertise</description>
+        <version>2.0.0</version>
+        <last_updated>2025-03-09</last_updated>
+        <author>Domain-Driven Infrastructure Team</author>
+        <description>Comprehensive knowledge system for Terraform infrastructure as code with domain-driven design principles</description>
         <compatibility>
             <minimum_terraform_version>1.0.0</minimum_terraform_version>
-            <recommended_terraform_version>1.5.0+</recommended_terraform_version>
+            <recommended_terraform_version>1.7.0+</recommended_terraform_version>
             <supported_providers>
                 <provider>AWS</provider>
                 <provider>Azure</provider>
@@ -16,8 +16,26 @@
                 <provider>Kubernetes</provider>
                 <provider>Custom Providers</provider>
             </supported_providers>
+            <works_with>
+                <system>Azure DevOps Pipelines Expert</system>
+                <system>What-if Analysis Framework</system>
+                <system>Azure Networking Expert System</system>
+                <system>Azure Governance Expert</system>
+            </works_with>
         </compatibility>
         <change_log>
+            <entry version="2.0.0" date="2025-03-09">
+                <change>Added domain-driven design principles for infrastructure</change>
+                <change>Enhanced CI/CD integration with Azure DevOps Pipelines</change>
+                <change>Added comprehensive what-if analysis framework</change>
+                <change>Improved language-specific optimizations (PowerShell, C#, TypeScript, HCL)</change>
+                <change>Added backward planning methodology</change>
+                <change>Enhanced module development patterns</change>
+                <change>Added policy as code and governance section</change>
+                <change>Improved security posture assessment</change>
+                <change>Added infrastructure testing frameworks</change>
+                <change>Enhanced multi-cloud strategies</change>
+            </entry>
             <entry version="1.0.0" date="2025-03-07">
                 <change>Initial terraform expert system creation</change>
             </entry>
@@ -35,6 +53,10 @@
                 <item>Functions and built-in operators</item>
                 <item>String interpolation and directives</item>
                 <item>Conditional expressions and splat operators</item>
+                <item>Type constraints and custom validation rules</item>
+                <item>For expressions and generation patterns</item>
+                <item>Complex type handling (maps, objects, tuples)</item>
+                <item>Dynamic provider configuration</item>
             </hcl_language>
 
             <lifecycle_management>
@@ -46,6 +68,10 @@
                 <item>Resource targeting</item>
                 <item>Refresh and drift detection</item>
                 <item>Import and state manipulation</item>
+                <item>Terraform Cloud integration</item>
+                <item>Remote operations and approval workflow</item>
+                <item>State migration strategies</item>
+                <item>Ephemeral environments management</item>
             </lifecycle_management>
 
             <providers>
@@ -57,6 +83,10 @@
                 <item>Provider plugin directory management</item>
                 <item>Registry-provided vs locally-defined providers</item>
                 <item>Provider proxy configuration</item>
+                <item>Provider-specific configuration optimizations</item>
+                <item>Multi-region provider configuration</item>
+                <item>Cross-provider resource integration</item>
+                <item>Provider-specific authentication strategies</item>
             </providers>
 
             <resource_management>
@@ -68,6 +98,10 @@
                 <item>Provisioners and connection configuration</item>
                 <item>Destroy-time provisioners</item>
                 <item>Resource import and adoption</item>
+                <item>Resource replacement analysis</item>
+                <item>Moved block usage for refactoring</item>
+                <item>For_each with complex expressions</item>
+                <item>Resource preconditions and postconditions</item>
             </resource_management>
         </terraform_fundamentals>
 
@@ -81,6 +115,10 @@
                 <item>Version constraints and selection</item>
                 <item>Module development workflow</item>
                 <item>Module documentation generation</item>
+                <item>Domain-aligned module boundaries</item>
+                <item>Cross-module state coordination</item>
+                <item>Versioning strategy and compatibility</item>
+                <item>Module interface design principles</item>
             </architecture>
 
             <patterns>
@@ -92,6 +130,10 @@
                 <item>Loop constructs (count vs for_each)</item>
                 <item>Default configurations and overrides</item>
                 <item>Tagging strategies and inheritance</item>
+                <item>Opinionated vs. flexible module design</item>
+                <item>Boundary enforcement with validations</item>
+                <item>Adapter pattern for multi-provider support</item>
+                <item>Domain-specific language construction</item>
             </patterns>
 
             <testing>
@@ -103,7 +145,26 @@
                 <item>Property-based testing</item>
                 <item>Snapshot testing</item>
                 <item>Compliance testing frameworks</item>
+                <item>End-to-end infrastructure testing</item>
+                <item>Performance and load testing</item>
+                <item>Security posture testing</item>
+                <item>Infrastructure drift testing</item>
             </testing>
+            
+            <domain_driven_modules>
+                <item>Bounded context identification in infrastructure</item>
+                <item>Ubiquitous language in module design</item>
+                <item>Domain entity representation as resources</item>
+                <item>Aggregate boundaries for resource groups</item>
+                <item>Strategic domain partitioning</item>
+                <item>Context mapping between modules</item>
+                <item>Anti-corruption layers for legacy integration</item>
+                <item>Domain event propagation through triggers</item>
+                <item>Repository pattern for state management</item>
+                <item>Value objects and entities in infrastructure</item>
+                <item>Policy enforcement through domain constraints</item>
+                <item>Infrastructure as code domain modeling techniques</item>
+            </domain_driven_modules>
         </module_development>
 
         <state_management>
@@ -116,6 +177,10 @@
                 <item>Backend initialization</item>
                 <item>Backend migration strategies</item>
                 <item>Partial backend configuration</item>
+                <item>Enhanced state encryption options</item>
+                <item>Multi-backend coordination</item>
+                <item>State performance optimization</item>
+                <item>Custom backend implementation</item>
             </backend_configuration>
 
             <state_operations>
@@ -127,6 +192,10 @@
                 <item>Sensitive data in state</item>
                 <item>Resource move operations</item>
                 <item>State recovery techniques</item>
+                <item>State pruning and cleanup</item>
+                <item>State integrity validation</item>
+                <item>Resource import workflows</item>
+                <item>Bulk state transformation</item>
             </state_operations>
 
             <collaboration>
@@ -138,6 +207,10 @@
                 <item>Cross-team dependency management</item>
                 <item>State change notification</item>
                 <item>Audit logging for state changes</item>
+                <item>RBAC for state operations</item>
+                <item>Approval workflows for state changes</item>
+                <item>State change communication protocols</item>
+                <item>SLA management for state operations</item>
             </collaboration>
         </state_management>
 
@@ -151,6 +224,10 @@
                 <item>Resource distribution strategies</item>
                 <item>Cross-cutting concerns</item>
                 <item>Service mesh integration</item>
+                <item>Multi-tenant architecture management</item>
+                <item>Dynamic capacity allocation</item>
+                <item>Load-based resource provisioning</item>
+                <item>Elastic infrastructure patterns</item>
             </scaling>
 
             <security>
@@ -162,6 +239,10 @@
                 <item>Encryption configuration</item>
                 <item>Compliance as code</item>
                 <item>Security scanning integration</item>
+                <item>Zero-trust architecture implementation</item>
+                <item>Key rotation automation</item>
+                <item>Certificate management</item>
+                <item>Security posture assessment</item>
             </security>
 
             <reliability>
@@ -173,6 +254,10 @@
                 <item>Backup automation</item>
                 <item>Self-healing infrastructure</item>
                 <item>Chaos engineering integration</item>
+                <item>Regional failover automation</item>
+                <item>Recovery time objective optimization</item>
+                <item>Resilience testing frameworks</item>
+                <item>Degraded state management</item>
             </reliability>
 
             <cost_optimization>
@@ -184,7 +269,26 @@
                 <item>Lifecycle policies for storage</item>
                 <item>Automated cleanup for unused resources</item>
                 <item>Cost estimation and budgeting</item>
+                <item>Cost-aware resource selection</item>
+                <item>Usage-based scaling rules</item>
+                <item>Resource utilization monitoring</item>
+                <item>Budget enforcement policies</item>
             </cost_optimization>
+            
+            <backward_planning>
+                <item>Outcome-based infrastructure design</item>
+                <item>Production-first requirement modeling</item>
+                <item>Constraint-driven architecture</item>
+                <item>End-state configuration definition</item>
+                <item>Dependency mapping from target state</item>
+                <item>Progressive enhancement patterns</item>
+                <item>Capability-based resource selection</item>
+                <item>Transition state planning</item>
+                <item>Validation criteria derivation</item>
+                <item>Implementation phasing strategy</item>
+                <item>Acceptance criteria definition</item>
+                <item>Verification and rollback planning</item>
+            </backward_planning>
         </infrastructure_patterns>
 
         <devops_integration>
@@ -197,6 +301,10 @@
                 <item>Pipeline variables and secrets</item>
                 <item>Parallel execution strategies</item>
                 <item>Artifact management</item>
+                <item>Azure DevOps Pipeline integration</item>
+                <item>GitHub Actions workflow configuration</item>
+                <item>Jenkins pipeline integration</item>
+                <item>CircleCI configuration patterns</item>
             </cicd_pipelines>
 
             <gitops>
@@ -208,6 +316,10 @@
                 <item>Code review automation</item>
                 <item>Automated documentation</item>
                 <item>Change categorization</item>
+                <item>Flux integration for GitOps</item>
+                <item>ArgoCD configuration for Terraform</item>
+                <item>Automated drift remediation</item>
+                <item>GitOps operator configuration</item>
             </gitops>
 
             <monitoring>
@@ -219,8 +331,151 @@
                 <item>Metric collection</item>
                 <item>Distributed tracing setup</item>
                 <item>Performance baseline establishment</item>
+                <item>Auto-remediation workflow integration</item>
+                <item>Synthetic monitoring configuration</item>
+                <item>Resource health tracking</item>
+                <item>Cost anomaly detection</item>
             </monitoring>
+            
+            <azure_devops_integration>
+                <item>Terraform Tasks in Azure Pipelines</item>
+                <item>Service connection configuration</item>
+                <item>Variable groups for Terraform</item>
+                <item>Multi-stage deployment pipelines</item>
+                <item>Release gate integration</item>
+                <item>Task groups for Terraform operations</item>
+                <item>Artifact publishing for Terraform modules</item>
+                <item>Azure DevOps repository integration</item>
+                <item>YAML pipeline templates for Terraform</item>
+                <item>Domain-aligned pipeline organization</item>
+                <item>Security scanning integration</item>
+                <item>Pull request validation workflows</item>
+            </azure_devops_integration>
         </devops_integration>
+        
+        <language_integration>
+            <powershell_integration>
+                <item>PowerShell script provisioners</item>
+                <item>Custom Azure PowerShell modules</item>
+                <item>PowerShell DSC integration</item>
+                <item>PowerShell-based validation hooks</item>
+                <item>Azure Automation DSC integration</item>
+                <item>PowerShell Gallery module integration</item>
+                <item>Credential management for PowerShell scripts</item>
+                <item>PowerShell-based data source providers</item>
+                <item>Pipeline-integrated PowerShell steps</item>
+                <item>PowerShell module as external provider</item>
+                <item>Azure VM Extension configuration</item>
+                <item>PowerShell logging integration</item>
+            </powershell_integration>
+            
+            <csharp_integration>
+                <item>.NET Core application deployment</item>
+                <item>C# Azure Functions integration</item>
+                <item>ASP.NET Core application infrastructure</item>
+                <item>Azure App Service configuration</item>
+                <item>.NET container deployment patterns</item>
+                <item>SQL Server configuration for .NET applications</item>
+                <item>Entity Framework Core-aware database provisioning</item>
+                <item>C# Lambda function deployment</item>
+                <item>Azure DevOps Pipeline for .NET applications</item>
+                <item>NuGet package integration</item>
+                <item>C# application configuration management</item>
+                <item>Service Fabric application deployment</item>
+            </csharp_integration>
+            
+            <typescript_integration>
+                <item>Node.js application infrastructure</item>
+                <item>TypeScript-based Lambda functions</item>
+                <item>TypeScript Azure Functions</item>
+                <item>Angular/React application hosting</item>
+                <item>CDN configuration for SPA deployment</item>
+                <item>npm package dependency management</item>
+                <item>Static website configuration</item>
+                <item>TypeScript AWS CDK integration</item>
+                <item>Next.js application infrastructure</item>
+                <item>TypeScript build pipeline integration</item>
+                <item>API Gateway configuration for TypeScript backends</item>
+                <item>TypeScript application configuration management</item>
+            </typescript_integration>
+            
+            <hcl_optimization>
+                <item>Advanced HCL syntax patterns</item>
+                <item>Performance optimization techniques</item>
+                <item>Code organization for large infrastructures</item>
+                <item>Dynamic expression optimization</item>
+                <item>Type system utilization</item>
+                <item>HCL-based DSL creation</item>
+                <item>HCL generator tools integration</item>
+                <item>Source code generation strategies</item>
+                <item>HCL code transformation techniques</item>
+                <item>Environment-specific language features</item>
+                <item>Custom function implementation</item>
+                <item>Meta-programming techniques</item>
+            </hcl_optimization>
+        </language_integration>
+        
+        <governance_patterns>
+            <policy_as_code>
+                <item>OPA/Rego policy implementation</item>
+                <item>Sentinel policy configuration</item>
+                <item>Azure Policy integration</item>
+                <item>AWS Organization policy management</item>
+                <item>Compliance validation frameworks</item>
+                <item>Policy enforcement points</item>
+                <item>Custom policy engine integration</item>
+                <item>Policy testing methodologies</item>
+                <item>Policy versioning strategies</item>
+                <item>Exception handling mechanisms</item>
+                <item>Policy violation remediation</item>
+                <item>Compliance reporting automation</item>
+            </policy_as_code>
+            
+            <team_governance>
+                <item>Multi-team collaboration models</item>
+                <item>Infrastructure ownership boundaries</item>
+                <item>Shared responsibility models</item>
+                <item>Cross-team dependency management</item>
+                <item>Infrastructure interface contracts</item>
+                <item>Governance enforcement mechanisms</item>
+                <item>Architectural review processes</item>
+                <item>Change advisory implementation</item>
+                <item>Infrastructure enhancement proposals</item>
+                <item>Risk assessment frameworks</item>
+                <item>Technical debt management</item>
+                <item>Knowledge sharing protocols</item>
+            </team_governance>
+            
+            <compliance_automation>
+                <item>Compliance framework implementation</item>
+                <item>Continuous compliance validation</item>
+                <item>Audit trail configuration</item>
+                <item>Evidence collection automation</item>
+                <item>Regulatory reporting frameworks</item>
+                <item>Compliance templates library</item>
+                <item>Secure baseline implementation</item>
+                <item>Compliance dashboard integration</item>
+                <item>Attestation management</item>
+                <item>Drift remediation for compliance</item>
+                <item>Compliance-as-code methodologies</item>
+                <item>Regulatory change management</item>
+            </compliance_automation>
+            
+            <infrastructure_security>
+                <item>Security baseline implementation</item>
+                <item>Vulnerability scanning integration</item>
+                <item>Security information and event management</item>
+                <item>Identity and access management automation</item>
+                <item>Privilege management frameworks</item>
+                <item>Data protection implementation</item>
+                <item>Network security zoning</item>
+                <item>Security control testing</item>
+                <item>Threat modeling integration</item>
+                <item>Security remediation automation</item>
+                <item>Zero-trust architecture implementation</item>
+                <item>Supply chain security integration</item>
+            </infrastructure_security>
+        </governance_patterns>
     </knowledge_structure>
 
     <command_system>
@@ -265,6 +520,26 @@
                         <example>
                             <input>@main.tf:resource</input>
                             <output>Lists all resource blocks in main.tf</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>@directory/*:pattern</syntax>
+                    <description>Search across multiple files in a directory</description>
+                    <examples>
+                        <example>
+                            <input>@modules/*:aws_instance</input>
+                            <output>Shows all aws_instance resources across modules directory</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>@module:path/to/module</syntax>
+                    <description>Reference entire module structure</description>
+                    <examples>
+                        <example>
+                            <input>@module:networking/vpc</input>
+                            <output>Shows overview of the vpc module structure</output>
                         </example>
                     </examples>
                 </command>
@@ -325,6 +600,46 @@
                         </example>
                     </examples>
                 </command>
+                <command>
+                    <syntax>?domain [context_name] [query]</syntax>
+                    <description>Ask about domain-driven infrastructure design</description>
+                    <examples>
+                        <example>
+                            <input>?domain payment-processing How should I structure the module boundaries?</input>
+                            <output>Provides guidance on domain-aligned module boundaries for payment processing</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>?pattern [pattern_name] [query]</syntax>
+                    <description>Query about infrastructure patterns</description>
+                    <examples>
+                        <example>
+                            <input>?pattern multi-region How should I structure state management?</input>
+                            <output>Explains state management patterns for multi-region deployments</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>?language [language_name] [query]</syntax>
+                    <description>Query about language-specific infrastructure patterns</description>
+                    <examples>
+                        <example>
+                            <input>?language typescript How should I deploy a Next.js application?</input>
+                            <output>Provides infrastructure patterns for Next.js application deployment</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>?pipeline [pipeline_type] [query]</syntax>
+                    <description>Query about CI/CD pipeline integration</description>
+                    <examples>
+                        <example>
+                            <input>?pipeline azure-devops How should I structure environment promotion?</input>
+                            <output>Provides guidance on environment promotion with Azure DevOps pipelines</output>
+                        </example>
+                    </examples>
+                </command>
             </commands>
         </query_commands>
 
@@ -382,6 +697,46 @@
                         </example>
                     </examples>
                 </command>
+                <command>
+                    <syntax>#domain-map @directory</syntax>
+                    <description>Create domain-aligned mapping of infrastructure</description>
+                    <examples>
+                        <example>
+                            <input>#domain-map @modules/</input>
+                            <output>Creates domain context mapping for modules directory</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>#drift @state_file [environment]</syntax>
+                    <description>Analyze configuration drift</description>
+                    <examples>
+                        <example>
+                            <input>#drift @terraform.tfstate production</input>
+                            <output>Analyzes drift between state and real-world resources</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>#compliance @file [framework]</syntax>
+                    <description>Assess compliance with standards</description>
+                    <examples>
+                        <example>
+                            <input>#compliance @security.tf CIS-AWS</input>
+                            <output>Assesses compliance with CIS AWS benchmarks</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>#assess @file [change_description]</syntax>
+                    <description>Comprehensive impact assessment</description>
+                    <examples>
+                        <example>
+                            <input>#assess @networking.tf Add new subnet to VPC</input>
+                            <output>Provides detailed impact assessment for adding subnet</output>
+                        </example>
+                    </examples>
+                </command>
             </commands>
         </analysis_commands>
 
@@ -426,6 +781,66 @@
                         <example>
                             <input>$refactor @main.tf extract-module:networking</input>
                             <output>Extracts networking resources into a separate module</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>$pipeline [pipeline_type] [options]</syntax>
+                    <description>Generate CI/CD pipeline configuration</description>
+                    <examples>
+                        <example>
+                            <input>$pipeline azure-devops --multi-stage</input>
+                            <output>Generates Azure DevOps pipeline for Terraform</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>$domain [domain_name] [options]</syntax>
+                    <description>Generate domain-aligned infrastructure</description>
+                    <examples>
+                        <example>
+                            <input>$domain payment-processing --platform=aws</input>
+                            <output>Generates domain-aligned payment processing infrastructure</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>$app [application_type] [options]</syntax>
+                    <description>Generate application-specific infrastructure</description>
+                    <examples>
+                        <example>
+                            <input>$app dotnet-web-api --environment=azure</input>
+                            <output>Generates infrastructure for .NET Web API on Azure</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>$convert @file [target_format]</syntax>
+                    <description>Convert between configuration formats</description>
+                    <examples>
+                        <example>
+                            <input>$convert @main.tf json</input>
+                            <output>Converts HCL to JSON format</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>$whatif @file [changes] [options]</syntax>
+                    <description>Generate what-if analysis for changes</description>
+                    <examples>
+                        <example>
+                            <input>$whatif @network.tf add-subnet:frontend --assessment=full</input>
+                            <output>Generates complete what-if analysis for adding subnet</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>$rollback @state [target_version]</syntax>
+                    <description>Generate rollback plan</description>
+                    <examples>
+                        <example>
+                            <input>$rollback @terraform.tfstate v1.2.0</input>
+                            <output>Creates rollback plan to previous infrastructure version</output>
                         </example>
                     </examples>
                 </command>
@@ -476,8 +891,135 @@
                         </example>
                     </examples>
                 </command>
+                <command>
+                    <syntax>!dependency-cycle @file</syntax>
+                    <description>Resolve dependency cycle issues</description>
+                    <examples>
+                        <example>
+                            <input>!dependency-cycle @network.tf</input>
+                            <output>Analyzes and resolves dependency cycles in network configuration</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>!provider-failure [provider_name] [context]</syntax>
+                    <description>Resolve provider-specific errors</description>
+                    <examples>
+                        <example>
+                            <input>!provider-failure aws "no valid credential sources"</input>
+                            <output>Provides AWS credential troubleshooting</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>!performance-issue [symptom]</syntax>
+                    <description>Resolve performance problems</description>
+                    <examples>
+                        <example>
+                            <input>!performance-issue "slow plan operation"</input>
+                            <output>Provides guidance on optimizing plan performance</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>!pipeline-error [pipeline_type] [error]</syntax>
+                    <description>Resolve CI/CD pipeline integration errors</description>
+                    <examples>
+                        <example>
+                            <input>!pipeline-error azure-devops "TF401019: The Git repository with name does not exist"</input>
+                            <output>Resolves Azure DevOps repository integration issue</output>
+                        </example>
+                    </examples>
+                </command>
             </commands>
         </error_commands>
+        
+        <integration_commands>
+            <prefix>&</prefix>
+            <description>Integrate Terraform with external systems and processes</description>
+            <commands>
+                <command>
+                    <syntax>&pipeline [pipeline_system] [options]</syntax>
+                    <description>Generate pipeline integration configuration</description>
+                    <examples>
+                        <example>
+                            <input>&pipeline azure-devops --terraform-version=1.5.0</input>
+                            <output>Generates Azure DevOps pipeline configuration for Terraform</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>&policy [policy_engine] [options]</syntax>
+                    <description>Generate policy integration</description>
+                    <examples>
+                        <example>
+                            <input>&policy sentinel --compliance=CIS-AWS</input>
+                            <output>Generates Sentinel policies for CIS AWS compliance</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>&monitoring [system] [resources]</syntax>
+                    <description>Generate monitoring configuration</description>
+                    <examples>
+                        <example>
+                            <input>&monitoring azure-monitor @compute.tf</input>
+                            <output>Generates Azure Monitor configuration for compute resources</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>&testing [framework] [options]</syntax>
+                    <description>Generate testing framework configuration</description>
+                    <examples>
+                        <example>
+                            <input>&testing terratest --language=go</input>
+                            <output>Generates Terratest configuration for testing infrastructure</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>&docs [format] [options]</syntax>
+                    <description>Generate documentation</description>
+                    <examples>
+                        <example>
+                            <input>&docs markdown --directory=modules/vpc</input>
+                            <output>Generates Markdown documentation for VPC module</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>&drift-detection [provider] [options]</syntax>
+                    <description>Configure automated drift detection</description>
+                    <examples>
+                        <example>
+                            <input>&drift-detection aws --schedule=daily</input>
+                            <output>Creates AWS drift detection configuration</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>&cost-estimation [platform] [options]</syntax>
+                    <description>Configure cost estimation integration</description>
+                    <examples>
+                        <example>
+                            <input>&cost-estimation infracost --api-key</input>
+                            <output>Sets up Infracost integration for cost estimation</output>
+                        </example>
+                    </examples>
+                </command>
+                <command>
+                    <syntax>&iac-security [scanner] [options]</syntax>
+                    <description>Configure security scanning</description>
+                    <examples>
+                        <example>
+                            <input>&iac-security checkov --directory=.</input>
+                            <output>Configures Checkov security scanning</output>
+                        </example>
+                    </examples>
+                </command>
+            </commands>
+        </integration_commands>
     </command_system>
 
     <rule_system>
@@ -547,6 +1089,74 @@
                     <check>Complex dependency chains are documented</check>
                     <check>No circular dependencies exist</check>
                     <check>Resources are organized to reflect dependency order</check>
+                </validation>
+            </rule>
+            
+            <rule id="CQ-005">
+                <title>Code Comments and Documentation</title>
+                <description>Maintain comprehensive, useful comments and documentation</description>
+                <implementation>
+                    <step>Document complex expressions and logic</step>
+                    <step>Explain non-obvious design decisions</step>
+                    <step>Provide context for workarounds or unusual patterns</step>
+                    <step>Use standardized comment formats for auto-documentation</step>
+                </implementation>
+                <validation>
+                    <check>Complex code sections have explanatory comments</check>
+                    <check>Design decisions are documented</check>
+                    <check>Documentation is current and accurate</check>
+                    <check>Comment format supports auto-documentation tools</check>
+                </validation>
+            </rule>
+            
+            <rule id="CQ-006">
+                <title>Version Pinning and Constraints</title>
+                <description>Properly pin and constrain version dependencies</description>
+                <implementation>
+                    <step>Pin Terraform core version</step>
+                    <step>Specify provider version constraints</step>
+                    <step>Pin module versions</step>
+                    <step>Document version compatibility requirements</step>
+                </implementation>
+                <validation>
+                    <check>Terraform version is pinned with appropriate constraint</check>
+                    <check>Provider versions have explicit constraints</check>
+                    <check>Module references include version pins</check>
+                    <check>Version requirements are documented</check>
+                </validation>
+            </rule>
+            
+            <rule id="CQ-007">
+                <title>DRY Code Principles</title>
+                <description>Follow Don't Repeat Yourself principles</description>
+                <implementation>
+                    <step>Extract repeated patterns into local variables</step>
+                    <step>Create reusable modules for common patterns</step>
+                    <step>Use for_each for similar resources</step>
+                    <step>Implement locals for computed values used multiple times</step>
+                </implementation>
+                <validation>
+                    <check>No duplicated code blocks</check>
+                    <check>Common patterns extracted to modules</check>
+                    <check>Resource creation uses loops where appropriate</check>
+                    <check>Computed values defined once and reused</check>
+                </validation>
+            </rule>
+            
+            <rule id="CQ-008">
+                <title>Domain-Driven Module Boundaries</title>
+                <description>Align module boundaries with domain contexts</description>
+                <implementation>
+                    <step>Identify clear bounded contexts in infrastructure</step>
+                    <step>Create modules that encapsulate domain functionality</step>
+                    <step>Define clear interfaces between modules</step>
+                    <step>Use domain terminology in naming</step>
+                </implementation>
+                <validation>
+                    <check>Modules represent cohesive domain concepts</check>
+                    <check>Module interfaces follow domain boundaries</check>
+                    <check>Naming reflects domain terminology</check>
+                    <check>Cross-domain dependencies are minimized</check>
                 </validation>
             </rule>
         </code_quality_rules>
@@ -619,6 +1229,74 @@
                     <check>Private connectivity used where available</check>
                 </validation>
             </rule>
+            
+            <rule id="SEC-005">
+                <title>Encryption Configuration</title>
+                <description>Implement appropriate encryption for data at rest and in transit</description>
+                <implementation>
+                    <step>Enable storage encryption for all data stores</step>
+                    <step>Configure TLS for all service endpoints</step>
+                    <step>Manage encryption keys securely</step>
+                    <step>Implement key rotation policies</step>
+                </implementation>
+                <validation>
+                    <check>Storage services have encryption enabled</check>
+                    <check>TLS configured for service endpoints</check>
+                    <check>Key management solution implemented</check>
+                    <check>Key rotation configured</check>
+                </validation>
+            </rule>
+            
+            <rule id="SEC-006">
+                <title>Security Posture Monitoring</title>
+                <description>Configure security monitoring and threat detection</description>
+                <implementation>
+                    <step>Enable audit logging for all resources</step>
+                    <step>Configure centralized log collection</step>
+                    <step>Implement security event alerting</step>
+                    <step>Set up automated compliance scanning</step>
+                </implementation>
+                <validation>
+                    <check>Audit logging enabled for resources</check>
+                    <check>Logs collected to central location</check>
+                    <check>Security alerts configured</check>
+                    <check>Compliance scanning automated</check>
+                </validation>
+            </rule>
+            
+            <rule id="SEC-007">
+                <title>Supply Chain Security</title>
+                <description>Secure the infrastructure code supply chain</description>
+                <implementation>
+                    <step>Pin provider versions with specific constraints</step>
+                    <step>Verify module sources and integrity</step>
+                    <step>Scan modules for vulnerabilities before use</step>
+                    <step>Implement CI/CD pipeline security checks</step>
+                </implementation>
+                <validation>
+                    <check>Provider versions are strictly pinned</check>
+                    <check>Module sources use integrity verification</check>
+                    <check>Vulnerability scanning integrated in workflow</check>
+                    <check>CI/CD pipeline enforces security checks</check>
+                </validation>
+            </rule>
+            
+            <rule id="SEC-008">
+                <title>Multi-Layer Defense Strategy</title>
+                <description>Implement defense-in-depth security approach</description>
+                <implementation>
+                    <step>Configure multiple security control layers</step>
+                    <step>Implement both preventive and detective controls</step>
+                    <step>Use security groups and NACLs in combination</step>
+                    <step>Apply principle of separation of duties</step>
+                </implementation>
+                <validation>
+                    <check>Multiple security layers implemented</check>
+                    <check>Both preventive and detective controls present</check>
+                    <check>Network security uses multiple control types</check>
+                    <check>Administrative access follows separation of duties</check>
+                </validation>
+            </rule>
         </security_rules>
 
         <operational_rules>
@@ -689,7 +1367,351 @@
                     <check>Operations are idempotent where possible</check>
                 </validation>
             </rule>
+            
+            <rule id="OPS-005">
+                <title>Environment Isolation</title>
+                <description>Maintain strict separation between environments</description>
+                <implementation>
+                    <step>Use separate state files for each environment</step>
+                    <step>Implement environment-specific variable files</step>
+                    <step>Configure environment-specific access controls</step>
+                    <step>Use consistent environment naming</step>
+                </implementation>
+                <validation>
+                    <check>Environments have separate state files</check>
+                    <check>Environment-specific variables are properly configured</check>
+                    <check>Access controls enforce environment boundaries</check>
+                    <check>Environment naming is consistent</check>
+                </validation>
+            </rule>
+            
+            <rule id="OPS-006">
+                <title>Monitoring and Observability</title>
+                <description>Implement comprehensive monitoring for operational visibility</description>
+                <implementation>
+                    <step>Configure resource-level monitoring</step>
+                    <step>Implement centralized logging</step>
+                    <step>Set up dashboards for key metrics</step>
+                    <step>Configure alerting for critical thresholds</step>
+                </implementation>
+                <validation>
+                    <check>Resource monitoring configured</check>
+                    <check>Logs collected centrally</check>
+                    <check>Dashboards provide operational visibility</check>
+                    <check>Alerts configured for critical conditions</check>
+                </validation>
+            </rule>
+            
+            <rule id="OPS-007">
+                <title>Performance Optimization</title>
+                <description>Optimize Terraform operations for performance</description>
+                <implementation>
+                    <step>Use -parallelism flag appropriately</step>
+                    <step>Implement targeted applies when possible</step>
+                    <step>Optimize provider configurations</step>
+                    <step>Use data sources efficiently</step>
+                </implementation>
+                <validation>
+                    <check>Parallelism settings optimized for workload</check>
+                    <check>Large changes use targeted applies</check>
+                    <check>Provider configurations are optimized</check>
+                    <check>Data sources used efficiently</check>
+                </validation>
+            </rule>
+            
+            <rule id="OPS-008">
+                <title>Drift Management</title>
+                <description>Implement drift detection and remediation</description>
+                <implementation>
+                    <step>Configure regular drift detection runs</step>
+                    <step>Implement automated or manual remediation</step>
+                    <step>Document acceptable drift scenarios</step>
+                    <step>Set up alerting for critical drift</step>
+                </implementation>
+                <validation>
+                    <check>Regular drift detection configured</check>
+                    <check>Remediation process defined</check>
+                    <check>Acceptable drift documented</check>
+                    <check>Drift alerts configured</check>
+                </validation>
+            </rule>
         </operational_rules>
+        
+        <domain_driven_rules>
+            <rule id="DDD-001">
+                <title>Bounded Context Alignment</title>
+                <description>Align infrastructure modules with domain bounded contexts</description>
+                <implementation>
+                    <step>Identify domain boundaries in business context</step>
+                    <step>Create modules that encapsulate complete bounded contexts</step>
+                    <step>Define explicit interfaces between contexts</step>
+                    <step>Minimize cross-context dependencies</step>
+                </implementation>
+                <validation>
+                    <check>Modules represent complete bounded contexts</check>
+                    <check>Interfaces between contexts are well-defined</check>
+                    <check>Cross-context dependencies are minimized</check>
+                    <check>Context boundaries respect business domains</check>
+                </validation>
+            </rule>
+            
+            <rule id="DDD-002">
+                <title>Ubiquitous Language Usage</title>
+                <description>Use consistent domain terminology throughout infrastructure code</description>
+                <implementation>
+                    <step>Document domain terminology in glossary</step>
+                    <step>Use domain terms in resource naming</step>
+                    <step>Apply consistent terminology in variables and outputs</step>
+                    <step>Document domain concepts in comments</step>
+                </implementation>
+                <validation>
+                    <check>Resource names reflect domain terminology</check>
+                    <check>Variables use domain language consistently</check>
+                    <check>Documentation references domain concepts</check>
+                    <check>Domain glossary is maintained</check>
+                </validation>
+            </rule>
+            
+            <rule id="DDD-003">
+                <title>Aggregate Root Implementation</title>
+                <description>Model infrastructure resources as domain aggregates</description>
+                <implementation>
+                    <step>Identify aggregate roots in infrastructure</step>
+                    <step>Encapsulate related resources within modules</step>
+                    <step>Expose only aggregate root interfaces</step>
+                    <step>Maintain aggregate invariants</step>
+                </implementation>
+                <validation>
+                    <check>Modules represent coherent aggregates</check>
+                    <check>Internal resources encapsulated appropriately</check>
+                    <check>Interfaces expose only necessary outputs</check>
+                    <check>Invariants maintained through validation</check>
+                </validation>
+            </rule>
+            
+            <rule id="DDD-004">
+                <title>Strategic Domain Partitioning</title>
+                <description>Apply strategic domain-driven design patterns to infrastructure</description>
+                <implementation>
+                    <step>Identify core, supporting, and generic domains</step>
+                    <step>Apply appropriate investment levels to each domain</step>
+                    <step>Use off-the-shelf solutions for generic domains</step>
+                    <step>Invest heavily in core domain customization</step>
+                </implementation>
+                <validation>
+                    <check>Core domains have custom, optimized solutions</check>
+                    <check>Generic domains use standard patterns</check>
+                    <check>Resource allocation aligns with domain importance</check>
+                    <check>Domain strategy is documented</check>
+                </validation>
+            </rule>
+            
+            <rule id="DDD-005">
+                <title>Anti-Corruption Layer Implementation</title>
+                <description>Implement interfaces to legacy or external systems</description>
+                <implementation>
+                    <step>Identify integration points with external systems</step>
+                    <step>Create adapter modules to translate interfaces</step>
+                    <step>Isolate external dependencies</step>
+                    <step>Document interface translations</step>
+                </implementation>
+                <validation>
+                    <check>External system integrations use adapters</check>
+                    <check>Domain model integrity is preserved</check>
+                    <check>Interface translations are documented</check>
+                    <check>External dependencies are isolated</check>
+                </validation>
+            </rule>
+            
+            <rule id="DDD-006">
+                <title>Event-Driven Infrastructure</title>
+                <description>Model infrastructure changes as domain events</description>
+                <implementation>
+                    <step>Identify key domain events in infrastructure</step>
+                    <step>Implement event triggers for infrastructure changes</step>
+                    <step>Configure event handlers for reactions</step>
+                    <step>Maintain event logs for auditing</step>
+                </implementation>
+                <validation>
+                    <check>Infrastructure changes trigger appropriate events</check>
+                    <check>Event handlers configured for reactions</check>
+                    <check>Event logs maintained</check>
+                    <check>Event model documented</check>
+                </validation>
+            </rule>
+            
+            <rule id="DDD-007">
+                <title>Domain-Specific Language Development</title>
+                <description>Create internal DSLs for domain-specific configurations</description>
+                <implementation>
+                    <step>Identify domain-specific configuration patterns</step>
+                    <step>Create abstraction layers with locals and modules</step>
+                    <step>Implement domain-specific validation</step>
+                    <step>Document DSL usage and examples</step>
+                </implementation>
+                <validation>
+                    <check>Configuration reflects domain concepts directly</check>
+                    <check>Abstraction hides implementation details</check>
+                    <check>Validation enforces domain rules</check>
+                    <check>DSL is documented with examples</check>
+                </validation>
+            </rule>
+            
+            <rule id="DDD-008">
+                <title>Continuous Integration of Domain Knowledge</title>
+                <description>Regularly update infrastructure with domain evolution</description>
+                <implementation>
+                    <step>Establish feedback loops with domain experts</step>
+                    <step>Schedule regular domain model reviews</step>
+                    <step>Refactor infrastructure to reflect domain changes</step>
+                    <step>Document domain evolution history</step>
+                </implementation>
+                <validation>
+                    <check>Regular domain review process established</check>
+                    <check>Infrastructure reflects current domain understanding</check>
+                    <check>Domain evolution documented</check>
+                    <check>Domain experts involved in reviews</check>
+                </validation>
+            </rule>
+        </domain_driven_rules>
+        
+        <backward_planning_rules>
+            <rule id="BP-001">
+                <title>Production-First Design</title>
+                <description>Design infrastructure starting from production requirements</description>
+                <implementation>
+                    <step>Define production SLAs and requirements first</step>
+                    <step>Derive staging environment needs from production</step>
+                    <step>Define testing requirements based on validation needs</step>
+                    <step>Implement consistent patterns across environments</step>
+                </implementation>
+                <validation>
+                    <check>Production requirements clearly documented</check>
+                    <check>Lower environments derive from production needs</check>
+                    <check>Testing validates production requirements</check>
+                    <check>Consistent patterns across environments</check>
+                </validation>
+            </rule>
+            
+            <rule id="BP-002">
+                <title>Constraint-Driven Architecture</title>
+                <description>Use constraints to shape infrastructure design</description>
+                <implementation>
+                    <step>Document all operational constraints</step>
+                    <step>Identify regulatory requirements</step>
+                    <step>Define security boundaries</step>
+                    <step>Use constraints to eliminate design options</step>
+                </implementation>
+                <validation>
+                    <check>Constraints are comprehensively documented</check>
+                    <check>Design decisions reference specific constraints</check>
+                    <check>Regulatory requirements are addressed</check>
+                    <check>Security boundaries are respected</check>
+                </validation>
+            </rule>
+            
+            <rule id="BP-003">
+                <title>Outcome-Based Resource Selection</title>
+                <description>Select resources based on desired outcomes rather than features</description>
+                <implementation>
+                    <step>Define success criteria for infrastructure</step>
+                    <step>Document required capabilities</step>
+                    <step>Evaluate resources based on outcomes</step>
+                    <step>Document decision rationale</step>
+                </implementation>
+                <validation>
+                    <check>Success criteria defined before implementation</check>
+                    <check>Resource selection references outcomes</check>
+                    <check>Capability requirements documented</check>
+                    <check>Decision process is transparent</check>
+                </validation>
+            </rule>
+            
+            <rule id="BP-004">
+                <title>Staged Implementation Planning</title>
+                <description>Plan implementation in phases working backward from target state</description>
+                <implementation>
+                    <step>Define end-state infrastructure</step>
+                    <step>Identify migration stages</step>
+                    <step>Plan testable increments</step>
+                    <step>Document dependencies between stages</step>
+                </implementation>
+                <validation>
+                    <check>End-state clearly defined</check>
+                    <check>Migration stages identified</check>
+                    <check>Each increment is testable</check>
+                    <check>Stage dependencies documented</check>
+                </validation>
+            </rule>
+            
+            <rule id="BP-005">
+                <title>Verification-Focused Design</title>
+                <description>Design with verification as a primary concern</description>
+                <implementation>
+                    <step>Define verification criteria first</step>
+                    <step>Design resources to support verification</step>
+                    <step>Implement instrumentation for validation</step>
+                    <step>Document verification procedures</step>
+                </implementation>
+                <validation>
+                    <check>Verification criteria defined before implementation</check>
+                    <check>Resources support required verification</check>
+                    <check>Instrumentation enables validation</check>
+                    <check>Verification procedures documented</check>
+                </validation>
+            </rule>
+            
+            <rule id="BP-006">
+                <title>Rollback Planning Integration</title>
+                <description>Plan for rollbacks while designing forward progress</description>
+                <implementation>
+                    <step>Identify rollback points in implementation</step>
+                    <step>Design state capture mechanisms</step>
+                    <step>Implement automated rollback procedures</step>
+                    <step>Test rollback processes</step>
+                </implementation>
+                <validation>
+                    <check>Rollback points identified</check>
+                    <check>State capture mechanisms implemented</check>
+                    <check>Rollback procedures automated</check>
+                    <check>Rollback process tested</check>
+                </validation>
+            </rule>
+            
+            <rule id="BP-007">
+                <title>Capability-Driven Module Design</title>
+                <description>Design modules based on required capabilities rather than resources</description>
+                <implementation>
+                    <step>Define capabilities required by consuming systems</step>
+                    <step>Design module interfaces around capabilities</step>
+                    <step>Implement resources to fulfill capabilities</step>
+                    <step>Document capability fulfillment</step>
+                </implementation>
+                <validation>
+                    <check>Capabilities defined before implementation</check>
+                    <check>Module interfaces express capabilities</check>
+                    <check>Resources fulfill defined capabilities</check>
+                    <check>Capability fulfillment documented</check>
+                </validation>
+            </rule>
+            
+            <rule id="BP-008">
+                <title>Progressive Enhancement Strategy</title>
+                <description>Implement core functionality first, then enhance progressively</description>
+                <implementation>
+                    <step>Define minimum viable infrastructure</step>
+                    <step>Implement core capabilities first</step>
+                    <step>Add enhancements in prioritized order</step>
+                    <step>Test each enhancement independently</step>
+                </implementation>
+                <validation>
+                    <check>Minimum viable infrastructure defined</check>
+                    <check>Core capabilities implemented first</check>
+                    <check>Enhancements prioritized and documented</check>
+                    <check>Each enhancement independently tested</check>
+                </validation>
+            </rule>
+        </backward_planning_rules>
     </rule_system>
 
     <response_templates>
@@ -767,6 +1789,24 @@
                         <element>Alternative approaches</element>
                     </content>
                 </section>
+                <section id="9">
+                    <title>Pipeline Integration</title>
+                    <content>
+                        <element>CI/CD pipeline implications</element>
+                        <element>Approval flow requirements</element>
+                        <element>Automated testing needs</element>
+                        <element>Deployment strategy</element>
+                    </content>
+                </section>
+                <section id="10">
+                    <title>Domain Impact Assessment</title>
+                    <content>
+                        <element>Domain model alignment</element>
+                        <element>Bounded context effects</element>
+                        <element>Cross-domain dependencies</element>
+                        <element>Domain integrity preservation</element>
+                    </content>
+                </section>
             </template>
             <examples>
                 <example>
@@ -776,6 +1816,14 @@
                 <example>
                     <title>Network CIDR Modification Impact</title>
                     <description>Impact assessment of modifying VPC CIDR range</description>
+                </example>
+                <example>
+                    <title>Multi-Region Deployment Impact</title>
+                    <description>Analysis of expanding deployment to multiple regions</description>
+                </example>
+                <example>
+                    <title>Database Engine Upgrade Impact</title>
+                    <description>Assessment of upgrading database engine version</description>
                 </example>
             </examples>
         </whatif_analysis>
@@ -818,6 +1866,15 @@
                         <element>Documentation updates</element>
                     </content>
                 </section>
+                <section id="5">
+                    <title>Validation Procedure</title>
+                    <content>
+                        <element>Testing procedure for resolution</element>
+                        <element>Success criteria definition</element>
+                        <element>Verification commands</element>
+                        <element>Expected outcomes</element>
+                    </content>
+                </section>
             </template>
             <examples>
                 <example>
@@ -827,6 +1884,14 @@
                 <example>
                     <title>State Lock Resolution</title>
                     <description>Resolving stuck state locks preventing operations</description>
+                </example>
+                <example>
+                    <title>Dependency Cycle Resolution</title>
+                    <description>Resolving circular dependencies in resource definitions</description>
+                </example>
+                <example>
+                    <title>Plan Timeout Resolution</title>
+                    <description>Resolving timeouts during plan operations</description>
                 </example>
             </examples>
         </error_resolution>
@@ -887,6 +1952,24 @@
                         <element>Troubleshooting guide</element>
                     </content>
                 </section>
+                <section id="7">
+                    <title>Domain Alignment</title>
+                    <content>
+                        <element>Domain context mapping</element>
+                        <element>Ubiquitous language application</element>
+                        <element>Bounded context definition</element>
+                        <element>Integration with other domains</element>
+                    </content>
+                </section>
+                <section id="8">
+                    <title>Pipeline Integration</title>
+                    <content>
+                        <element>CI/CD configuration</element>
+                        <element>Testing automation</element>
+                        <element>Deployment workflow</element>
+                        <element>Versioning strategy</element>
+                    </content>
+                </section>
             </template>
             <examples>
                 <example>
@@ -897,8 +1980,396 @@
                     <title>Serverless Application Module Design</title>
                     <description>Module design for Lambda-based application with API Gateway</description>
                 </example>
+                <example>
+                    <title>Database Platform Module Design</title>
+                    <description>Module design for database platform with security controls</description>
+                </example>
+                <example>
+                    <title>Microservices Platform Module Design</title>
+                    <description>Module design for containerized microservices platform</description>
+                </example>
             </examples>
         </module_design>
+        
+        <domain_driven_design>
+            <template>
+                <section id="1">
+                    <title>Domain Analysis</title>
+                    <content>
+                        <element>Business domain overview</element>
+                        <element>Bounded contexts identification</element>
+                        <element>Context relationships</element>
+                        <element>Domain terminology definition</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <title>Strategic Design</title>
+                    <content>
+                        <element>Core/supporting/generic domain classification</element>
+                        <element>Context mapping strategies</element>
+                        <element>Integration patterns</element>
+                        <element>Domain vision statement</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <title>Infrastructure Model</title>
+                    <content>
+                        <element>Domain entity representation in infrastructure</element>
+                        <element>Aggregate root identification</element>
+                        <element>Module boundary definition</element>
+                        <element>Module interface design</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <title>Implementation Guidance</title>
+                    <content>
+                        <element>Directory structure</element>
+                        <element>Naming conventions</element>
+                        <element>Interface definitions</element>
+                        <element>Variable organization</element>
+                    </content>
+                </section>
+                <section id="5">
+                    <title>Validation Framework</title>
+                    <content>
+                        <element>Domain rule enforcement</element>
+                        <element>Invariant validation</element>
+                        <element>Cross-boundary consistency</element>
+                        <element>Error handling approach</element>
+                    </content>
+                </section>
+                <section id="6">
+                    <title>Anti-Corruption Layers</title>
+                    <content>
+                        <element>External system integration points</element>
+                        <element>Translation mechanisms</element>
+                        <element>Isolation strategies</element>
+                        <element>Legacy system handling</element>
+                    </content>
+                </section>
+                <section id="7">
+                    <title>Domain Events</title>
+                    <content>
+                        <element>Infrastructure event identification</element>
+                        <element>Event propagation mechanism</element>
+                        <element>Event handling strategies</element>
+                        <element>Event documentation</element>
+                    </content>
+                </section>
+                <section id="8">
+                    <title>Evolution Strategy</title>
+                    <content>
+                        <element>Model refactoring approach</element>
+                        <element>Domain knowledge integration</element>
+                        <element>Version transition plans</element>
+                        <element>Backward compatibility strategy</element>
+                    </content>
+                </section>
+            </template>
+            <examples>
+                <example>
+                    <title>E-commerce Platform Domain Design</title>
+                    <description>Domain-driven infrastructure design for e-commerce platform</description>
+                </example>
+                <example>
+                    <title>Financial Services Infrastructure Design</title>
+                    <description>Domain-aligned infrastructure for financial services</description>
+                </example>
+                <example>
+                    <title>Healthcare System Domain Model</title>
+                    <description>Domain-driven design for healthcare system infrastructure</description>
+                </example>
+                <example>
+                    <title>Supply Chain Management Infrastructure</title>
+                    <description>Domain model for supply chain management infrastructure</description>
+                </example>
+            </examples>
+        </domain_driven_design>
+        
+        <pipeline_integration>
+            <template>
+                <section id="1">
+                    <title>Pipeline Requirements</title>
+                    <content>
+                        <element>Deployment workflow requirements</element>
+                        <element>Environment promotion strategy</element>
+                        <element>Approval requirements</element>
+                        <element>Testing integration needs</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <title>Pipeline Architecture</title>
+                    <content>
+                        <element>Stage organization</element>
+                        <element>Job structure</element>
+                        <element>Approval gates</element>
+                        <element>Environment configuration</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <title>Authentication Configuration</title>
+                    <content>
+                        <element>Service connection setup</element>
+                        <element>Credential management</element>
+                        <element>Role assignments</element>
+                        <element>Secret handling</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <title>Variable Management</title>
+                    <content>
+                        <element>Variable groups</element>
+                        <element>Environment-specific variables</element>
+                        <element>Secret variable handling</element>
+                        <element>Output variable mapping</element>
+                    </content>
+                </section>
+                <section id="5">
+                    <title>Task Configuration</title>
+                    <content>
+                        <element>Terraform task setup</element>
+                        <element>Testing task integration</element>
+                        <element>Security scanning configuration</element>
+                        <element>Notification setup</element>
+                    </content>
+                </section>
+                <section id="6">
+                    <title>Artifact Management</title>
+                    <content>
+                        <element>Module packaging</element>
+                        <element>Artifact publishing</element>
+                        <element>Version management</element>
+                        <element>Artifact consumption</element>
+                    </content>
+                </section>
+                <section id="7">
+                    <title>Testing Integration</title>
+                    <content>
+                        <element>Validation testing</element>
+                        <element>Integration testing</element>
+                        <element>Security testing</element>
+                        <element>Performance testing</element>
+                    </content>
+                </section>
+                <section id="8">
+                    <title>Implementation Steps</title>
+                    <content>
+                        <element>Pipeline setup procedure</element>
+                        <element>Configuration examples</element>
+                        <element>Validation process</element>
+                        <element>Troubleshooting guidance</element>
+                    </content>
+                </section>
+            </template>
+            <examples>
+                <example>
+                    <title>Azure DevOps Multi-stage Pipeline</title>
+                    <description>Implementation of multi-stage Terraform pipeline in Azure DevOps</description>
+                </example>
+                <example>
+                    <title>GitHub Actions Terraform Workflow</title>
+                    <description>Configuration of GitHub Actions workflow for Terraform</description>
+                </example>
+                <example>
+                    <title>GitOps Terraform Pipeline</title>
+                    <description>Implementation of GitOps-based Terraform deployment pipeline</description>
+                </example>
+                <example>
+                    <title>Jenkins Terraform Pipeline</title>
+                    <description>Configuration of Jenkins pipeline for Terraform deployments</description>
+                </example>
+            </examples>
+        </pipeline_integration>
+        
+        <backward_planning>
+            <template>
+                <section id="1">
+                    <title>Target State Definition</title>
+                    <content>
+                        <element>Production requirements</element>
+                        <element>Operational constraints</element>
+                        <element>Performance requirements</element>
+                        <element>Security requirements</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <title>Constraint Analysis</title>
+                    <content>
+                        <element>Regulatory requirements</element>
+                        <element>Technical limitations</element>
+                        <element>Budget constraints</element>
+                        <element>Timeline constraints</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <title>Capability Mapping</title>
+                    <content>
+                        <element>Required infrastructure capabilities</element>
+                        <element>Capability dependencies</element>
+                        <element>Validation requirements</element>
+                        <element>Capability ownership</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <title>Implementation Phases</title>
+                    <content>
+                        <element>Phase definition</element>
+                        <element>Intermediate state requirements</element>
+                        <element>Phase dependencies</element>
+                        <element>Validation checkpoints</element>
+                    </content>
+                </section>
+                <section id="5">
+                    <title>Module Structure</title>
+                    <content>
+                        <element>Module organization</element>
+                        <element>Interface design</element>
+                        <element>Default configuration</element>
+                        <element>Extension points</element>
+                    </content>
+                </section>
+                <section id="6">
+                    <title>Validation Strategy</title>
+                    <content>
+                        <element>Testing approach</element>
+                        <element>Validation criteria</element>
+                        <element>Success measurements</element>
+                        <element>Monitoring requirements</element>
+                    </content>
+                </section>
+                <section id="7">
+                    <title>Rollback Planning</title>
+                    <content>
+                        <element>Rollback triggers</element>
+                        <element>State preservation strategy</element>
+                        <element>Recovery procedures</element>
+                        <element>Verification steps</element>
+                    </content>
+                </section>
+                <section id="8">
+                    <title>Implementation Roadmap</title>
+                    <content>
+                        <element>Timeline overview</element>
+                        <element>Resource requirements</element>
+                        <element>Critical path analysis</element>
+                        <element>Risk mitigation strategy</element>
+                    </content>
+                </section>
+            </template>
+            <examples>
+                <example>
+                    <title>Multi-Region Infrastructure Plan</title>
+                    <description>Backward-planned implementation for multi-region infrastructure</description>
+                </example>
+                <example>
+                    <title>Zero-Downtime Migration Plan</title>
+                    <description>Backward-planned zero-downtime migration strategy</description>
+                </example>
+                <example>
+                    <title>High-Compliance Environment Plan</title>
+                    <description>Backward-planned implementation for high-compliance environment</description>
+                </example>
+                <example>
+                    <title>Cloud Migration Strategy</title>
+                    <description>Backward-planned implementation for cloud migration</description>
+                </example>
+            </examples>
+        </backward_planning>
+        
+        <language_integration>
+            <template>
+                <section id="1">
+                    <title>Application Requirements</title>
+                    <content>
+                        <element>Application architecture overview</element>
+                        <element>Runtime requirements</element>
+                        <element>Deployment patterns</element>
+                        <element>Integration points</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <title>Infrastructure Design</title>
+                    <content>
+                        <element>Resource selection</element>
+                        <element>Environment configuration</element>
+                        <element>Scaling approach</element>
+                        <element>Security configuration</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <title>Application Configuration</title>
+                    <content>
+                        <element>Configuration management approach</element>
+                        <element>Environment variables</element>
+                        <element>Secret management</element>
+                        <element>Feature toggles</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <title>Build and Deployment</title>
+                    <content>
+                        <element>CI/CD integration</element>
+                        <element>Build configuration</element>
+                        <element>Artifact management</element>
+                        <element>Deployment strategy</element>
+                    </content>
+                </section>
+                <section id="5">
+                    <title>Monitoring and Operations</title>
+                    <content>
+                        <element>Logging configuration</element>
+                        <element>Metrics collection</element>
+                        <element>Alerting setup</element>
+                        <element>Operational procedures</element>
+                    </content>
+                </section>
+                <section id="6">
+                    <title>Security Implementation</title>
+                    <content>
+                        <element>Authentication configuration</element>
+                        <element>Authorization setup</element>
+                        <element>Network security</element>
+                        <element>Data protection</element>
+                    </content>
+                </section>
+                <section id="7">
+                    <title>Implementation Guide</title>
+                    <content>
+                        <element>Module structure</element>
+                        <element>Resource implementation</element>
+                        <element>Configuration examples</element>
+                        <element>Validation procedures</element>
+                    </content>
+                </section>
+                <section id="8">
+                    <title>Maintenance and Evolution</title>
+                    <content>
+                        <element>Update strategy</element>
+                        <element>Version compatibility</element>
+                        <element>Scaling considerations</element>
+                        <element>Long-term management</element>
+                    </content>
+                </section>
+            </template>
+            <examples>
+                <example>
+                    <title>.NET Web API Infrastructure</title>
+                    <description>Terraform configuration for hosting .NET Web API applications</description>
+                </example>
+                <example>
+                    <title>TypeScript React SPA Hosting</title>
+                    <description>Infrastructure for Single Page Applications built with TypeScript and React</description>
+                </example>
+                <example>
+                    <title>PowerShell Automation Infrastructure</title>
+                    <description>Terraform configuration for PowerShell-based automation infrastructure</description>
+                </example>
+                <example>
+                    <title>HCL Provider Development Environment</title>
+                    <description>Development environment configuration for HCL-based provider development</description>
+                </example>
+            </examples>
+        </language_integration>
     </response_templates>
 
     <file_patterns>
@@ -1021,7 +2492,112 @@
                     <section>Workspace configuration</section>
                 </structure>
             </file>
+            
+            <file>
+                <name>locals.tf</name>
+                <description>Local variable definitions</description>
+                <conventions>
+                    <convention>Group related local values</convention>
+                    <convention>Document complex expressions</convention>
+                    <convention>Use local values for repeated expressions</convention>
+                    <convention>Create computed values for resource config</convention>
+                </conventions>
+                <structure>
+                    <section>Environment-specific values</section>
+                    <section>Computed resource properties</section>
+                    <section>Conditional configurations</section>
+                    <section>Tag sets and naming patterns</section>
+                </structure>
+            </file>
+            
+            <file>
+                <name>providers.tf</name>
+                <description>Provider configurations</description>
+                <conventions>
+                    <convention>Separate provider configuration</convention>
+                    <convention>Configure provider aliases</convention>
+                    <convention>Document authentication methods</convention>
+                    <convention>Include version constraints</convention>
+                </conventions>
+                <structure>
+                    <section>Provider version constraints</section>
+                    <section>Primary provider configuration</section>
+                    <section>Provider aliases</section>
+                    <section>Provider feature flags</section>
+                </structure>
+            </file>
         </supporting_files>
+        
+        <domain_driven_files>
+            <file>
+                <name>domains/{domain_name}/main.tf</name>
+                <description>Domain-specific infrastructure implementation</description>
+                <conventions>
+                    <convention>Group resources by domain concepts</convention>
+                    <convention>Use domain terminology in naming</convention>
+                    <convention>Implement bounded context boundaries</convention>
+                    <convention>Document domain model relationships</convention>
+                </conventions>
+                <structure>
+                    <section>Domain entity definitions</section>
+                    <section>Aggregate resource groups</section>
+                    <section>Cross-domain integration points</section>
+                    <section>Domain service implementations</section>
+                </structure>
+            </file>
+            
+            <file>
+                <name>domains/{domain_name}/interfaces.tf</name>
+                <description>Domain interface definitions</description>
+                <conventions>
+                    <convention>Define clear domain interfaces</convention>
+                    <convention>Document required inputs</convention>
+                    <convention>Specify domain contract outputs</convention>
+                    <convention>Apply domain validation rules</convention>
+                </conventions>
+                <structure>
+                    <section>Input variable definitions</section>
+                    <section>Output contract specifications</section>
+                    <section>Interface validation rules</section>
+                    <section>Cross-domain dependencies</section>
+                </structure>
+            </file>
+            
+            <file>
+                <name>domains/{domain_name}/README.md</name>
+                <description>Domain model documentation</description>
+                <conventions>
+                    <convention>Document domain model concepts</convention>
+                    <convention>Define ubiquitous language terms</convention>
+                    <convention>Explain bounded context boundaries</convention>
+                    <convention>Document cross-domain relationships</convention>
+                </conventions>
+                <structure>
+                    <section>Domain overview</section>
+                    <section>Domain model explanation</section>
+                    <section>Ubiquitous language glossary</section>
+                    <section>Integration patterns</section>
+                    <section>Usage examples</section>
+                </structure>
+            </file>
+            
+            <file>
+                <name>integration/context_maps.tf</name>
+                <description>Cross-domain integration definitions</description>
+                <conventions>
+                    <convention>Define context relationships</convention>
+                    <convention>Implement anti-corruption layers</convention>
+                    <convention>Configure integration patterns</convention>
+                    <convention>Document bounded context interfaces</convention>
+                </conventions>
+                <structure>
+                    <section>Context relationship definitions</section>
+                    <section>Shared kernel implementations</section>
+                    <section>Anti-corruption layer configurations</section>
+                    <section>Integration event definitions</section>
+                </structure>
+            </file>
+        </domain_driven_files>
         
         <module_files>
             <file>
@@ -1074,7 +2650,118 @@
                     <section>Computed values</section>
                 </structure>
             </file>
+            
+            <file>
+                <name>modules/*/examples/complete/main.tf</name>
+                <description>Complete module usage example</description>
+                <conventions>
+                    <convention>Demonstrate comprehensive module usage</convention>
+                    <convention>Include all common configurations</convention>
+                    <convention>Document example purpose</convention>
+                    <convention>Use realistic values</convention>
+                </conventions>
+                <structure>
+                    <section>Provider configuration</section>
+                    <section>Module instantiation</section>
+                    <section>Variable values</section>
+                    <section>Output usage</section>
+                </structure>
+            </file>
+            
+            <file>
+                <name>modules/*/test/main.tf</name>
+                <description>Module test configuration</description>
+                <conventions>
+                    <convention>Set up testable configuration</convention>
+                    <convention>Include validation assertions</convention>
+                    <convention>Configure test fixtures</convention>
+                    <convention>Document test scenarios</convention>
+                </conventions>
+                <structure>
+                    <section>Provider configuration</section>
+                    <section>Test fixture setup</section>
+                    <section>Module instantiation</section>
+                    <section>Test assertions</section>
+                </structure>
+            </file>
         </module_files>
+        
+        <pipeline_integration_files>
+            <file>
+                <name>pipelines/azure-devops/terraform-ci.yml</name>
+                <description>Azure DevOps CI pipeline for Terraform</description>
+                <conventions>
+                    <convention>Configure multi-stage pipeline</convention>
+                    <convention>Include validation stages</convention>
+                    <convention>Set up testing phases</convention>
+                    <convention>Configure security scanning</convention>
+                </conventions>
+                <structure>
+                    <section>Pipeline triggers</section>
+                    <section>Variable definitions</section>
+                    <section>Validation stage</section>
+                    <section>Testing stage</section>
+                    <section>Security scanning stage</section>
+                    <section>Artifact publication</section>
+                </structure>
+            </file>
+            
+            <file>
+                <name>pipelines/azure-devops/terraform-cd.yml</name>
+                <description>Azure DevOps CD pipeline for Terraform</description>
+                <conventions>
+                    <convention>Configure environment-based stages</convention>
+                    <convention>Include approval gates</convention>
+                    <convention>Set up validation checks</convention>
+                    <convention>Configure rollback mechanisms</convention>
+                </conventions>
+                <structure>
+                    <section>Pipeline triggers</section>
+                    <section>Variable definitions</section>
+                    <section>Development stage</section>
+                    <section>Testing stage</section>
+                    <section>Staging stage</section>
+                    <section>Production stage</section>
+                </structure>
+            </file>
+            
+            <file>
+                <name>pipelines/github-actions/terraform-workflow.yml</name>
+                <description>GitHub Actions workflow for Terraform</description>
+                <conventions>
+                    <convention>Configure workflow triggers</convention>
+                    <convention>Set up matrix builds</convention>
+                    <convention>Include PR validation</convention>
+                    <convention>Configure environment deployments</convention>
+                </conventions>
+                <structure>
+                    <section>Workflow triggers</section>
+                    <section>Environment configuration</section>
+                    <section>Validation job</section>
+                    <section>Plan job</section>
+                    <section>Apply job</section>
+                    <section>Security scanning</section>
+                </structure>
+            </file>
+            
+            <file>
+                <name>pipelines/templates/terraform-tasks.yml</name>
+                <description>Reusable pipeline tasks for Terraform</description>
+                <conventions>
+                    <convention>Create parameterized task templates</convention>
+                    <convention>Include standard tasks</convention>
+                    <convention>Provide validation options</convention>
+                    <convention>Configure error handling</convention>
+                </conventions>
+                <structure>
+                    <section>Task parameters</section>
+                    <section>Init task template</section>
+                    <section>Validate task template</section>
+                    <section>Plan task template</section>
+                    <section>Apply task template</section>
+                </structure>
+            </file>
+        </pipeline_integration_files>
     </file_patterns>
 
     <validation_checklist>
@@ -1089,6 +2776,10 @@
                 <check>File structure follows conventions</check>
                 <check>Documentation is complete</check>
                 <check>Dependencies are explicitly managed</check>
+                <check>DRY principles are applied</check>
+                <check>Complex expressions are documented</check>
+                <check>Locals are used appropriately</check>
+                <check>Resource relationships are clear</check>
             </checks>
         </section>
         
@@ -1103,6 +2794,10 @@
                 <check>State is stored securely</check>
                 <check>Access controls are implemented</check>
                 <check>Logging and monitoring are configured</check>
+                <check>Compliance requirements are documented</check>
+                <check>Security scanning is implemented</check>
+                <check>Key rotation is configured</check>
+                <check>Sensitive outputs are marked appropriately</check>
             </checks>
         </section>
         
@@ -1117,6 +2812,10 @@
                 <check>Scaling considerations are addressed</check>
                 <check>Cost optimization is implemented</check>
                 <check>Operational procedures are documented</check>
+                <check>Drift detection is configured</check>
+                <check>Performance optimization is implemented</check>
+                <check>Resource timeouts are configured</check>
+                <check>Rollback mechanisms are defined</check>
             </checks>
         </section>
         
@@ -1131,7 +2830,1144 @@
                 <check>Customization options are available</check>
                 <check>Internal implementation is encapsulated</check>
                 <check>Testing approach is defined</check>
+                <check>Version constraints are specified</check>
+                <check>Module follows single responsibility principle</check>
+                <check>Dependencies are minimized</check>
+                <check>Interface is stable across versions</check>
+            </checks>
+        </section>
+        
+        <section name="domain_alignment">
+            <title>Domain Alignment</title>
+            <checks>
+                <check>Infrastructure aligns with business domains</check>
+                <check>Bounded contexts are properly defined</check>
+                <check>Ubiquitous language is consistently used</check>
+                <check>Domain entities are represented appropriately</check>
+                <check>Aggregates are properly encapsulated</check>
+                <check>Context boundaries are respected</check>
+                <check>Anti-corruption layers are implemented</check>
+                <check>Domain events are properly modeled</check>
+                <check>Integration patterns follow DDD principles</check>
+                <check>Domain model is documented</check>
+                <check>Cross-domain dependencies are minimized</check>
+                <check>Strategic domain patterns are applied</check>
+            </checks>
+        </section>
+        
+        <section name="pipeline_integration">
+            <title>Pipeline Integration</title>
+            <checks>
+                <check>CI/CD pipelines are configured</check>
+                <check>Validation stages are implemented</check>
+                <check>Security scanning is integrated</check>
+                <check>Approval gates are configured</check>
+                <check>Environment promotion flow is defined</check>
+                <check>State backend supports CI/CD</check>
+                <check>Variables are properly managed</check>
+                <check>Sensitive values are secured</check>
+                <check>Testing is automated</check>
+                <check>Documentation is generated</check>
+                <check>Artifact management is configured</check>
+                <check>Pipeline follows domain boundaries</check>
+            </checks>
+        </section>
+        
+        <section name="cross_language_integration">
+            <title>Cross-Language Integration</title>
+            <checks>
+                <check>PowerShell integration is properly configured</check>
+                <check>C# application infrastructure is optimized</check>
+                <check>TypeScript application deployment is efficient</check>
+                <check>HCL code follows best practices</check>
+                <check>Language-specific resource configurations are optimized</check>
+                <check>Application configuration management is appropriate</check>
+                <check>Build and deployment integration is seamless</check>
+                <check>Language-specific security considerations are addressed</check>
+                <check>Runtime environment configuration is optimized</check>
+                <check>Log integration is configured</check>
+                <check>Performance considerations are addressed</check>
+                <check>Scaling patterns are appropriate</check>
             </checks>
         </section>
     </validation_checklist>
+
+    <template_resources>
+        <azure_devops_pipelines>
+            <template>
+                <name>terraform-multi-stage-pipeline.yml</name>
+                <description>Full multi-stage pipeline for Terraform with validation, testing, and deployment</description>
+                <usage>Base template for Azure DevOps Terraform implementation</usage>
+            </template>
+            <template>
+                <name>terraform-pr-validation.yml</name>
+                <description>Pull request validation pipeline for Terraform</description>
+                <usage>Template for PR validation workflow</usage>
+            </template>
+            <template>
+                <name>terraform-module-ci.yml</name>
+                <description>Continuous integration pipeline for Terraform modules</description>
+                <usage>Template for module development and testing</usage>
+            </template>
+            <template>
+                <name>terraform-multi-environment-cd.yml</name>
+                <description>Continuous deployment pipeline for multiple environments</description>
+                <usage>Template for production deployment pipelines</usage>
+            </template>
+        </azure_devops_pipelines>
+        
+        <module_templates>
+            <template>
+                <name>azure/vnet</name>
+                <description>Azure Virtual Network module template with domain-driven design</description>
+                <usage>Base template for Azure networking</usage>
+            </template>
+            <template>
+                <name>aws/vpc</name>
+                <description>AWS VPC module template with domain-driven design</description>
+                <usage>Base template for AWS networking</usage>
+            </template>
+            <template>
+                <name>kubernetes/namespace</name>
+                <description>Kubernetes namespace module with domain boundary enforcement</description>
+                <usage>Base template for Kubernetes organization</usage>
+            </template>
+            <template>
+                <name>cross-cloud/networking</name>
+                <description>Cross-cloud networking module template</description>
+                <usage>Base template for multi-cloud networking</usage>
+            </template>
+        </module_templates>
+        
+        <domain_templates>
+            <template>
+                <name>e-commerce/payment-processing</name>
+                <description>Domain-aligned payment processing infrastructure</description>
+                <usage>Template for payment-related infrastructure</usage>
+            </template>
+            <template>
+                <name>finance/transaction-processing</name>
+                <description>Domain-aligned financial transaction infrastructure</description>
+                <usage>Template for financial transaction systems</usage>
+            </template>
+            <template>
+                <name>healthcare/patient-data</name>
+                <description>Domain-aligned patient data infrastructure with compliance</description>
+                <usage>Template for healthcare data systems</usage>
+            </template>
+            <template>
+                <name>retail/inventory-management</name>
+                <description>Domain-aligned inventory management infrastructure</description>
+                <usage>Template for retail inventory systems</usage>
+            </template>
+        </domain_templates>
+        
+        <language_integration_templates>
+            <template>
+                <name>dotnet/web-api</name>
+                <description>Infrastructure template for .NET Web API hosting</description>
+                <usage>Template for C# web API applications</usage>
+            </template>
+            <template>
+                <name>typescript/spa</name>
+                <description>Infrastructure template for TypeScript SPA hosting</description>
+                <usage>Template for TypeScript single-page applications</usage>
+            </template>
+            <template>
+                <name>powershell/automation</name>
+                <description>Infrastructure template for PowerShell automation</description>
+                <usage>Template for PowerShell-based automation systems</usage>
+            </template>
+            <template>
+                <name>hcl/provider-dev</name>
+                <description>Infrastructure template for Terraform provider development</description>
+                <usage>Template for HCL-based provider development</usage>
+            </template>
+        </language_integration_templates>
+        
+        <policy_templates>
+            <template>
+                <name>security/cis-aws</name>
+                <description>CIS AWS benchmark policy templates</description>
+                <usage>Template for AWS security compliance</usage>
+            </template>
+            <template>
+                <name>security/cis-azure</name>
+                <description>CIS Azure benchmark policy templates</description>
+                <usage>Template for Azure security compliance</usage>
+            </template>
+            <template>
+                <name>governance/tagging</name>
+                <description>Resource tagging policy templates</description>
+                <usage>Template for tagging governance</usage>
+            </template>
+            <template>
+                <name>governance/cost</name>
+                <description>Cost management policy templates</description>
+                <usage>Template for cost control policies</usage>
+            </template>
+        </policy_templates>
+    </template_resources>
+
+    <integration_patterns>
+        <azure_devops_patterns>
+            <pattern>
+                <name>Multi-Stage Deployment</name>
+                <description>Pattern for implementing multi-stage Terraform deployments in Azure DevOps</description>
+                <implementation>
+                    <step>Configure service connections for each environment</step>
+                    <step>Define stage-specific variable groups</step>
+                    <step>Implement approval gates between environments</step>
+                    <step>Configure state isolation by environment</step>
+                </implementation>
+                <example>
+                    <code>
+stages:
+  - stage: Validate
+    jobs:
+      - job: Validate
+        steps:
+          - task: TerraformInstaller@0
+            inputs:
+              terraformVersion: '1.5.0'
+          - task: TerraformCLI@0
+            inputs:
+              command: 'init'
+              backendType: 'azurerm'
+              backendServiceArm: '$(BACKEND_SERVICE_CONNECTION)'
+          - task: TerraformCLI@0
+            inputs:
+              command: 'validate'
+
+  - stage: Dev
+    dependsOn: Validate
+    jobs:
+      - deployment: Deploy
+        environment: Development
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - template: terraform-deploy-steps.yml
+                  parameters:
+                    environment: 'dev'
+                    serviceConnection: '$(DEV_SERVICE_CONNECTION)'
+
+  - stage: Test
+    dependsOn: Dev
+    jobs:
+      - deployment: Deploy
+        environment: Test
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - template: terraform-deploy-steps.yml
+                  parameters:
+                    environment: 'test'
+                    serviceConnection: '$(TEST_SERVICE_CONNECTION)'
+
+  - stage: Production
+    dependsOn: Test
+    jobs:
+      - deployment: Deploy
+        environment: Production
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - template: terraform-deploy-steps.yml
+                  parameters:
+                    environment: 'prod'
+                    serviceConnection: '$(PROD_SERVICE_CONNECTION)'
+                    </code>
+                </example>
+            </pattern>
+            
+            <pattern>
+                <name>Domain-Aligned Pipeline</name>
+                <description>Pattern for organizing pipelines by domain boundaries</description>
+                <implementation>
+                    <step>Organize repositories by domain context</step>
+                    <step>Define domain-specific pipeline configurations</step>
+                    <step>Implement cross-domain coordination</step>
+                    <step>Configure domain-specific approvers</step>
+                </implementation>
+                <example>
+                    <code>
+# payment-processing-domain-pipeline.yml
+trigger:
+  branches:
+    include:
+      - main
+      - feature/*
+  paths:
+    include:
+      - domains/payment-processing/**
+
+variables:
+  - group: payment-domain-variables
+  - name: domainPath
+    value: domains/payment-processing
+
+stages:
+  - stage: Validate
+    jobs:
+      - job: ValidateDomain
+        steps:
+          - task: TerraformInstaller@0
+            inputs:
+              terraformVersion: '1.5.0'
+          - task: TerraformCLI@0
+            inputs:
+              command: 'init'
+              workingDirectory: '$(System.DefaultWorkingDirectory)/$(domainPath)'
+              backendType: 'azurerm'
+              backendServiceArm: '$(BACKEND_SERVICE_CONNECTION)'
+          - task: TerraformCLI@0
+            inputs:
+              command: 'validate'
+              workingDirectory: '$(System.DefaultWorkingDirectory)/$(domainPath)'
+
+  - stage: DeployDomain
+    dependsOn: Validate
+    jobs:
+      - deployment: DeployDomain
+        environment: Production
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - template: domain-deployment-steps.yml
+                  parameters:
+                    domainPath: '$(domainPath)'
+                    serviceConnection: '$(DOMAIN_SERVICE_CONNECTION)'
+                    </code>
+                </example>
+            </pattern>
+            
+            <pattern>
+                <name>PR Validation with Security Scanning</name>
+                <description>Pattern for comprehensive PR validation with security checks</description>
+                <implementation>
+                    <step>Configure PR triggers</step>
+                    <step>Implement validation checks</step>
+                    <step>Set up security scanning</step>
+                    <step>Configure policy validation</step>
+                </implementation>
+                <example>
+                    <code>
+# pr-validation-pipeline.yml
+trigger: none
+
+pr:
+  branches:
+    include:
+      - main
+      - release/*
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  - task: TerraformInstaller@0
+    inputs:
+      terraformVersion: '1.5.0'
+  
+  - task: TerraformCLI@0
+    inputs:
+      command: 'init'
+      backendType: 'azurerm'
+      backendServiceArm: '$(BACKEND_SERVICE_CONNECTION)'
+  
+  - task: TerraformCLI@0
+    inputs:
+      command: 'validate'
+  
+  - task: TerraformCLI@0
+    inputs:
+      command: 'plan'
+      environmentServiceName: '$(AZURE_SERVICE_CONNECTION)'
+      publishPlanResults: 'PlanResults'
+  
+  - task: Bash@3
+    displayName: 'Install tfsec'
+    inputs:
+      targetType: 'inline'
+      script: |
+        curl -s https://raw.githubusercontent.com/aquasecurity/tfsec/master/scripts/install_linux.sh | bash
+  
+  - task: Bash@3
+    displayName: 'Run tfsec'
+    inputs:
+      targetType: 'inline'
+      script: |
+        tfsec . --format=junit --out=tfsec-results.xml
+  
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFormat: 'JUnit'
+      testResultsFiles: '**/tfsec-results.xml'
+      testRunTitle: 'Security Scan Results'
+                    </code>
+                </example>
+            </pattern>
+            
+            <pattern>
+                <name>Module CI/CD Pipeline</name>
+                <description>Pattern for Terraform module continuous integration and delivery</description>
+                <implementation>
+                    <step>Configure testing environment</step>
+                    <step>Implement automated testing</step>
+                    <step>Set up documentation generation</step>
+                    <step>Configure module versioning</step>
+                </implementation>
+                <example>
+                    <code>
+# module-ci-pipeline.yml
+trigger:
+  branches:
+    include:
+      - main
+      - feature/*
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+stages:
+  - stage: Build
+    jobs:
+      - job: ValidateAndTest
+        steps:
+          - task: TerraformInstaller@0
+            inputs:
+              terraformVersion: '1.5.0'
+          
+          - task: Bash@3
+            displayName: 'Install Go for testing'
+            inputs:
+              targetType: 'inline'
+              script: |
+                wget https://golang.org/dl/go1.18.linux-amd64.tar.gz
+                sudo tar -C /usr/local -xzf go1.18.linux-amd64.tar.gz
+                export PATH=$PATH:/usr/local/go/bin
+                go version
+          
+          - task: TerraformCLI@0
+            inputs:
+              command: 'init'
+              workingDirectory: '$(System.DefaultWorkingDirectory)/test'
+          
+          - task: Bash@3
+            displayName: 'Run Terratest'
+            inputs:
+              targetType: 'inline'
+              workingDirectory: '$(System.DefaultWorkingDirectory)/test'
+              script: |
+                export PATH=$PATH:/usr/local/go/bin
+                go test -v
+          
+          - task: Bash@3
+            displayName: 'Generate Documentation'
+            inputs:
+              targetType: 'inline'
+              script: |
+                curl -Lo ./terraform-docs https://github.com/terraform-docs/terraform-docs/releases/download/v0.16.0/terraform-docs-v0.16.0-linux-amd64
+                chmod +x ./terraform-docs
+                ./terraform-docs markdown . > README.md
+          
+          - task: PublishBuildArtifacts@1
+            inputs:
+              pathToPublish: '$(System.DefaultWorkingDirectory)'
+              artifactName: 'module'
+                    </code>
+                </example>
+            </pattern>
+        </azure_devops_patterns>
+        
+        <github_actions_patterns>
+            <pattern>
+                <name>Terraform Workflow</name>
+                <description>Pattern for GitHub Actions Terraform workflow</description>
+                <implementation>
+                    <step>Configure GitHub Actions workflow</step>
+                    <step>Set up environment secrets</step>
+                    <step>Implement PR validation</step>
+                    <step>Configure deployment workflow</step>
+                </implementation>
+                <example>
+                    <code>
+name: 'Terraform CI/CD'
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  terraform:
+    name: 'Terraform'
+    runs-on: ubuntu-latest
+    environment: ${{ github.event_name == 'push' && 'production' || 'development' }}
+    
+    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+    # Checkout the repository to the GitHub Actions runner
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    # Install the latest version of Terraform CLI
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v2
+      with:
+        terraform_version: 1.5.0
+
+    # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
+    - name: Terraform Init
+      run: terraform init
+      env:
+        ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+        ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+        ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
+        ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+
+    # Checks that all Terraform configuration files adhere to a canonical format
+    - name: Terraform Format
+      run: terraform fmt -check
+
+    # Validates the configuration files in a directory
+    - name: Terraform Validate
+      run: terraform validate
+
+    # Run tfsec to check for security issues
+    - name: tfsec
+      uses: aquasecurity/tfsec-action@v1.0.0
+      with:
+        soft_fail: true
+
+    # Generate a Terraform plan for pull requests
+    - name: Terraform Plan
+      if: github.event_name == 'pull_request'
+      run: terraform plan -no-color
+      env:
+        ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+        ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+        ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
+        ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+      
+    # Add a comment to the pull request with the plan
+    - name: Add Plan Comment
+      if: github.event_name == 'pull_request'
+      uses: actions/github-script@v6
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const output = `#### Terraform Format and Style 🖌\`${{ steps.fmt.outcome }}\`
+          #### Terraform Initialization ⚙️\`${{ steps.init.outcome }}\`
+          #### Terraform Validation 🤖\`${{ steps.validate.outcome }}\`
+          #### Terraform Plan 📖\`${{ steps.plan.outcome }}\`
+
+          <details><summary>Show Plan</summary>
+
+          \`\`\`terraform
+          ${{ steps.plan.outputs.stdout }}
+          \`\`\`
+
+          </details>`;
+
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: output
+          })
+
+    # Apply Terraform configuration on push to main
+    - name: Terraform Apply
+      if: github.event_name == 'push'
+      run: terraform apply -auto-approve
+      env:
+        ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+        ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+        ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
+        ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+                    </code>
+                </example>
+            </pattern>
+            
+            <pattern>
+                <name>Domain-Specific Workflow</name>
+                <description>Pattern for domain-specific GitHub Actions workflow</description>
+                <implementation>
+                    <step>Organize workflows by domain</step>
+                    <step>Configure domain-specific environments</step>
+                    <step>Set up domain approval processes</step>
+                    <step>Implement cross-domain notifications</step>
+                </implementation>
+                <example>
+                    <code>
+name: 'Payment Domain CI/CD'
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'domains/payment-processing/**'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'domains/payment-processing/**'
+
+jobs:
+  validate:
+    name: 'Validate Payment Domain'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./domains/payment-processing
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v2
+      with:
+        terraform_version: 1.5.0
+
+    - name: Terraform Init
+      run: terraform init
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+    - name: Terraform Validate
+      run: terraform validate
+
+    - name: Terraform Plan
+      run: terraform plan
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+  deploy:
+    name: 'Deploy Payment Domain'
+    needs: validate
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    environment: 'payment-production'
+    defaults:
+      run:
+        working-directory: ./domains/payment-processing
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v2
+      with:
+        terraform_version: 1.5.0
+
+    - name: Terraform Init
+      run: terraform init
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+    - name: Terraform Apply
+      run: terraform apply -auto-approve
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    
+    - name: Domain Change Notification
+      uses: actions/github-script@v6
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const issue = await github.rest.issues.create({
+            owner: context.repo.owner,
+            repo: 'operations-notifications',
+            title: 'Payment Processing Domain Deployed',
+            body: `The Payment Processing domain has been deployed.\n\nCommit: ${context.sha}\nBranch: ${context.ref}\nTime: ${new Date().toISOString()}`
+          });
+                    </code>
+                </example>
+            </pattern>
+        </github_actions_patterns>
+        
+        <module_testing_patterns>
+            <pattern>
+                <name>Terratest Implementation</name>
+                <description>Pattern for implementing Terratest for Terraform modules</description>
+                <implementation>
+                    <step>Configure Go test environment</step>
+                    <step>Implement test fixture</step>
+                    <step>Define test assertions</step>
+                    <step>Set up cleanup procedures</step>
+                </implementation>
+                <example>
+                    <code>
+// test/module_test.go
+package test
+
+import (
+	"testing"
+	"time"
+
+	"github.com/gruntwork-io/terratest/modules/terraform"
+	"github.com/stretchr/testify/assert"
+)
+
+func TestTerraformVpcModule(t *testing.T) {
+	t.Parallel()
+
+	// Configure Terraform options with the fixture
+	terraformOptions := &terraform.Options{
+		// The path to where the Terraform code is located
+		TerraformDir: "../examples/complete",
+
+		// Variables to pass to our Terraform code using -var options
+		Vars: map[string]interface{}{
+			"vpc_name": "terratest-vpc",
+			"cidr_block": "10.0.0.0/16",
+			"environment": "test",
+		},
+
+		// Environment variables to set when running Terraform
+		EnvVars: map[string]string{
+			"AWS_DEFAULT_REGION": "us-east-1",
+		},
+
+		// Configure a plan file path so we can introspect the plan
+		PlanFilePath: "terraform.tfplan",
+	}
+
+	// At the end of the test, run `terraform destroy` to clean up any resources created
+	defer terraform.Destroy(t, terraformOptions)
+
+	// Run `terraform init` and `terraform apply`
+	terraform.InitAndApply(t, terraformOptions)
+
+	// Run `terraform output` to get the output variables
+	vpcId := terraform.Output(t, terraformOptions, "vpc_id")
+	privateSubnetIds := terraform.OutputList(t, terraformOptions, "private_subnet_ids")
+	publicSubnetIds := terraform.OutputList(t, terraformOptions, "public_subnet_ids")
+
+	// Verify we get the expected outputs
+	assert.NotEmpty(t, vpcId)
+	assert.Equal(t, 3, len(privateSubnetIds))
+	assert.Equal(t, 3, len(publicSubnetIds))
+
+	// Additional assertions to verify the VPC configuration
+	// These could include checking routing tables, security groups, etc.
+	// Example: Check that the VPC has the correct CIDR block using the AWS SDK
+}
+                    </code>
+                </example>
+            </pattern>
+            
+            <pattern>
+                <name>Kitchen-Terraform Implementation</name>
+                <description>Pattern for implementing Kitchen-Terraform for testing</description>
+                <implementation>
+                    <step>Configure Kitchen-Terraform environment</step>
+                    <step>Define test suites</step>
+                    <step>Implement InSpec tests</step>
+                    <step>Set up test stages</step>
+                </implementation>
+                <example>
+                    <code>
+# .kitchen.yml
+---
+driver:
+  name: terraform
+  root_module_directory: test/fixtures/example
+
+provisioner:
+  name: terraform
+
+platforms:
+  - name: aws
+
+verifier:
+  name: terraform
+  systems:
+    - name: aws
+      backend: aws
+      profile_name: default
+      controls:
+        - vpc
+        - subnets
+        - routing
+
+suites:
+  - name: default
+                    </code>
+                </example>
+                <example>
+                    <code>
+# test/integration/default/controls/vpc.rb
+control 'vpc' do
+  impact 1.0
+  title 'Test VPC Configuration'
+
+  describe aws_vpc(vpc_id: attribute('vpc_id')) do
+    it { should exist }
+    its('cidr_block') { should eq attribute('vpc_cidr') }
+    its('instance_tenancy') { should eq 'default' }
+    its('dns_hostnames.enabled') { should eq true }
+    its('tags') { should include('Environment' => attribute('environment')) }
+  end
+end
+
+control 'subnets' do
+  impact 1.0
+  title 'Test Subnet Configuration'
+
+  attribute('private_subnet_ids').each_with_index do |subnet_id, index|
+    describe aws_subnet(subnet_id: subnet_id) do
+      it { should exist }
+      its('vpc_id') { should eq attribute('vpc_id') }
+      its('map_public_ip_on_launch') { should eq false }
+      its('availabilty_zone') { should match /#{attribute('region')}.+/ }
+    end
+  end
+
+  attribute('public_subnet_ids').each_with_index do |subnet_id, index|
+    describe aws_subnet(subnet_id: subnet_id) do
+      it { should exist }
+      its('vpc_id') { should eq attribute('vpc_id') }
+      its('map_public_ip_on_launch') { should eq true }
+      its('availabilty_zone') { should match /#{attribute('region')}.+/ }
+    end
+  end
+end
+                    </code>
+                </example>
+            </pattern>
+            
+            <pattern>
+                <name>End-to-End Testing</name>
+                <description>Pattern for implementing end-to-end infrastructure testing</description>
+                <implementation>
+                    <step>Configure test infrastructure</step>
+                    <step>Implement application deployment</step>
+                    <step>Define integration tests</step>
+                    <step>Set up monitoring validation</step>
+                </implementation>
+                <example>
+                    <code>
+// test/e2e_test.go
+package test
+
+import (
+	"fmt"
+	"testing"
+	"time"
+
+	http_helper "github.com/gruntwork-io/terratest/modules/http-helper"
+	"github.com/gruntwork-io/terratest/modules/terraform"
+)
+
+func TestEndToEndDeployment(t *testing.T) {
+	t.Parallel()
+
+	// Deploy the infrastructure
+	terraformOptions := &terraform.Options{
+		TerraformDir: "../examples/complete",
+		Vars: map[string]interface{}{
+			"environment": "test",
+			"app_version": "1.0.0",
+		},
+	}
+	defer terraform.Destroy(t, terraformOptions)
+	terraform.InitAndApply(t, terraformOptions)
+
+	// Get the URL of the deployed application
+	appUrl := terraform.Output(t, terraformOptions, "app_url")
+
+	// Test that the application responds correctly
+	maxRetries := 30
+	timeBetweenRetries := 10 * time.Second
+	http_helper.HttpGetWithRetry(t, fmt.Sprintf("https://%s/health", appUrl), nil, 200, "OK", maxRetries, timeBetweenRetries)
+
+	// Test application functionality
+	http_helper.HttpGetWithRetry(t, fmt.Sprintf("https://%s/api/products", appUrl), nil, 200, "", maxRetries, timeBetweenRetries)
+
+	// Test integration with other components
+	databaseStatus := terraform.Output(t, terraformOptions, "database_status")
+	if databaseStatus != "available" {
+		t.Fatalf("Database is not available, status: %s", databaseStatus)
+	}
+
+	// Test monitoring is properly configured
+	monitoringUrl := terraform.Output(t, terraformOptions, "monitoring_url")
+	monitoringToken := terraform.Output(t, terraformOptions, "monitoring_token")
+	headers := map[string]string{
+		"Authorization": fmt.Sprintf("Bearer %s", monitoringToken),
+	}
+	http_helper.HttpGetWithRetry(t, monitoringUrl, &headers, 200, "healthy", maxRetries, timeBetweenRetries)
+}
+                    </code>
+                </example>
+            </pattern>
+        </module_testing_patterns>
+        
+        <policy_integration_patterns>
+            <pattern>
+                <name>OPA Policy Integration</name>
+                <description>Pattern for integrating Open Policy Agent with Terraform</description>
+                <implementation>
+                    <step>Configure OPA policy files</step>
+                    <step>Define policy constraints</step>
+                    <step>Set up policy testing</step>
+                    <step>Integrate with CI/CD pipeline</step>
+                </implementation>
+                <example>
+                    <code>
+# policy/terraform.rego
+package terraform
+
+import input.plan as tfplan
+
+# Rule to deny creating public S3 buckets
+deny[msg] {
+    resource := tfplan.resource_changes[_]
+    resource.type == "aws_s3_bucket"
+    resource.change.after.acl == "public-read"
+    
+    msg := sprintf(
+        "S3 bucket '%s' has a public ACL. Public S3 buckets are not allowed.",
+        [resource.name]
+    )
+}
+
+# Rule to require certain tags on resources
+required_tags = ["Environment", "Owner", "CostCenter"]
+
+deny[msg] {
+    resource := tfplan.resource_changes[_]
+    action := resource.change.actions[count(resource.change.actions) - 1]
+    is_create_or_update(action)
+    
+    tags := resource.change.after.tags
+    required_tag := required_tags[_]
+    not tags[required_tag]
+    
+    msg := sprintf(
+        "Resource '%s' of type '%s' is missing required tag '%s'",
+        [resource.name, resource.type, required_tag]
+    )
+}
+
+# Helper function to determine if this is a create or update action
+is_create_or_update(action) {
+    action == "create"
+} else {
+    action == "update"
+}
+                    </code>
+                </example>
+                <example>
+                    <code>
+# scripts/check-policy.sh
+#!/bin/bash
+set -e
+
+# Generate Terraform plan in JSON format
+terraform plan -out=tfplan.binary
+terraform show -json tfplan.binary > tfplan.json
+
+# Validate against OPA policies
+conftest test tfplan.json -p policy/
+                    </code>
+                </example>
+            </pattern>
+            
+            <pattern>
+                <name>Sentinel Policy Integration</name>
+                <description>Pattern for integrating Hashicorp Sentinel with Terraform Cloud/Enterprise</description>
+                <implementation>
+                    <step>Configure Sentinel policy files</step>
+                    <step>Define policy sets</step>
+                    <step>Set up enforcement levels</step>
+                    <step>Implement policy testing</step>
+                </implementation>
+                <example>
+                    <code>
+# sentinel/restrict-s3-buckets.sentinel
+import "tfplan/v2" as tfplan
+
+# Get all S3 buckets from the plan
+s3_buckets = filter tfplan.resource_changes as _, rc {
+    rc.type is "aws_s3_bucket" and
+    (rc.change.actions contains "create" or rc.change.actions contains "update")
+}
+
+# Rule to require private ACLs
+s3_buckets_private = rule {
+    all s3_buckets as _, bucket {
+        bucket.change.after.acl is "private"
+    }
+}
+
+# Rule to require encryption
+s3_buckets_encrypted = rule {
+    all s3_buckets as _, bucket {
+        bucket.change.after.server_side_encryption_configuration is not null
+    }
+}
+
+# Rule to ensure versioning is enabled
+s3_buckets_versioned = rule {
+    all s3_buckets as _, bucket {
+        bucket.change.after.versioning[0].enabled is true
+    }
+}
+
+# Main rule that requires all other rules to pass
+main = rule {
+    s3_buckets_private and
+    s3_buckets_encrypted and
+    s3_buckets_versioned
+}
+                    </code>
+                </example>
+                <example>
+                    <code>
+# sentinel/enforce-tags.sentinel
+import "tfplan/v2" as tfplan
+
+# Define required tags
+required_tags = [
+    "Environment",
+    "Owner",
+    "CostCenter",
+    "Application"
+]
+
+# Get all resources that support tags
+tagged_resources = filter tfplan.resource_changes as _, rc {
+    rc.change.actions contains "create" or rc.change.actions contains "update"
+}
+
+# Check that all resources have the required tags
+resources_have_required_tags = rule {
+    all tagged_resources as _, resource {
+        all required_tags as _, tag {
+            resource.change.after.tags contains tag
+        }
+    }
+}
+
+# Main rule
+main = rule {
+    resources_have_required_tags
+}
+                    </code>
+                </example>
+            </pattern>
+            
+            <pattern>
+                <name>Compliance Scanning Integration</name>
+                <description>Pattern for integrating compliance scanning tools with Terraform</description>
+                <implementation>
+                    <step>Configure scanning tools</step>
+                    <step>Define compliance profiles</step>
+                    <step>Set up scan automation</step>
+                    <step>Implement reporting</step>
+                </implementation>
+                <example>
+                    <code>
+# .github/workflows/compliance-scan.yml
+name: Compliance Scan
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  tfsec:
+    name: tfsec
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: tfsec
+        uses: aquasecurity/tfsec-action@v1.0.0
+        with:
+          soft_fail: true
+
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: tfsec.sarif
+
+  checkov:
+    name: checkov
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install checkov
+        run: pip install checkov
+
+      - name: Run checkov
+        run: checkov -d . --output-file-path checkov.sarif --output sarif
+        
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: checkov.sarif
+
+  terrascan:
+    name: terrascan
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install terrascan
+        run: |
+          curl -L "$(curl -s https://api.github.com/repos/accurics/terrascan/releases/latest | grep -o -E "https://.+?_Linux_x86_64.tar.gz")" > terrascan.tar.gz
+          tar -xf terrascan.tar.gz terrascan && rm terrascan.tar.gz
+          sudo install terrascan /usr/local/bin
+          rm terrascan
+
+      - name: Run terrascan
+        run: terrascan scan -i terraform -o sarif -o sarif > terrascan.sarif
+
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: terrascan.sarif
+                    </code>
+                </example>
+            </pattern>
+        </policy_integration_patterns>
+    </integration_patterns>
 </terraform_expert>

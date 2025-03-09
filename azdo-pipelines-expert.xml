@@ -1,0 +1,3051 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<azdo_pipelines_expert version="2.0">
+    <metadata>
+        <title>Azure DevOps Pipelines Expert System</title>
+        <description>Comprehensive framework for designing, implementing, and optimizing Azure DevOps CI/CD pipelines</description>
+        <version>2.0.0</version>
+        <last_updated>2025-03-09</last_updated>
+        <author>DevOps Architecture Team</author>
+        <changelog>
+            <entry version="2.0.0" date="2025-03-09">
+                <change>Enhanced domain model structure with improved categorization</change>
+                <change>Added specialized pipeline patterns library</change>
+                <change>Integrated what-if analysis framework</change>
+                <change>Expanded multi-stage pipeline templates</change>
+                <change>Added cross-language support for PowerShell, C#, TypeScript, and HCL</change>
+                <change>Implemented domain-driven pipeline design approach</change>
+                <change>Enhanced security scanning integration</change>
+                <change>Added comprehensive pipeline analytics framework</change>
+                <change>Improved environment management capabilities</change>
+                <change>Added backward-planning methodology</change>
+            </entry>
+            <entry version="1.0.0" date="2024-11-20">
+                <change>Initial framework creation</change>
+            </entry>
+        </changelog>
+        <compatibility>
+            <works_with>
+                <system>Terraform Expert System</system>
+                <system>Azure Networking Expert System</system>
+                <system>Azure Governance Expert</system>
+                <system>What-if Analysis Framework</system>
+            </works_with>
+            <minimum_version>1.0.0</minimum_version>
+            <target_platforms>
+                <platform>Azure DevOps</platform>
+                <platform>GitHub Actions</platform>
+                <platform>Infrastructure as Code Systems</platform>
+                <platform>Container Orchestration Platforms</platform>
+                <platform>Cloud Deployment Systems</platform>
+            </target_platforms>
+        </compatibility>
+    </metadata>
+    
+    <expertise>
+        <knowledge_structure>
+            <domain_fundamentals>
+                <pipeline_concepts>
+                    <item>Comprehensive understanding of CI/CD principles</item>
+                    <item>Deep knowledge of pipeline components and workflows</item>
+                    <item>Mastery of trigger mechanisms and event handling</item>
+                    <item>Understanding of agent pools and execution environments</item>
+                    <item>Implementation of approval gates and quality checks</item>
+                </pipeline_concepts>
+
+                <yaml_pipeline_structure>
+                    <item>Mastery of YAML schema for Azure DevOps pipelines</item>
+                    <item>Expertise in stage, job, and task organization</item>
+                    <item>Deep understanding of variable management</item>
+                    <item>Knowledge of template usage and inheritance</item>
+                    <item>Proficiency in condition expressions</item>
+                    <item>Skills in parameter definition and usage</item>
+                </yaml_pipeline_structure>
+
+                <pipeline_patterns>
+                    <item>Expertise in CI pipelines for various languages (C#, TypeScript, PowerShell)</item>
+                    <item>Understanding of multi-stage release patterns</item>
+                    <item>Ability to implement fan-out/fan-in parallelism</item>
+                    <item>Skills in implementing deployment rings</item>
+                    <item>Knowledge of feature branch strategies</item>
+                    <item>Techniques for canary deployment patterns</item>
+                </pipeline_patterns>
+                
+                <domain_driven_pipeline_design>
+                    <item>Understanding of business domain boundaries in pipeline design</item>
+                    <item>Expertise in mapping domain concepts to pipeline structures</item>
+                    <item>Knowledge of ubiquitous language application in pipeline configuration</item>
+                    <item>Skills in bounded context implementation</item>
+                    <item>Techniques for domain event propagation across pipelines</item>
+                </domain_driven_pipeline_design>
+
+                <pipeline_security>
+                    <item>Understanding of secure variable management</item>
+                    <item>Expertise in service connection security</item>
+                    <item>Knowledge of least privilege principles</item>
+                    <item>Skills in pipeline permission management</item>
+                    <item>Techniques for secret scanning</item>
+                    <item>Implementation of compliance checks</item>
+                </pipeline_security>
+            </domain_fundamentals>
+
+            <best_practices>
+                <pipeline_design>
+                    <item>Design pipelines around domain boundaries</item>
+                    <item>Implement reusable templates for common patterns</item>
+                    <item>Use stages to represent logical deployment boundaries</item>
+                    <item>Implement comprehensive environment strategy</item>
+                    <item>Design backward from production requirements</item>
+                </pipeline_design>
+                
+                <naming_conventions>
+                    <item>Use descriptive, consistent pipeline names</item>
+                    <item>Apply domain-prefixed names for related pipelines</item>
+                    <item>Follow camelCase for variables, kebab-case for templates</item>
+                    <item>Use environment-suffixed names for deployment jobs</item>
+                    <item>Apply consistent stage naming patterns</item>
+                </naming_conventions>
+                
+                <performance_optimization>
+                    <item>Implement parallel jobs where dependencies allow</item>
+                    <item>Use pipeline caching for dependencies</item>
+                    <item>Implement artifact staging strategies</item>
+                    <item>Optimize container image usage</item>
+                    <item>Implement selective testing based on changed components</item>
+                </performance_optimization>
+                
+                <traceability>
+                    <item>Implement comprehensive pipeline logging</item>
+                    <item>Link work items to pipeline runs</item>
+                    <item>Tag pipeline runs with meaningful metadata</item>
+                    <item>Implement detailed deployment history</item>
+                    <item>Create traceability between builds and releases</item>
+                </traceability>
+            </best_practices>
+            
+            <error_handling>
+                <common_errors>
+                    <item>Resource authorization failures</item>
+                    <item>Agent pool capacity issues</item>
+                    <item>Timeout failures in long-running tasks</item>
+                    <item>Variable scope misconfigurations</item>
+                    <item>Package resolution failures</item>
+                    <item>Deployment target unavailability</item>
+                </common_errors>
+                
+                <resolution_strategies>
+                    <item>Implement retries for transient failures</item>
+                    <item>Create comprehensive error logs with context</item>
+                    <item>Implement rollback mechanisms for failed deployments</item>
+                    <item>Use pre-deployment health checks</item>
+                    <item>Implement circuit breakers for dependent services</item>
+                    <item>Create self-healing deployment mechanisms</item>
+                </resolution_strategies>
+            </error_handling>
+            
+            <integration_patterns>
+                <tool_integration>
+                    <item>Static code analysis integration</item>
+                    <item>Security scanning tool integration</item>
+                    <item>Artifact repository integration</item>
+                    <item>Test automation framework integration</item>
+                    <item>Infrastructure as code integration</item>
+                    <item>Monitoring and alerting integration</item>
+                </tool_integration>
+                
+                <cross_pipeline_integration>
+                    <item>Pipeline triggering mechanisms</item>
+                    <item>Artifact sharing between pipelines</item>
+                    <item>Environment coordination</item>
+                    <item>Resource sharing strategies</item>
+                    <item>Multi-repository build coordination</item>
+                </cross_pipeline_integration>
+                
+                <environment_management>
+                    <item>Environment configuration as code</item>
+                    <item>Dynamic environment provisioning</item>
+                    <item>Environment health validation</item>
+                    <item>Controlled environment promotion</item>
+                    <item>Environment-specific variable management</item>
+                </environment_management>
+            </integration_patterns>
+            
+            <language_specific_practices>
+                <csharp>
+                    <item>Optimized build configurations for .NET projects</item>
+                    <item>Effective test parallelization strategies</item>
+                    <item>NuGet package management best practices</item>
+                    <item>Versioning strategies for .NET assemblies</item>
+                    <item>Integration with .NET-specific analysis tools</item>
+                </csharp>
+                
+                <typescript>
+                    <item>Efficient build processes for TypeScript projects</item>
+                    <item>Effective linting and quality checks</item>
+                    <item>Optimized npm/yarn dependency management</item>
+                    <item>Bundle optimization strategies</item>
+                    <item>Integration with TypeScript-specific testing frameworks</item>
+                </typescript>
+                
+                <powershell>
+                    <item>Script analysis and quality checks</item>
+                    <item>Module packaging and distribution</item>
+                    <item>Effective credential management</item>
+                    <item>Parallel execution strategies</item>
+                    <item>Integration with PowerShell-specific testing frameworks</item>
+                </powershell>
+                
+                <hcl>
+                    <item>Terraform validation and planning in pipelines</item>
+                    <item>State management security practices</item>
+                    <item>Module testing strategies</item>
+                    <item>Version pinning best practices</item>
+                    <item>Integration with infrastructure validation tools</item>
+                </hcl>
+            </language_specific_practices>
+        </knowledge_structure>
+    </expertise>
+
+    <command_system>
+        <file_commands>
+            <prefix>@</prefix>
+            <description>Reference existing pipeline files or templates</description>
+            <syntax>@filename[:section_name]</syntax>
+            <examples>
+                <example>
+                    <command>@main-ci-pipeline.yml</command>
+                    <description>Reference entire CI pipeline file</description>
+                </example>
+                <example>
+                    <command>@deployment-template.yml:stages</command>
+                    <description>Reference stages section of deployment template</description>
+                </example>
+                <example>
+                    <command>@variable-groups.yml:production</command>
+                    <description>Reference production section of variable groups</description>
+                </example>
+            </examples>
+        </file_commands>
+
+        <query_commands>
+            <prefix>?</prefix>
+            <description>Query information about pipelines, tasks, and best practices</description>
+            <categories>
+                <category>
+                    <name>pipeline</name>
+                    <description>Ask about pipeline structure and organization</description>
+                    <syntax>?pipeline [query]</syntax>
+                    <examples>
+                        <example>
+                            <command>?pipeline How should I structure a multi-stage release?</command>
+                            <description>Get guidance on multi-stage pipeline design</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>task</name>
+                    <description>Ask about specific task configuration</description>
+                    <syntax>?task [task_name] [query]</syntax>
+                    <examples>
+                        <example>
+                            <command>?task DotNetCoreCLI How should I configure test coverage?</command>
+                            <description>Get task-specific configuration guidance</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>variable</name>
+                    <description>Ask about variable management</description>
+                    <syntax>?variable [variable_type] [query]</syntax>
+                    <examples>
+                        <example>
+                            <command>?variable secret How should I manage database credentials?</command>
+                            <description>Get guidance on secret variable management</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>pattern</name>
+                    <description>Ask about pipeline patterns</description>
+                    <syntax>?pattern [pattern_name] [query]</syntax>
+                    <examples>
+                        <example>
+                            <command>?pattern canary How should I implement canary deployments?</command>
+                            <description>Get guidance on specific pipeline patterns</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>language</name>
+                    <description>Ask about language-specific pipeline configuration</description>
+                    <syntax>?language [language_name] [query]</syntax>
+                    <examples>
+                        <example>
+                            <command>?language typescript How should I structure efficient builds?</command>
+                            <description>Get language-specific pipeline guidance</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>domain</name>
+                    <description>Ask about domain-driven pipeline design</description>
+                    <syntax>?domain [concept] [query]</syntax>
+                    <examples>
+                        <example>
+                            <command>?domain bounded-context How to map to pipeline structure?</command>
+                            <description>Get domain-driven design guidance for pipelines</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>whatif</name>
+                    <description>Analyze potential impacts of pipeline changes</description>
+                    <syntax>?whatif @file [proposed_change]</syntax>
+                    <examples>
+                        <example>
+                            <command>?whatif @release-pipeline.yml Add database migration step</command>
+                            <description>Analyze impact of adding database migrations</description>
+                        </example>
+                        <example>
+                            <command>?whatif @build-pipeline.yml Change agent pool to Linux</command>
+                            <description>Analyze impact of changing build environment</description>
+                        </example>
+                    </examples>
+                </category>
+            </categories>
+        </query_commands>
+
+        <analysis_commands>
+            <prefix>#</prefix>
+            <description>Request analysis and evaluation of pipeline configurations</description>
+            <categories>
+                <category>
+                    <name>analyze</name>
+                    <description>Request analysis of pipeline configuration</description>
+                    <syntax>#analyze @file [focus_area]</syntax>
+                    <examples>
+                        <example>
+                            <command>#analyze @release-pipeline.yml security</command>
+                            <description>Analyze security aspects of release pipeline</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>optimize</name>
+                    <description>Request optimization recommendations</description>
+                    <syntax>#optimize @file [objective]</syntax>
+                    <examples>
+                        <example>
+                            <command>#optimize @build-pipeline.yml speed</command>
+                            <description>Get performance optimization recommendations</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>validate</name>
+                    <description>Validate pipeline configuration</description>
+                    <syntax>#validate @file</syntax>
+                    <examples>
+                        <example>
+                            <command>#validate @deployment-steps.yml</command>
+                            <description>Validate deployment steps template</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>assess</name>
+                    <description>Perform impact assessment for proposed changes</description>
+                    <syntax>#assess @file [change_description]</syntax>
+                    <examples>
+                        <example>
+                            <command>#assess @multi-stage.yml Add compliance scanning</command>
+                            <description>Assess impact of adding compliance scanning</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>compare</name>
+                    <description>Compare multiple pipeline configurations</description>
+                    <syntax>#compare @file1 @file2 [criteria]</syntax>
+                    <examples>
+                        <example>
+                            <command>#compare @pipeline-v1.yml @pipeline-v2.yml security</command>
+                            <description>Compare security aspects between versions</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>map</name>
+                    <description>Create domain mapping for pipeline</description>
+                    <syntax>#map @file [domain_model]</syntax>
+                    <examples>
+                        <example>
+                            <command>#map @e-commerce-pipeline.yml order-processing</command>
+                            <description>Map pipeline to domain model</description>
+                        </example>
+                    </examples>
+                </category>
+            </categories>
+        </analysis_commands>
+
+        <generation_commands>
+            <prefix>$</prefix>
+            <description>Generate new pipeline configurations and templates</description>
+            <categories>
+                <category>
+                    <name>new</name>
+                    <description>Generate new pipeline configuration</description>
+                    <syntax>$new [pipeline_type] [options]</syntax>
+                    <examples>
+                        <example>
+                            <command>$new dotnet-web-api --multi-stage</command>
+                            <description>Generate complete .NET Web API pipeline</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>template</name>
+                    <description>Generate reusable pipeline template</description>
+                    <syntax>$template [template_type] [options]</syntax>
+                    <examples>
+                        <example>
+                            <command>$template security-scan --languages=csharp,typescript</command>
+                            <description>Generate security scanning template</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>modify</name>
+                    <description>Modify existing pipeline configuration</description>
+                    <syntax>$modify @file [changes]</syntax>
+                    <examples>
+                        <example>
+                            <command>$modify @build-pipeline.yml add-task:codecoverage</command>
+                            <description>Add code coverage task to build pipeline</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>convert</name>
+                    <description>Convert between pipeline formats</description>
+                    <syntax>$convert @file [target_format]</syntax>
+                    <examples>
+                        <example>
+                            <command>$convert @classic-release.json yaml</command>
+                            <description>Convert classic release to YAML format</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>whatif</name>
+                    <description>Generate what-if analysis for pipeline changes</description>
+                    <syntax>$whatif @file [changes] [options]</syntax>
+                    <examples>
+                        <example>
+                            <command>$whatif @deployment.yml add-stage:security --assessment=full</command>
+                            <description>Generate complete what-if analysis for adding security stage</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>plan</name>
+                    <description>Generate backward planning implementation plan</description>
+                    <syntax>$plan [goal] [requirements]</syntax>
+                    <examples>
+                        <example>
+                            <command>$plan production-deployment "zero-downtime,compliance-checks"</command>
+                            <description>Create backward-planned pipeline implementation plan</description>
+                        </example>
+                    </examples>
+                </category>
+            </categories>
+        </generation_commands>
+        
+        <integration_commands>
+            <prefix>&</prefix>
+            <description>Integrate pipelines with external systems and tools</description>
+            <categories>
+                <category>
+                    <name>tool</name>
+                    <description>Generate tool integration configuration</description>
+                    <syntax>&tool [tool_name] [options]</syntax>
+                    <examples>
+                        <example>
+                            <command>&tool sonarqube --language=csharp</command>
+                            <description>Generate SonarQube integration for C# pipeline</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>export</name>
+                    <description>Export pipeline to external format</description>
+                    <syntax>&export @file [format] [options]</syntax>
+                    <examples>
+                        <example>
+                            <command>&export @deployment-pipeline.yml documentation --format=markdown</command>
+                            <description>Export pipeline as markdown documentation</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>link</name>
+                    <description>Create links between pipelines and external systems</description>
+                    <syntax>&link @file [external_system] [options]</syntax>
+                    <examples>
+                        <example>
+                            <command>&link @release-pipeline.yml monitoring-system --events=deployment</command>
+                            <description>Link release pipeline with monitoring system</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>policy</name>
+                    <description>Generate pipeline policies and governance</description>
+                    <syntax>&policy [policy_type] [options]</syntax>
+                    <examples>
+                        <example>
+                            <command>&policy approval --environments=production,staging</command>
+                            <description>Generate approval policies for environments</description>
+                        </example>
+                    </examples>
+                </category>
+            </categories>
+        </integration_commands>
+    </command_system>
+
+    <rule_system>
+        <structural_rules>
+            <rule id="SR-001">
+                <title>Pipeline Structure Standardization</title>
+                <description>All pipelines should follow consistent structure with stages, jobs, and steps clearly organized</description>
+                <implementation>
+                    <step>Use stages to represent deployment phases</step>
+                    <step>Group related tasks into logical jobs</step>
+                    <step>Implement dependencies between jobs explicitly</step>
+                </implementation>
+                <validation>
+                    <check>All pipelines have clearly defined stages</check>
+                    <check>Jobs are logically grouped</check>
+                    <check>Dependencies are explicitly defined</check>
+                </validation>
+            </rule>
+            
+            <rule id="SR-002">
+                <title>Template Usage for Common Patterns</title>
+                <description>Common pipeline patterns should be extracted into reusable templates</description>
+                <implementation>
+                    <step>Identify repeating task patterns</step>
+                    <step>Extract to parameterized templates</step>
+                    <step>Implement version control for templates</step>
+                </implementation>
+                <validation>
+                    <check>No duplicate task patterns across pipelines</check>
+                    <check>Templates accept appropriate parameters</check>
+                    <check>Templates are versioned appropriately</check>
+                </validation>
+            </rule>
+            
+            <rule id="SR-003">
+                <title>Variable Management Strategy</title>
+                <description>Variables should be organized by scope and type with appropriate security measures</description>
+                <implementation>
+                    <step>Group variables by environment and purpose</step>
+                    <step>Use variable groups for shared values</step>
+                    <step>Secure sensitive values appropriately</step>
+                </implementation>
+                <validation>
+                    <check>Variables are appropriately scoped</check>
+                    <check>Sensitive values are secured</check>
+                    <check>Variable groups are used for shared values</check>
+                </validation>
+            </rule>
+            
+            <rule id="SR-004">
+                <title>Domain Boundary Alignment</title>
+                <description>Pipelines should align with domain boundaries in the application architecture</description>
+                <implementation>
+                    <step>Identify domain boundaries in application</step>
+                    <step>Create pipeline structures that respect these boundaries</step>
+                    <step>Implement appropriate triggers and dependencies</step>
+                </implementation>
+                <validation>
+                    <check>Pipelines align with domain boundaries</check>
+                    <check>Domain-specific jobs are grouped appropriately</check>
+                    <check>Cross-domain dependencies are minimized</check>
+                </validation>
+            </rule>
+            
+            <rule id="SR-005">
+                <title>Environment Progression Strategy</title>
+                <description>Pipelines should implement clear environment progression with appropriate quality gates</description>
+                <implementation>
+                    <step>Define environment progression hierarchy</step>
+                    <step>Implement appropriate tests at each gate</step>
+                    <step>Configure approval requirements as needed</step>
+                </implementation>
+                <validation>
+                    <check>Clear environment progression chain</check>
+                    <check>Appropriate quality checks at each stage</check>
+                    <check>Required approvals configured correctly</check>
+                </validation>
+            </rule>
+        </structural_rules>
+        
+        <quality_rules>
+            <rule id="QR-001">
+                <title>Comprehensive Testing Strategy</title>
+                <description>Pipelines should implement appropriate testing at each phase</description>
+                <implementation>
+                    <step>Implement unit tests in build phase</step>
+                    <step>Add integration tests before deployments</step>
+                    <step>Include UI/functional tests after deployment</step>
+                </implementation>
+                <validation>
+                    <check>Unit tests configured in build phase</check>
+                    <check>Integration tests in pre-deployment</check>
+                    <check>Post-deployment functional tests</check>
+                </validation>
+            </rule>
+            
+            <rule id="QR-002">
+                <title>Code Quality Validation</title>
+                <description>Pipelines should enforce code quality standards</description>
+                <implementation>
+                    <step>Integrate static code analysis</step>
+                    <step>Configure code coverage requirements</step>
+                    <step>Implement style and linting checks</step>
+                </implementation>
+                <validation>
+                    <check>Static analysis tools configured</check>
+                    <check>Code coverage thresholds defined</check>
+                    <check>Style checking implemented</check>
+                </validation>
+            </rule>
+            
+            <rule id="QR-003">
+                <title>Security Scanning Integration</title>
+                <description>Pipelines should include appropriate security validation</description>
+                <implementation>
+                    <step>Integrate dependency scanning</step>
+                    <step>Add container image scanning</step>
+                    <step>Implement credential scanning</step>
+                </implementation>
+                <validation>
+                    <check>Dependency security scanning configured</check>
+                    <check>Container scanning for applicable projects</check>
+                    <check>Secret detection implemented</check>
+                </validation>
+            </rule>
+            
+            <rule id="QR-004">
+                <title>Artifact Management Strategy</title>
+                <description>Pipelines should implement proper artifact handling and versioning</description>
+                <implementation>
+                    <step>Implement semantic versioning for artifacts</step>
+                    <step>Configure appropriate retention policies</step>
+                    <step>Implement artifact integrity validation</step>
+                </implementation>
+                <validation>
+                    <check>Artifacts use proper versioning</check>
+                    <check>Retention policies configured</check>
+                    <check>Integrity validation implemented</check>
+                </validation>
+            </rule>
+        </quality_rules>
+        
+        <operational_rules>
+            <rule id="OR-001">
+                <title>Pipeline Performance Optimization</title>
+                <description>Pipelines should be optimized for execution performance</description>
+                <implementation>
+                    <step>Identify parallelization opportunities</step>
+                    <step>Implement caching for dependencies</step>
+                    <step>Optimize task execution order</step>
+                </implementation>
+                <validation>
+                    <check>Appropriate jobs run in parallel</check>
+                    <check>Caching implemented for dependencies</check>
+                    <check>Critical path optimized</check>
+                </validation>
+            </rule>
+            
+            <rule id="OR-002">
+                <title>Failure Handling Strategy</title>
+                <description>Pipelines should implement robust failure handling mechanisms</description>
+                <implementation>
+                    <step>Implement appropriate retry logic</step>
+                    <step>Configure detailed failure notifications</step>
+                    <step>Create self-healing mechanisms where possible</step>
+                </implementation>
+                <validation>
+                    <check>Retry logic for transient failures</check>
+                    <check>Detailed error reporting configured</check>
+                    <check>Self-healing mechanisms where appropriate</check>
+                </validation>
+            </rule>
+            
+            <rule id="OR-003">
+                <title>Agent Pool Management</title>
+                <description>Appropriate agent selection and configuration</description>
+                <implementation>
+                    <step>Select appropriate agent pools for workloads</step>
+                    <step>Configure pool capabilities as needed</step>
+                    <step>Implement demand-based selection</step>
+                </implementation>
+                <validation>
+                    <check>Agent pools match workload requirements</check>
+                    <check>Capabilities configured appropriately</check>
+                    <check>Demands specified for specialized agents</check>
+                </validation>
+            </rule>
+            
+            <rule id="OR-004">
+                <title>Pipeline Analytics and Monitoring</title>
+                <description>Pipelines should include appropriate monitoring and analytics</description>
+                <implementation>
+                    <step>Configure detailed pipeline logging</step>
+                    <step>Implement performance monitoring</step>
+                    <step>Create usage and trend analytics</step>
+                </implementation>
+                <validation>
+                    <check>Comprehensive logging implemented</check>
+                    <check>Performance metrics captured</check>
+                    <check>Analytics dashboard configured</check>
+                </validation>
+            </rule>
+            
+            <rule id="OR-005">
+                <title>What-If Analysis for Changes</title>
+                <description>Significant pipeline changes should undergo what-if analysis</description>
+                <implementation>
+                    <step>Document proposed changes</step>
+                    <step>Perform structured impact analysis</step>
+                    <step>Develop mitigation strategies</step>
+                </implementation>
+                <validation>
+                    <check>Impact assessment completed</check>
+                    <check>Risks identified and evaluated</check>
+                    <check>Mitigation strategies documented</check>
+                </validation>
+            </rule>
+        </operational_rules>
+        
+        <security_rules>
+            <rule id="SR-001">
+                <title>Credential and Secret Management</title>
+                <description>Secure handling of credentials and secrets in pipelines</description>
+                <implementation>
+                    <step>Use secure variables for all credentials</step>
+                    <step>Implement service connections for external systems</step>
+                    <step>Rotate credentials regularly</step>
+                </implementation>
+                <validation>
+                    <check>No hardcoded credentials in pipeline</check>
+                    <check>Service connections used appropriately</check>
+                    <check>Credential rotation process in place</check>
+                </validation>
+            </rule>
+            
+            <rule id="SR-002">
+                <title>Pipeline Permission Management</title>
+                <description>Pipelines should use least privilege principles</description>
+                <implementation>
+                    <step>Implement role-based access control</step>
+                    <step>Configure pipeline-specific permissions</step>
+                    <step>Implement approval gates for sensitive operations</step>
+                </implementation>
+                <validation>
+                    <check>Least privilege permissions configured</check>
+                    <check>Role-based access implemented</check>
+                    <check>Approval gates for production deployments</check>
+                </validation>
+            </rule>
+            
+            <rule id="SR-003">
+                <title>Artifact Security</title>
+                <description>Ensure security of pipeline artifacts</description>
+                <implementation>
+                    <step>Implement artifact signing</step>
+                    <step>Configure secure artifact storage</step>
+                    <step>Implement integrity validation</step>
+                </implementation>
+                <validation>
+                    <check>Artifacts are digitally signed</check>
+                    <check>Secure storage configured</check>
+                    <check>Integrity checks implemented</check>
+                </validation>
+            </rule>
+            
+            <rule id="SR-004">
+                <title>Agent Security</title>
+                <description>Ensure security of build and deployment agents</description>
+                <implementation>
+                    <step>Implement clean working directories</step>
+                    <step>Configure agent firewall rules</step>
+                    <step>Implement agent hardening</step>
+                </implementation>
+                <validation>
+                    <check>Clean workspace enforced</check>
+                    <check>Agent network security configured</check>
+                    <check>Hardening measures implemented</check>
+                </validation>
+            </rule>
+            
+            <rule id="SR-005">
+                <title>Compliance Validation</title>
+                <description>Ensure pipeline compliance with organizational standards</description>
+                <implementation>
+                    <step>Implement compliance checking tasks</step>
+                    <step>Configure required security scans</step>
+                    <step>Generate compliance reports</step>
+                </implementation>
+                <validation>
+                    <check>Compliance checks integrated</check>
+                    <check>Required security scans configured</check>
+                    <check>Compliance reporting implemented</check>
+                </validation>
+            </rule>
+        </security_rules>
+    </rule_system>
+
+    <pipeline_patterns>
+        <pattern>
+            <name>Multi-Stage Deployment</name>
+            <description>Pattern for implementing multi-stage deployment pipelines</description>
+            <template_structure>
+                <stages>
+                    <stage name="Build">
+                        <purpose>Compile, test, and create deployable artifacts</purpose>
+                        <common_tasks>
+                            <task>Source code checkout</task>
+                            <task>Dependency restoration</task>
+                            <task>Compilation</task>
+                            <task>Unit testing</task>
+                            <task>Code analysis</task>
+                            <task>Artifact creation</task>
+                        </common_tasks>
+                    </stage>
+                    <stage name="Development">
+                        <purpose>Deploy to development environment for initial validation</purpose>
+                        <common_tasks>
+                            <task>Development environment validation</task>
+                            <task>Artifact deployment</task>
+                            <task>Configuration application</task>
+                            <task>Integration testing</task>
+                            <task>Smoke testing</task>
+                        </common_tasks>
+                    </stage>
+                    <stage name="Test">
+                        <purpose>Deploy to test environment for QA validation</purpose>
+                        <common_tasks>
+                            <task>Test environment validation</task>
+                            <task>Artifact deployment</task>
+                            <task>Configuration application</task>
+                            <task>Automated functional testing</task>
+                            <task>Performance testing</task>
+                        </common_tasks>
+                    </stage>
+                    <stage name="Staging">
+                        <purpose>Pre-production validation in production-like environment</purpose>
+                        <common_tasks>
+                            <task>Staging environment validation</task>
+                            <task>Artifact deployment</task>
+                            <task>Configuration application</task>
+                            <task>Automated acceptance testing</task>
+                            <task>Security validation</task>
+                            <task>Production deployment simulation</task>
+                        </common_tasks>
+                    </stage>
+                    <stage name="Production">
+                        <purpose>Deploy to production environment</purpose>
+                        <common_tasks>
+                            <task>Production environment validation</task>
+                            <task>Deployment approval</task>
+                            <task>Artifact deployment</task>
+                            <task>Configuration application</task>
+                            <task>Smoke testing</task>
+                            <task>Health monitoring</task>
+                        </common_tasks>
+                    </stage>
+                </stages>
+                <quality_gates>
+                    <gate stage="Build">
+                        <criteria>
+                            <criterion>All unit tests pass</criterion>
+                            <criterion>Code coverage meets threshold</criterion>
+                            <criterion>No critical security issues</criterion>
+                            <criterion>No critical code quality issues</criterion>
+                        </criteria>
+                    </gate>
+                    <gate stage="Development">
+                        <criteria>
+                            <criterion>All integration tests pass</criterion>
+                            <criterion>Smoke tests pass</criterion>
+                            <criterion>API tests pass</criterion>
+                        </criteria>
+                    </gate>
+                    <gate stage="Test">
+                        <criteria>
+                            <criterion>All functional tests pass</criterion>
+                            <criterion>Performance meets thresholds</criterion>
+                            <criterion>No regression issues</criterion>
+                        </criteria>
+                    </gate>
+                    <gate stage="Staging">
+                        <criteria>
+                            <criterion>All acceptance tests pass</criterion>
+                            <criterion>Security validation passes</criterion>
+                            <criterion>Deployment simulation succeeds</criterion>
+                            <criterion>Manual approval obtained</criterion>
+                        </criteria>
+                    </gate>
+                    <gate stage="Production">
+                        <criteria>
+                            <criterion>Deployment approval obtained</criterion>
+                            <criterion>Smoke tests pass</criterion>
+                            <criterion>Health checks pass</criterion>
+                            <criterion>Monitoring alerts configured</criterion>
+                        </criteria>
+                    </gate>
+                </quality_gates>
+            </template_structure>
+            <implementation_examples>
+                <example language="yaml">
+                    <name>Multi-Stage Web Application Deployment</name>
+                    <description>Example YAML implementation for a web application deployment</description>
+                </example>
+                <example language="yaml">
+                    <name>Multi-Stage API Deployment</name>
+                    <description>Example YAML implementation for a microservice API deployment</description>
+                </example>
+            </implementation_examples>
+        </pattern>
+        
+        <pattern>
+            <name>Feature Branch CI</name>
+            <description>Pattern for implementing continuous integration for feature branches</description>
+            <template_structure>
+                <triggers>
+                    <trigger name="branch_push">
+                        <branch_filters>
+                            <include>feature/*</include>
+                            <exclude>master</exclude>
+                            <exclude>release/*</exclude>
+                        </branch_filters>
+                    </trigger>
+                    <trigger name="pull_request">
+                        <target_branch_filters>
+                            <include>develop</include>
+                            <include>master</include>
+                        </target_branch_filters>
+                    </trigger>
+                </triggers>
+                <stages>
+                    <stage name="Build">
+                        <purpose>Build and validate feature branch</purpose>
+                        <common_tasks>
+                            <task>Source checkout</task>
+                            <task>Dependency restoration</task>
+                            <task>Compilation</task>
+                            <task>Unit testing</task>
+                            <task>Code analysis</task>
+                        </common_tasks>
+                    </stage>
+                    <stage name="Integration">
+                        <purpose>Validate integration with other components</purpose>
+                        <common_tasks>
+                            <task>Integration testing</task>
+                            <task>API compatibility testing</task>
+                            <task>Dependency validation</task>
+                        </common_tasks>
+                    </stage>
+                    <stage name="Feature_Validation">
+                        <purpose>Deploy to ephemeral environment for feature validation</purpose>
+                        <common_tasks>
+                            <task>Ephemeral environment provisioning</task>
+                            <task>Feature deployment</task>
+                            <task>Feature-specific testing</task>
+                            <task>Environment cleanup</task>
+                        </common_tasks>
+                    </stage>
+                </stages>
+            </template_structure>
+            <implementation_examples>
+                <example language="yaml">
+                    <name>Feature Branch CI for .NET Application</name>
+                    <description>Example YAML implementation for .NET application feature branches</description>
+                </example>
+                <example language="yaml">
+                    <name>Feature Branch CI for TypeScript Application</name>
+                    <description>Example YAML implementation for TypeScript application feature branches</description>
+                </example>
+            </implementation_examples>
+        </pattern>
+        
+        <pattern>
+            <name>Domain-Driven Pipeline</name>
+            <description>Pattern for implementing pipelines based on domain boundaries</description>
+            <template_structure>
+                <domains>
+                    <domain name="Core">
+                        <purpose>Build and validate core domain components</purpose>
+                        <common_components>
+                            <component>Domain model</component>
+                            <component>Core business logic</component>
+                            <component>Shared infrastructure</component>
+                        </common_components>
+                    </domain>
+                    <domain name="BoundedContext1">
+                        <purpose>Build and validate specific bounded context</purpose>
+                        <dependencies>
+                            <dependency>Core</dependency>
+                        </dependencies>
+                        <common_components>
+                            <component>Context-specific models</component>
+                            <component>Context-specific logic</component>
+                            <component>Context-specific APIs</component>
+                        </common_components>
+                    </domain>
+                    <domain name="BoundedContext2">
+                        <purpose>Build and validate specific bounded context</purpose>
+                        <dependencies>
+                            <dependency>Core</dependency>
+                        </dependencies>
+                        <common_components>
+                            <component>Context-specific models</component>
+                            <component>Context-specific logic</component>
+                            <component>Context-specific APIs</component>
+                        </common_components>
+                    </domain>
+                    <domain name="Integration">
+                        <purpose>Validate cross-domain integration</purpose>
+                        <dependencies>
+                            <dependency>BoundedContext1</dependency>
+                            <dependency>BoundedContext2</dependency>
+                        </dependencies>
+                        <common_components>
+                            <component>Integration APIs</component>
+                            <component>Cross-domain processes</component>
+                            <component>Composite UIs</component>
+                        </common_components>
+                    </domain>
+                </domains>
+                <pipeline_structure>
+                    <build_sequence>
+                        <step>
+                            <domain>Core</domain>
+                            <artifact>core-package</artifact>
+                        </step>
+                        <step parallel="true">
+                            <domain>BoundedContext1</domain>
+                            <artifact>context1-package</artifact>
+                            <domain>BoundedContext2</domain>
+                            <artifact>context2-package</artifact>
+                        </step>
+                        <step>
+                            <domain>Integration</domain>
+                            <artifact>integrated-package</artifact>
+                        </step>
+                    </build_sequence>
+                    <deployment_sequence>
+                        <environment name="Development">
+                            <deployment>
+                                <domain>Core</domain>
+                                <domain>BoundedContext1</domain>
+                                <domain>BoundedContext2</domain>
+                                <domain>Integration</domain>
+                            </deployment>
+                        </environment>
+                        <environment name="Test">
+                            <deployment>
+                                <domain>Core</domain>
+                                <domain>BoundedContext1</domain>
+                                <domain>BoundedContext2</domain>
+                                <domain>Integration</domain>
+                            </deployment>
+                        </environment>
+                        <environment name="Production">
+                            <deployment>
+                                <domain>Core</domain>
+                                <domain>BoundedContext1</domain>
+                                <domain>BoundedContext2</domain>
+                                <domain>Integration</domain>
+                            </deployment>
+                        </environment>
+                    </deployment_sequence>
+                </pipeline_structure>
+            </template_structure>
+            <implementation_examples>
+                <example language="yaml">
+                    <name>E-commerce Domain-Driven Pipeline</name>
+                    <description>Example implementation for e-commerce domain-driven architecture</description>
+                </example>
+                <example language="yaml">
+                    <name>Financial System Domain-Driven Pipeline</name>
+                    <description>Example implementation for financial system domain-driven architecture</description>
+                </example>
+            </implementation_examples>
+        </pattern>
+        
+        <pattern>
+            <name>Backward Planning Deployment</name>
+            <description>Pattern for implementing deployments planned from production requirements backward</description>
+            <template_structure>
+                <planning_stages>
+                    <stage name="ProductionRequirements">
+                        <purpose>Define production deployment requirements</purpose>
+                        <considerations>
+                            <consideration>Deployment window constraints</consideration>
+                            <consideration>Zero-downtime requirements</consideration>
+                            <consideration>Performance requirements</consideration>
+                            <consideration>Compliance requirements</consideration>
+                            <consideration>Rollback capability requirements</consideration>
+                            <consideration>Monitoring requirements</consideration>
+                        </considerations>
+                    </stage>
+                    <stage name="StagingValidation">
+                        <purpose>Define staging validation requirements</purpose>
+                        <derived_from>ProductionRequirements</derived_from>
+                        <considerations>
+                            <consideration>Production simulation requirements</consideration>
+                            <consideration>Data requirements</consideration>
+                            <consideration>Performance validation requirements</consideration>
+                            <consideration>Security validation requirements</consideration>
+                        </considerations>
+                    </stage>
+                    <stage name="TestingRequirements">
+                        <purpose>Define testing requirements</purpose>
+                        <derived_from>StagingValidation</derived_from>
+                        <considerations>
+                            <consideration>Functional testing requirements</consideration>
+                            <consideration>Integration testing requirements</consideration>
+                            <consideration>User acceptance testing requirements</consideration>
+                        </considerations>
+                    </stage>
+                    <stage name="BuildRequirements">
+                        <purpose>Define build requirements</purpose>
+                        <derived_from>TestingRequirements</derived_from>
+                        <considerations>
+                            <consideration>Source control requirements</consideration>
+                            <consideration>Compilation requirements</consideration>
+                            <consideration>Artifact creation requirements</consideration>
+                            <consideration>Code quality requirements</consideration>
+                        </considerations>
+                    </stage>
+                </planning_stages>
+                <implementation_flow>
+                    <step>
+                        <phase>Build</phase>
+                        <derived_from>BuildRequirements</derived_from>
+                        <common_tasks>
+                            <task>Source checkout</task>
+                            <task>Dependency restoration</task>
+                            <task>Compilation</task>
+                            <task>Unit testing</task>
+                            <task>Code analysis</task>
+                            <task>Artifact creation</task>
+                        </common_tasks>
+                    </step>
+                    <step>
+                        <phase>Test</phase>
+                        <derived_from>TestingRequirements</derived_from>
+                        <common_tasks>
+                            <task>Test environment deployment</task>
+                            <task>Functional testing</task>
+                            <task>Integration testing</task>
+                            <task>User acceptance testing</task>
+                        </common_tasks>
+                    </step>
+                    <step>
+                        <phase>Staging</phase>
+                        <derived_from>StagingValidation</derived_from>
+                        <common_tasks>
+                            <task>Production-like deployment</task>
+                            <task>Performance validation</task>
+                            <task>Security validation</task>
+                            <task>Compliance validation</task>
+                            <task>Deployment simulation</task>
+                        </common_tasks>
+                    </step>
+                    <step>
+                        <phase>Production</phase>
+                        <derived_from>ProductionRequirements</derived_from>
+                        <common_tasks>
+                            <task>Production readiness verification</task>
+                            <task>Deployment execution</task>
+                            <task>Zero-downtime implementation</task>
+                            <task>Rollback capability verification</task>
+                            <task>Monitoring implementation</task>
+                            <task>Post-deployment validation</task>
+                        </common_tasks>
+                    </step>
+                </implementation_flow>
+            </template_structure>
+            <implementation_examples>
+                <example language="yaml">
+                    <name>Web Application Backward-Planned Deployment</name>
+                    <description>Example implementation for web application using backward planning</description>
+                </example>
+                <example language="yaml">
+                    <name>Database System Backward-Planned Deployment</name>
+                    <description>Example implementation for database system using backward planning</description>
+                </example>
+            </implementation_examples>
+        </pattern>
+    </pipeline_patterns>
+
+    <language_specific_templates>
+        <language name="csharp">
+            <build_template>
+                <name>DotNet Build Pipeline</name>
+                <description>Template for building .NET applications</description>
+                <structure>
+                    <steps>
+                        <step>
+                            <name>Use .NET Core</name>
+                            <task>UseDotNet@2</task>
+                            <parameters>
+                                <parameter>version</parameter>
+                                <parameter>includePreviewVersions</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <name>Restore dependencies</name>
+                            <task>DotNetCoreCLI@2</task>
+                            <parameters>
+                                <parameter>command: restore</parameter>
+                                <parameter>projects</parameter>
+                                <parameter>feedsToUse</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <name>Build</name>
+                            <task>DotNetCoreCLI@2</task>
+                            <parameters>
+                                <parameter>command: build</parameter>
+                                <parameter>projects</parameter>
+                                <parameter>arguments</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <name>Test</name>
+                            <task>DotNetCoreCLI@2</task>
+                            <parameters>
+                                <parameter>command: test</parameter>
+                                <parameter>projects</parameter>
+                                <parameter>arguments</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <name>Publish</name>
+                            <task>DotNetCoreCLI@2</task>
+                            <parameters>
+                                <parameter>command: publish</parameter>
+                                <parameter>projects</parameter>
+                                <parameter>arguments</parameter>
+                                <parameter>zipAfterPublish</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <name>Publish Artifacts</name>
+                            <task>PublishBuildArtifacts@1</task>
+                            <parameters>
+                                <parameter>pathToPublish</parameter>
+                                <parameter>artifactName</parameter>
+                            </parameters>
+                        </step>
+                    </steps>
+                </structure>
+                <best_practices>
+                    <practice>Enable deterministic builds with -p:ContinuousIntegrationBuild=true</practice>
+                    <practice>Configure test coverage with --collect:"XPlat Code Coverage"</practice>
+                    <practice>Use --no-build in test and publish to avoid redundant builds</practice>
+                    <practice>Enable source link with -p:SourceLinkCreate=true</practice>
+                    <practice>Add -p:DebugType=portable for improved debugging</practice>
+                </best_practices>
+            </build_template>
+            <test_template>
+                <name>DotNet Test Pipeline</name>
+                <description>Template for testing .NET applications</description>
+                <structure>
+                    <steps>
+                        <step>
+                            <name>Unit Tests</name>
+                            <task>DotNetCoreCLI@2</task>
+                            <parameters>
+                                <parameter>command: test</parameter>
+                                <parameter>projects: **/*[Tt]ests/*.csproj</parameter>
+                                <parameter>arguments: --filter Category=Unit</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <name>Integration Tests</name>
+                            <task>DotNetCoreCLI@2</task>
+                            <parameters>
+                                <parameter>command: test</parameter>
+                                <parameter>projects: **/*[Tt]ests/*.csproj</parameter>
+                                <parameter>arguments: --filter Category=Integration</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <name>Publish Test Results</name>
+                            <task>PublishTestResults@2</task>
+                            <parameters>
+                                <parameter>testResultsFormat: VSTest</parameter>
+                                <parameter>testResultsFiles: **/*.trx</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <name>Publish Coverage</name>
+                            <task>PublishCodeCoverageResults@1</task>
+                            <parameters>
+                                <parameter>codeCoverageTool: Cobertura</parameter>
+                                <parameter>summaryFileLocation: $(Agent.TempDirectory)/**/coverage.cobertura.xml</parameter>
+                            </parameters>
+                        </step>
+                    </steps>
+                </structure>
+                <best_practices>
+                    <practice>Categorize tests using [Trait] or [Category] attributes</practice>
+                    <practice>Run tests in parallel with --parallel</practice>
+                    <practice>Set blame mode for hanging tests with --blame</practice>
+                    <practice>Configure test logger with --logger trx</practice>
+                    <practice>Use dotCover or Coverlet for code coverage</practice>
+                </best_practices>
+            </test_template>
+        </language>
+        
+        <language name="typescript">
+            <build_template>
+                <name>TypeScript Build Pipeline</name>
+                <description>Template for building TypeScript applications</description>
+                <structure>
+                    <steps>
+                        <step>
+                            <name>Use Node.js</name>
+                            <task>NodeTool@0</task>
+                            <parameters>
+                                <parameter>versionSpec</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <name>Install dependencies</name>
+                            <task>Npm@1</task>
+                            <parameters>
+                                <parameter>command: install</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <name>Lint</name>
+                            <task>Npm@1</task>
+                            <parameters>
+                                <parameter>command: custom</parameter>
+                                <parameter>customCommand: run lint</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <name>Build</name>
+                            <task>Npm@1</task>
+                            <parameters>
+                                <parameter>command: custom</parameter>
+                                <parameter>customCommand: run build</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <name>Test</name>
+                            <task>Npm@1</task>
+                            <parameters>
+                                <parameter>command: custom</parameter>
+                                <parameter>customCommand: run test</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <name>Publish Artifacts</name>
+                            <task>PublishBuildArtifacts@1</task>
+                            <parameters>
+                                <parameter>pathToPublish: dist</parameter>
+                                <parameter>artifactName: drop</parameter>
+                            </parameters>
+                        </step>
+                    </steps>
+                </structure>
+                <best_practices>
+                    <practice>Use npm ci instead of npm install for reproducible builds</practice>
+                    <practice>Configure strict TypeScript compiler options</practice>
+                    <practice>Implement ESLint for code quality</practice>
+                    <practice>Use Jest or Mocha for testing</practice>
+                    <practice>Implement bundle analysis for optimization</practice>
+                </best_practices>
+            </build_template>
+        </language>
+        
+        <language name="powershell">
+            <build_template>
+                <name>PowerShell Module Build Pipeline</name>
+                <description>Template for building PowerShell modules</description>
+                <structure>
+                    <steps>
+                        <step>
+                            <name>Install dependencies</name>
+                            <task>PowerShell@2</task>
+                            <parameters>
+                                <parameter>targetType: inline</parameter>
+                                <parameter>script: Install-Module Pester, PSScriptAnalyzer -Force -Scope CurrentUser</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <name>Static Analysis</name>
+                            <task>PowerShell@2</task>
+                            <parameters>
+                                <parameter>targetType: inline</parameter>
+                                <parameter>script: Invoke-ScriptAnalyzer -Path . -Recurse</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <name>Run Tests</name>
+                            <task>PowerShell@2</task>
+                            <parameters>
+                                <parameter>targetType: inline</parameter>
+                                <parameter>script: Invoke-Pester -Path ./tests -OutputFile TestResults.xml -OutputFormat NUnitXml</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <name>Publish Test Results</name>
+                            <task>PublishTestResults@2</task>
+                            <parameters>
+                                <parameter>testResultsFormat: NUnit</parameter>
+                                <parameter>testResultsFiles: TestResults.xml</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <name>Package Module</name>
+                            <task>PowerShell@2</task>
+                            <parameters>
+                                <parameter>targetType: inline</parameter>
+                                <parameter>script: ./build/package-module.ps1</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <name>Publish Artifact</name>
+                            <task>PublishBuildArtifacts@1</task>
+                            <parameters>
+                                <parameter>pathToPublish: ./out</parameter>
+                                <parameter>artifactName: module</parameter>
+                            </parameters>
+                        </step>
+                    </steps>
+                </structure>
+                <best_practices>
+                    <practice>Use PSScriptAnalyzer with custom rule sets</practice>
+                    <practice>Implement Pester tests with code coverage</practice>
+                    <practice>Follow the PowerShell module structure guidelines</practice>
+                    <practice>Implement module manifest validation</practice>
+                    <practice>Use platyPS for documentation generation</practice>
+                </best_practices>
+            </build_template>
+        </language>
+        
+        <language name="hcl">
+            <build_template>
+                <name>Terraform Build Pipeline</name>
+                <description>Template for building and validating Terraform configurations</description>
+                <structure>
+                    <steps>
+                        <step>
+                            <name>Install Terraform</name>
+                            <task>TerraformInstaller@0</task>
+                            <parameters>
+                                <parameter>terraformVersion</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <name>Terraform Init</name>
+                            <task>TerraformCLI@0</task>
+                            <parameters>
+                                <parameter>command: init</parameter>
+                                <parameter>backendType: azurerm</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <name>Terraform Validate</name>
+                            <task>TerraformCLI@0</task>
+                            <parameters>
+                                <parameter>command: validate</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <name>Terraform Format Check</name>
+                            <task>TerraformCLI@0</task>
+                            <parameters>
+                                <parameter>command: fmt</parameter>
+                                <parameter>commandOptions: -check -recursive</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <name>Terraform Plan</name>
+                            <task>TerraformCLI@0</task>
+                            <parameters>
+                                <parameter>command: plan</parameter>
+                                <parameter>environmentServiceName</parameter>
+                                <parameter>commandOptions: -out=$(System.DefaultWorkingDirectory)/tfplan</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <name>Publish Plan Artifact</name>
+                            <task>PublishBuildArtifacts@1</task>
+                            <parameters>
+                                <parameter>pathToPublish: $(System.DefaultWorkingDirectory)/tfplan</parameter>
+                                <parameter>artifactName: tfplan</parameter>
+                            </parameters>
+                        </step>
+                    </steps>
+                </structure>
+                <best_practices>
+                    <practice>Pin Terraform provider versions</practice>
+                    <practice>Use remote state with proper locking</practice>
+                    <practice>Implement terraform-docs for documentation</practice>
+                    <practice>Use tfsec for security scanning</practice>
+                    <practice>Implement Terratest for infrastructure testing</practice>
+                </best_practices>
+            </build_template>
+        </language>
+    </language_specific_templates>
+
+    <domain_modeling_framework>
+        <bounded_contexts>
+            <bounded_context>
+                <name>BuildProcess</name>
+                <description>Domain for source compilation and artifact creation</description>
+                <key_concepts>
+                    <concept>SourceRepository</concept>
+                    <concept>BuildConfiguration</concept>
+                    <concept>TestExecution</concept>
+                    <concept>ArtifactPackaging</concept>
+                </key_concepts>
+                <pipeline_concepts>
+                    <concept>CI Triggers</concept>
+                    <concept>Build Jobs</concept>
+                    <concept>Artifact Publishing</concept>
+                    <concept>Test Reporting</concept>
+                </pipeline_concepts>
+                <ubiquitous_language>
+                    <term>Build</term>
+                    <term>Artifact</term>
+                    <term>Test Run</term>
+                    <term>Package</term>
+                    <term>Version</term>
+                </ubiquitous_language>
+            </bounded_context>
+            
+            <bounded_context>
+                <name>DeploymentProcess</name>
+                <description>Domain for deploying artifacts to environments</description>
+                <key_concepts>
+                    <concept>TargetEnvironment</concept>
+                    <concept>DeploymentStrategy</concept>
+                    <concept>ReleaseApproval</concept>
+                    <concept>HealthValidation</concept>
+                </key_concepts>
+                <pipeline_concepts>
+                    <concept>Environment Stages</concept>
+                    <concept>Deployment Jobs</concept>
+                    <concept>Approval Gates</concept>
+                    <concept>Validation Checks</concept>
+                </pipeline_concepts>
+                <ubiquitous_language>
+                    <term>Release</term>
+                    <term>Deployment</term>
+                    <term>Environment</term>
+                    <term>Approval</term>
+                    <term>Rollback</term>
+                </ubiquitous_language>
+            </bounded_context>
+            
+            <bounded_context>
+                <name>QualityAssurance</name>
+                <description>Domain for ensuring quality standards</description>
+                <key_concepts>
+                    <concept>CodeQuality</concept>
+                    <concept>SecurityCompliance</concept>
+                    <concept>PerformanceValidation</concept>
+                    <concept>TestCoverage</concept>
+                </key_concepts>
+                <pipeline_concepts>
+                    <concept>Quality Gates</concept>
+                    <concept>Test Execution Jobs</concept>
+                    <concept>Security Scanning</concept>
+                    <concept>Performance Testing</concept>
+                </pipeline_concepts>
+                <ubiquitous_language>
+                    <term>Quality Gate</term>
+                    <term>Test Suite</term>
+                    <term>Coverage</term>
+                    <term>Security Scan</term>
+                    <term>Performance Test</term>
+                </ubiquitous_language>
+            </bounded_context>
+            
+            <bounded_context>
+                <name>InfrastructureManagement</name>
+                <description>Domain for managing infrastructure resources</description>
+                <key_concepts>
+                    <concept>ResourceProvisioning</concept>
+                    <concept>ConfigurationManagement</concept>
+                    <concept>SecurityHardening</concept>
+                    <concept>ComplianceValidation</concept>
+                </key_concepts>
+                <pipeline_concepts>
+                    <concept>IaC Jobs</concept>
+                    <concept>Configuration Jobs</concept>
+                    <concept>Compliance Checks</concept>
+                    <concept>Infrastructure Tests</concept>
+                </pipeline_concepts>
+                <ubiquitous_language>
+                    <term>Infrastructure</term>
+                    <term>Resource</term>
+                    <term>Provisioning</term>
+                    <term>Configuration</term>
+                    <term>Compliance</term>
+                </ubiquitous_language>
+            </bounded_context>
+        </bounded_contexts>
+        
+        <domain_events>
+            <event>
+                <name>BuildCompleted</name>
+                <source_context>BuildProcess</source_context>
+                <target_contexts>
+                    <context>DeploymentProcess</context>
+                    <context>QualityAssurance</context>
+                </target_contexts>
+                <data_elements>
+                    <element>BuildId</element>
+                    <element>ArtifactLocations</element>
+                    <element>TestResults</element>
+                    <element>Version</element>
+                </data_elements>
+                <pipeline_implementation>
+                    <trigger>Pipeline completion trigger</trigger>
+                    <artifact_publishing>Build artifact publication</artifact_publishing>
+                    <variable_passing>Variable groups or output variables</variable_passing>
+                </pipeline_implementation>
+            </event>
+            
+            <event>
+                <name>DeploymentCompleted</name>
+                <source_context>DeploymentProcess</source_context>
+                <target_contexts>
+                    <context>QualityAssurance</context>
+                </target_contexts>
+                <data_elements>
+                    <element>DeploymentId</element>
+                    <element>Environment</element>
+                    <element>Resources</element>
+                    <element>Status</element>
+                </data_elements>
+                <pipeline_implementation>
+                    <trigger>Pipeline completion trigger</trigger>
+                    <notification>Deployment completion notification</notification>
+                    <status_update>Deployment status update</status_update>
+                </pipeline_implementation>
+            </event>
+            
+            <event>
+                <name>QualityGatePassed</name>
+                <source_context>QualityAssurance</source_context>
+                <target_contexts>
+                    <context>DeploymentProcess</context>
+                </target_contexts>
+                <data_elements>
+                    <element>GateId</element>
+                    <element>QualityMetrics</element>
+                    <element>ApprovalStatus</element>
+                </data_elements>
+                <pipeline_implementation>
+                    <trigger>Gate approval trigger</trigger>
+                    <approval>Manual or automated approval</approval>
+                    <status_update>Quality gate status update</status_update>
+                </pipeline_implementation>
+            </event>
+            
+            <event>
+                <name>InfrastructureProvisioned</name>
+                <source_context>InfrastructureManagement</source_context>
+                <target_contexts>
+                    <context>DeploymentProcess</context>
+                </target_contexts>
+                <data_elements>
+                    <element>EnvironmentId</element>
+                    <element>ResourceIds</element>
+                    <element>Configuration</element>
+                </data_elements>
+                <pipeline_implementation>
+                    <trigger>Pipeline completion trigger</trigger>
+                    <output_variables>Infrastructure output variables</output_variables>
+                    <status_update>Infrastructure status update</status_update>
+                </pipeline_implementation>
+            </event>
+        </domain_events>
+        
+        <pipeline_modeling>
+            <domain_alignment>
+                <principle>
+                    <name>Bounded Context Alignment</name>
+                    <description>Pipeline structure should align with bounded contexts</description>
+                    <implementation>
+                        <step>Map pipeline stages to bounded contexts</step>
+                        <step>Align variables with ubiquitous language</step>
+                        <step>Structure templates around domain concepts</step>
+                    </implementation>
+                </principle>
+                
+                <principle>
+                    <name>Event-Based Integration</name>
+                    <description>Use domain events for pipeline integration</description>
+                    <implementation>
+                        <step>Implement pipeline triggers based on domain events</step>
+                        <step>Use artifacts to pass event data</step>
+                        <step>Structure pipeline variables around event data</step>
+                    </implementation>
+                </principle>
+                
+                <principle>
+                    <name>Aggregation Structure</name>
+                    <description>Group pipeline components by domain aggregates</description>
+                    <implementation>
+                        <step>Group related jobs into domain-aligned stages</step>
+                        <step>Structure templates around domain aggregates</step>
+                        <step>Use naming that reflects domain concepts</step>
+                    </implementation>
+                </principle>
+            </domain_alignment>
+            
+            <backward_planning>
+                <principle>
+                    <name>Goal-Based Definition</name>
+                    <description>Define pipelines based on end goals</description>
+                    <implementation>
+                        <step>Start with production requirements</step>
+                        <step>Define quality gates working backward</step>
+                        <step>Determine build requirements from quality needs</step>
+                    </implementation>
+                </principle>
+                
+                <principle>
+                    <name>Constraint-Driven Design</name>
+                    <description>Use constraints to shape pipeline structure</description>
+                    <implementation>
+                        <step>Identify deployment constraints</step>
+                        <step>Define testing requirements from constraints</step>
+                        <step>Structure pipeline to satisfy all constraints</step>
+                    </implementation>
+                </principle>
+            </backward_planning>
+        </pipeline_modeling>
+    </domain_modeling_framework>
+
+    <whatif_integration>
+        <analysis_templates>
+            <template type="pipeline_change">
+                <structure>
+                    <section id="1">
+                        <name>Change Summary</name>
+                        <content>
+                            <element>Pipeline identification</element>
+                            <element>Change description</element>
+                            <element>Purpose of change</element>
+                            <element>Overall risk assessment</element>
+                        </content>
+                    </section>
+                    <section id="2">
+                        <name>Pipeline Impact</name>
+                        <content>
+                            <element>Affected pipeline components</element>
+                            <element>Changes to execution flow</element>
+                            <element>Performance considerations</element>
+                            <element>Resource requirements changes</element>
+                        </content>
+                    </section>
+                    <section id="3">
+                        <name>Dependency Analysis</name>
+                        <content>
+                            <element>Upstream pipeline dependencies</element>
+                            <element>Downstream pipeline impacts</element>
+                            <element>External system integration effects</element>
+                            <element>Resource dependencies</element>
+                        </content>
+                    </section>
+                    <section id="4">
+                        <name>Risk Assessment</name>
+                        <content>
+                            <element>Security implications</element>
+                            <element>Deployment stability risks</element>
+                            <element>Performance risks</element>
+                            <element>Compliance considerations</element>
+                        </content>
+                    </section>
+                    <section id="5">
+                        <name>Mitigation Strategy</name>
+                        <content>
+                            <element>Testing requirements</element>
+                            <element>Phased rollout recommendations</element>
+                            <element>Monitoring requirements</element>
+                            <element>Fallback options</element>
+                        </content>
+                    </section>
+                    <section id="6">
+                        <name>Implementation Guidance</name>
+                        <content>
+                            <element>Configuration changes needed</element>
+                            <element>Rollout steps</element>
+                            <element>Validation procedures</element>
+                            <element>Documentation updates</element>
+                        </content>
+                    </section>
+                </structure>
+            </template>
+            
+            <template type="infrastructure_change">
+                <structure>
+                    <section id="1">
+                        <name>Change Summary</name>
+                        <content>
+                            <element>Infrastructure component identification</element>
+                            <element>Change description</element>
+                            <element>Purpose of change</element>
+                            <element>Overall risk assessment</element>
+                        </content>
+                    </section>
+                    <section id="2">
+                        <name>Resource Impact</name>
+                        <content>
+                            <element>Affected infrastructure resources</element>
+                            <element>Configuration changes</element>
+                            <element>Capacity considerations</element>
+                            <element>Security posture changes</element>
+                        </content>
+                    </section>
+                    <section id="3">
+                        <name>Pipeline Integration</name>
+                        <content>
+                            <element>Changes to deployment pipelines</element>
+                            <element>Pipeline variable adjustments</element>
+                            <element>Service connection requirements</element>
+                            <element>Deployment sequence changes</element>
+                        </content>
+                    </section>
+                    <section id="4">
+                        <name>Risk Assessment</name>
+                        <content>
+                            <element>Deployment risks</element>
+                            <element>Service availability risks</element>
+                            <element>Data integrity considerations</element>
+                            <element>Cost implications</element>
+                        </content>
+                    </section>
+                    <section id="5">
+                        <name>Mitigation Strategy</name>
+                        <content>
+                            <element>Testing requirements</element>
+                            <element>Phased implementation approach</element>
+                            <element>Rollback capabilities</element>
+                            <element>Monitoring enhancements</element>
+                        </content>
+                    </section>
+                    <section id="6">
+                        <name>Implementation Guidance</name>
+                        <content>
+                            <element>Infrastructure code changes</element>
+                            <element>Deployment steps</element>
+                            <element>Validation procedures</element>
+                            <element>Documentation updates</element>
+                        </content>
+                    </section>
+                </structure>
+            </template>
+        </analysis_templates>
+        
+        <risk_assessment_framework>
+            <risk_matrix>
+                <probability_levels>
+                    <level value="1">Very Unlikely</level>
+                    <level value="2">Unlikely</level>
+                    <level value="3">Possible</level>
+                    <level value="4">Likely</level>
+                    <level value="5">Very Likely</level>
+                </probability_levels>
+                <severity_levels>
+                    <level value="1">Minimal</level>
+                    <level value="2">Minor</level>
+                    <level value="3">Moderate</level>
+                    <level value="4">Major</level>
+                    <level value="5">Severe</level>
+                </severity_levels>
+            </risk_matrix>
+            
+            <risk_categories>
+                <category>
+                    <name>Deployment Risks</name>
+                    <common_risks>
+                        <risk>
+                            <name>Deployment Failure</name>
+                            <description>Failure of deployment process</description>
+                            <mitigation>Implement comprehensive pre-deployment validation</mitigation>
+                        </risk>
+                        <risk>
+                            <name>Service Disruption</name>
+                            <description>Disruption to running services during deployment</description>
+                            <mitigation>Implement zero-downtime deployment patterns</mitigation>
+                        </risk>
+                        <risk>
+                            <name>Incomplete Deployment</name>
+                            <description>Partial deployment leading to inconsistent state</description>
+                            <mitigation>Implement transactional deployment approach</mitigation>
+                        </risk>
+                    </common_risks>
+                </category>
+                
+                <category>
+                    <name>Pipeline Risks</name>
+                    <common_risks>
+                        <risk>
+                            <name>Pipeline Performance Degradation</name>
+                            <description>Increased pipeline execution time</description>
+                            <mitigation>Optimize parallel execution and caching</mitigation>
+                        </risk>
+                        <risk>
+                            <name>Resource Contention</name>
+                            <description>Insufficient agent resources for pipeline execution</description>
+                            <mitigation>Configure appropriate capacity and scaling</mitigation>
+                        </risk>
+                        <risk>
+                            <name>Pipeline Instability</name>
+                            <description>Intermittent failures in pipeline execution</description>
+                            <mitigation>Implement robust error handling and retries</mitigation>
+                        </risk>
+                    </common_risks>
+                </category>
+                
+                <category>
+                    <name>Security Risks</name>
+                    <common_risks>
+                        <risk>
+                            <name>Credential Exposure</name>
+                            <description>Exposure of sensitive credentials in pipeline</description>
+                            <mitigation>Use secure variable handling and credential scanning</mitigation>
+                        </risk>
+                        <risk>
+                            <name>Insufficient Permission Boundaries</name>
+                            <description>Overly permissive pipeline permissions</description>
+                            <mitigation>Implement least privilege permission model</mitigation>
+                        </risk>
+                        <risk>
+                            <name>Vulnerable Dependencies</name>
+                            <description>Introduction of vulnerable dependencies</description>
+                            <mitigation>Implement dependency scanning and validation</mitigation>
+                        </risk>
+                    </common_risks>
+                </category>
+                
+                <category>
+                    <name>Operational Risks</name>
+                    <common_risks>
+                        <risk>
+                            <name>Monitoring Gaps</name>
+                            <description>Insufficient monitoring of deployed components</description>
+                            <mitigation>Implement comprehensive monitoring and alerting</mitigation>
+                        </risk>
+                        <risk>
+                            <name>Configuration Drift</name>
+                            <description>Divergence between intended and actual configuration</description>
+                            <mitigation>Implement configuration validation and enforcement</mitigation>
+                        </risk>
+                        <risk>
+                            <name>Capacity Limitations</name>
+                            <description>Insufficient resource capacity for operation</description>
+                            <mitigation>Implement capacity planning and auto-scaling</mitigation>
+                        </risk>
+                    </common_risks>
+                </category>
+            </risk_categories>
+        </risk_assessment_framework>
+        
+        <rollback_strategy_templates>
+            <strategy>
+                <name>Pipeline Configuration Rollback</name>
+                <description>Strategy for rolling back pipeline configuration changes</description>
+                <steps>
+                    <step>
+                        <action>Preserve original pipeline configuration</action>
+                        <method>Branch protection and versioned pipeline files</method>
+                    </step>
+                    <step>
+                        <action>Revert pipeline configuration changes</action>
+                        <method>Source control revert or restore from branch</method>
+                    </step>
+                    <step>
+                        <action>Validate reverted pipeline</action>
+                        <method>Pipeline validation checks</method>
+                    </step>
+                    <step>
+                        <action>Notify stakeholders of rollback</action>
+                        <method>Automated notifications to affected teams</method>
+                    </step>
+                </steps>
+            </strategy>
+            
+            <strategy>
+                <name>Deployment Rollback</name>
+                <description>Strategy for rolling back application deployments</description>
+                <steps>
+                    <step>
+                        <action>Preserve pre-deployment state</action>
+                        <method>Environment snapshots or backups</method>
+                    </step>
+                    <step>
+                        <action>Deploy previous version</action>
+                        <method>Specific version deployment or blue-green swap</method>
+                    </step>
+                    <step>
+                        <action>Validate rolled back version</action>
+                        <method>Automated health checks and smoke tests</method>
+                    </step>
+                    <step>
+                        <action>Notify stakeholders of rollback</action>
+                        <method>Automated notifications to affected teams</method>
+                    </step>
+                </steps>
+            </strategy>
+            
+            <strategy>
+                <name>Infrastructure Change Rollback</name>
+                <description>Strategy for rolling back infrastructure changes</description>
+                <steps>
+                    <step>
+                        <action>Preserve infrastructure state</action>
+                        <method>Terraform state backups or ARM template snapshots</method>
+                    </step>
+                    <step>
+                        <action>Apply previous infrastructure configuration</action>
+                        <method>Terraform apply previous state or ARM template deployment</method>
+                    </step>
+                    <step>
+                        <action>Validate infrastructure state</action>
+                        <method>Automated infrastructure tests and health checks</method>
+                    </step>
+                    <step>
+                        <action>Notify stakeholders of rollback</action>
+                        <method>Automated notifications to affected teams</method>
+                    </step>
+                </steps>
+            </strategy>
+        </rollback_strategy_templates>
+    </whatif_integration>
+
+    <response_templates>
+        <template type="pipeline_design">
+            <title>Pipeline Design Guide</title>
+            <description>Template for designing Azure DevOps pipelines</description>
+            <structure>
+                <section id="1">
+                    <name>Pipeline Requirements</name>
+                    <content>
+                        <element>Business objectives</element>
+                        <element>Technical requirements</element>
+                        <element>Performance requirements</element>
+                        <element>Security considerations</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <name>Pipeline Architecture</name>
+                    <content>
+                        <element>Stage organization</element>
+                        <element>Job structure</element>
+                        <element>Domain alignment</element>
+                        <element>Dependency management</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <name>Configuration Elements</name>
+                    <content>
+                        <element>Trigger configuration</element>
+                        <element>Environment configuration</element>
+                        <element>Variable strategy</element>
+                        <element>Service connections</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <name>Implementation Details</name>
+                    <content>
+                        <element>YAML structure</element>
+                        <element>Task configuration</element>
+                        <element>Template usage</element>
+                        <element>Condition expressions</element>
+                    </content>
+                </section>
+                <section id="5">
+                    <name>Quality Assurance</name>
+                    <content>
+                        <element>Testing strategy</element>
+                        <element>Validation procedures</element>
+                        <element>Security scanning</element>
+                        <element>Performance optimization</element>
+                    </content>
+                </section>
+                <section id="6">
+                    <name>Operational Considerations</name>
+                    <content>
+                        <element>Monitoring approach</element>
+                        <element>Error handling</element>
+                        <element>Maintenance procedures</element>
+                        <element>Scaling strategy</element>
+                    </content>
+                </section>
+            </structure>
+        </template>
+        
+        <template type="pipeline_optimization">
+            <title>Pipeline Optimization Guide</title>
+            <description>Template for optimizing Azure DevOps pipelines</description>
+            <structure>
+                <section id="1">
+                    <name>Performance Analysis</name>
+                    <content>
+                        <element>Execution time breakdown</element>
+                        <element>Resource usage analysis</element>
+                        <element>Bottleneck identification</element>
+                        <element>Optimization opportunities</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <name>Parallelization Strategy</name>
+                    <content>
+                        <element>Parallel job opportunities</element>
+                        <element>Dependency optimization</element>
+                        <element>Matrix strategy implementation</element>
+                        <element>Parallel testing approach</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <name>Caching Implementation</name>
+                    <content>
+                        <element>Dependency caching</element>
+                        <element>Build output caching</element>
+                        <element>Tool installation caching</element>
+                        <element>Cache invalidation strategy</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <name>Resource Optimization</name>
+                    <content>
+                        <element>Agent pool selection</element>
+                        <element>Resource demands configuration</element>
+                        <element>VM size optimization</element>
+                        <element>Container usage strategy</element>
+                    </content>
+                </section>
+                <section id="5">
+                    <name>Pipeline Structure Improvements</name>
+                    <content>
+                        <element>Template refactoring</element>
+                        <element>Task optimization</element>
+                        <element>Condition expression optimization</element>
+                        <element>Script consolidation</element>
+                    </content>
+                </section>
+                <section id="6">
+                    <name>Validation and Measurement</name>
+                    <content>
+                        <element>Performance benchmarking</element>
+                        <element>Optimization validation</element>
+                        <element>Regression testing</element>
+                        <element>Ongoing monitoring</element>
+                    </content>
+                </section>
+            </structure>
+        </template>
+        
+        <template type="domain_driven_pipeline">
+            <title>Domain-Driven Pipeline Design</title>
+            <description>Template for designing pipelines using domain-driven principles</description>
+            <structure>
+                <section id="1">
+                    <name>Domain Analysis</name>
+                    <content>
+                        <element>Business domain identification</element>
+                        <element>Bounded context mapping</element>
+                        <element>Domain event identification</element>
+                        <element>Ubiquitous language definition</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <name>Pipeline Domain Mapping</name>
+                    <content>
+                        <element>Domain to pipeline structure mapping</element>
+                        <element>Stage organization by bounded context</element>
+                        <element>Job alignment with aggregates</element>
+                        <element>Pipeline naming based on ubiquitous language</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <name>Event-Driven Integration</name>
+                    <content>
+                        <element>Domain event to pipeline trigger mapping</element>
+                        <element>Inter-pipeline communication patterns</element>
+                        <element>Artifact sharing based on domain events</element>
+                        <element>Status tracking and notification flow</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <name>Context Boundaries</name>
+                    <content>
+                        <element>Pipeline isolation by bounded context</element>
+                        <element>Integration approach at context boundaries</element>
+                        <element>Shared context management</element>
+                        <element>Anti-corruption layer implementation</element>
+                    </content>
+                </section>
+                <section id="5">
+                    <name>Implementation Guidance</name>
+                    <content>
+                        <element>YAML structure recommendations</element>
+                        <element>Template organization by domain</element>
+                        <element>Variable scoping and naming</element>
+                        <element>Folder and file organization</element>
+                    </content>
+                </section>
+                <section id="6">
+                    <name>Evolution Strategy</name>
+                    <content>
+                        <element>Domain model evolution approach</element>
+                        <element>Pipeline adaptation strategy</element>
+                        <element>Versioning approach</element>
+                        <element>Backward compatibility strategy</element>
+                    </content>
+                </section>
+            </structure>
+        </template>
+        
+        <template type="backward_planning">
+            <title>Backward Planning Implementation</title>
+            <description>Template for implementing pipelines using backward planning approach</description>
+            <structure>
+                <section id="1">
+                    <name>Production Requirements Definition</name>
+                    <content>
+                        <element>Production deployment requirements</element>
+                        <element>Operational constraints</element>
+                        <element>Performance requirements</element>
+                        <element>Security requirements</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <name>Validation Requirements</name>
+                    <content>
+                        <element>Pre-production validation needs</element>
+                        <element>Testing requirements</element>
+                        <element>Approval requirements</element>
+                        <element>Compliance validation</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <name>Stage Definition</name>
+                    <content>
+                        <element>Production stage design</element>
+                        <element>Pre-production stages</element>
+                        <element>Testing stages</element>
+                        <element>Build stage requirements</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <name>Quality Gate Design</name>
+                    <content>
+                        <element>Production release gates</element>
+                        <element>Staging validation gates</element>
+                        <element>Testing quality gates</element>
+                        <element>Build quality requirements</element>
+                    </content>
+                </section>
+                <section id="5">
+                    <name>Pipeline Implementation</name>
+                    <content>
+                        <element>YAML implementation approach</element>
+                        <element>Template organization</element>
+                        <element>Variable structure</element>
+                        <element>Environment configuration</element>
+                    </content>
+                </section>
+                <section id="6">
+                    <name>Implementation Plan</name>
+                    <content>
+                        <element>Phased implementation approach</element>
+                        <element>Validation strategy</element>
+                        <element>Rollout timeline</element>
+                        <element>Success criteria</element>
+                    </content>
+                </section>
+            </structure>
+        </template>
+    </response_templates>
+
+    <validation_framework>
+        <category name="pipeline_validation">
+            <title>Pipeline Configuration Validation</title>
+            <description>Checks for validating Azure DevOps pipeline configurations</description>
+            <items>
+                <item>Pipeline structure follows organizational standards</item>
+                <item>Triggers are correctly configured</item>
+                <item>Required variables are defined with appropriate scope</item>
+                <item>Required service connections are present</item>
+                <item>Task versions are consistent and current</item>
+                <item>Required approvals are configured</item>
+                <item>Environment references are valid</item>
+                <item>Required templates are referenced</item>
+                <item>Artifact publishing is properly configured</item>
+                <item>Task inputs are properly defined</item>
+            </items>
+        </category>
+        
+        <category name="security_validation">
+            <title>Pipeline Security Validation</title>
+            <description>Checks for ensuring pipeline security</description>
+            <items>
+                <item>No hardcoded credentials in pipeline</item>
+                <item>Secrets are stored in secure variables</item>
+                <item>Service connections use least privilege permissions</item>
+                <item>Required security scanning tasks are present</item>
+                <item>Production deployments have required approvals</item>
+                <item>Agent pools are properly secured</item>
+                <item>Repository triggers have appropriate branch filters</item>
+                <item>Task execution is limited to trusted sources</item>
+                <item>Sensitive output variables are secured</item>
+                <item>Script execution follows security guidelines</item>
+            </items>
+        </category>
+        
+        <category name="performance_validation">
+            <title>Pipeline Performance Validation</title>
+            <description>Checks for ensuring pipeline performance</description>
+            <items>
+                <item>Parallel execution is used where appropriate</item>
+                <item>Caching is implemented for dependencies</item>
+                <item>Appropriate agent pool is selected</item>
+                <item>Task order is optimized</item>
+                <item>Artifacts are published efficiently</item>
+                <item>Required cleanup tasks are implemented</item>
+                <item>Resource demands are properly specified</item>
+                <item>Script execution is optimized</item>
+                <item>Container usage is efficient</item>
+            </items>
+        </category>
+        
+        <category name="quality_validation">
+            <title>Pipeline Quality Validation</title>
+            <description>Checks for ensuring pipeline quality standards</description>
+            <items>
+                <item>Required testing tasks are present</item>
+                <item>Code quality checks are implemented</item>
+                <item>Test results are published appropriately</item>
+                <item>Code coverage reporting is configured</item>
+                <item>Required security scanning is implemented</item>
+                <item>Required compliance checks are included</item>
+                <item>Dependency scanning is configured</item>
+                <item>Documentation is generated when needed</item>
+                <item>Versioning strategy is implemented</item>
+                <item>Health validation checks are included</item>
+            </items>
+        </category>
+        
+        <category name="domain_alignment_validation">
+            <title>Domain Alignment Validation</title>
+            <description>Checks for validating domain-driven pipeline design</description>
+            <items>
+                <item>Pipeline structure aligns with bounded contexts</item>
+                <item>Variable naming follows ubiquitous language</item>
+                <item>Stage organization respects domain boundaries</item>
+                <item>Cross-domain dependencies are minimized</item>
+                <item>Domain events are properly propagated</item>
+                <item>Templates are organized by domain concept</item>
+                <item>Pipelines respect aggregate boundaries</item>
+                <item>Domain-specific quality gates are implemented</item>
+                <item>Domain-specific variables are properly isolated</item>
+                <item>Domain relationships are respected in dependencies</item>
+            </items>
+        </category>
+    </validation_framework>
+
+    <integration_framework>
+        <integration_systems>
+            <system>
+                <name>Source Control</name>
+                <integration_type>Input</integration_type>
+                <data_elements>
+                    <input_elements>
+                        <element>source_code</element>
+                        <element>pipeline_definitions</element>
+                        <element>templates</element>
+                        <element>configuration_files</element>
+                    </input_elements>
+                </data_elements>
+                <configuration>
+                    <item>
+                        <name>Repository</name>
+                        <value_type>String</value_type>
+                        <description>Repository name or URL</description>
+                    </item>
+                    <item>
+                        <name>Branch</name>
+                        <value_type>String</value_type>
+                        <description>Branch to build from</description>
+                    </item>
+                    <item>
+                        <name>Trigger Type</name>
+                        <value_type>String</value_type>
+                        <description>CI, scheduled, or manual</description>
+                    </item>
+                </configuration>
+                <workflow_integration>
+                    <trigger_events>
+                        <event>
+                            <name>commit_pushed</name>
+                            <action>Trigger CI pipeline</action>
+                        </event>
+                        <event>
+                            <name>pull_request_created</name>
+                            <action>Trigger PR validation pipeline</action>
+                        </event>
+                    </trigger_events>
+                </workflow_integration>
+            </system>
+            
+            <system>
+                <name>Artifact Repository</name>
+                <integration_type>Output/Input</integration_type>
+                <data_elements>
+                    <output_elements>
+                        <element>build_artifacts</element>
+                        <element>packages</element>
+                        <element>deployment_packages</element>
+                    </output_elements>
+                    <input_elements>
+                        <element>dependencies</element>
+                        <element>tools</element>
+                        <element>libraries</element>
+                    </input_elements>
+                </data_elements>
+                <configuration>
+                    <item>
+                        <name>Repository URL</name>
+                        <value_type>URL</value_type>
+                        <description>Artifact repository URL</description>
+                    </item>
+                    <item>
+                        <name>Authentication Method</name>
+                        <value_type>String</value_type>
+                        <description>Authentication method for repository access</description>
+                    </item>
+                </configuration>
+                <workflow_integration>
+                    <trigger_events>
+                        <event>
+                            <name>artifact_published</name>
+                            <action>Trigger deployment pipeline</action>
+                        </event>
+                    </trigger_events>
+                </workflow_integration>
+            </system>
+            
+            <system>
+                <name>Test Management</name>
+                <integration_type>Output</integration_type>
+                <data_elements>
+                    <output_elements>
+                        <element>test_results</element>
+                        <element>code_coverage</element>
+                        <element>test_execution_logs</element>
+                    </output_elements>
+                </data_elements>
+                <configuration>
+                    <item>
+                        <name>Test Results Format</name>
+                        <value_type>String</value_type>
+                        <description>Format of test results (JUnit, NUnit, etc.)</description>
+                    </item>
+                    <item>
+                        <name>Coverage Format</name>
+                        <value_type>String</value_type>
+                        <description>Format of coverage results (Cobertura, JaCoCo, etc.)</description>
+                    </item>
+                </configuration>
+                <workflow_integration>
+                    <status_updates>
+                        <update>
+                            <name>tests_completed</name>
+                            <data_elements>
+                                <element>test_results_location</element>
+                                <element>pass_rate</element>
+                            </data_elements>
+                        </update>
+                    </status_updates>
+                </workflow_integration>
+            </system>
+            
+            <system>
+                <name>Deployment Targets</name>
+                <integration_type>Output</integration_type>
+                <data_elements>
+                    <output_elements>
+                        <element>deployment_packages</element>
+                        <element>configuration</element>
+                        <element>deployment_scripts</element>
+                    </output_elements>
+                </data_elements>
+                <configuration>
+                    <item>
+                        <name>Target Type</name>
+                        <value_type>String</value_type>
+                        <description>Type of deployment target (App Service, VM, etc.)</description>
+                    </item>
+                    <item>
+                        <name>Connection Method</name>
+                        <value_type>String</value_type>
+                        <description>Method for connecting to target (Service Connection, etc.)</description>
+                    </item>
+                </configuration>
+                <workflow_integration>
+                    <status_updates>
+                        <update>
+                            <name>deployment_completed</name>
+                            <data_elements>
+                                <element>deployment_id</element>
+                                <element>deployment_status</element>
+                                <element>deployment_time</element>
+                            </data_elements>
+                        </update>
+                    </status_updates>
+                </workflow_integration>
+            </system>
+            
+            <system>
+                <name>Monitoring System</name>
+                <integration_type>Output</integration_type>
+                <data_elements>
+                    <output_elements>
+                        <element>pipeline_metrics</element>
+                        <element>deployment_events</element>
+                        <element>environment_health</element>
+                    </output_elements>
+                </data_elements>
+                <configuration>
+                    <item>
+                        <name>Monitoring Endpoint</name>
+                        <value_type>URL</value_type>
+                        <description>Endpoint for monitoring integration</description>
+                    </item>
+                    <item>
+                        <name>Metrics Format</name>
+                        <value_type>String</value_type>
+                        <description>Format for metric data</description>
+                    </item>
+                </configuration>
+                <workflow_integration>
+                    <trigger_events>
+                        <event>
+                            <name>health_degradation</name>
+                            <action>Trigger rollback pipeline</action>
+                        </event>
+                    </trigger_events>
+                </workflow_integration>
+            </system>
+        </integration_systems>
+        
+        <tool_integrations>
+            <tool>
+                <name>SonarQube</name>
+                <description>Code quality and security analysis tool</description>
+                <configuration>
+                    <step>
+                        <task>SonarQubePrepare@5</task>
+                        <parameters>
+                            <parameter>SonarQube Project Name</parameter>
+                            <parameter>SonarQube Project Key</parameter>
+                            <parameter>SonarQube Service Connection</parameter>
+                        </parameters>
+                    </step>
+                    <step>
+                        <task>SonarQubeAnalyze@5</task>
+                    </step>
+                    <step>
+                        <task>SonarQubePublish@5</task>
+                        <parameters>
+                            <parameter>pollingTimeoutSec</parameter>
+                        </parameters>
+                    </step>
+                </configuration>
+                <language_specifics>
+                    <language name="csharp">
+                        <configuration>
+                            <parameter>projectKey</parameter>
+                            <parameter>extraProperties: sonar.cs.opencover.reportsPaths=$(Agent.TempDirectory)/*/coverage.opencover.xml</parameter>
+                        </configuration>
+                    </language>
+                    <language name="typescript">
+                        <configuration>
+                            <parameter>projectKey</parameter>
+                            <parameter>extraProperties: sonar.typescript.lcov.reportPaths=coverage/lcov.info</parameter>
+                        </configuration>
+                    </language>
+                    <language name="powershell">
+                        <configuration>
+                            <parameter>projectKey</parameter>
+                            <parameter>extraProperties: sonar.sources=./src</parameter>
+                        </configuration>
+                    </language>
+                </language_specifics>
+            </tool>
+            
+            <tool>
+                <name>WhiteSource</name>
+                <description>Open source security and license compliance tool</description>
+                <configuration>
+                    <step>
+                        <task>WhiteSource@21</task>
+                        <parameters>
+                            <parameter>cwd</parameter>
+                            <parameter>projectName</parameter>
+                            <parameter>WhiteSource Service Connection</parameter>
+                        </parameters>
+                    </step>
+                </configuration>
+                <language_specifics>
+                    <language name="csharp">
+                        <configuration>
+                            <parameter>projectType: .NET</parameter>
+                        </configuration>
+                    </language>
+                    <language name="typescript">
+                        <configuration>
+                            <parameter>projectType: npm</parameter>
+                        </configuration>
+                    </language>
+                </language_specifics>
+            </tool>
+            
+            <tool>
+                <name>JFrog Artifactory</name>
+                <description>Universal artifact repository manager</description>
+                <configuration>
+                    <step>
+                        <task>ArtifactoryToolsInstaller@1</task>
+                        <parameters>
+                            <parameter>artifactoryService</parameter>
+                        </parameters>
+                    </step>
+                    <step>
+                        <task>ArtifactoryNpm@2</task>
+                        <parameters>
+                            <parameter>command</parameter>
+                            <parameter>artifactoryService</parameter>
+                            <parameter>sourceRepo</parameter>
+                        </parameters>
+                    </step>
+                </configuration>
+                <language_specifics>
+                    <language name="csharp">
+                        <configuration>
+                            <task>ArtifactoryDotnet@1</task>
+                            <parameters>
+                                <parameter>command: push</parameter>
+                                <parameter>artifactoryService</parameter>
+                                <parameter>targetRepo</parameter>
+                            </parameters>
+                        </configuration>
+                    </language>
+                    <language name="typescript">
+                        <configuration>
+                            <task>ArtifactoryNpm@2</task>
+                            <parameters>
+                                <parameter>command: publish</parameter>
+                                <parameter>artifactoryService</parameter>
+                                <parameter>targetRepo</parameter>
+                            </parameters>
+                        </configuration>
+                    </language>
+                </language_specifics>
+            </tool>
+        </tool_integrations>
+        
+        <authentication_methods>
+            <method>
+                <name>Service Connection</name>
+                <description>Azure DevOps service connection authentication</description>
+                <implementation>
+                    <step>Configure service connection in Azure DevOps</step>
+                    <step>Reference service connection in pipeline tasks</step>
+                    <step>Manage permissions on service connection</step>
+                </implementation>
+            </method>
+            <method>
+                <name>Managed Identity</name>
+                <description>Azure Managed Identity authentication</description>
+                <implementation>
+                    <step>Configure system-assigned or user-assigned identity</step>
+                    <step>Assign appropriate RBAC permissions</step>
+                    <step>Use identity in deployment tasks</step>
+                </implementation>
+            </method>
+            <method>
+                <name>Service Principal</name>
+                <description>Azure AD service principal authentication</description>
+                <implementation>
+                    <step>Create service principal in Azure AD</step>
+                    <step>Assign appropriate permissions</step>
+                    <step>Store credentials securely in pipeline</step>
+                </implementation>
+            </method>
+        </authentication_methods>
+    </integration_framework>
+
+    <file_patterns>
+        <pattern>
+            <name>YAML Pipeline Files</name>
+            <description>Patterns for organizing YAML pipeline definition files</description>
+            <conventions>
+                <convention>
+                    <name>Main Pipeline Files</name>
+                    <pattern>azure-pipelines.yml</pattern>
+                    <description>Primary pipeline definition file at repository root</description>
+                </convention>
+                <convention>
+                    <name>Domain-Specific Pipelines</name>
+                    <pattern>pipelines/{domain-name}/{pipeline-name}.yml</pattern>
+                    <description>Domain-specific pipeline definitions</description>
+                </convention>
+                <convention>
+                    <name>Template Files</name>
+                    <pattern>templates/{template-type}/{template-name}.yml</pattern>
+                    <description>Reusable pipeline templates organized by type</description>
+                </convention>
+                <convention>
+                    <name>Environment-Specific Files</name>
+                    <pattern>environments/{environment-name}/pipeline.yml</pattern>
+                    <description>Environment-specific pipeline configurations</description>
+                </convention>
+                <convention>
+                    <name>Variable Files</name>
+                    <pattern>variables/{scope}/{variable-group}.yml</pattern>
+                    <description>Variable definitions organized by scope</description>
+                </convention>
+            </conventions>
+            <directory_structure>
+                <folder path="/">
+                    <description>Repository root containing main pipeline file</description>
+                    <files>
+                        <file>azure-pipelines.yml</file>
+                        <file>README.md</file>
+                    </files>
+                </folder>
+                <folder path="/pipelines">
+                    <description>Pipeline definition files organized by domain</description>
+                    <subfolders>
+                        <folder path="build">
+                            <files>
+                                <file>ci-pipeline.yml</file>
+                                <file>pr-validation.yml</file>
+                            </files>
+                        </folder>
+                        <folder path="release">
+                            <files>
+                                <file>cd-pipeline.yml</file>
+                                <file>hotfix-pipeline.yml</file>
+                            </files>
+                        </folder>
+                        <folder path="{domain-name}">
+                            <files>
+                                <file>{pipeline-purpose}.yml</file>
+                            </files>
+                        </folder>
+                    </subfolders>
+                </folder>
+                <folder path="/templates">
+                    <description>Reusable pipeline templates organized by type</description>
+                    <subfolders>
+                        <folder path="steps">
+                            <files>
+                                <file>build-steps.yml</file>
+                                <file>test-steps.yml</file>
+                                <file>deploy-steps.yml</file>
+                            </files>
+                        </folder>
+                        <folder path="jobs">
+                            <files>
+                                <file>build-job.yml</file>
+                                <file>test-job.yml</file>
+                                <file>deploy-job.yml</file>
+                            </files>
+                        </folder>
+                        <folder path="stages">
+                            <files>
+                                <file>build-stage.yml</file>
+                                <file>test-stage.yml</file>
+                                <file>deploy-stage.yml</file>
+                            </files>
+                        </folder>
+                    </subfolders>
+                </folder>
+                <folder path="/variables">
+                    <description>Variable definitions organized by scope</description>
+                    <files>
+                        <file>global.yml</file>
+                    </files>
+                    <subfolders>
+                        <folder path="environments">
+                            <files>
+                                <file>dev.yml</file>
+                                <file>test.yml</file>
+                                <file>prod.yml</file>
+                            </files>
+                        </folder>
+                        <folder path="domains">
+                            <files>
+                                <file>{domain-name}.yml</file>
+                            </files>
+                        </folder>
+                    </subfolders>
+                </folder>
+                <folder path="/environments">
+                    <description>Environment-specific configurations</description>
+                    <subfolders>
+                        <folder path="{environment-name}">
+                            <files>
+                                <file>configuration.yml</file>
+                                <file>variables.yml</file>
+                            </files>
+                        </folder>
+                    </subfolders>
+                </folder>
+                <folder path="/scripts">
+                    <description>Pipeline-related scripts</description>
+                    <subfolders>
+                        <folder path="powershell">
+                            <files>
+                                <file>{script-name}.ps1</file>
+                            </files>
+                        </folder>
+                        <folder path="bash">
+                            <files>
+                                <file>{script-name}.sh</file>
+                            </files>
+                        </folder>
+                    </subfolders>
+                </folder>
+            </directory_structure>
+        </pattern>
+        
+        <pattern>
+            <name>Language-Specific Patterns</name>
+            <description>File patterns for language-specific pipeline configurations</description>
+            <conventions>
+                <convention>
+                    <name>C# Project Pipelines</name>
+                    <pattern>pipelines/csharp/{project-name}/{pipeline-purpose}.yml</pattern>
+                    <description>Pipeline definitions for C# projects</description>
+                </convention>
+                <convention>
+                    <name>TypeScript Project Pipelines</name>
+                    <pattern>pipelines/typescript/{project-name}/{pipeline-purpose}.yml</pattern>
+                    <description>Pipeline definitions for TypeScript projects</description>
+                </convention>
+                <convention>
+                    <name>PowerShell Module Pipelines</name>
+                    <pattern>pipelines/powershell/{module-name}/{pipeline-purpose}.yml</pattern>
+                    <description>Pipeline definitions for PowerShell modules</description>
+                </convention>
+                <convention>
+                    <name>Terraform Configuration Pipelines</name>
+                    <pattern>pipelines/terraform/{config-name}/{pipeline-purpose}.yml</pattern>
+                    <description>Pipeline definitions for Terraform configurations</description>
+                </convention>
+            </conventions>
+            <file_structure>
+                <language name="csharp">
+                    <files>
+                        <file path="azure-pipelines.yml">
+                            <sections>
+                                <section>Trigger configuration</section>
+                                <section>Variables definition</section>
+                                <section>Stages definition</section>
+                                <section>Build stage</section>
+                                <section>Test stage</section>
+                                <section>Publish stage</section>
+                            </sections>
+                        </file>
+                        <file path="templates/dotnet/build-steps.yml">
+                            <sections>
+                                <section>Parameter definitions</section>
+                                <section>Restore steps</section>
+                                <section>Build steps</section>
+                                <section>Test steps</section>
+                                <section>Publish steps</section>
+                            </sections>
+                        </file>
+                    </files>
+                </language>
+                <language name="typescript">
+                    <files>
+                        <file path="azure-pipelines.yml">
+                            <sections>
+                                <section>Trigger configuration</section>
+                                <section>Variables definition</section>
+                                <section>Stages definition</section>
+                                <section>Build stage</section>
+                                <section>Test stage</section>
+                                <section>Publish stage</section>
+                            </sections>
+                        </file>
+                        <file path="templates/typescript/build-steps.yml">
+                            <sections>
+                                <section>Parameter definitions</section>
+                                <section>Node.js setup</section>
+                                <section>Dependency installation</section>
+                                <section>Lint steps</section>
+                                <section>Build steps</section>
+                                <section>Test steps</section>
+                                <section>Publish steps</section>
+                            </sections>
+                        </file>
+                    </files>
+                </language>
+                <language name="powershell">
+                    <files>
+                        <file path="azure-pipelines.yml">
+                            <sections>
+                                <section>Trigger configuration</section>
+                                <section>Variables definition</section>
+                                <section>Stages definition</section>
+                                <section>Analysis stage</section>
+                                <section>Test stage</section>
+                                <section>Publish stage</section>
+                            </sections>
+                        </file>
+                        <file path="templates/powershell/module-validation.yml">
+                            <sections>
+                                <section>Parameter definitions</section>
+                                <section>PSScriptAnalyzer steps</section>
+                                <section>Pester test steps</section>
+                                <section>Documentation validation</section>
+                                <section>Module packaging</section>
+                            </sections>
+                        </file>
+                    </files>
+                </language>
+                <language name="hcl">
+                    <files>
+                        <file path="azure-pipelines.yml">
+                            <sections>
+                                <section>Trigger configuration</section>
+                                <section>Variables definition</section>
+                                <section>Stages definition</section>
+                                <section>Validation stage</section>
+                                <section>Plan stage</section>
+                                <section>Apply stage</section>
+                            </sections>
+                        </file>
+                        <file path="templates/terraform/validation-steps.yml">
+                            <sections>
+                                <section>Parameter definitions</section>
+                                <section>Terraform initialization</section>
+                                <section>Terraform validation</section>
+                                <section>Terraform format check</section>
+                                <section>Security scanning</section>
+                            </sections>
+                        </file>
+                    </files>
+                </language>
+            </file_structure>
+        </pattern>
+    </file_patterns>
+
+    <template_resources>
+        <yaml_templates>
+            <template>
+                <name>multi-stage-pipeline.yml</name>
+                <description>Complete multi-stage pipeline template with build, test, and deployment stages</description>
+                <usage>Base template for standard application deployment</usage>
+            </template>
+            <template>
+                <name>domain-driven-pipeline.yml</name>
+                <description>Pipeline template structured around domain boundaries</description>
+                <usage>Template for domain-driven application architectures</usage>
+            </template>
+            <template>
+                <name>backward-planned-pipeline.yml</name>
+                <description>Pipeline template implementing backward planning approach</description>
+                <usage>Template for complex deployment scenarios</usage>
+            </template>
+            <template>
+                <name>feature-branch-pipeline.yml</name>
+                <description>Pipeline template for feature branch workflows</description>
+                <usage>Template for feature branch CI workflows</usage>
+            </template>
+        </yaml_templates>
+        
+        <example_implementations>
+            <implementation>
+                <name>dotnet-web-api-pipeline.yml</name>
+                <description>Complete pipeline for .NET Web API applications</description>
+                <usage>Reference for C# web API projects</usage>
+            </implementation>
+            <implementation>
+                <name>typescript-spa-pipeline.yml</name>
+                <description>Complete pipeline for TypeScript single-page applications</description>
+                <usage>Reference for TypeScript SPA projects</usage>
+            </implementation>
+            <implementation>
+                <name>powershell-module-pipeline.yml</name>
+                <description>Complete pipeline for PowerShell module development</description>
+                <usage>Reference for PowerShell module projects</usage>
+            </implementation>
+            <implementation>
+                <name>terraform-azure-pipeline.yml</name>
+                <description>Complete pipeline for Terraform Azure infrastructure</description>
+                <usage>Reference for Terraform Azure projects</usage>
+            </implementation>
+        </example_implementations>
+        
+        <integration_templates>
+            <template>
+                <name>sonarqube-integration.yml</name>
+                <description>SonarQube integration template for code quality analysis</description>
+                <usage>Add to build pipelines for code quality analysis</usage>
+            </template>
+            <template>
+                <name>security-scanning.yml</name>
+                <description>Security scanning integration template</description>
+                <usage>Add to build pipelines for security validation</usage>
+            </template>
+            <template>
+                <name>monitoring-integration.yml</name>
+                <description>Monitoring system integration template</description>
+                <usage>Add to deployment pipelines for monitoring integration</usage>
+            </template>
+        </integration_templates>
+        
+        <documentation_templates>
+            <template>
+                <name>pipeline-design-document.md</name>
+                <description>Template for pipeline design documentation</description>
+                <usage>Document pipeline architecture decisions</usage>
+            </template>
+            <template>
+                <name>pipeline-operations-guide.md</name>
+                <description>Template for pipeline operational documentation</description>
+                <usage>Document pipeline operational procedures</usage>
+            </template>
+            <template>
+                <name>deployment-runbook.md</name>
+                <description>Template for deployment runbook documentation</description>
+                <usage>Document deployment procedures and troubleshooting</usage>
+            </template>
+        </documentation_templates>
+    </template_resources>
+</azdo_pipelines_expert>

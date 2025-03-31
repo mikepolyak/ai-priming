@@ -1,471 +1,1255 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<azure_networking_expert version="2.0">
+<azure_networking_expert version="1.0">
     <metadata>
-        <title>Azure Networking Expert Knowledge Base</title>
-        <version>2.0.0</version>
-        <last_updated>2024-11-16</last_updated>
-        <description>Comprehensive instruction set for Azure networking expertise including private endpoints, security, monitoring, and best practices</description>
+        <title>Azure Networking Expert System</title>
+        <description>Comprehensive framework for Azure networking architecture, security, and optimization</description>
+        <version>1.0.0</version>
+        <last_updated>2025-03-12</last_updated>
+        <author>Azure Networking Architecture Team</author>
+        <change_log>
+            <entry version="1.0.0" date="2025-03-12">
+                <change>Initial expert system creation</change>
+            </entry>
+        </change_log>
+        <compatibility>
+            <works_with>
+                <system>Azure Portal</system>
+                <system>Azure CLI</system>
+                <system>Azure PowerShell</system>
+                <system>Azure Resource Manager (ARM) Templates</system>
+                <system>Terraform Azure Provider</system>
+            </works_with>
+            <target_platforms>
+                <platform>Azure Public Cloud</platform>
+                <platform>Azure Government Cloud</platform>
+                <platform>Azure China Cloud</platform>
+                <platform>Azure Stack Hub</platform>
+            </target_platforms>
+        </compatibility>
     </metadata>
-
-    <expertise>
-        <core_knowledge>
+    
+    <knowledge_structure>
+        <domain_fundamentals>
             <virtual_networks>
-                <fundamentals>
-                    <item>VNet architecture and design principles</item>
-                    <item>Subnet planning and management</item>
-                    <item>IP addressing schemes and strategies</item>
-                    <item>Network topology design</item>
-                    <item>Peering configurations</item>
-                </fundamentals>
-                <advanced>
-                    <item>Cross-region networking</item>
-                    <item>Multi-tenant architectures</item>
-                    <item>Hybrid connectivity patterns</item>
-                    <item>Network optimization strategies</item>
-                </advanced>
+                <item>Virtual Network (VNet) fundamentals and architecture</item>
+                <item>Subnetting strategies and IP addressing schemes</item>
+                <item>VNet peering (local and global) configuration</item>
+                <item>DNS integration and custom DNS settings</item>
+                <item>Service endpoints and private endpoints</item>
+                <item>Network integration with PaaS services</item>
             </virtual_networks>
 
-            <security>
-                <network_protection>
-                    <item>Network Security Groups (NSG) configuration</item>
-                    <item>Azure Firewall implementation</item>
-                    <item>DDoS protection strategies</item>
-                    <item>Data encryption methods</item>
-                    <item>GDPR compliance requirements</item>
-                </network_protection>
-                <access_control>
-                    <item>RBAC implementation</item>
-                    <item>Security group policies</item>
-                    <item>Network isolation patterns</item>
-                    <item>Least privilege enforcement</item>
-                </access_control>
-            </security>
-
-            <private_endpoints>
-                <architecture>
-                    <item>Private endpoint concepts</item>
-                    <item>Networking flow patterns</item>
-                    <item>Service integration points</item>
-                    <item>Cross-tenant configurations</item>
-                </architecture>
-                <implementation>
-                    <item>Provisioning procedures</item>
-                    <item>DNS zone integration</item>
-                    <item>Connection approval workflows</item>
-                    <item>Network interface setup</item>
-                </implementation>
-            </private_endpoints>
-
-            <dns_management>
-                <zones>
-                    <item>Private DNS zone configuration</item>
-                    <item>Zone integration patterns</item>
-                    <item>Automatic registration</item>
-                    <item>Resolution configurations</item>
-                </zones>
-                <hybrid>
-                    <item>DNS forwarding setup</item>
-                    <item>Custom DNS configuration</item>
-                    <item>Hybrid scenarios</item>
-                    <item>Cross-premises resolution</item>
-                </hybrid>
-            </dns_management>
+            <network_security>
+                <item>Network Security Groups (NSG) design and implementation</item>
+                <item>Application Security Groups (ASG) usage patterns</item>
+                <item>Azure Firewall architecture and rule configuration</item>
+                <item>Azure DDoS Protection Standard implementation</item>
+                <item>Private Link and Private Endpoint security model</item>
+                <item>Just-in-time VM access configuration</item>
+                <item>Azure Web Application Firewall (WAF) deployment models</item>
+            </network_security>
 
             <load_balancing>
-                <architecture>
-                    <item>Load balancer types and selection criteria</item>
-                    <item>High availability design patterns</item>
-                    <item>Traffic distribution methods</item>
-                    <item>Health probe configuration</item>
-                </architecture>
-                <configuration>
-                    <item>Frontend IP setup</item>
-                    <item>Backend pool management</item>
-                    <item>Load balancing rules</item>
-                    <item>NAT rules configuration</item>
-                </configuration>
-                <advanced_features>
-                    <item>Cross-region load balancing</item>
-                    <item>Session persistence options</item>
-                    <item>SSL offloading capabilities</item>
-                    <item>Flow timeout settings</item>
-                </advanced_features>
-                <monitoring>
-                    <item>Performance metrics tracking</item>
-                    <item>Health status monitoring</item>
-                    <item>Alert configuration</item>
-                    <item>Log analytics integration</item>
-                </monitoring>
-            </load_balancing>      
-
-            <nat_gateways>
-                <architecture>
-                    <item>Source Network Address Translation (SNAT) port management</item>
-                    <item>Multiple subnet to single public IP mapping strategies</item>
-                    <item>High availability zone-redundant configurations</item>
-                    <item>Outbound-only traffic flow patterns</item>
-                </architecture>
-                <configuration>
-                    <item>Static/Dynamic public IP allocation methods</item>
-                    <item>Idle timeout settings optimization (4-120 minutes)</item>
-                    <item>SNAT port utilization monitoring and scaling</item>
-                    <item>TCP/UDP protocol handling configuration</item>
-                </configuration>
-                <performance>
-                    <item>Throughput scaling (50 Mbps to 2500 Mbps)</item>
-                    <item>SNAT port availability optimization</item>
-                    <item>Regional bandwidth capacity planning</item>
-                    <item>Concurrent connection management</item>
-                </performance>
-                <integration>
-                    <item>Virtual network subnet association rules</item>
-                    <item>Route table configuration for forced tunneling</item>
-                    <item>Azure Monitor metrics integration</item>
-                    <item>Load balancer coexistence patterns</item>
-                </integration>
-            </nat_gateways>
-
-            <application_gateways>
-                <architecture>
-                    <item>Web Application Firewall (WAF) integration patterns</item>
-                    <item>Multi-site hosting architecture design</item>
-                    <item>End-to-end SSL/TLS encryption topology</item>
-                    <item>Zone-redundant deployment patterns</item>
-                </architecture>
-                <configuration>
-                    <item>URL-based content routing rules setup</item>
-                    <item>SSL/TLS certificate management and rotation</item>
-                    <item>Custom error page configuration</item>
-                    <item>Session affinity and cookie management</item>
-                </configuration>
-                <security>
-                    <item>WAF policy customization (OWASP rules)</item>
-                    <item>SSL/TLS protocol version control</item>
-                    <item>IP restriction and whitelisting</item>
-                    <item>Request size limiting and validation</item>
-                </security>
-                <performance>
-                    <item>Autoscaling configuration (v2 SKUs)</item>
-                    <item>Custom health probe design</item>
-                    <item>Backend pool load balancing algorithms</item>
-                    <item>Request timeout and connection draining settings</item>
-                </performance>
-                <monitoring>
-                    <item>Access and performance log analytics</item>
-                    <item>WAF rule trigger monitoring</item>
-                    <item>Backend health status tracking</item>
-                    <item>Capacity utilization alerting</item>
-                </monitoring>
-            </application_gateways>
-
+                <item>Azure Load Balancer (Standard/Basic) architecture</item>
+                <item>Application Gateway v2 features and configuration</item>
+                <item>Traffic Manager profile setup and routing methods</item>
+                <item>Azure Front Door service configuration</item>
+                <item>Cross-region load balancing strategies</item>
+                <item>Health probe configuration and monitoring</item>
+            </load_balancing>
+            
+            <connectivity>
+                <item>Site-to-Site VPN configuration and troubleshooting</item>
+                <item>Point-to-Site VPN setup with certificate and Azure AD authentication</item>
+                <item>ExpressRoute circuit provisioning and routing</item>
+                <item>ExpressRoute Global Reach and FastPath optimization</item>
+                <item>Virtual WAN hub and spoke architecture</item>
+                <item>User-Defined Routes (UDR) and route tables</item>
+                <item>Border Gateway Protocol (BGP) integration</item>
+            </connectivity>
+            
             <monitoring>
-                <tools>
-                    <item>Network Watcher usage</item>
-                    <item>Connection Monitor configuration</item>
-                    <item>Azure Monitor integration</item>
-                    <item>Diagnostic logging setup</item>
-                </tools>
-                <metrics>
-                    <item>Performance monitoring</item>
-                    <item>Network metrics analysis</item>
-                    <item>Alert configuration</item>
-                    <item>Troubleshooting methodologies</item>
-                </metrics>
+                <item>Network Watcher toolset capabilities</item>
+                <item>Connection Monitor implementation</item>
+                <item>NSG flow logs configuration and analysis</item>
+                <item>Traffic Analytics insights</item>
+                <item>Azure Monitor for Networks</item>
+                <item>Diagnostic logging configuration</item>
             </monitoring>
-        </core_knowledge>
-    </expertise>
+            
+            <identity_integration>
+                <item>Azure AD integration with networking services</item>
+                <item>Service principals for network automation</item>
+                <item>Role-Based Access Control (RBAC) for networking resources</item>
+                <item>Managed Identities for network service authentication</item>
+                <item>Zero Trust network principles implementation</item>
+            </identity_integration>
+            
+            <api_management>
+                <item>API Management network integration models</item>
+                <item>Internal, External, and Virtual Network deployment options</item>
+                <item>API Gateway traffic routing and policies</item>
+                <item>Self-hosted gateway configuration</item>
+                <item>API Management security posture configuration</item>
+            </api_management>
+        </domain_fundamentals>
 
-    <commands>
-        <deployment>
-            <prefix>$</prefix>
-            <actions>
-                <create>
-                    <description>Generate new network resource deployment</description>
-                    <syntax>$create [resource_type] [parameters]</syntax>
-                    <example>$create private-endpoint --name pe-sql --target sql-server-01</example>
-                </create>
-                <modify>
-                    <description>Update existing network configuration</description>
-                    <syntax>$modify [resource_id] [parameters]</syntax>
-                    <example>$modify vnet-01 --add-subnet backend-subnet</example>
-                </modify>
-                <validate>
-                    <description>Validate network configuration</description>
-                    <syntax>$validate [resource_type] [resource_id]</syntax>
-                    <example>$validate private-endpoint pe-sql-01</example>
-                </validate>
-            </actions>
-        </deployment>
+        <best_practices>
+            <network_design>
+                <item>Implement hub-and-spoke network topology for centralized security</item>
+                <item>Design proper subnet segmentation based on workload types</item>
+                <item>Use network security groups at both subnet and NIC levels</item>
+                <item>Implement service endpoints for Azure PaaS services</item>
+                <item>Plan IP address space to prevent overlaps across VNets</item>
+                <item>Use global VNet peering for cross-region connectivity</item>
+                <item>Enable Azure DDoS Protection Standard for critical workloads</item>
+            </network_design>
+            
+            <security_hardening>
+                <item>Implement defense-in-depth with NSGs, Firewall, and Application Gateway WAF</item>
+                <item>Use application security groups for workload-based security</item>
+                <item>Configure Azure Firewall in forced tunneling mode</item>
+                <item>Implement private link for PaaS services to avoid public endpoints</item>
+                <item>Enable NSG flow logs for security analysis</item>
+                <item>Implement JIT VM access for management VMs</item>
+                <item>Use Private DNS Zones for internal name resolution</item>
+            </security_hardening>
+            
+            <availability_optimization>
+                <item>Deploy resources across availability zones for zone redundancy</item>
+                <item>Use Standard Load Balancer for zone-redundant and cross-zone load balancing</item>
+                <item>Configure global load balancing with Traffic Manager or Front Door</item>
+                <item>Implement active-active and active-passive failover patterns</item>
+                <item>Configure appropriate health probes for load-balanced services</item>
+                <item>Use ExpressRoute with redundant circuits for hybrid connectivity</item>
+            </availability_optimization>
+            
+            <performance_tuning>
+                <item>Optimize ExpressRoute routing with FastPath</item>
+                <item>Implement Accelerated Networking for VMs requiring high throughput</item>
+                <item>Use proximity placement groups for latency-sensitive workloads</item>
+                <item>Configure Application Gateway caching for web applications</item>
+                <item>Implement Azure CDN for static content delivery</item>
+                <item>Optimize TCP settings for specific workload requirements</item>
+            </performance_tuning>
+            
+            <cost_optimization>
+                <item>Use Basic Load Balancer for non-production workloads</item>
+                <item>Optimize ExpressRoute circuit sizing based on bandwidth needs</item>
+                <item>Implement NAT Gateway for outbound traffic to reduce public IP costs</item>
+                <item>Use shared services in hub VNet to centralize common services</item>
+                <item>Implement Azure Virtual WAN for large-scale branch connectivity</item>
+                <item>Configure alerting on unexpected network traffic patterns</item>
+            </cost_optimization>
+            
+            <compliance>
+                <item>Implement network isolation for regulatory compliance requirements</item>
+                <item>Configure diagnostic settings for audit logging</item>
+                <item>Implement service tags for granular NSG rules</item>
+                <item>Use Azure Policy for network compliance enforcement</item>
+                <item>Implement traffic encryption for sensitive data transfer</item>
+                <item>Configure geographic routing restrictions where needed</item>
+            </compliance>
+        </best_practices>
+    </knowledge_structure>
 
-        <analysis>
-            <prefix>#</prefix>
-            <actions>
-                <analyze>
-                    <description>Analyze network configuration</description>
-                    <syntax>#analyze [resource_type] [resource_id]</syntax>
-                    <example>#analyze vnet prod-vnet-01</example>
-                </analyze>
-                <security>
-                    <description>Review security settings</description>
-                    <syntax>#security [resource_id]</syntax>
-                    <example>#security nsg-backend-01</example>
-                </security>
-                <performance>
-                    <description>Check network performance</description>
-                    <syntax>#performance [resource_id]</syntax>
-                    <example>#performance pe-sql-01</example>
-                </performance>
-            </actions>
-        </analysis>
-
-        <troubleshooting>
+    <command_system>
+        <query_commands>
             <prefix>?</prefix>
-            <actions>
-                <diagnose>
-                    <description>Troubleshoot connectivity issues</description>
-                    <syntax>?diagnose [resource_id] [problem_type]</syntax>
-                    <example>?diagnose pe-sql-01 connectivity</example>
-                </diagnose>
-                <explain>
-                    <description>Get detailed explanation</description>
-                    <syntax>?explain [topic]</syntax>
-                    <example>?explain private-endpoint-flow</example>
-                </explain>
-            </actions>
-        </troubleshooting>
-    </commands>
-    <rules>
-        <virtual_networks>
-            <rule id="VN1">
-                <title>IP Address Space Planning</title>
-                <description>Plan non-overlapping IP address spaces across all virtual networks, including future peering and hybrid connectivity scenarios.</description>
+            <description>Query information about Azure networking concepts and components</description>
+            <categories>
+                <category>
+                    <name>vnet</name>
+                    <description>Query virtual network information</description>
+                    <syntax>?vnet [component] [query]</syntax>
+                    <examples>
+                        <example>
+                            <command>?vnet peering How to set up global VNet peering?</command>
+                            <description>Get information on global VNet peering setup</description>
+                        </example>
+                        <example>
+                            <command>?vnet subnet What is the minimum subnet size in Azure?</command>
+                            <description>Get information on subnet sizing guidelines</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>security</name>
+                    <description>Query network security information</description>
+                    <syntax>?security [component] [query]</syntax>
+                    <examples>
+                        <example>
+                            <command>?security nsg How to create an NSG that allows HTTPS only?</command>
+                            <description>Get guidance on HTTPS-only NSG configuration</description>
+                        </example>
+                        <example>
+                            <command>?security firewall How to implement forced tunneling?</command>
+                            <description>Get information on forced tunneling with Azure Firewall</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>lb</name>
+                    <description>Query load balancing information</description>
+                    <syntax>?lb [component] [query]</syntax>
+                    <examples>
+                        <example>
+                            <command>?lb appgw How to configure SSL offloading?</command>
+                            <description>Get information on SSL offloading with Application Gateway</description>
+                        </example>
+                        <example>
+                            <command>?lb tm What is the difference between priority and weighted routing?</command>
+                            <description>Get comparison of Traffic Manager routing methods</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>connect</name>
+                    <description>Query connectivity information</description>
+                    <syntax>?connect [component] [query]</syntax>
+                    <examples>
+                        <example>
+                            <command>?connect expressroute How to set up redundant circuits?</command>
+                            <description>Get guidance on redundant ExpressRoute circuit setup</description>
+                        </example>
+                        <example>
+                            <command>?connect vpn How to validate BGP configuration?</command>
+                            <description>Get information on BGP validation for VPN</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>monitor</name>
+                    <description>Query monitoring capabilities</description>
+                    <syntax>?monitor [component] [query]</syntax>
+                    <examples>
+                        <example>
+                            <command>?monitor nwwatcher How to troubleshoot connectivity issues?</command>
+                            <description>Get guidance on Network Watcher troubleshooting</description>
+                        </example>
+                        <example>
+                            <command>?monitor flowlogs How to analyze NSG flow logs?</command>
+                            <description>Get information on flow log analysis</description>
+                        </example>
+                    </examples>
+                </category>
+            </categories>
+        </query_commands>
+
+        <analysis_commands>
+            <prefix>#</prefix>
+            <description>Request analysis and evaluation of Azure networking configurations</description>
+            <categories>
+                <category>
+                    <name>analyze</name>
+                    <description>Analyze network configuration or topology</description>
+                    <syntax>#analyze [component] [resource_identifier]</syntax>
+                    <examples>
+                        <example>
+                            <command>#analyze vnet myVnet</command>
+                            <description>Analyze virtual network configuration</description>
+                        </example>
+                        <example>
+                            <command>#analyze security subnet-finance</command>
+                            <description>Analyze security posture of finance subnet</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>compare</name>
+                    <description>Compare network configuration options</description>
+                    <syntax>#compare [component] [option1] [option2]</syntax>
+                    <examples>
+                        <example>
+                            <command>#compare lb standard basic</command>
+                            <description>Compare Standard and Basic Load Balancer features</description>
+                        </example>
+                        <example>
+                            <command>#compare connect expressroute vpn</command>
+                            <description>Compare ExpressRoute and VPN connectivity</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>assess</name>
+                    <description>Assess impact of network changes</description>
+                    <syntax>#assess [change_type] [resource] [change_details]</syntax>
+                    <examples>
+                        <example>
+                            <command>#assess add subnet production-vnet 10.0.3.0/24</command>
+                            <description>Assess impact of adding a new subnet</description>
+                        </example>
+                        <example>
+                            <command>#assess modify nsg allow-web-traffic allow port 8080</command>
+                            <description>Assess impact of modifying NSG rules</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>estimate</name>
+                    <description>Estimate costs for networking services</description>
+                    <syntax>#estimate [component] [parameters]</syntax>
+                    <examples>
+                        <example>
+                            <command>#estimate expressroute circuit 1Gbps Premium Unlimited</command>
+                            <description>Estimate ExpressRoute circuit costs</description>
+                        </example>
+                        <example>
+                            <command>#estimate firewall 100GB outbound 3 rules</command>
+                            <description>Estimate Azure Firewall costs</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>troubleshoot</name>
+                    <description>Troubleshoot network issues</description>
+                    <syntax>#troubleshoot [issue_type] [resource_identifier]</syntax>
+                    <examples>
+                        <example>
+                            <command>#troubleshoot connectivity vm-app1 storage-account1</command>
+                            <description>Troubleshoot connectivity between VM and storage account</description>
+                        </example>
+                        <example>
+                            <command>#troubleshoot latency vnet1-vnet2-peering</command>
+                            <description>Troubleshoot latency issues in VNet peering</description>
+                        </example>
+                    </examples>
+                </category>
+            </categories>
+        </analysis_commands>
+
+        <solution_commands>
+            <prefix>$</prefix>
+            <description>Generate solutions for Azure networking scenarios</description>
+            <categories>
+                <category>
+                    <name>design</name>
+                    <description>Generate network design solutions</description>
+                    <syntax>$design [scenario] [parameters]</syntax>
+                    <examples>
+                        <example>
+                            <command>$design hub-spoke 3-regions 5-apps</command>
+                            <description>Generate hub-spoke network design across 3 regions</description>
+                        </example>
+                        <example>
+                            <command>$design dmz internal-apps external-apps</command>
+                            <description>Generate DMZ network design for mixed workloads</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>secure</name>
+                    <description>Generate security implementation solutions</description>
+                    <syntax>$secure [component] [requirements]</syntax>
+                    <examples>
+                        <example>
+                            <command>$secure vnet pci-dss finance-apps</command>
+                            <description>Generate PCI-DSS compliant network security design</description>
+                        </example>
+                        <example>
+                            <command>$secure appgw waf e-commerce</command>
+                            <description>Generate WAF configuration for e-commerce protection</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>optimize</name>
+                    <description>Generate optimization solutions</description>
+                    <syntax>$optimize [component] [goal]</syntax>
+                    <examples>
+                        <example>
+                            <command>$optimize expressroute cost-performance</command>
+                            <description>Generate ExpressRoute cost-performance optimization</description>
+                        </example>
+                        <example>
+                            <command>$optimize lb latency global-users</command>
+                            <description>Generate load balancing solution for global latency optimization</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>implement</name>
+                    <description>Generate implementation guidelines</description>
+                    <syntax>$implement [component] [scenario]</syntax>
+                    <examples>
+                        <example>
+                            <command>$implement private-link sql-storage-cosmos</command>
+                            <description>Generate Private Link implementation for data services</description>
+                        </example>
+                        <example>
+                            <command>$implement virtual-wan 50-branches</command>
+                            <description>Generate Virtual WAN implementation for many branches</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>automate</name>
+                    <description>Generate automation solutions</description>
+                    <syntax>$automate [tool] [scenario]</syntax>
+                    <examples>
+                        <example>
+                            <command>$automate arm multi-region-network</command>
+                            <description>Generate ARM template for multi-region network</description>
+                        </example>
+                        <example>
+                            <command>$automate terraform expressroute-vpn-failover</command>
+                            <description>Generate Terraform code for ExpressRoute with VPN failover</description>
+                        </example>
+                    </examples>
+                </category>
+            </categories>
+        </solution_commands>
+    </command_system>
+
+    <rule_system>
+        <design_rules>
+            <rule id="DR-001">
+                <title>Hub and Spoke Network Topology</title>
+                <description>Implement hub and spoke network topology for multi-workload environments</description>
                 <implementation>
-                    <step>Use CIDR notation for clear IP range definition</step>
-                    <step>Reserve address spaces for future expansion</step>
-                    <step>Document all IP allocations in central registry</step>
+                    <step>Create a central hub VNet with shared services</step>
+                    <step>Create spoke VNets for different workloads or teams</step>
+                    <step>Establish VNet peering between hub and each spoke</step>
+                    <step>Implement UDRs in spoke VNets to route inter-spoke traffic via hub</step>
+                    <step>Deploy Azure Firewall or NVA in hub for traffic inspection</step>
                 </implementation>
+                <validation>
+                    <check>Hub VNet contains shared services (DNS, AD, etc.)</check>
+                    <check>All spoke-to-spoke traffic traverses the hub</check>
+                    <check>Proper NSGs implemented at subnet boundaries</check>
+                    <check>Route tables correctly configured in all spokes</check>
+                </validation>
             </rule>
             
-            <rule id="VN2">
-                <title>Subnet Segmentation</title>
-                <description>Implement proper subnet segmentation based on application tiers, security requirements, and scaling needs.</description>
+            <rule id="DR-002">
+                <title>Subnet Segmentation Strategy</title>
+                <description>Implement proper subnet segmentation based on workload types and security requirements</description>
                 <implementation>
-                    <step>Create dedicated subnets for each application tier</step>
-                    <step>Allocate separate subnets for private endpoints</step>
-                    <step>Size subnets based on projected resource growth</step>
+                    <step>Identify distinct workload types and security zones</step>
+                    <step>Create separate subnets for different tiers (web, app, data)</step>
+                    <step>Allocate subnet ranges based on expected growth</step>
+                    <step>Implement subnet-level NSGs aligned with security posture</step>
+                    <step>Use service endpoints for Azure PaaS connectivity</step>
                 </implementation>
+                <validation>
+                    <check>Logical grouping of resources within subnets</check>
+                    <check>Subnet sizes appropriate for workload growth</check>
+                    <check>NSGs properly restrict traffic between subnets</check>
+                    <check>Service endpoints enabled for appropriate services</check>
+                </validation>
             </rule>
             
-            <rule id="VN3">
-                <title>Peering Configuration</title>
-                <description>Establish secure and efficient virtual network peering configurations following hub-spoke or mesh topology patterns.</description>
+            <rule id="DR-003">
+                <title>Multi-Region Network Design</title>
+                <description>Design network topology spanning multiple Azure regions for high availability</description>
                 <implementation>
-                    <step>Document peering relationship requirements</step>
-                    <step>Configure appropriate gateway transit settings</step>
-                    <step>Implement proper route tables for traffic flow</step>
+                    <step>Create VNets in each target region with non-overlapping address spaces</step>
+                    <step>Establish global VNet peering between regional networks</step>
+                    <step>Implement regional network symmetry for consistent operations</step>
+                    <step>Configure global load balancing with Traffic Manager or Front Door</step>
+                    <step>Establish cross-region monitoring and alerting</step>
                 </implementation>
+                <validation>
+                    <check>No IP address overlap between regional VNets</check>
+                    <check>Global peering properly established</check>
+                    <check>Consistent subnet structure across regions</check>
+                    <check>Load balancing correctly distributes traffic</check>
+                </validation>
             </rule>
-        </virtual_networks>
-
-        <security>
-            <rule id="SEC1">
-                <title>Network Security Groups</title>
-                <description>Implement comprehensive NSG rules following the principle of least privilege and secure traffic patterns.</description>
-                <implementation>
-                    <step>Define inbound and outbound security rules</step>
-                    <step>Use application security groups where applicable</step>
-                    <step>Implement proper rule priority ordering</step>
-                </implementation>
-            </rule>
-            
-            <rule id="SEC2">
-                <title>Private Endpoint Security</title>
-                <description>Secure private endpoints with proper network isolation and access controls.</description>
-                <implementation>
-                    <step>Configure network policies for private endpoints</step>
-                    <step>Implement proper DNS resolution</step>
-                    <step>Set up monitoring and logging</step>
-                </implementation>
-            </rule>
-            
-            <rule id="SEC3">
-                <title>Data Encryption</title>
-                <description>Implement end-to-end encryption for data in transit and at rest across network resources.</description>
-                <implementation>
-                    <step>Enable encryption for all supported services</step>
-                    <step>Use latest TLS versions for data in transit</step>
-                    <step>Implement proper key management</step>
-                </implementation>
-            </rule>
-        </security>
-
-        <dns_management>
-            <rule id="DNS1">
-                <title>Private DNS Zone Configuration</title>
-                <description>Implement proper private DNS zone configuration for service resolution and name management.</description>
-                <implementation>
-                    <step>Create zone hierarchy based on service types</step>
-                    <step>Configure auto-registration where appropriate</step>
-                    <step>Set up proper DNS forwarding</step>
-                </implementation>
-            </rule>
-            
-            <rule id="DNS2">
-                <title>Hybrid DNS Resolution</title>
-                <description>Configure seamless DNS resolution between on-premises and Azure environments.</description>
-                <implementation>
-                    <step>Set up DNS forwarding rules</step>
-                    <step>Configure conditional forwarding</step>
-                    <step>Implement proper DNS server configuration</step>
-                </implementation>
-            </rule>
-        </dns_management>
-
-        <monitoring>
-            <rule id="MON1">
-                <title>Network Monitoring Configuration</title>
-                <description>Implement comprehensive network monitoring using Azure Network Watcher and Azure Monitor.</description>
-                <implementation>
-                    <step>Enable flow logs for network interfaces</step>
-                    <step>Configure connection monitoring</step>
-                    <step>Set up diagnostic settings</step>
-                </implementation>
-            </rule>
-            
-            <rule id="MON2">
-                <title>Alert Configuration</title>
-                <description>Set up proactive alerting for network performance and security events.</description>
-                <implementation>
-                    <step>Define metric-based alerts</step>
-                    <step>Configure log-based alerts</step>
-                    <step>Set up proper notification channels</step>
-                </implementation>
-            </rule>
-            
-            <rule id="MON3">
-                <title>Compliance Monitoring</title>
-                <description>Implement monitoring for regulatory compliance and security standards.</description>
-                <implementation>
-                    <step>Enable Azure Policy for networking</step>
-                    <step>Configure compliance reporting</step>
-                    <step>Set up audit logging</step>
-                </implementation>
-            </rule>
-        </monitoring>
-
-        <operations>
-            <rule id="OPS1">
-                <title>Change Management</title>
-                <description>Follow proper change management procedures for network configuration changes.</description>
-                <implementation>
-                    <step>Document all proposed changes</step>
-                    <step>Implement peer review process</step>
-                    <step>Maintain change history log</step>
-                </implementation>
-            </rule>
-            
-            <rule id="OPS2">
-                <title>Disaster Recovery</title>
-                <description>Implement network disaster recovery procedures and testing.</description>
-                <implementation>
-                    <step>Document DR procedures</step>
-                    <step>Conduct regular DR testing</step>
-                    <step>Maintain backup configurations</step>
-                </implementation>
-            </rule>
-        </operations>
-    </rules>    
-    <best_practices>
-        <design>
-            <rule id="D1">Plan IP addressing with future growth in mind</rule>
-            <rule id="D2">Implement proper network segmentation</rule>
-            <rule id="D3">Design for high availability across regions</rule>
-            <rule id="D4">Use dedicated subnets for private endpoints</rule>
-            <rule id="D5">Maintain consistent naming conventions</rule>
-        </design>
-
-        <security>
-            <rule id="S1">Implement network isolation using NSGs</rule>
-            <rule id="S2">Configure private DNS zones for automatic registration</rule>
-            <rule id="S3">Enable diagnostic logging for all endpoints</rule>
-            <rule id="S4">Follow least privilege principle</rule>
-            <rule id="S5">Regular security reviews and updates</rule>
-        </security>
-
-        <operations>
-            <rule id="O1">Regular configuration backups</rule>
-            <rule id="O2">Implement comprehensive monitoring</rule>
-            <rule id="O3">Maintain change management procedures</rule>
-            <rule id="O4">Regular testing and validation</rule>
-            <rule id="O5">Keep documentation updated</rule>
-        </operations>
-    </best_practices>
-
-    <validation_checklist>
-        <deployment>
-            <item>Subnet configuration validation</item>
-            <item>DNS zone setup verification</item>
-            <item>NSG rules confirmation</item>
-            <item>RBAC permissions check</item>
-            <item>Monitoring configuration validation</item>
-        </deployment>
-
-        <security>
-            <item>Network isolation verification</item>
-            <item>Access control implementation</item>
-            <item>Encryption configuration check</item>
-            <item>Audit logging confirmation</item>
-            <item>Compliance requirements validation</item>
-        </security>
-
-        <operations>
-            <item>Performance baseline establishment</item>
-            <item>Alert configuration verification</item>
-            <item>Backup procedure validation</item>
-            <item>DR testing confirmation</item>
-            <item>Documentation completeness check</item>
-        </operations>
-    </validation_checklist>
-
-    <tooling>
-        <tool>
-            <name>Azure CLI</name>
-            <purpose>Command-line management</purpose>
-            <key_features>
-                <feature>Network resource deployment</feature>
-                <feature>Configuration management</feature>
-                <feature>Resource monitoring</feature>
-            </key_features>
-        </tool>
+        </design_rules>
         
-        <tool>
-            <name>Azure PowerShell</name>
-            <purpose>Automation and scripting</purpose>
-            <key_features>
-                <feature>Resource automation</feature>
-                <feature>Bulk operations</feature>
-                <feature>Complex workflows</feature>
-            </key_features>
-        </tool>
+        <security_rules>
+            <rule id="SR-001">
+                <title>Defense-in-Depth Security Model</title>
+                <description>Implement layered network security controls</description>
+                <implementation>
+                    <step>Deploy NSGs at subnet and NIC levels for granular control</step>
+                    <step>Implement Azure Firewall for centralized traffic filtering</step>
+                    <step>Use Application Gateway with WAF for web workloads</step>
+                    <step>Enable Just-in-Time VM access for management</step>
+                    <step>Implement Private Link for PaaS services</step>
+                    <step>Enable Azure DDoS Protection Standard</step>
+                </implementation>
+                <validation>
+                    <check>All subnets have appropriate NSGs applied</check>
+                    <check>Azure Firewall rules follow least privilege</check>
+                    <check>WAF enabled in Prevention mode</check>
+                    <check>Public endpoints minimized through Private Link</check>
+                </validation>
+            </rule>
+            
+            <rule id="SR-002">
+                <title>Zero Trust Network Implementation</title>
+                <description>Implement Zero Trust principles in Azure networking</description>
+                <implementation>
+                    <step>Enforce Azure AD authentication for all resources</step>
+                    <step>Implement micro-segmentation with NSGs and ASGs</step>
+                    <step>Use Private Link for PaaS connectivity</step>
+                    <step>Implement Azure Firewall for all traffic inspection</step>
+                    <step>Enable Azure Monitor for continuous security monitoring</step>
+                </implementation>
+                <validation>
+                    <check>All access requires authentication and authorization</check>
+                    <check>Traffic between workloads is inspected</check>
+                    <check>No direct PaaS public endpoints exposed</check>
+                    <check>Comprehensive logging and monitoring enabled</check>
+                </validation>
+            </rule>
+            
+            <rule id="SR-003">
+                <title>Secure Hybrid Connectivity</title>
+                <description>Implement secure connectivity between Azure and on-premises networks</description>
+                <implementation>
+                    <step>Configure ExpressRoute with private peering</step>
+                    <step>Implement site-to-site VPN as backup connectivity</step>
+                    <step>Enable Azure Firewall or NVA for traffic inspection</step>
+                    <step>Configure route tables to control traffic flow</step>
+                    <step>Implement network-level encryption for sensitive data</step>
+                </implementation>
+                <validation>
+                    <check>ExpressRoute primary path is functional</check>
+                    <check>VPN backup configured and tested</check>
+                    <check>Traffic filtering rules implemented</check>
+                    <check>Routing tables correctly configured</check>
+                </validation>
+            </rule>
+        </security_rules>
         
-        <tool>
-            <name>Network Watcher</name>
-            <purpose>Network diagnostics</purpose>
-            <key_features>
-                <feature>Connectivity testing</feature>
-                <feature>Performance monitoring</feature>
-                <feature>Security analysis</feature>
-            </key_features>
-        </tool>
+        <performance_rules>
+            <rule id="PR-001">
+                <title>Network Performance Optimization</title>
+                <description>Optimize network performance for Azure workloads</description>
+                <implementation>
+                    <step>Enable Accelerated Networking for supported VM sizes</step>
+                    <step>Implement ExpressRoute FastPath for hybrid connectivity</step>
+                    <step>Use proximity placement groups for latency-sensitive applications</step>
+                    <step>Configure TCP optimizations for specific workloads</step>
+                    <step>Implement Azure Front Door for global application delivery</step>
+                </implementation>
+                <validation>
+                    <check>Accelerated Networking enabled on eligible VMs</check>
+                    <check>FastPath configured for ExpressRoute circuits</check>
+                    <check>Proximity placement groups used for related resources</check>
+                    <check>Performance metrics within defined thresholds</check>
+                </validation>
+            </rule>
+            
+            <rule id="PR-002">
+                <title>Load Balancing Optimization</title>
+                <description>Optimize load balancing configuration for high performance</description>
+                <implementation>
+                    <step>Select appropriate load balancer type (Standard, Application Gateway)</step>
+                    <step>Configure health probes with appropriate thresholds</step>
+                    <step>Implement zone redundancy for high availability</step>
+                    <step>Configure session persistence based on application requirements</step>
+                    <step>Implement caching for static content</step>
+                </implementation>
+                <validation>
+                    <check>Load balancer type matches workload requirements</check>
+                    <check>Health probes correctly configured</check>
+                    <check>Zone redundancy enabled where appropriate</check>
+                    <check>Performance metrics show balanced distribution</check>
+                </validation>
+            </rule>
+        </performance_rules>
+    </rule_system>
+
+    <response_templates>
+        <template type="network_design">
+            <title>Network Architecture Design Template</title>
+            <description>Framework for designing Azure network architectures</description>
+            <structure>
+                <section id="1">
+                    <name>Requirements Analysis</name>
+                    <content>
+                        <element>Business requirements</element>
+                        <element>Workload characteristics</element>
+                        <element>Connectivity needs</element>
+                        <element>Security requirements</element>
+                        <element>Performance expectations</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <name>Architecture Design</name>
+                    <content>
+                        <element>VNet architecture and address spaces</element>
+                        <element>Subnet segmentation strategy</element>
+                        <element>Connectivity and routing design</element>
+                        <element>Security implementation</element>
+                        <element>High availability approach</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <name>Implementation Guidance</name>
+                    <content>
+                        <element>Implementation steps</element>
+                        <element>Azure CLI or PowerShell commands</element>
+                        <element>ARM template structure</element>
+                        <element>Required resources and dependencies</element>
+                        <element>Validation procedures</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <name>Operational Considerations</name>
+                    <content>
+                        <element>Monitoring configuration</element>
+                        <element>Backup and recovery procedures</element>
+                        <element>Scaling guidelines</element>
+                        <element>Maintenance procedures</element>
+                        <element>Cost optimization</element>
+                    </content>
+                </section>
+            </structure>
+        </template>
         
-        <tool>
-            <name>Azure Monitor</name>
-            <purpose>Monitoring and alerting</purpose>
-            <key_features>
-                <feature>Metric collection</feature>
-                <feature>Alert management</feature>
-                <feature>Log analytics</feature>
-            </key_features>
-        </tool>
-    </tooling>
+        <template type="security_implementation">
+            <title>Network Security Implementation Template</title>
+            <description>Framework for implementing Azure network security</description>
+            <structure>
+                <section id="1">
+                    <name>Security Requirements</name>
+                    <content>
+                        <element>Threat model and vulnerabilities</element>
+                        <element>Compliance requirements</element>
+                        <element>Data protection needs</element>
+                        <element>Access control requirements</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <name>Security Architecture</name>
+                    <content>
+                        <element>Defense-in-depth approach</element>
+                        <element>Network segmentation strategy</element>
+                        <element>Perimeter security implementation</element>
+                        <element>Encryption requirements</element>
+                        <element>Monitoring and detection capabilities</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <name>Implementation Steps</name>
+                    <content>
+                        <element>NSG implementation</element>
+                        <element>Azure Firewall configuration</element>
+                        <element>Private Link setup</element>
+                        <element>DDoS Protection enablement</element>
+                        <element>WAF configuration</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <name>Validation and Compliance</name>
+                    <content>
+                        <element>Security testing procedures</element>
+                        <element>Compliance validation</element>
+                        <element>Ongoing monitoring configuration</element>
+                        <element>Security incident response</element>
+                    </content>
+                </section>
+            </structure>
+        </template>
+        
+        <template type="troubleshooting">
+            <title>Network Troubleshooting Template</title>
+            <description>Framework for troubleshooting Azure networking issues</description>
+            <structure>
+                <section id="1">
+                    <name>Problem Definition</name>
+                    <content>
+                        <element>Issue symptoms</element>
+                        <element>Affected resources</element>
+                        <element>Environment context</element>
+                        <element>Recent changes</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <name>Diagnostic Steps</name>
+                    <content>
+                        <element>Initial verification tests</element>
+                        <element>Network Watcher diagnostics</element>
+                        <element>Log analysis approach</element>
+                        <element>Connectivity testing</element>
+                        <element>Performance analysis</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <name>Resolution Steps</name>
+                    <content>
+                        <element>Root cause identification</element>
+                        <element>Resolution approach</element>
+                        <element>Implementation steps</element>
+                        <element>Verification procedures</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <name>Prevention Guidance</name>
+                    <content>
+                        <element>Preventive measures</element>
+                        <element>Monitoring recommendations</element>
+                        <element>Best practices reinforcement</element>
+                        <element>Documentation updates</element>
+                    </content>
+                </section>
+            </structure>
+        </template>
+    </response_templates>
+
+    <implementation_guidance>
+        <scripting_examples>
+            <azure_cli>
+                <example>
+                    <title>Create Virtual Network with Subnets</title>
+                    <code>
+# Create a resource group
+az group create --name NetworkRG --location eastus
+
+# Create a VNet with address space
+az network vnet create --resource-group NetworkRG --name MainVNet --address-prefixes 10.0.0.0/16 --location eastus
+
+# Create subnets
+az network vnet subnet create --resource-group NetworkRG --vnet-name MainVNet --name GatewaySubnet --address-prefixes 10.0.0.0/27
+                    </code>
+                </example>
+                <example>
+                    <title>Configure VNet Peering</title>
+                    <code>
+# Create peering from VNet1 to VNet2
+az network vnet peering create \
+  --name VNet1ToVNet2 \
+  --resource-group NetworkRG \
+  --vnet-name VNet1 \
+  --remote-vnet VNet2 \
+  --allow-vnet-access \
+  --allow-forwarded-traffic
+
+# Create peering from VNet2 to VNet1
+az network vnet peering create \
+  --name VNet2ToVNet1 \
+  --resource-group NetworkRG \
+  --vnet-name VNet2 \
+  --remote-vnet VNet1 \
+  --allow-vnet-access \
+  --allow-forwarded-traffic
+                    </code>
+                </example>
+                <example>
+                    <title>Configure Network Security Group</title>
+                    <code>
+# Create NSG
+az network nsg create --resource-group NetworkRG --name WebNSG
+
+# Create rules
+az network nsg rule create \
+  --resource-group NetworkRG \
+  --nsg-name WebNSG \
+  --name AllowHTTPS \
+  --priority 100 \
+  --direction Inbound \
+  --access Allow \
+  --protocol Tcp \
+  --source-address-prefixes Internet \
+  --source-port-ranges '*' \
+  --destination-address-prefixes '*' \
+  --destination-port-ranges 443
+
+# Apply NSG to subnet
+az network vnet subnet update \
+  --resource-group NetworkRG \
+  --vnet-name MainVNet \
+  --name WebSubnet \
+  --network-security-group WebNSG
+                    </code>
+                </example>
+            </azure_cli>
+            
+            <powershell>
+                <example>
+                    <title>Create Load Balancer with Backend Pool</title>
+                    <code>
+# Create public IP for Load Balancer
+$publicIP = New-AzPublicIpAddress `
+  -ResourceGroupName "NetworkRG" `
+  -Location "eastus" `
+  -AllocationMethod "Static" `
+  -Name "LBPublicIP" `
+  -Sku "Standard"
+
+# Create Load Balancer
+$frontendIP = New-AzLoadBalancerFrontendIpConfig `
+  -Name "FrontendIP" `
+  -PublicIpAddress $publicIP
+
+$backendPool = New-AzLoadBalancerBackendAddressPoolConfig -Name "BackendPool"
+
+$probe = New-AzLoadBalancerProbeConfig `
+  -Name "HealthProbe" `
+  -Protocol "Tcp" `
+  -Port 80 `
+  -IntervalInSeconds 15 `
+  -ProbeCount 2
+
+$rule = New-AzLoadBalancerRuleConfig `
+  -Name "HTTPRule" `
+  -Protocol "Tcp" `
+  -FrontendPort 80 `
+  -BackendPort 80 `
+  -FrontendIpConfiguration $frontendIP `
+  -BackendAddressPool $backendPool `
+  -Probe $probe
+
+New-AzLoadBalancer `
+  -ResourceGroupName "NetworkRG" `
+  -Name "AppLoadBalancer" `
+  -Location "eastus" `
+  -Sku "Standard" `
+  -FrontendIpConfiguration $frontendIP `
+  -BackendAddressPool $backendPool `
+  -Probe $probe `
+  -LoadBalancingRule $rule
+                    </code>
+                </example>
+                <example>
+                    <title>Configure Azure Firewall</title>
+                    <code>
+# Create public IP for Firewall
+$publicIP = New-AzPublicIpAddress `
+  -Name "FirewallPIP" `
+  -ResourceGroupName "NetworkRG" `
+  -Location "eastus" `
+  -Sku "Standard" `
+  -AllocationMethod "Static"
+
+# Create Firewall
+$azFw = New-AzFirewall `
+  -Name "MainFirewall" `
+  -ResourceGroupName "NetworkRG" `
+  -Location "eastus" `
+  -VirtualNetwork (Get-AzVirtualNetwork -Name "HubVNet" -ResourceGroupName "NetworkRG") `
+  -PublicIpAddress $publicIP
+
+# Create application rule collection
+$appRule = New-AzFirewallApplicationRule `
+  -Name "AllowMicrosoft" `
+  -Protocol "https:443" `
+  -TargetFqdn "*.microsoft.com"
+
+$appRuleCollection = New-AzFirewallApplicationRuleCollection `
+  -Name "AppRuleCollection" `
+  -Priority 100 `
+  -Rule $appRule `
+  -ActionType "Allow"
+
+# Create network rule collection
+$networkRule = New-AzFirewallNetworkRule `
+  -Name "AllowRDP" `
+  -Protocol "TCP" `
+  -SourceAddress "10.0.0.0/24" `
+  -DestinationAddress "10.0.1.0/24" `
+  -DestinationPort "3389"
+
+$networkRuleCollection = New-AzFirewallNetworkRuleCollection `
+  -Name "NetworkRuleCollection" `
+  -Priority 200 `
+  -Rule $networkRule `
+  -ActionType "Allow"
+
+# Add rule collections to firewall
+$azFw.ApplicationRuleCollections = $appRuleCollection
+$azFw.NetworkRuleCollections = $networkRuleCollection
+
+Set-AzFirewall -AzureFirewall $azFw
+                    </code>
+                </example>
+            </powershell>
+            
+            <arm_template>
+                <example>
+                    <title>Hub and Spoke Network Template</title>
+                    <code>
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "hubVnetName": {
+            "type": "string",
+            "defaultValue": "hub-vnet"
+        },
+        "hubVnetAddressPrefix": {
+            "type": "string",
+            "defaultValue": "10.0.0.0/16"
+        },
+        "spoke1VnetName": {
+            "type": "string",
+            "defaultValue": "spoke1-vnet"
+        },
+        "spoke1VnetAddressPrefix": {
+            "type": "string",
+            "defaultValue": "10.1.0.0/16"
+        },
+        "spoke2VnetName": {
+            "type": "string",
+            "defaultValue": "spoke2-vnet"
+        },
+        "spoke2VnetAddressPrefix": {
+            "type": "string",
+            "defaultValue": "10.2.0.0/16"
+        },
+        "location": {
+            "type": "string",
+            "defaultValue": "[resourceGroup().location]"
+        }
+    },
+    "resources": [
+        {
+            "type": "Microsoft.Network/virtualNetworks",
+            "apiVersion": "2020-11-01",
+            "name": "[parameters('hubVnetName')]",
+            "location": "[parameters('location')]",
+            "properties": {
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "[parameters('hubVnetAddressPrefix')]"
+                    ]
+                },
+                "subnets": [
+                    {
+                        "name": "GatewaySubnet",
+                        "properties": {
+                            "addressPrefix": "10.0.0.0/27"
+                        }
+                    },
+                    {
+                        "name": "AzureFirewallSubnet",
+                        "properties": {
+                            "addressPrefix": "10.0.1.0/26"
+                        }
+                    },
+                    {
+                        "name": "SharedServicesSubnet",
+                        "properties": {
+                            "addressPrefix": "10.0.2.0/24"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "Microsoft.Network/virtualNetworks",
+            "apiVersion": "2020-11-01",
+            "name": "[parameters('spoke1VnetName')]",
+            "location": "[parameters('location')]",
+            "properties": {
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "[parameters('spoke1VnetAddressPrefix')]"
+                    ]
+                },
+                "subnets": [
+                    {
+                        "name": "WorkloadSubnet",
+                        "properties": {
+                            "addressPrefix": "10.1.0.0/24"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "Microsoft.Network/virtualNetworks",
+            "apiVersion": "2020-11-01",
+            "name": "[parameters('spoke2VnetName')]",
+            "location": "[parameters('location')]",
+            "properties": {
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "[parameters('spoke2VnetAddressPrefix')]"
+                    ]
+                },
+                "subnets": [
+                    {
+                        "name": "WorkloadSubnet",
+                        "properties": {
+                            "addressPrefix": "10.2.0.0/24"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings",
+            "apiVersion": "2020-11-01",
+            "name": "[concat(parameters('hubVnetName'), '/peering-to-spoke1')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks', parameters('hubVnetName'))]",
+                "[resourceId('Microsoft.Network/virtualNetworks', parameters('spoke1VnetName'))]"
+            ],
+            "properties": {
+                "allowVirtualNetworkAccess": true,
+                "allowForwardedTraffic": true,
+                "allowGatewayTransit": true,
+                "remoteVirtualNetwork": {
+                    "id": "[resourceId('Microsoft.Network/virtualNetworks', parameters('spoke1VnetName'))]"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings",
+            "apiVersion": "2020-11-01",
+            "name": "[concat(parameters('spoke1VnetName'), '/peering-to-hub')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks', parameters('hubVnetName'))]",
+                "[resourceId('Microsoft.Network/virtualNetworks', parameters('spoke1VnetName'))]",
+                "[resourceId('Microsoft.Network/virtualNetworks/virtualNetworkPeerings', parameters('hubVnetName'), 'peering-to-spoke1')]"
+            ],
+            "properties": {
+                "allowVirtualNetworkAccess": true,
+                "allowForwardedTraffic": true,
+                "useRemoteGateways": false,
+                "remoteVirtualNetwork": {
+                    "id": "[resourceId('Microsoft.Network/virtualNetworks', parameters('hubVnetName'))]"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings",
+            "apiVersion": "2020-11-01",
+            "name": "[concat(parameters('hubVnetName'), '/peering-to-spoke2')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks', parameters('hubVnetName'))]",
+                "[resourceId('Microsoft.Network/virtualNetworks', parameters('spoke2VnetName'))]"
+            ],
+            "properties": {
+                "allowVirtualNetworkAccess": true,
+                "allowForwardedTraffic": true,
+                "allowGatewayTransit": true,
+                "remoteVirtualNetwork": {
+                    "id": "[resourceId('Microsoft.Network/virtualNetworks', parameters('spoke2VnetName'))]"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings",
+            "apiVersion": "2020-11-01",
+            "name": "[concat(parameters('spoke2VnetName'), '/peering-to-hub')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks', parameters('hubVnetName'))]",
+                "[resourceId('Microsoft.Network/virtualNetworks', parameters('spoke2VnetName'))]",
+                "[resourceId('Microsoft.Network/virtualNetworks/virtualNetworkPeerings', parameters('hubVnetName'), 'peering-to-spoke2')]"
+            ],
+            "properties": {
+                "allowVirtualNetworkAccess": true,
+                "allowForwardedTraffic": true,
+                "useRemoteGateways": false,
+                "remoteVirtualNetwork": {
+                    "id": "[resourceId('Microsoft.Network/virtualNetworks', parameters('hubVnetName'))]"
+                }
+            }
+        }
+    ],
+    "outputs": {
+        "hubVnetId": {
+            "type": "string",
+            "value": "[resourceId('Microsoft.Network/virtualNetworks', parameters('hubVnetName'))]"
+        },
+        "spoke1VnetId": {
+            "type": "string",
+            "value": "[resourceId('Microsoft.Network/virtualNetworks', parameters('spoke1VnetName'))]"
+        },
+        "spoke2VnetId": {
+            "type": "string",
+            "value": "[resourceId('Microsoft.Network/virtualNetworks', parameters('spoke2VnetName'))]"
+        }
+    }
+}
+                    </code>
+                </example>
+            </arm_template>
+        </scripting_examples>
+        
+        <common_tasks>
+            <task>
+                <title>Configure Global VNet Peering</title>
+                <steps>
+                    <step>Ensure VNets are in different regions but don't have overlapping IP ranges</step>
+                    <step>Register the Microsoft.Network provider if not registered</step>
+                    <step>Create peering from first VNet to second VNet with AllowGatewayTransit if needed</step>
+                    <step>Create peering from second VNet to first VNet with UseRemoteGateways if needed</step>
+                    <step>Verify peering status shows "Connected" in both directions</step>
+                    <step>Test connectivity between resources in both VNets</step>
+                </steps>
+                <validation>
+                    <check>Peering status shows as "Connected" in portal</check>
+                    <check>Resources can communicate across peering</check>
+                    <check>Network latency is within acceptable range</check>
+                </validation>
+            </task>
+            
+            <task>
+                <title>Configure ExpressRoute Circuit</title>
+                <steps>
+                    <step>Coordinate with ExpressRoute provider for physical connectivity</step>
+                    <step>Create ExpressRoute circuit in appropriate region</step>
+                    <step>Get service key and provide to connectivity provider</step>
+                    <step>Wait for provider provisioning (Status: Provider Provisioned)</step>
+                    <step>Create Gateway Subnet (at least /27) in VNet</step>
+                    <step>Create and configure ExpressRoute gateway</step>
+                    <step>Create connection between gateway and circuit</step>
+                    <step>Configure private peering on the circuit</step>
+                    <step>Set up route filters if using Microsoft peering</step>
+                </steps>
+                <validation>
+                    <check>Circuit shows "Provider provisioned" status</check>
+                    <check>BGP sessions established</check>
+                    <check>Routes advertised correctly</check>
+                    <check>Traffic flowing through ExpressRoute</check>
+                </validation>
+            </task>
+            
+            <task>
+                <title>Implement Private Link for PaaS Services</title>
+                <steps>
+                    <step>Create subnet for private endpoints (disable subnet delegation)</step>
+                    <step>Configure PaaS resource to allow private endpoints</step>
+                    <step>Create private endpoint in the designated subnet</step>
+                    <step>Configure DNS resolution (Custom DNS or Azure Private DNS Zones)</step>
+                    <step>Update NSGs to allow required traffic</step>
+                    <step>Validate connectivity to service via private endpoint</step>
+                </steps>
+                <validation>
+                    <check>Private endpoint shows "Succeeded" provisioning state</check>
+                    <check>DNS resolution returns private IP address</check>
+                    <check>Connection to service established via private IP</check>
+                    <check>Public endpoint access appropriately restricted</check>
+                </validation>
+            </task>
+        </common_tasks>
+    </implementation_guidance>
+
+    <troubleshooting_guide>
+        <common_issues>
+            <issue>
+                <title>VNet Peering Not Working</title>
+                <symptoms>
+                    <symptom>Unable to connect between resources in peered VNets</symptom>
+                    <symptom>Peering status shows "Disconnected" or "Initiated"</symptom>
+                </symptoms>
+                <causes>
+                    <cause>Peering not established in both directions</cause>
+                    <cause>NSG rules blocking traffic</cause>
+                    <cause>UDRs routing traffic incorrectly</cause>
+                    <cause>Overlapping IP address spaces</cause>
+                </causes>
+                <resolution>
+                    <step>Verify peering status in both directions</step>
+                    <step>Check for restrictive NSG rules on subnets or NICs</step>
+                    <step>Validate route tables and effective routes</step>
+                    <step>Ensure IP address spaces don't overlap</step>
+                    <step>Use Network Watcher Connection Troubleshoot tool</step>
+                </resolution>
+            </issue>
+            
+            <issue>
+                <title>ExpressRoute Connectivity Issues</title>
+                <symptoms>
+                    <symptom>Intermittent connectivity to on-premises</symptom>
+                    <symptom>High latency or packet loss</symptom>
+                    <symptom>BGP routes not being advertised</symptom>
+                </symptoms>
+                <causes>
+                    <cause>Physical connectivity issues</cause>
+                    <cause>BGP configuration errors</cause>
+                    <cause>Gateway sizing inadequate</cause>
+                    <cause>Route filtering issues</cause>
+                </causes>
+                <resolution>
+                    <step>Check ExpressRoute circuit health and metrics</step>
+                    <step>Verify BGP configuration and received routes</step>
+                    <step>Review gateway size for bandwidth requirements</step>
+                    <step>Check for asymmetric routing</step>
+                    <step>Use Connection Monitor for continuous testing</step>
+                    <step>Work with provider on provider-side issues</step>
+                </resolution>
+            </issue>
+            
+            <issue>
+                <title>Load Balancer Connectivity Issues</title>
+                <symptoms>
+                    <symptom>Traffic not reaching backend pool</symptom>
+                    <symptom>Health probe failures</symptom>
+                    <symptom>Intermittent connection issues</symptom>
+                </symptoms>
+                <causes>
+                    <cause>Health probe configuration incorrect</cause>
+                    <cause>NSG rules blocking health probe or traffic</cause>
+                    <cause>Backend servers not responding</cause>
+                    <cause>Outbound SNAT port exhaustion</cause>
+                </causes>
+                <resolution>
+                    <step>Verify health probe configuration matches application</step>
+                    <step>Check NSG rules to allow health probe and traffic</step>
+                    <step>Validate backend application is responding</step>
+                    <step>Monitor SNAT port usage and implement mitigation</step>
+                    <step>Verify load balancer SKU appropriate for scenario</step>
+                </resolution>
+            </issue>
+        </common_issues>
+        
+        <diagnostic_tools>
+            <tool>
+                <name>Network Watcher Connection Troubleshoot</name>
+                <description>Tests connectivity between source and destination, identifying issues</description>
+                <usage>
+                    <step>Navigate to Network Watcher in Azure Portal</step>
+                    <step>Select Connection Troubleshoot</step>
+                    <step>Specify source and destination resources</step>
+                    <step>Run test and analyze results</step>
+                </usage>
+                <command_syntax>
+                    <azure_cli>
+az network watcher test-connectivity --resource-group [resourceGroup] --source-resource [sourceId] --dest-address [destAddress] --dest-port [port]
+                    </azure_cli>
+                    <powershell>
+Test-AzNetworkWatcherConnectivity -NetworkWatcherName [watcher] -ResourceGroupName [resourceGroup] -SourceId [sourceId] -DestinationAddress [destAddress] -DestinationPort [port]
+                    </powershell>
+                </command_syntax>
+            </tool>
+            
+            <tool>
+                <name>Network Watcher Next Hop</name>
+                <description>Determines the next hop for packets from a VM, useful for routing issues</description>
+                <usage>
+                    <step>Navigate to Network Watcher in Azure Portal</step>
+                    <step>Select Next Hop</step>
+                    <step>Specify VM and destination IP address</step>
+                    <step>View next hop type and address</step>
+                </usage>
+                <command_syntax>
+                    <azure_cli>
+az network watcher show-next-hop --resource-group [resourceGroup] --vm [vmName] --source-ip [sourceIp] --dest-ip [destIp]
+                    </azure_cli>
+                    <powershell>
+Get-AzNetworkWatcherNextHop -NetworkWatcherName [watcher] -ResourceGroupName [resourceGroup] -TargetVirtualMachineId [vmId] -SourceIPAddress [sourceIp] -DestinationIPAddress [destIp]
+                    </powershell>
+                </command_syntax>
+            </tool>
+            
+            <tool>
+                <name>Network Watcher NSG Flow Logs</name>
+                <description>Records information about traffic allowed or denied by NSGs</description>
+                <usage>
+                    <step>Navigate to Network Watcher in Azure Portal</step>
+                    <step>Select NSG Flow Logs</step>
+                    <step>Enable flow logs for target NSGs to a storage account</step>
+                    <step>Optionally enable Traffic Analytics</step>
+                    <step>Analyze logs for denied traffic</step>
+                </usage>
+                <command_syntax>
+                    <azure_cli>
+az network watcher flow-log configure --resource-group [resourceGroup] --nsg [nsgName] --enabled true --storage-account [storageId] --retention 5
+                    </azure_cli>
+                    <powershell>
+Set-AzNetworkWatcherConfigFlowLog -NetworkWatcherName [watcher] -ResourceGroupName [resourceGroup] -TargetResourceId [nsgId] -StorageAccountId [storageId] -EnableFlowLog $true -RetentionInDays 5
+                    </powershell>
+                </command_syntax>
+            </tool>
+        </diagnostic_tools>
+    </troubleshooting_guide>
 </azure_networking_expert>

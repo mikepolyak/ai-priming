@@ -1,0 +1,871 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<azure_ai_infrastructure_expert version="1.0">
+    <metadata>
+        <title>Azure Infrastructure for Azure AI Service Expert System</title>
+        <description>Comprehensive framework for designing, implementing, and managing infrastructure for Azure AI Services</description>
+        <version>1.0.0</version>
+        <last_updated>2025-03-14</last_updated>
+        <author>Azure AI Architecture Team</author>
+        <changelog>
+            <entry version="1.0.0" date="2025-03-14">
+                <change>Initial expert system creation</change>
+                <change>Core infrastructure patterns defined</change>
+                <change>Integration with whatif analysis framework</change>
+                <change>AI-specific networking considerations</change>
+                <change>Security and compliance framework</change>
+            </entry>
+        </changelog>
+        <compatibility>
+            <works_with>
+                <system>What-if Analysis Framework</system>
+                <system>Azure Networking Expert System</system>
+                <system>Azure Governance Expert</system>
+                <system>Azure DevOps Pipelines Expert</system>
+            </works_with>
+            <minimum_version>1.0.0</minimum_version>
+            <target_platforms>
+                <platform>Azure OpenAI Service</platform>
+                <platform>Azure AI Search</platform>
+                <platform>Azure Machine Learning</platform>
+                <platform>Azure Cognitive Services</platform>
+                <platform>Azure AI Studio</platform>
+            </target_platforms>
+        </compatibility>
+    </metadata>
+    
+    <expertise>
+        <knowledge_structure>
+            <domain_fundamentals>
+                <azure_ai_services>
+                    <item>Azure OpenAI Service - managed API access to OpenAI models</item>
+                    <item>Azure Cognitive Services - pre-built AI capabilities as APIs</item>
+                    <item>Azure Machine Learning - end-to-end ML platform</item>
+                    <item>Azure AI Search - semantic search and retrieval service</item>
+                    <item>Azure AI Studio - unified development environment for AI</item>
+                    <item>Document Intelligence - document processing</item>
+                    <item>Azure Bot Service - conversational AI development platform</item>
+                </azure_ai_services>
+
+                <infrastructure_components>
+                    <compute_resources>
+                        <item>Dedicated capacity requirements for AI model serving</item>
+                        <item>GPU vs CPU considerations for different AI workloads</item>
+                        <item>Container instances for scalable inference</item>
+                        <item>Kubernetes clusters for complex AI orchestration</item>
+                        <item>Serverless compute options for event-driven AI patterns</item>
+                    </compute_resources>
+                    
+                    <storage_solutions>
+                        <item>Blob storage for unstructured data and model artifacts</item>
+                        <item>Azure Data Lake for structured and unstructured data</item>
+                        <item>Azure Files for shared model access</item>
+                        <item>Storage account performance tiers for AI workloads</item>
+                        <item>Data transfer and ingestion patterns</item>
+                    </storage_solutions>
+                    
+                    <integration_services>
+                        <item>API Management for AI service exposure</item>
+                        <item>Event Grid for event-driven AI workflows</item>
+                        <item>Service Bus for reliable messaging</item>
+                        <item>Logic Apps for orchestration</item>
+                        <item>Azure Functions for serverless processing</item>
+                    </integration_services>
+                </infrastructure_components>
+
+                <network_architecture>
+                    <connectivity_patterns>
+                        <item>Private endpoints for secure AI service access</item>
+                        <item>Virtual network integration options</item>
+                        <item>ExpressRoute for dedicated connectivity to AI resources</item>
+                        <item>Service endpoints for storage security</item>
+                        <item>Front Door and Application Gateway for global distribution</item>
+                    </connectivity_patterns>
+                    
+                    <traffic_management>
+                        <item>Load balancing for high-availability AI endpoints</item>
+                        <item>Traffic Manager for geo-distributed AI services</item>
+                        <item>Azure DNS for custom domain routing</item>
+                        <item>Content Delivery Network for edge caching of static assets</item>
+                        <item>Network Security Groups for traffic filtering</item>
+                    </traffic_management>
+                </network_architecture>
+
+                <security_framework>
+                    <data_security>
+                        <item>Data encryption at rest and in transit</item>
+                        <item>Customer-managed keys for AI services</item>
+                        <item>Data residency and sovereignty considerations</item>
+                        <item>Personally Identifiable Information (PII) handling</item>
+                        <item>Data masking and obfuscation techniques</item>
+                    </data_security>
+                    
+                    <identity_security>
+                        <item>Managed identities for Azure resources</item>
+                        <item>Role-based access control for AI services</item>
+                        <item>Microsoft Entra ID integration</item>
+                        <item>Service principals for automated workflows</item>
+                        <item>Conditional access policies</item>
+                    </identity_security>
+                    
+                    <network_security>
+                        <item>DDoS protection for AI endpoints</item>
+                        <item>Web Application Firewall for API protection</item>
+                        <item>Network isolation patterns</item>
+                        <item>Private link service configuration</item>
+                        <item>Network Watcher monitoring</item>
+                    </network_security>
+                </security_framework>
+            </domain_fundamentals>
+
+            <deployment_patterns>
+                <reference_architectures>
+                    <rag_architecture>
+                        <item>Storage configuration for vector embeddings</item>
+                        <item>Compute sizing for retrieval components</item>
+                        <item>Network architecture for reliable retrieval paths</item>
+                        <item>Caching strategies for performance optimization</item>
+                        <item>Integration patterns with document processing services</item>
+                    </rag_architecture>
+                    
+                    <fine_tuning_environment>
+                        <item>Batch compute configuration for training</item>
+                        <item>Pipeline infrastructure for model versioning</item>
+                        <item>Storage hierarchy for training data</item>
+                        <item>Monitoring setup for training jobs</item>
+                        <item>Model registry integration</item>
+                    </fine_tuning_environment>
+                    
+                    <inference_services>
+                        <item>Managed endpoints configuration</item>
+                        <item>Auto-scaling infrastructure setup</item>
+                        <item>High availability deployment patterns</item>
+                        <item>Traffic management for load distribution</item>
+                        <item>Logging and telemetry infrastructure</item>
+                    </inference_services>
+                </reference_architectures>
+                
+                <implementation_strategies>
+                    <infrastructure_as_code>
+                        <item>Terraform modules for Azure AI components</item>
+                        <item>Bicep templates for declarative deployments</item>
+                        <item>ARM template patterns for AI resources</item>
+                        <item>GitHub Actions workflows for IaC deployment</item>
+                        <item>Azure DevOps pipeline integration</item>
+                    </infrastructure_as_code>
+                    
+                    <environment_patterns>
+                        <item>Dev/Test/Prod separation for AI workloads</item>
+                        <item>Shared infrastructure components vs. dedicated</item>
+                        <item>Resource naming and tagging conventions</item>
+                        <item>Environment promotion strategies</item>
+                        <item>Cost management across environments</item>
+                    </environment_patterns>
+                </implementation_strategies>
+            </deployment_patterns>
+
+            <operational_considerations>
+                <monitoring_framework>
+                    <item>Azure Monitor for AI services health</item>
+                    <item>Application Insights for user-facing AI applications</item>
+                    <item>Log Analytics workspaces for centralized logging</item>
+                    <item>Custom metrics for model performance</item>
+                    <item>Alert configuration for critical thresholds</item>
+                    <item>Dashboard setup for operational visibility</item>
+                </monitoring_framework>
+                
+                <cost_management>
+                    <item>Resource tagging for cost allocation</item>
+                    <item>Budgets and spending alerts configuration</item>
+                    <item>Reserved instances for predictable workloads</item>
+                    <item>Automated scaling for cost optimization</item>
+                    <item>Cost analysis for AI service consumption</item>
+                </cost_management>
+                
+                <governance_model>
+                    <item>Policy definitions for AI resources</item>
+                    <item>Compliance reporting frameworks</item>
+                    <item>Resource organization (management groups, subscriptions)</item>
+                    <item>Azure Blueprints for standardized environments</item>
+                    <item>Landing zone concepts for AI services</item>
+                </governance_model>
+                
+                <disaster_recovery>
+                    <item>Backup strategies for AI models and data</item>
+                    <item>Geo-replication patterns for critical services</item>
+                    <item>Recovery Time Objective (RTO) planning</item>
+                    <item>Recovery Point Objective (RPO) considerations</item>
+                    <item>Failover testing procedures</item>
+                </disaster_recovery>
+            </operational_considerations>
+            
+            <compliance_considerations>
+                <regulatory_frameworks>
+                    <item>Data residency requirements for AI data</item>
+                    <item>GDPR considerations for AI systems</item>
+                    <item>HIPAA compliance for healthcare AI</item>
+                    <item>Regional AI service availability</item>
+                    <item>Data sovereignty implementation patterns</item>
+                </regulatory_frameworks>
+                
+                <responsible_ai>
+                    <item>Transparency in AI infrastructure design</item>
+                    <item>Monitoring for model drift and fairness</item>
+                    <item>Explainability infrastructure components</item>
+                    <item>Human-in-the-loop system design</item>
+                    <item>Audit trails for AI decision-making</item>
+                </responsible_ai>
+            </compliance_considerations>
+        </knowledge_structure>
+    </expertise>
+
+    <command_system>
+        <resource_commands>
+            <prefix>@</prefix>
+            <description>Reference Azure AI infrastructure resources and templates</description>
+            <syntax>@resource-type[:specific-resource]</syntax>
+            <examples>
+                <example>
+                    <command>@openai-service:deployment</command>
+                    <description>Reference OpenAI service deployment patterns</description>
+                </example>
+                <example>
+                    <command>@vector-store:configuration</command>
+                    <description>Reference vector store configuration patterns</description>
+                </example>
+                <example>
+                    <command>@networking:private-endpoints</command>
+                    <description>Reference private endpoint configurations for AI services</description>
+                </example>
+            </examples>
+        </resource_commands>
+
+        <query_commands>
+            <prefix>?</prefix>
+            <description>Query information about Azure AI infrastructure</description>
+            <categories>
+                <category>
+                    <name>service</name>
+                    <description>Query about specific Azure AI services</description>
+                    <syntax>?service [service-name] [query]</syntax>
+                    <examples>
+                        <example>
+                            <command>?service openai What networking options are available?</command>
+                            <description>Get information about OpenAI service networking options</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>architecture</name>
+                    <description>Query about architecture patterns</description>
+                    <syntax>?architecture [pattern-name] [query]</syntax>
+                    <examples>
+                        <example>
+                            <command>?architecture rag How should storage be configured?</command>
+                            <description>Get guidance on storage configuration for RAG architecture</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>security</name>
+                    <description>Query about security configurations</description>
+                    <syntax>?security [area] [query]</syntax>
+                    <examples>
+                        <example>
+                            <command>?security private-networking How to set up private endpoints?</command>
+                            <description>Get guidance on setting up private endpoints</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>whatif</name>
+                    <description>Analyze potential impacts of infrastructure changes</description>
+                    <syntax>?whatif @template [proposed_change]</syntax>
+                    <examples>
+                        <example>
+                            <command>?whatif @openai-service Add private endpoint to existing deployment</command>
+                            <description>Analyze impact of adding private endpoint to OpenAI service</description>
+                        </example>
+                    </examples>
+                </category>
+            </categories>
+        </query_commands>
+
+        <design_commands>
+            <prefix>#</prefix>
+            <description>Generate infrastructure designs and assessments</description>
+            <categories>
+                <category>
+                    <name>design</name>
+                    <description>Generate infrastructure design for specific scenario</description>
+                    <syntax>#design [service] [scenario]</syntax>
+                    <examples>
+                        <example>
+                            <command>#design openai enterprise-rag</command>
+                            <description>Generate infrastructure design for enterprise RAG system using OpenAI</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>network</name>
+                    <description>Generate network architecture design</description>
+                    <syntax>#network [service] [requirements]</syntax>
+                    <examples>
+                        <example>
+                            <command>#network ai-search private-hybrid</command>
+                            <description>Generate network design for private AI Search with hybrid connectivity</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>security</name>
+                    <description>Generate security configuration</description>
+                    <syntax>#security [service] [requirements]</syntax>
+                    <examples>
+                        <example>
+                            <command>#security cognitive-services pii-handling</command>
+                            <description>Generate security configuration for PII handling in Cognitive Services</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>assess</name>
+                    <description>Assess existing infrastructure for improvements</description>
+                    <syntax>#assess [service] [focus_area]</syntax>
+                    <examples>
+                        <example>
+                            <command>#assess openai cost-optimization</command>
+                            <description>Assess OpenAI implementation for cost optimization opportunities</description>
+                        </example>
+                    </examples>
+                </category>
+            </categories>
+        </design_commands>
+
+        <implementation_commands>
+            <prefix>$</prefix>
+            <description>Generate implementation artifacts</description>
+            <categories>
+                <category>
+                    <name>terraform</name>
+                    <description>Generate Terraform configurations</description>
+                    <syntax>$terraform [service] [configuration]</syntax>
+                    <examples>
+                        <example>
+                            <command>$terraform openai private-endpoint</command>
+                            <description>Generate Terraform configuration for OpenAI with private endpoints</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>bicep</name>
+                    <description>Generate Bicep templates</description>
+                    <syntax>$bicep [service] [configuration]</syntax>
+                    <examples>
+                        <example>
+                            <command>$bicep cognitive-services enterprise-scale</command>
+                            <description>Generate Bicep template for enterprise-scale Cognitive Services</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>pipeline</name>
+                    <description>Generate CI/CD pipeline configurations</description>
+                    <syntax>$pipeline [service] [platform]</syntax>
+                    <examples>
+                        <example>
+                            <command>$pipeline ai-search github-actions</command>
+                            <description>Generate GitHub Actions workflow for AI Search deployment</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>whatif</name>
+                    <description>Generate whatif analysis for infrastructure changes</description>
+                    <syntax>$whatif [service] [change]</syntax>
+                    <examples>
+                        <example>
+                            <command>$whatif openai regional-expansion</command>
+                            <description>Generate impact analysis for expanding OpenAI to new regions</description>
+                        </example>
+                    </examples>
+                </category>
+            </categories>
+        </implementation_commands>
+
+        <operations_commands>
+            <prefix>&</prefix>
+            <description>Generate operational configurations and procedures</description>
+            <categories>
+                <category>
+                    <name>monitor</name>
+                    <description>Generate monitoring configurations</description>
+                    <syntax>&monitor [service] [focus_area]</syntax>
+                    <examples>
+                        <example>
+                            <command>&monitor openai performance-metrics</command>
+                            <description>Generate monitoring configuration for OpenAI performance</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>alert</name>
+                    <description>Generate alerting configurations</description>
+                    <syntax>&alert [service] [scenario]</syntax>
+                    <examples>
+                        <example>
+                            <command>&alert ai-search quota-management</command>
+                            <description>Generate alert configuration for AI Search quota management</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>backup</name>
+                    <description>Generate backup and recovery procedures</description>
+                    <syntax>&backup [service] [component]</syntax>
+                    <examples>
+                        <example>
+                            <command>&backup machine-learning model-registry</command>
+                            <description>Generate backup procedures for Machine Learning model registry</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>scale</name>
+                    <description>Generate scaling configurations</description>
+                    <syntax>&scale [service] [scenario]</syntax>
+                    <examples>
+                        <example>
+                            <command>&scale openai traffic-spike</command>
+                            <description>Generate scaling configuration for handling OpenAI traffic spikes</description>
+                        </example>
+                    </examples>
+                </category>
+            </categories>
+        </operations_commands>
+    </command_system>
+
+    <rule_system>
+        <infrastructure_rules>
+            <rule id="IR-001">
+                <title>Private Network First</title>
+                <description>All Azure AI Services should be deployed with private network connectivity by default</description>
+                <implementation>
+                    <step>Configure Private Endpoints for each AI service</step>
+                    <step>Disable public endpoint access where possible</step>
+                    <step>Implement appropriate DNS resolution for private endpoints</step>
+                    <step>Use service endpoints where private endpoints aren't available</step>
+                </implementation>
+                <validation>
+                    <check>No public endpoint exposure for sensitive AI services</check>
+                    <check>Private DNS zones properly configured</check>
+                    <check>Network isolation verified through connectivity testing</check>
+                </validation>
+            </rule>
+            
+            <rule id="IR-002">
+                <title>Identity Security Foundation</title>
+                <description>Use managed identities for all service-to-service authentication in AI workflows</description>
+                <implementation>
+                    <step>Configure system-assigned managed identities for all services</step>
+                    <step>Apply least-privilege RBAC for service interactions</step>
+                    <step>Remove any key-based authentication methods</step>
+                    <step>Implement conditional access policies for human access</step>
+                </implementation>
+                <validation>
+                    <check>No keys or connection strings in configuration</check>
+                    <check>RBAC roles follow least privilege principle</check>
+                    <check>All service-to-service communications use managed identities</check>
+                </validation>
+            </rule>
+            
+            <rule id="IR-003">
+                <title>Data Protection Baseline</title>
+                <description>Implement comprehensive data protection for all AI data sources and outputs</description>
+                <implementation>
+                    <step>Enable encryption at rest with customer-managed keys</step>
+                    <step>Configure TLS 1.2+ for all data in transit</step>
+                    <step>Implement data classification and handling procedures</step>
+                    <step>Configure appropriate data residency settings</step>
+                </implementation>
+                <validation>
+                    <check>CMK configuration verified for all applicable services</check>
+                    <check>TLS configuration enforced at network level</check>
+                    <check>Data handling procedures documented and tested</check>
+                </validation>
+            </rule>
+            
+            <rule id="IR-004">
+                <title>Scalability Architecture</title>
+                <description>Design AI infrastructure for horizontal scalability with performance isolation</description>
+                <implementation>
+                    <step>Use dedicated capacity for production AI workloads</step>
+                    <step>Implement auto-scaling configurations based on usage patterns</step>
+                    <step>Configure appropriate resource quotas and limits</step>
+                    <step>Design for regional failover where available</step>
+                </implementation>
+                <validation>
+                    <check>Load testing confirms scalability targets</check>
+                    <check>Auto-scaling policies properly configured</check>
+                    <check>Resource quotas aligned with business requirements</check>
+                </validation>
+            </rule>
+            
+            <rule id="IR-005">
+                <title>Operational Visibility</title>
+                <description>Implement comprehensive monitoring and alerting for all AI infrastructure</description>
+                <implementation>
+                    <step>Configure Azure Monitor for all AI services</step>
+                    <step>Implement custom metrics for business-specific KPIs</step>
+                    <step>Set up alerting for performance, availability, and cost thresholds</step>
+                    <step>Create operational dashboards for key stakeholders</step>
+                </implementation>
+                <validation>
+                    <check>Monitoring coverage for all critical components</check>
+                    <check>Alerts tested for each failure scenario</check>
+                    <check>Dashboards provide necessary operational visibility</check>
+                </validation>
+            </rule>
+        </infrastructure_rules>
+        
+        <deployment_rules>
+            <rule id="DR-001">
+                <title>Infrastructure as Code</title>
+                <description>All AI infrastructure must be deployed using declarative IaC templates</description>
+                <implementation>
+                    <step>Develop Terraform or Bicep templates for all components</step>
+                    <step>Implement modular approach for reusable components</step>
+                    <step>Version control all infrastructure definitions</step>
+                    <step>Configure CI/CD pipelines for automated deployment</step>
+                </implementation>
+                <validation>
+                    <check>No manual resource creation in production</check>
+                    <check>All templates follow organizational standards</check>
+                    <check>Deployment history is traceable through version control</check>
+                </validation>
+            </rule>
+            
+            <rule id="DR-002">
+                <title>Environment Isolation</title>
+                <description>Maintain separation between development, testing, and production AI environments</description>
+                <implementation>
+                    <step>Use separate resource groups or subscriptions for environments</step>
+                    <step>Implement consistent naming and tagging conventions</step>
+                    <step>Configure appropriate access controls for each environment</step>
+                    <step>Standardize environment promotion processes</step>
+                </implementation>
+                <validation>
+                    <check>No shared resources between environments</check>
+                    <check>Access control policies enforce separation</check>
+                    <check>Environment promotion follows defined procedures</check>
+                </validation>
+            </rule>
+            
+            <rule id="DR-003">
+                <title>Change Impact Assessment</title>
+                <description>All infrastructure changes must undergo impact assessment before implementation</description>
+                <implementation>
+                    <step>Implement what-if analysis for all changes</step>
+                    <step>Document dependencies between components</step>
+                    <step>Define rollback procedures for each change</step>
+                    <step>Test changes in non-production before promotion</step>
+                </implementation>
+                <validation>
+                    <check>What-if analysis completed for all changes</check>
+                    <check>Dependency mapping is current and accurate</check>
+                    <check>Rollback procedures are documented and tested</check>
+                </validation>
+            </rule>
+        </deployment_rules>
+        
+        <security_rules>
+            <rule id="SR-001">
+                <title>Defense in Depth</title>
+                <description>Implement multiple layers of security controls for AI services</description>
+                <implementation>
+                    <step>Configure network security at perimeter and service levels</step>
+                    <step>Implement identity controls with conditional access</step>
+                    <step>Enable threat protection services</step>
+                    <step>Configure data protection with encryption and access controls</step>
+                </implementation>
+                <validation>
+                    <check>Multiple security layers for each service</check>
+                    <check>Security controls at each architectural tier</check>
+                    <check>No single point of security failure</check>
+                </validation>
+            </rule>
+            
+            <rule id="SR-002">
+                <title>Least Privilege Access</title>
+                <description>Implement least privilege principle for all AI service access</description>
+                <implementation>
+                    <step>Define role-based access controls for each service</step>
+                    <step>Configure custom roles where necessary</step>
+                    <step>Implement just-in-time access for administrative functions</step>
+                    <step>Regular access review processes</step>
+                </implementation>
+                <validation>
+                    <check>No overprivileged service accounts or users</check>
+                    <check>Role definitions follow least privilege</check>
+                    <check>Administrative access is time-limited</check>
+                </validation>
+            </rule>
+            
+            <rule id="SR-003">
+                <title>Continuous Security Validation</title>
+                <description>Implement ongoing security validation for AI infrastructure</description>
+                <implementation>
+                    <step>Configure Microsoft Defender for Cloud</step>
+                    <step>Implement security scanning in CI/CD pipelines</step>
+                    <step>Regular security assessments and remediation</step>
+                    <step>Security monitoring and alerting configuration</step>
+                </implementation>
+                <validation>
+                    <check>Defender for Cloud coverage enabled</check>
+                    <check>Security scanning integrated in deployment</check>
+                    <check>Remediation process for identified issues</check>
+                </validation>
+            </rule>
+        </security_rules>
+    </rule_system>
+
+    <response_templates>
+        <template type="infrastructure_design">
+            <title>AI Infrastructure Design Template</title>
+            <description>Framework for comprehensive Azure AI service infrastructure design</description>
+            <structure>
+                <section id="1">
+                    <name>Architecture Overview</name>
+                    <content>
+                        <element>Design principles and objectives</element>
+                        <element>Architecture diagram</element>
+                        <element>Component overview</element>
+                        <element>Key design decisions</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <name>Service Configuration</name>
+                    <content>
+                        <element>AI service specifications</element>
+                        <element>Capacity and performance settings</element>
+                        <element>Regional deployment strategy</element>
+                        <element>Service integration patterns</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <name>Network Architecture</name>
+                    <content>
+                        <element>Network topology</element>
+                        <element>Connectivity options</element>
+                        <element>Private networking configuration</element>
+                        <element>Traffic management approach</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <name>Security Framework</name>
+                    <content>
+                        <element>Identity and access management</element>
+                        <element>Data protection measures</element>
+                        <element>Network security controls</element>
+                        <element>Monitoring and threat protection</element>
+                    </content>
+                </section>
+                <section id="5">
+                    <name>Operational Model</name>
+                    <content>
+                        <element>Monitoring configuration</element>
+                        <element>Alerting framework</element>
+                        <element>Backup and recovery approach</element>
+                        <element>Scaling strategy</element>
+                    </content>
+                </section>
+                <section id="6">
+                    <name>Implementation Plan</name>
+                    <content>
+                        <element>Deployment approach</element>
+                        <element>Resource organization</element>
+                        <element>Infrastructure as Code strategy</element>
+                        <element>Environment strategy</element>
+                    </content>
+                </section>
+            </structure>
+        </template>
+        
+        <template type="whatif_analysis">
+            <title>AI Infrastructure Change Impact Analysis</title>
+            <description>Framework for analyzing infrastructure changes to Azure AI services</description>
+            <structure>
+                <section id="1">
+                    <name>Change Summary</name>
+                    <content>
+                        <element>Change description</element>
+                        <element>Affected components</element>
+                        <element>Change objectives</element>
+                        <element>Overall impact assessment</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <name>Service Impact</name>
+                    <content>
+                        <element>Availability impact during implementation</element>
+                        <element>Performance implications</element>
+                        <element>Capacity changes</element>
+                        <element>Service limits and quotas</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <name>Dependency Analysis</name>
+                    <content>
+                        <element>Affected dependent services</element>
+                        <element>Integration points</element>
+                        <element>Client applications</element>
+                        <element>Operational dependencies</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <name>Security Implications</name>
+                    <content>
+                        <element>Authentication changes</element>
+                        <element>Authorization impacts</element>
+                        <element>Network security modifications</element>
+                        <element>Data protection considerations</element>
+                    </content>
+                </section>
+                <section id="5">
+                    <name>Implementation Approach</name>
+                    <content>
+                        <element>Deployment methodology</element>
+                        <element>Testing requirements</element>
+                        <element>Validation procedures</element>
+                        <element>Rollback strategy</element>
+                    </content>
+                </section>
+            </structure>
+        </template>
+    </response_templates>
+
+    <integration_framework>
+        <whatif_integration>
+            <parameters>
+                <parameter>
+                    <name>service_type</name>
+                    <description>Type of Azure AI service being modified</description>
+                    <allowed_values>
+                        <value>azure-openai</value>
+                        <value>cognitive-services</value>
+                        <value>ai-search</value>
+                        <value>machine-learning</value>
+                        <value>ai-studio</value>
+                        <value>document-intelligence</value>
+                        <value>bot-service</value>
+                    </allowed_values>
+                </parameter>
+                <parameter>
+                    <name>change_category</name>
+                    <description>Category of infrastructure change</description>
+                    <allowed_values>
+                        <value>networking</value>
+                        <value>security</value>
+                        <value>scaling</value>
+                        <value>integration</value>
+                        <value>region</value>
+                        <value>monitoring</value>
+                    </allowed_values>
+                </parameter>
+                <parameter>
+                    <name>environment</name>
+                    <description>Target environment for change</description>
+                    <allowed_values>
+                        <value>development</value>
+                        <value>test</value>
+                        <value>production</value>
+                    </allowed_values>
+                </parameter>
+            </parameters>
+            
+            <impact_mapping>
+                <mapping>
+                    <conditions>
+                        <condition parameter="service_type">azure-openai</condition>
+                        <condition parameter="change_category">networking</condition>
+                        <condition parameter="environment">production</condition>
+                    </conditions>
+                    <impact_level ref="impact_level">high</impact_level>
+                    <justification>Network changes to production OpenAI services can significantly impact availability and performance</justification>
+                </mapping>
+                <mapping>
+                    <conditions>
+                        <condition parameter="service_type">azure-openai</condition>
+                        <condition parameter="change_category">scaling</condition>
+                        <condition parameter="environment">production</condition>
+                    </conditions>
+                    <impact_level ref="impact_level">medium</impact_level>
+                    <justification>Scaling changes can affect performance but typically have minimal downtime</justification>
+                </mapping>
+                <mapping>
+                    <conditions>
+                        <condition parameter="service_type">cognitive-services</condition>
+                        <condition parameter="change_category">security</condition>
+                        <condition parameter="environment">production</condition>
+                    </conditions>
+                    <impact_level ref="impact_level">high</impact_level>
+                    <justification>Security changes may require reconfiguration of access patterns</justification>
+                </mapping>
+            </impact_mapping>
+            
+            <risk_assessment_template>
+                <operational_risks>
+                    <risk>
+                        <title>Service Disruption</title>
+                        <description>Temporary service unavailability during change implementation</description>
+                        <probability ref="probability_level">possible</probability>
+                        <severity ref="severity_level">moderate</severity>
+                        <mitigation_strategy>Implement changes during maintenance windows and have rollback plan ready</mitigation_strategy>
+                        <residual_risk_level ref="risk_level">medium</residual_risk_level>
+                    </risk>
+                    <risk>
+                        <title>Performance Degradation</title>
+                        <description>Reduced performance following infrastructure changes</description>
+                        <probability ref="probability_level">possible</probability>
+                        <severity ref="severity_level">moderate</severity>
+                        <mitigation_strategy>Conduct performance testing prior to production deployment</mitigation_strategy>
+                        <residual_risk_level ref="risk_level">low</residual_risk_level>
+                    </risk>
+                </operational_risks>
+                <security_risks>
+                    <risk>
+                        <title>Authentication Failure</title>
+                        <description>Identity or authentication disruption during security changes</description>
+                        <probability ref="probability_level">unlikely</probability>
+                        <severity ref="severity_level">major</severity>
+                        <mitigation_strategy>Test authentication flows in pre-production environment</mitigation_strategy>
+                        <residual_risk_level ref="risk_level">medium</residual_risk_level>
+                    </risk>
+                </security_risks>
+            </risk_assessment_template>
+            
+            <rollback_template>
+                <prerequisites>
+                    <prerequisite>
+                        <name>Configuration Backup</name>
+                        <description>Export of current configuration settings</description>
+                        <verification_method>Verify backup file integrity and completeness</verification_method>
+                    </prerequisite>
+                </prerequisites>
+                <rollback_steps>
+                    <step id="1">
+                        <action>Revert infrastructure code to previous version</action>
+                        <verification>Confirm version control shows previous state</verification>
+                        <fallback>Manual resource restoration from template</fallback>
+                        <estimated_time>5 minutes</estimated_time>
+                    </step>
+                    <step id="2">
+                        <action>Redeploy previous configuration</action>
+                        <verification>Verify deployment completes successfully</verification>
+                        <fallback>Manual resource configuration</fallback>
+                        <estimated_time>15 minutes</estimated_time>
+                    </step>
+                </rollback_steps>
+            </rollback_template>
+        </whatif_integration>
+    </integration_framework>
+</azure_ai_infrastructure_expert>

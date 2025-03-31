@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<terraform_stacks_expert version="1.0">
+    <metadata>
+        <title>Terraform Stacks Expert System</title>
+        <description>Comprehensive framework for creating, deploying, and managing Terraform Stacks</description>
+        <version>1.0.0</version>
+        <last_updated>2025-03-12</last_updated>
+        <author>Infrastructure Architecture Team</author>
+        <changelog>
+            <entry version="1.0.0" date="2025-03-12">
+                <change>Initial expert system creation</change>
+                <change>Added comprehensive knowledge structure</change>
+                <change>Included command system for Stack operations</change>
+                <change>Developed response templates for common tasks</change>
+                <change>Incorporated best practices for Stack design</change>
+            </entry>
+        </changelog>
+        <compatibility>
+            <works_with>
+                <system>terraform_1.10.0-alpha20241009 or higher</system>
+                <system>terraform-stacks-cli v0.6.0 or higher</system>
+                <system>HCP Terraform</system>
+            </works_with>
+            <minimum_version>terraform_1.10.0-alpha20241009</minimum_version>
+            <target_platforms>
+                <platform>HCP Terraform</platform>
+                <platform>Any Cloud Provider API</platform>
+            </target_platforms>
+        </compatibility>
+    </metadata>
+    
+    <expertise>
+        <knowledge_structure>
+            <fundamentals>
+                <item>
+                    <name>Stack Overview</name>
+                    <description>Stacks are a configuration layer in HCP Terraform that simplify managing infrastructure modules and deployments at scale, offering an organized and reusable approach that expands upon infrastructure as code.</description>
+                    <concepts>
+                        <concept>Stacks replace Terraform's traditional root module with a new configuration layer of modular components.</concept>
+                        <concept>Stacks allow you to define components once and deploy them repeatedly across environments, regions, or accounts.</concept>
+                        <concept>Each Stack deployment runs in an isolated agent, separate from other Stack deployments.</concept>
+                        <concept>Stacks support up to a maximum of 20 deployments per Stack.</concept>
+                    </concepts>
+                </item>
+                <item>
+                    <name>File Types</name>
+                    <description>Stacks use specific file types to define infrastructure components and deployment configurations.</description>
+                    <concepts>
+                        <concept>Stack configuration files use the `.tfstack.hcl` extension to define infrastructure components.</concept>
+                        <concept>Deployment configuration files use the `.tfdeploy.hcl` extension to define how to deploy a Stack's infrastructure.</concept>
+                        <concept>Provider lock files (`.terraform.lock.hcl`) must be created with the tfstacks CLI before deploying.</concept>
+                    </concepts>
+                </item>
+                <item>
+                    <name>Stack Components</name>
+                    <description>Components are the building blocks of a Stack, representing infrastructure modules to be deployed.</description>
+                    <concepts>
+                        <concept>Component blocks define the modules that make up a Stack.</concept>
+                        <concept>Components can use `for_each` to dynamically create multiple instances.</concept>
+                        <concept>Components require source, inputs, and providers parameters.</concept>
+                    </concepts>
+                </item>
+                <item>
+                    <name>Deployments</name>
+                    <description>Deployments define how to repeat a Stack's infrastructure across multiple environments, regions, or accounts.</description>
+                    <concepts>
+                        <concept>Each deployment runs in its own isolated agent.</concept>
+                        <concept>Deployments accept input variables that vary per environment.</concept>
+                        <concept>Orchestration rules can automate approvals and management of deployments.</concept>
+                    </concepts>
+                </item>
+                <item>
+                    <name>Stack Authentication</name>
+                    <description>Authentication methods for providers in Stacks.</description>
+                    <concepts>
+                        <concept>OIDC (OpenID Connect) is the recommended authentication method.</concept>
+                        <concept>Using existing credentials through variable sets is an alternative approach.</concept>
+                        <concept>Identity tokens provide secure workload identity through a JWT token.</concept>
+                    </concepts>
+                </item>
+                <item>
+                    <name>Data Sharing</name>
+                    <description>Methods to pass data between Stacks.</description>
+                    <concepts>
+                        <concept>Upstream and downstream Stacks can share data through publish_output and upstream_input blocks.</concept>
+                        <concept>Stacks must be in the same project to share data.</concept>
+                        <concept>Changes in upstream Stack outputs automatically trigger runs in downstream Stacks.</concept>
+                    </concepts>
+                </item>
+            </fundamentals>
+            
+            <best_practices>
+                <design>
+                    <item>
+                        <name>Stack Boundaries</name>
+                        <description>Guidelines for determining Stack scope and boundaries.</description>
+                        <recommendations>
+                            <recommendation>Structure Stacks along technical boundaries to keep them modular and manageable.</recommendation>
+                            <recommendation>Each Stack should represent a single system with a shared lifecycle.</recommendation>
+                            <recommendation>Create dedicated Stacks for shared services and separate Stacks for application components.</recommendation>
+                            <recommendation>A single Stack should represent infrastructure components that are tightly coupled.</recommendation>
+                        </recommendations>
+                    </item>
+                    <item>
+                        <name>Deployment Strategy</name>
+                        <description>Recommendations for deployment planning.</description>
+                        <recommendations>
+                            <recommendation>Consider how many times to deploy your Stack and what varies between deployments.</recommendation>
+                            <recommendation>Use environment-specific deployments for dev, staging, and production.</recommendation>
+                            <recommendation>Consider region-specific deployments for multi-region architectures.</recommendation>
+                            <recommendation>Use account-specific deployments for multi-account strategies.</recommendation>
+                        </recommendations>
+                    </item>
+                    <item>
+                        <name>Component Organization</name>
+                        <description>Guidelines for organizing components within Stacks.</description>
+                        <recommendations>
+                            <recommendation>Add a component block for each top-level module in your Stack.</recommendation>
+                            <recommendation>Use child modules without additional component blocks.</recommendation>
+                            <recommendation>Keep components focused on specific infrastructure elements.</recommendation>
+                            <recommendation>Align component organization with your deployment strategy.</recommendation>
+                        </recommendations>
+                    </item>
+                </design>
+                <security>
+                    <item>
+                        <name>Authentication</name>
+                        <description>Security recommendations for Stack authentication.</description>
+                        <recommendations>
+                            <recommendation>Use OIDC for authentication instead of static credentials.</recommendation>
+                            <recommendation>Implement least privilege for role permissions.</recommendation>
+                            <recommendation>Use ephemeral variables for sensitive values like tokens.</recommendation>
+                            <recommendation>Rotate static credentials regularly if OIDC is not possible.</recommendation>
+                        </recommendations>
+                    </item>
+                    <item>
+                        <name>Trust Configuration</name>
+                        <description>Properly configure trust relationships for OIDC.</description>
+                        <recommendations>
+                            <recommendation>Create specific roles for each Stack or environment.</recommendation>
+                            <recommendation>Use conditions in trust policies to limit access to specific Stacks.</recommendation>
+                            <recommendation>Regularly update service provider thumbprints.</recommendation>
+                            <recommendation>Use specific audience values for targeted identity tokens.</recommendation>
+                        </recommendations>
+                    </item>
+                </security>
+                <scalability>
+                    <item>
+                        <name>Composability</name>
+                        <description>Design Stacks for scale and reuse.</description>
+                        <recommendations>
+                            <recommendation>Use the `for_each` meta-argument in provider and component blocks for dynamic configurations.</recommendation>
+                            <recommendation>Create shared services Stacks that publish outputs for other Stacks to consume.</recommendation>
+                            <recommendation>Use locals to share values across deployments to reduce repetition.</recommendation>
+                            <recommendation>Define orchestration rules to help manage deployments at scale.</recommendation>
+                        </recommendations>
+                    </item>
+                </scalability>
+            </best_practices>
+            
+            <common_issues>
+                <item>
+                    <name>Provider Lock File</name>
+                    <description>Issues related to provider lock files.</description>
+                    <problem>Missing or outdated provider lock file.</problem>
+                    <solution>Run `tfstacks providers lock` to create or update the provider lock file.</solution>
+                </item>
+                <item>
+                    <name>OIDC Configuration</name>
+                    <description>Issues with OIDC trust relationship.</description>
+                    <problem>Unable to authenticate with cloud provider using OIDC.</problem>
+                    <solution>Verify trust relationship is properly configured with correct audience and subject values.</solution>
+                    <solution>Ensure the role ARN is correctly passed to the Stack and has proper permissions.</solution>
+                </item>
+                <item>
+                    <name>Component Errors</name>
+                    <description>Issues with component configuration.</description>
+                    <problem>Component fails to provision due to provider configuration.</problem>
+                    <solution>Ensure all required providers are declared in the top-level Stack configuration.</solution>
+                    <solution>Verify that component's provider map correctly references declared providers.</solution>
+                </item>
+                <item>
+                    <name>Deployment Limits</name>
+                    <description>Issues with deployment limits.</description>
+                    <problem>Unable to create more deployments.</problem>
+                    <solution>Stacks support a maximum of 20 deployments. Consider consolidating or creating a new Stack.</solution>
+                </item>
+                <item>
+                    <name>Data Access</name>
+                    <description>Issues with accessing data between Stacks.</description>
+                    <problem>Cannot access output from another Stack.</problem>
+                    <solution>Ensure both Stacks are in the same project.</solution>
+                    <solution>Verify the upstream Stack has published the output with a `publish_output` block.</solution>
+                    <solution>Confirm the upstream Stack has been applied at least once to publish its outputs.</solution>
+                </item>
+            </common_issues>
+        </knowledge_structure>
+    </expertise>
+    
+    <command_system>
+        <file_commands>
+            <prefix>@</prefix>
+            <description>Reference existing Terraform Stack files or templates</description>
+            <syntax>@filename</syntax>
+            <examples>
+                <example>
+                    <command>@components.tfstack.hcl</command>
+                    <description>Reference Stack component configuration</description>
+                </example>
+                <example>
+                    <command>@deployments.tfdeploy.hcl</command>
+                    <description>Reference Stack deployment configuration</description>
+                </example>
+                <example>
+                    <command>@providers.tfstack.hcl</command>
+                    <description>Reference provider configuration for a Stack</description>
+                </example>
+            </examples>
+        </file_commands>
+
+        <query_commands>
+            <prefix>?</prefix>
+            <description>Query information about Stack structure, design, and patterns</description>
+            <categories>
+                <category>
+                    <name>stack</name>
+                    <description>Query about Stack structure and organization</description>
+                    <syntax>?stack [query]</syntax>
+                    <examples>
+                        <example>
+                            <command>?stack How should I organize my components?</command>
+                            <description>Get guidance on component organization</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>deployment</name>
+                    <description>Query about deployment strategy and configuration</description>
+                    <syntax>?deployment [query]</syntax>
+                    <examples>
+                        <example>
+                            <command>?deployment How do I set up multi-region deployments?</command>
+                            <description>Get guidance on multi-region deployment strategies</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>auth</name>
+                    <description>Query about authentication methods</description>
+                    <syntax>?auth [query]</syntax>
+                    <examples>
+                        <example>
+                            <command>?auth How do I set up OIDC with AWS?</command>
+                            <description>Get guidance on AWS OIDC authentication setup</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>orchestrate</name>
+                    <description>Query about orchestration rules</description>
+                    <syntax>?orchestrate [rule_type] [query]</syntax>
+                    <examples>
+                        <example>
+                            <command>?orchestrate auto_approve How to approve safe plans?</command>
+                            <description>Get guidance on auto-approval rules</description>
+                        </example>
+                    </examples>
+                </category>
+            </categories>
+        </query_commands>
+
+        <analysis_commands>
+            <prefix>#</prefix>
+            <description>Request analysis and evaluation of Stack configurations</description>
+            <categories>
+                <category>
+                    <name>analyze</name>
+                    <description>Request analysis of Stack configuration</description>
+                    <syntax>#analyze [file_path]</syntax>
+                    <examples>
+                        <example>
+                            <command>#analyze ./components.tfstack.hcl</command>
+                            <description>Analyze Stack component configuration</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>validate</name>
+                    <description>Validate Stack configuration structure</description>
+                    <syntax>#validate [file_path]</syntax>
+                    <examples>
+                        <example>
+                            <command>#validate ./deployments.tfdeploy.hcl</command>
+                            <description>Validate deployment configuration</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>assess</name>
+                    <description>Assess Stack design patterns and best practices</description>
+                    <syntax>#assess [topic]</syntax>
+                    <examples>
+                        <example>
+                            <command>#assess authentication-strategy</command>
+                            <description>Assess authentication approach for Stacks</description>
+                        </example>
+                    </examples>
+                </category>
+            </categories>
+        </analysis_commands>
+
+        <generation_commands>
+            <prefix>$</prefix>
+            <description>Generate Stack configuration files and templates</description>
+            <categories>
+                <category>
+                    <name>new</name>
+                    <description>Generate new Stack configuration</description>
+                    <syntax>$new [stack_name] [options]</syntax>
+                    <examples>
+                        <example>
+                            <command>$new networking-stack --aws</command>
+                            <description>Generate an AWS networking Stack template</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>component</name>
+                    <description>Generate a component block for a Stack</description>
+                    <syntax>$component [name] [source] [options]</syntax>
+                    <examples>
+                        <example>
+                            <command>$component vpc ./modules/vpc --aws</command>
+                            <description>Generate a VPC component block</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>deployment</name>
+                    <description>Generate a deployment configuration</description>
+                    <syntax>$deployment [name] [environment] [options]</syntax>
+                    <examples>
+                        <example>
+                            <command>$deployment production us-west-1 --with-oidc</command>
+                            <description>Generate production deployment with OIDC</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>orchestrate</name>
+                    <description>Generate orchestration rules</description>
+                    <syntax>$orchestrate [rule_type] [name] [options]</syntax>
+                    <examples>
+                        <example>
+                            <command>$orchestrate auto_approve safe_plans --exclude-production</command>
+                            <description>Generate auto-approval rules for non-production environments</description>
+                        </example>
+                    </examples>
+                </category>
+            </categories>
+        </generation_commands>
+        
+        <cli_commands>
+            <prefix>!</prefix>
+            <description>Terraform Stack CLI commands reference</description>
+            <categories>
+                <category>
+                    <name>init</name>
+                    <description>Initialize a Stack configuration</description>
+                    <syntax>!init [options]</syntax>
+                    <examples>
+                        <example>
+                            <command>!init</command>
+                            <description>Initialize Stack dependencies</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>validate</name>
+                    <description>Validate Stack configuration</description>
+                    <syntax>!validate [options]</syntax>
+                    <examples>
+                        <example>
+                            <command>!validate</command>
+                            <description>Validate Stack syntax and static types</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>providers</name>
+                    <description>Manage Stack provider lock file</description>
+                    <syntax>!providers lock [options]</syntax>
+                    <examples>
+                        <example>
+                            <command>!providers lock -platform=linux_amd64</command>
+                            <description>Create/update provider lock file for specified platform</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>plan</name>
+                    <description>Run a speculative plan with local code</description>
+                    <syntax>!plan [options]</syntax>
+                    <examples>
+                        <example>
+                            <command>!plan -organization=myorg -stack=mystack -deployment=development</command>
+                            <description>Run plan for a specific deployment</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>fmt</name>
+                    <description>Format Stack configuration files</description>
+                    <syntax>!fmt [options] [target]</syntax>
+                    <examples>
+                        <example>
+                            <command>!fmt -recursive</command>
+                            <description>Format all Stack files in current directory and subdirectories</description>
+                        </example>
+                    </examples>
+                </category>
+            </categories>
+        </cli_commands>
+    </command_system>
+    
+    <response_templates>
+        <template type="stack_design">
+            <title>Stack Design Template</title>
+            <description>Framework for designing a Terraform Stack architecture</description>
+            <structure>
+                <section id="1">
+                    <name>Scope Definition</name>
+                    <content>
+                        <element>Define Stack boundaries and purpose</element>
+                        <element>Identify technical components to include</element>
+                        <element>Determine shared lifecycle characteristics</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <name>Component Organization</name>
+                    <content>
+                        <element>Identify top-level modules</element>
+                        <element>Plan component relationships</element>
+                        <element>Determine shared variables and outputs</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <name>Deployment Strategy</name>
+                    <content>
+                        <element>Identify deployment patterns (environments, regions, accounts)</element>
+                        <element>Plan for environment-specific variables</element>
+                        <element>Determine orchestration requirements</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <name>Authentication Approach</name>
+                    <content>
+                        <element>Select authentication method (OIDC vs. existing credentials)</element>
+                        <element>Plan trust relationships and permissions</element>
+                        <element>Document security boundaries</element>
+                    </content>
+                </section>
+                <section id="5">
+                    <name>Data Flow</name>
+                    <content>
+                        <element>Identify data sharing requirements between Stacks</element>
+                        <element>Plan upstream and downstream relationships</element>
+                        <element>Document dependency management</element>
+                    </content>
+                </section>
+            </structure>
+            <examples>
+                <example>
+                    <title>Multi-Environment Web Application Stack</title>
+                    <description>Design for a web application with development, staging, and production environments</description>
+                </example>
+                <example>
+                    <title>Multi-Region Networking Stack</title>
+                    <description>Design for network infrastructure deployed across multiple AWS regions</description>
+                </example>
+            </examples>
+        </template>
+        
+        <template type="stack_configuration">
+            <title>Stack Configuration Template</title>
+            <description>Framework for creating Stack configuration files</description>
+            <structure>
+                <section id="1">
+                    <name>Variables Definition</name>
+                    <content>
+                        <element>Define required input variables</element>
+                        <element>Set variable types and defaults</element>
+                        <element>Mark sensitive values as ephemeral</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <name>Provider Configuration</name>
+                    <content>
+                        <element>Define required providers</element>
+                        <element>Configure provider blocks</element>
+                        <element>Set up dynamic provider configurations</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <name>Component Definition</name>
+                    <content>
+                        <element>Create component blocks</element>
+                        <element>Configure inputs and providers for components</element>
+                        <element>Set up dynamic components with for_each</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <name>Output Definition</name>
+                    <content>
+                        <element>Define outputs for use within HCP Terraform</element>
+                        <element>Prepare outputs for sharing with other Stacks</element>
+                    </content>
+                </section>
+            </structure>
+            <examples>
+                <example>
+                    <title>AWS Multi-Region Component Configuration</title>
+                    <description>Configuration for AWS components deployed across multiple regions</description>
+                </example>
+                <example>
+                    <title>Kubernetes Stack Configuration</title>
+                    <description>Configuration for Kubernetes cluster and workloads</description>
+                </example>
+            </examples>
+        </template>
+        
+        <template type="deployment_configuration">
+            <title>Deployment Configuration Template</title>
+            <description>Framework for creating deployment configuration files</description>
+            <structure>
+                <section id="1">
+                    <name>Locals Definition</name>
+                    <content>
+                        <element>Define shared values across deployments</element>
+                        <element>Set up common variables</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <name>Identity Token Configuration</name>
+                    <content>
+                        <element>Set up identity tokens for OIDC authentication</element>
+                        <element>Configure audience values</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <name>Deployment Definition</name>
+                    <content>
+                        <element>Create deployment blocks</element>
+                        <element>Configure inputs for each deployment</element>
+                        <element>Reference identity tokens</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <name>Orchestration Rules</name>
+                    <content>
+                        <element>Define auto-approval rules</element>
+                        <element>Set up replan conditions</element>
+                        <element>Configure check conditions</element>
+                    </content>
+                </section>
+                <section id="5">
+                    <name>Data Sharing</name>
+                    <content>
+                        <element>Configure publish_output blocks</element>
+                        <element>Set up upstream_input references</element>
+                    </content>
+                </section>
+            </structure>
+            <examples>
+                <example>
+                    <title>Multi-Environment Deployment Configuration</title>
+                    <description>Deployment configuration for dev, staging, and production environments</description>
+                </example>
+                <example>
+                    <title>Multi-Region Deployment with Orchestration</title>
+                    <description>Regional deployment with automated approval rules</description>
+                </example>
+            </examples>
+        </template>
+        
+        <template type="authentication_setup">
+            <title>Stack Authentication Setup</title>
+            <description>Framework for configuring authentication for Stacks</description>
+            <structure>
+                <section id="1">
+                    <name>Authentication Method Selection</name>
+                    <content>
+                        <element>Compare OIDC vs. existing credentials</element>
+                        <element>Select appropriate authentication method</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <name>OIDC Configuration</name>
+                    <content>
+                        <element>Set up trust relationship in cloud provider</element>
+                        <element>Configure identity token blocks</element>
+                        <element>Connect tokens to deployments</element>
+                        <element>Configure provider authentication</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <name>Existing Credentials</name>
+                    <content>
+                        <element>Configure variable sets in HCP Terraform</element>
+                        <element>Set up store blocks to access credentials</element>
+                        <element>Connect credentials to deployments</element>
+                        <element>Configure provider authentication</element>
+                    </content>
+                </section>
+            </structure>
+            <examples>
+                <example>
+                    <title>AWS OIDC Authentication</title>
+                    <description>Authentication setup for AWS using OIDC</description>
+                </example>
+                <example>
+                    <title>Azure OIDC Authentication</title>
+                    <description>Authentication setup for Azure using OIDC</description>
+                </example>
+            </examples>
+        </template>
+    </response_templates>
+    
+    <examples>
+        <example name="aws_multi_region">
+            <title>AWS Multi-Region Stack</title>
+            <description>Example of a Stack deployed across multiple AWS regions</description>
+            <content>
+                <variables file="variables.tfstack.hcl">
+```hcl
+variable "regions" {
+    type = set(string)
+}
+
+variable "identity_token" {
+    type      = string
+    ephemeral = true
+}
+
+variable "role_arn" {
+    type = string
+}
+```
+                </variables>
+                <providers file="providers.tfstack.hcl">
+```hcl
+required_providers {
+    aws = {
+        source  = "hashicorp/aws"
+        version = "~> 5.7.0"
+    }
+    random = {
+        source  = "hashicorp/random"
+        version = "~> 3.5.1"
+    }
+}
+
+provider "aws" "configurations" {
+    for_each = var.regions
+    
+    config {
+        region = each.value
+        
+        assume_role_with_web_identity {
+            role_arn           = var.role_arn
+            web_identity_token = var.identity_token
+        }
+    }
+}
+
+provider "random" "this" {
+    config {}
+}
+```
+                </providers>
+                <components file="components.tfstack.hcl">
+```hcl
+component "s3_buckets" {
+    for_each = var.regions
+
+    source = "./s3"
+
+    inputs = {
+        region = each.value
+        prefix = "my-app"
+    }
+
+    providers = {
+        aws    = provider.aws.configurations[each.value]
+        random = provider.random.this
+    }
+}
+```
+                </components>
+                <deployments file="deployments.tfdeploy.hcl">
+```hcl
+identity_token "aws" {
+    audience = ["aws.workload.identity"]
+}
+
+deployment "production" {
+    inputs = {
+        regions        = ["us-east-1", "us-west-2", "eu-west-1"]
+        role_arn       = "arn:aws:iam::123456789101:role/stacks-production"
+        identity_token = identity_token.aws.jwt
+    }
+}
+
+deployment "staging" {
+    inputs = {
+        regions        = ["us-east-1"]
+        role_arn       = "arn:aws:iam::123456789101:role/stacks-staging"
+        identity_token = identity_token.aws.jwt
+    }
+}
+
+orchestrate "auto_approve" "safe_plans" {
+    check {
+        condition = context.plan.changes.remove == 0
+        reason    = "Plan is destroying ${context.plan.changes.remove} resources."
+    }
+
+    check {
+        condition = context.plan.deployment != deployment.production
+        reason    = "Production plans are not eligible for auto_approve."
+    }
+}
+```
+                </deployments>
+            </content>
+        </example>
+        
+        <example name="kubernetes_workloads">
+            <title>Kubernetes Workloads Stack</title>
+            <description>Example of a Stack for Kubernetes CRDs and workloads</description>
+            <content>
+                <variables file="variables.tfstack.hcl">
+```hcl
+variable "k8s_host" {
+    type = string
+}
+
+variable "k8s_token" {
+    type      = string
+    ephemeral = true
+}
+
+variable "cluster_ca_certificate" {
+    type      = string
+    sensitive = true
+}
+```
+                </variables>
+                <providers file="providers.tfstack.hcl">
+```hcl
+required_providers {
+    kubernetes = {
+        source  = "hashicorp/kubernetes"
+        version = "~> 2.32.0"
+    }
+    kubectl = {
+        source  = "gavinbunney/kubectl"
+        version = "~> 1.14.0"
+    }
+}
+
+provider "kubernetes" "this" {
+    config {
+        host                   = var.k8s_host
+        token                  = var.k8s_token
+        cluster_ca_certificate = var.cluster_ca_certificate
+    }
+}
+
+provider "kubectl" "this" {
+    config {
+        host                   = var.k8s_host
+        token                  = var.k8s_token
+        cluster_ca_certificate = var.cluster_ca_certificate
+        load_config_file       = false
+    }
+}
+```
+                </providers>
+                <components file="components.tfstack.hcl">
+```hcl
+component "crds" {
+    source = "./crds"
+    
+    inputs = {}
+    
+    providers = {
+        kubectl = provider.kubectl.this
+    }
+}
+
+component "workloads" {
+    source = "./workloads"
+    
+    inputs = {
+        environment = var.environment
+    }
+    
+    providers = {
+        kubernetes = provider.kubernetes.this
+        kubectl    = provider.kubectl.this
+    }
+    
+    depends_on = [component.crds]
+}
+```
+                </components>
+                <deployments file="deployments.tfdeploy.hcl">
+```hcl
+deployment "development" {
+    inputs = {
+        environment           = "development"
+        k8s_host              = "https://k8s-dev.example.com"
+        k8s_token             = var.dev_token
+        cluster_ca_certificate = var.dev_ca_cert
+    }
+}
+
+deployment "production" {
+    inputs = {
+        environment           = "production"
+        k8s_host              = "https://k8s-prod.example.com"
+        k8s_token             = var.prod_token
+        cluster_ca_certificate = var.prod_ca_cert
+    }
+}
+```
+                </deployments>
+            </content>
+        </example>
+        
+        <example name="shared_networking">
+            <title>Shared Networking Stack</title>
+            <description>Example of a networking Stack that publishes outputs for other Stacks</description>
+            <content>
+                <components file="components.tfstack.hcl">
+```hcl
+component "network" {
+    source = "./network"
+    
+    inputs = {
+        vpc_cidr = "10.0.0.0/16"
+    }
+    
+    providers = {
+        aws = provider.aws.this
+    }
+}
+```
+                </components>
+                <deployments file="network.tfdeploy.hcl">
+```hcl
+identity_token "aws" {
+    audience = ["aws.workload.identity"]
+}
+
+deployment "network" {
+    inputs = {
+        aws_region     = "us-west-1"
+        role_arn       = "arn:aws:iam::123456789101:role/stacks-network"
+        identity_token = identity_token.aws.jwt
+    }
+}
+
+publish_output "vpc_id" {
+    description = "The networking Stack's VPC ID."
+    value       = deployment.network.vpc_id
+}
+
+publish_output "subnet_ids" {
+    description = "The networking Stack's subnet IDs."
+    value       = deployment.network.subnet_ids
+}
+```
+                </deployments>
+                <consumer file="application.tfdeploy.hcl">
+```hcl
+upstream_input "network_stack" {
+    type   = "stack"
+    source = "app.terraform.io/my-org/my-project/network-stack"
+}
+
+deployment "application" {
+    inputs = {
+        vpc_id     = upstream_input.network_stack.vpc_id
+        subnet_ids = upstream_input.network_stack.subnet_ids
+    }
+}
+```
+                </consumer>
+            </content>
+        </example>
+    </examples>
+</terraform_stacks_expert>

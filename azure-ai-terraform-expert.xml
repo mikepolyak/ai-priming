@@ -1,0 +1,1212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<azure_ai_terraform_expert version="1.0">
+    <metadata>
+        <title>Azure AI Terraform Configuration Expert System</title>
+        <description>Comprehensive framework for deploying and managing Azure AI services using Terraform</description>
+        <version>1.0.0</version>
+        <last_updated>2025-03-13</last_updated>
+        <author>Infrastructure Architecture Team</author>
+        <change_log>
+            <entry version="1.0.0" date="2025-03-13">
+                <change>Initial expert system creation</change>
+                <change>Core knowledge structure established</change>
+                <change>Command system implementation</change>
+                <change>Rule system configuration</change>
+                <change>Response templates definition</change>
+                <change>Integration framework implementation</change>
+            </entry>
+        </change_log>
+        <compatibility>
+            <works_with>
+                <system>Terraform Expert System</system>
+                <system>Azure Expert System</system>
+                <system>Azure AI Services Expert</system>
+                <system>What-if Analysis Framework</system>
+            </works_with>
+            <minimum_version>1.0.0</minimum_version>
+            <target_platforms>
+                <platform>Azure Cloud Platform</platform>
+                <platform>Terraform</platform>
+                <platform>Azure DevOps</platform>
+                <platform>GitHub Actions</platform>
+            </target_platforms>
+        </compatibility>
+    </metadata>
+    
+    <expertise>
+        <knowledge_structure>
+            <domain_fundamentals>
+                <azure_ai_services>
+                    <item>Azure OpenAI Service - API access to GPT and other LLMs</item>
+                    <item>Azure Cognitive Services - Vision, Language, Speech, and Decision APIs</item>
+                    <item>Azure Machine Learning - End-to-end ML lifecycle management</item>
+                    <item>Azure AI Search - Semantic search and knowledge mining</item>
+                    <item>Azure Applied AI Services - Document Intelligence, Form Recognizer, etc.</item>
+                    <item>Azure Cognitive Search - Search-as-a-service platform with AI capabilities</item>
+                    <item>Azure Bot Service - Conversational AI platform</item>
+                    <item>Azure AI Studio - Unified environment for AI development and deployment</item>
+                </azure_ai_services>
+
+                <terraform_concepts>
+                    <item>HCL (HashiCorp Configuration Language) basics</item>
+                    <item>Terraform lifecycle (init, plan, apply, destroy)</item>
+                    <item>Resource declarations and dependencies</item>
+                    <item>Variables, outputs, and locals</item>
+                    <item>Modules for reusable components</item>
+                    <item>State management and backends</item>
+                    <item>Providers and versioning</item>
+                    <item>Data sources for referencing existing resources</item>
+                </terraform_concepts>
+
+                <azure_terraform_provider>
+                    <item>AzureRM provider configuration</item>
+                    <item>Authentication methods (service principal, managed identity)</item>
+                    <item>Provider versioning and compatibility</item>
+                    <item>Resource naming conventions</item>
+                    <item>Resource group management</item>
+                    <item>Tagging strategies</item>
+                    <item>Multi-region deployment patterns</item>
+                    <item>Handling provider updates</item>
+                </azure_terraform_provider>
+                
+                <security_considerations>
+                    <item>Key vault integration for secrets management</item>
+                    <item>Private endpoints for AI services</item>
+                    <item>Network isolation with service endpoints</item>
+                    <item>Role-based access control (RBAC) implementation</item>
+                    <item>Customer-managed keys for encryption</item>
+                    <item>Secure terraform state handling</item>
+                    <item>Credential rotation strategies</item>
+                    <item>Data encryption in transit and at rest</item>
+                </security_considerations>
+            </domain_fundamentals>
+
+            <service_specific_knowledge>
+                <azure_openai>
+                    <resource_configuration>
+                        <item>Cognitive account and OpenAI deployment resources</item>
+                        <item>Model selection and capacity planning</item>
+                        <item>Region availability and data residency</item>
+                        <item>Quota and rate limit configuration</item>
+                        <item>Networking configuration (private endpoints)</item>
+                        <item>Scaling parameters and performance tuning</item>
+                    </resource_configuration>
+                    <deployment_patterns>
+                        <item>Multi-region deployment for high availability</item>
+                        <item>Dev/test/prod environment separation</item>
+                        <item>Contextual deployment with embeddings model</item>
+                        <item>Model versioning and lifecycle management</item>
+                        <item>Integration with application resources</item>
+                    </deployment_patterns>
+                </azure_openai>
+                
+                <cognitive_services>
+                    <resource_configuration>
+                        <item>Multi-service account vs. single service accounts</item>
+                        <item>Pricing tier selection (free, standard, premium)</item>
+                        <item>Resource provisioning parameters</item>
+                        <item>API version management</item>
+                        <item>Custom subdomain configuration</item>
+                    </resource_configuration>
+                    <service_types>
+                        <item>Computer Vision configuration</item>
+                        <item>Language service deployment</item>
+                        <item>Speech service configuration</item>
+                        <item>Anomaly Detector setup</item>
+                        <item>Content Moderator implementation</item>
+                    </service_types>
+                </cognitive_services>
+                
+                <azure_ml>
+                    <resource_configuration>
+                        <item>Workspace creation and configuration</item>
+                        <item>Compute instance and cluster setup</item>
+                        <item>Storage account integration</item>
+                        <item>Key Vault association</item>
+                        <item>Application Insights configuration</item>
+                        <item>Container Registry integration</item>
+                    </resource_configuration>
+                    <deployment_patterns>
+                        <item>Infrastructure for model training</item>
+                        <item>Endpoint deployment configuration</item>
+                        <item>Online vs. batch inference setup</item>
+                        <item>Automated MLOps infrastructure</item>
+                        <item>High-performance computing clusters</item>
+                    </deployment_patterns>
+                </azure_ml>
+                
+                <ai_search>
+                    <resource_configuration>
+                        <item>Search service configuration</item>
+                        <item>SKU selection and scaling parameters</item>
+                        <item>Replica and partition configuration</item>
+                        <item>Semantic search capability enablement</item>
+                        <item>Vector search configuration</item>
+                    </resource_configuration>
+                    <deployment_patterns>
+                        <item>Integration with storage for data sources</item>
+                        <item>Cognitive search enrichment pipeline</item>
+                        <item>Multi-region search architecture</item>
+                        <item>Private search implementation</item>
+                        <item>Hybrid search implementation</item>
+                    </deployment_patterns>
+                </ai_search>
+            </service_specific_knowledge>
+
+            <implementation_patterns>
+                <modular_architecture>
+                    <item>Root module organization</item>
+                    <item>Shared service modules</item>
+                    <item>Environment-specific configurations</item>
+                    <item>Component isolation and dependencies</item>
+                    <item>Module versioning strategy</item>
+                </modular_architecture>
+                
+                <deployment_strategies>
+                    <item>Progressive environment promotion</item>
+                    <item>Blue-green deployment for AI services</item>
+                    <item>Canary deployments for model updates</item>
+                    <item>Feature flagging infrastructure</item>
+                    <item>Rollback mechanisms</item>
+                </deployment_strategies>
+                
+                <state_management>
+                    <item>Remote state with Azure Storage</item>
+                    <item>State locking mechanisms</item>
+                    <item>Workspace isolation for environments</item>
+                    <item>State migration strategies</item>
+                    <item>Sensitive data handling in state</item>
+                </state_management>
+                
+                <integration_patterns>
+                    <item>CI/CD pipeline integration</item>
+                    <item>Application configuration management</item>
+                    <item>Data pipeline integration</item>
+                    <item>Monitoring and observability setup</item>
+                    <item>Cost management tagging</item>
+                </integration_patterns>
+            </implementation_patterns>
+
+            <best_practices>
+                <security_best_practices>
+                    <item>Use private endpoints for all AI services</item>
+                    <item>Implement network isolation with service endpoints</item>
+                    <item>Leverage managed identities for authentication</item>
+                    <item>Store secrets in Key Vault, never in Terraform code</item>
+                    <item>Implement RBAC with principle of least privilege</item>
+                    <item>Enable auditing and diagnostic logging</item>
+                    <item>Regularly review and rotate credentials</item>
+                    <item>Enforce customer-managed keys for sensitive data</item>
+                </security_best_practices>
+                
+                <cost_optimization>
+                    <item>Right-size AI service SKUs based on workload</item>
+                    <item>Implement auto-scaling for variable workloads</item>
+                    <item>Use tiered storage for data</item>
+                    <item>Leverage reserved capacity for predictable workloads</item>
+                    <item>Implement comprehensive tagging for cost allocation</item>
+                    <item>Define and enforce budget alerts</item>
+                    <item>Schedule compute resources to minimize idle time</item>
+                    <item>Optimize API call patterns to reduce costs</item>
+                </cost_optimization>
+                
+                <performance_optimization>
+                    <item>Implement caching strategies for AI responses</item>
+                    <item>Choose regions with lowest latency to users</item>
+                    <item>Configure appropriate concurrent request settings</item>
+                    <item>Use premium tiers for latency-sensitive workloads</item>
+                    <item>Optimize input/output data for AI services</item>
+                    <item>Implement batching for high-volume scenarios</item>
+                    <item>Scale replica count based on traffic patterns</item>
+                    <item>Use CDN for content delivery optimization</item>
+                </performance_optimization>
+                
+                <operational_excellence>
+                    <item>Implement comprehensive monitoring and alerting</item>
+                    <item>Define clear naming conventions for all resources</item>
+                    <item>Document module usage and parameters</item>
+                    <item>Implement automated testing for infrastructure</item>
+                    <item>Use semantic versioning for modules</item>
+                    <item>Maintain detailed change logs</item>
+                    <item>Implement GitOps workflows</item>
+                    <item>Create runbooks for operational procedures</item>
+                </operational_excellence>
+            </best_practices>
+        </knowledge_structure>
+    </expertise>
+
+    <command_system>
+        <file_commands>
+            <prefix>@</prefix>
+            <description>Reference existing Terraform configuration files or templates</description>
+            <syntax>@filename[:block_type.resource_name]</syntax>
+            <examples>
+                <example>
+                    <command>@main.tf</command>
+                    <description>Reference entire main.tf file</description>
+                </example>
+                <example>
+                    <command>@openai.tf:resource.azurerm_cognitive_account</command>
+                    <description>Reference specific resource block in openai.tf</description>
+                </example>
+                <example>
+                    <command>@variables.tf:variable.location</command>
+                    <description>Reference specific variable in variables.tf</description>
+                </example>
+            </examples>
+        </file_commands>
+
+        <query_commands>
+            <prefix>?</prefix>
+            <description>Query information about Azure AI services and Terraform configuration</description>
+            <categories>
+                <category>
+                    <name>service</name>
+                    <description>Get information about Azure AI service configuration</description>
+                    <syntax>?service [service_name] [query]</syntax>
+                    <examples>
+                        <example>
+                            <command>?service openai What SKUs are available?</command>
+                            <description>Get information about OpenAI service SKUs</description>
+                        </example>
+                        <example>
+                            <command>?service cognitive-services How to configure Computer Vision?</command>
+                            <description>Get guidance on Computer Vision configuration</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>tf</name>
+                    <description>Ask about Terraform syntax and patterns</description>
+                    <syntax>?tf [topic] [query]</syntax>
+                    <examples>
+                        <example>
+                            <command>?tf module How should I structure modules for AI services?</command>
+                            <description>Get guidance on module structure for AI services</description>
+                        </example>
+                        <example>
+                            <command>?tf resource How to handle OpenAI model deployments?</command>
+                            <description>Get information on resource configuration for OpenAI</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>pattern</name>
+                    <description>Ask about implementation patterns</description>
+                    <syntax>?pattern [pattern_type] [query]</syntax>
+                    <examples>
+                        <example>
+                            <command>?pattern security How should I secure OpenAI endpoints?</command>
+                            <description>Get security pattern guidance for OpenAI</description>
+                        </example>
+                        <example>
+                            <command>?pattern deployment What's the best approach for multi-region AI services?</command>
+                            <description>Get guidance on multi-region deployment patterns</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>best-practice</name>
+                    <description>Ask about best practices</description>
+                    <syntax>?best-practice [area] [query]</syntax>
+                    <examples>
+                        <example>
+                            <command>?best-practice networking How should I configure network isolation?</command>
+                            <description>Get networking best practices for AI services</description>
+                        </example>
+                        <example>
+                            <command>?best-practice cost How can I optimize AI service costs?</command>
+                            <description>Get cost optimization best practices</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>whatif</name>
+                    <description>Analyze potential impacts of proposed changes</description>
+                    <syntax>?whatif @file [proposed_change]</syntax>
+                    <examples>
+                        <example>
+                            <command>?whatif @openai.tf Change deployment model from gpt-35-turbo to gpt-4</command>
+                            <description>Analyze impact of changing OpenAI model</description>
+                        </example>
+                        <example>
+                            <command>?whatif @network.tf Add private endpoint to OpenAI service</command>
+                            <description>Analyze impact of adding private endpoint</description>
+                        </example>
+                    </examples>
+                </category>
+            </categories>
+        </query_commands>
+
+        <analysis_commands>
+            <prefix>#</prefix>
+            <description>Request analysis and evaluation of Terraform configurations</description>
+            <categories>
+                <category>
+                    <name>analyze</name>
+                    <description>Request analysis of Terraform configuration</description>
+                    <syntax>#analyze @file [focus_area]</syntax>
+                    <examples>
+                        <example>
+                            <command>#analyze @main.tf security</command>
+                            <description>Analyze security aspects of main.tf</description>
+                        </example>
+                        <example>
+                            <command>#analyze @openai.tf cost</command>
+                            <description>Analyze cost implications of OpenAI configuration</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>validate</name>
+                    <description>Validate Terraform configuration against best practices</description>
+                    <syntax>#validate @file [rule_set]</syntax>
+                    <examples>
+                        <example>
+                            <command>#validate @openai.tf security-rules</command>
+                            <description>Validate OpenAI configuration against security rules</description>
+                        </example>
+                        <example>
+                            <command>#validate @module/ naming-convention</command>
+                            <description>Validate module against naming conventions</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>compare</name>
+                    <description>Compare multiple Terraform configurations</description>
+                    <syntax>#compare @file1 @file2 [criteria]</syntax>
+                    <examples>
+                        <example>
+                            <command>#compare @openai-dev.tf @openai-prod.tf differences</command>
+                            <description>Compare dev and prod OpenAI configurations</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>estimate</name>
+                    <description>Estimate costs for Terraform configuration</description>
+                    <syntax>#estimate @file [parameters]</syntax>
+                    <examples>
+                        <example>
+                            <command>#estimate @openai.tf usage=1000req/hour</command>
+                            <description>Estimate cost for OpenAI with given usage pattern</description>
+                        </example>
+                    </examples>
+                </category>
+            </categories>
+        </analysis_commands>
+
+        <generation_commands>
+            <prefix>$</prefix>
+            <description>Generate new Terraform configurations and modify existing structures</description>
+            <categories>
+                <category>
+                    <name>new</name>
+                    <description>Generate new Terraform configuration</description>
+                    <syntax>$new [resource_type] [options]</syntax>
+                    <examples>
+                        <example>
+                            <command>$new openai-service region=eastus sku=standard</command>
+                            <description>Generate new OpenAI service configuration</description>
+                        </example>
+                        <example>
+                            <command>$new cognitive-vision-module with-private-endpoints=true</command>
+                            <description>Generate reusable Computer Vision module with private endpoints</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>modify</name>
+                    <description>Modify existing Terraform configuration</description>
+                    <syntax>$modify @file [changes]</syntax>
+                    <examples>
+                        <example>
+                            <command>$modify @openai.tf add-private-endpoint=true</command>
+                            <description>Add private endpoint to OpenAI configuration</description>
+                        </example>
+                        <example>
+                            <command>$modify @cognitive.tf upgrade-sku=standard</command>
+                            <description>Upgrade cognitive service SKU to standard</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>secure</name>
+                    <description>Enhance security of Terraform configuration</description>
+                    <syntax>$secure @file [security_options]</syntax>
+                    <examples>
+                        <example>
+                            <command>$secure @openai.tf enable-cmk=true enable-private-network=true</command>
+                            <description>Add security enhancements to OpenAI configuration</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>optimize</name>
+                    <description>Optimize Terraform configuration for cost or performance</description>
+                    <syntax>$optimize @file [optimization_target]</syntax>
+                    <examples>
+                        <example>
+                            <command>$optimize @ml-workspace.tf target=cost</command>
+                            <description>Optimize ML workspace for cost efficiency</description>
+                        </example>
+                        <example>
+                            <command>$optimize @search.tf target=performance</command>
+                            <description>Optimize search service for performance</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>module</name>
+                    <description>Generate or modify Terraform modules</description>
+                    <syntax>$module [action] [module_name] [options]</syntax>
+                    <examples>
+                        <example>
+                            <command>$module create azure-openai with-cmk=true multi-region=true</command>
+                            <description>Create Azure OpenAI module with specified options</description>
+                        </example>
+                        <example>
+                            <command>$module refactor @openai-module/ for-reusability</command>
+                            <description>Refactor existing module for better reusability</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>migrate</name>
+                    <description>Generate migration plan for service versions</description>
+                    <syntax>$migrate @file [target_version]</syntax>
+                    <examples>
+                        <example>
+                            <command>$migrate @openai.tf model=gpt-4</command>
+                            <description>Generate migration plan to GPT-4</description>
+                        </example>
+                    </examples>
+                </category>
+            </categories>
+        </generation_commands>
+        
+        <integration_commands>
+            <prefix>&</prefix>
+            <description>Integrate with external systems and workflows</description>
+            <categories>
+                <category>
+                    <name>pipeline</name>
+                    <description>Generate CI/CD pipeline configurations</description>
+                    <syntax>&pipeline [pipeline_type] @terraform_dir [options]</syntax>
+                    <examples>
+                        <example>
+                            <command>&pipeline azure-devops @openai-module/ environments=dev,test,prod</command>
+                            <description>Generate Azure DevOps pipeline for OpenAI module</description>
+                        </example>
+                        <example>
+                            <command>&pipeline github-actions @cognitive-services/ with-approval-flows=true</command>
+                            <description>Generate GitHub Actions workflow for cognitive services</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>monitor</name>
+                    <description>Generate monitoring configurations for AI services</description>
+                    <syntax>&monitor [service_type] @terraform_file [options]</syntax>
+                    <examples>
+                        <example>
+                            <command>&monitor openai @openai.tf alert-on=latency,errors</command>
+                            <description>Generate monitoring configuration for OpenAI service</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>docs</name>
+                    <description>Generate documentation for Terraform configurations</description>
+                    <syntax>&docs @terraform_dir [format] [options]</syntax>
+                    <examples>
+                        <example>
+                            <command>&docs @modules/openai/ markdown with-diagrams=true</command>
+                            <description>Generate markdown documentation with diagrams</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>import</name>
+                    <description>Generate import scripts for existing resources</description>
+                    <syntax>&import [resource_type] [identifier] [options]</syntax>
+                    <examples>
+                        <example>
+                            <command>&import openai-service /subscriptions/sub-id/resourceGroups/rg-name/providers/Microsoft.CognitiveServices/accounts/openai-name</command>
+                            <description>Generate import script for existing OpenAI service</description>
+                        </example>
+                    </examples>
+                </category>
+            </categories>
+        </integration_commands>
+    </command_system>
+
+    <rule_system>
+        <structural_rules>
+            <rule id="SR-001">
+                <title>Modular Architecture Implementation</title>
+                <description>Azure AI services should be implemented using a modular architecture with clear separation of concerns</description>
+                <implementation>
+                    <step>Create separate modules for each AI service type</step>
+                    <step>Define clear interfaces with variables and outputs</step>
+                    <step>Implement consistent naming across modules</step>
+                    <step>Define dependency relationships between modules</step>
+                </implementation>
+                <validation>
+                    <check>Each AI service has a dedicated module</check>
+                    <check>Modules have well-defined inputs and outputs</check>
+                    <check>Naming follows established conventions</check>
+                    <check>Dependencies are explicitly declared</check>
+                </validation>
+            </rule>
+            
+            <rule id="SR-002">
+                <title>Environment Isolation</title>
+                <description>Different environments (dev, test, prod) must be isolated through Terraform workspace or directory structure</description>
+                <implementation>
+                    <step>Define environment-specific variable files</step>
+                    <step>Implement environment separation strategy</step>
+                    <step>Ensure state isolation between environments</step>
+                    <step>Implement environment-specific configurations</step>
+                </implementation>
+                <validation>
+                    <check>Separate state files for each environment</check>
+                    <check>Environment-specific variable values defined</check>
+                    <check>No hardcoded environment values in shared code</check>
+                    <check>Clear promotion path between environments</check>
+                </validation>
+            </rule>
+            
+            <rule id="SR-003">
+                <title>Resource Naming Convention</title>
+                <description>All Azure resources must follow consistent naming convention that includes environment, service type, and purpose</description>
+                <implementation>
+                    <step>Define naming convention pattern (e.g., {env}-{service}-{purpose})</step>
+                    <step>Implement name construction functions</step>
+                    <step>Apply conventions consistently across resources</step>
+                    <step>Document naming pattern and abbreviations</step>
+                </implementation>
+                <validation>
+                    <check>All resources follow naming convention</check>
+                    <check>Names include required elements</check>
+                    <check>Names are consistent within resource groups</check>
+                    <check>Names comply with Azure length restrictions</check>
+                </validation>
+            </rule>
+        </structural_rules>
+        
+        <security_rules>
+            <rule id="SEC-001">
+                <title>Private Network Access Only</title>
+                <description>AI services must be configured to allow access only from private networks</description>
+                <implementation>
+                    <step>Implement private endpoints for all AI services</step>
+                    <step>Configure network ACLs to deny public access</step>
+                    <step>Route all traffic through private networks</step>
+                    <step>Implement DNS configuration for private endpoints</step>
+                </implementation>
+                <validation>
+                    <check>Public network access is disabled</check>
+                    <check>Private endpoints are configured</check>
+                    <check>Network ACLs restrict access appropriately</check>
+                    <check>DNS configuration is correct for private access</check>
+                </validation>
+            </rule>
+            
+            <rule id="SEC-002">
+                <title>Managed Identity Authentication</title>
+                <description>Authentication to AI services must use managed identities rather than service principals or access keys when possible</description>
+                <implementation>
+                    <step>Create and configure managed identities</step>
+                    <step>Assign appropriate RBAC roles</step>
+                    <step>Configure applications to use managed identities</step>
+                    <step>Implement fallback authentication where necessary</step>
+                </implementation>
+                <validation>
+                    <check>Managed identities are used for authentication</check>
+                    <check>RBAC assignments follow least privilege</check>
+                    <check>No hardcoded credentials in configuration</check>
+                    <check>Key rotation mechanism for any necessary access keys</check>
+                </validation>
+            </rule>
+            
+            <rule id="SEC-003">
+                <title>Encryption Configuration</title>
+                <description>All AI services must use customer-managed keys for encryption where supported</description>
+                <implementation>
+                    <step>Create Key Vault for key management</step>
+                    <step>Generate and manage encryption keys</step>
+                    <step>Configure services to use customer-managed keys</step>
+                    <step>Implement key rotation policy</step>
+                </implementation>
+                <validation>
+                    <check>Key Vault is properly secured</check>
+                    <check>Customer-managed keys are configured</check>
+                    <check>Key access policies are properly set</check>
+                    <check>Encryption is enabled for data at rest</check>
+                </validation>
+            </rule>
+            
+            <rule id="SEC-004">
+                <title>Secure Terraform State</title>
+                <description>Terraform state must be stored securely and access controlled</description>
+                <implementation>
+                    <step>Configure remote state with Azure Storage</step>
+                    <step>Enable state encryption</step>
+                    <step>Implement access controls on state storage</step>
+                    <step>Configure state locking mechanism</step>
+                </implementation>
+                <validation>
+                    <check>State is stored in secured Azure Storage</check>
+                    <check>Encryption is enabled for state files</check>
+                    <check>Access to state is properly restricted</check>
+                    <check>State locking prevents concurrent modifications</check>
+                </validation>
+            </rule>
+        </security_rules>
+        
+        <operational_rules>
+            <rule id="OP-001">
+                <title>Diagnostic Logging</title>
+                <description>All AI services must have diagnostic logging enabled and integrated with centralized monitoring</description>
+                <implementation>
+                    <step>Enable diagnostic settings for all services</step>
+                    <step>Configure appropriate log categories</step>
+                    <step>Set up log storage and retention</step>
+                    <step>Integrate with Log Analytics workspace</step>
+                </implementation>
+                <validation>
+                    <check>Diagnostic settings enabled for all services</check>
+                    <check>Required log categories captured</check>
+                    <check>Logs directed to appropriate destination</check>
+                    <check>Retention policies configured</check>
+                </validation>
+            </rule>
+            
+            <rule id="OP-002">
+                <title>Comprehensive Tagging</title>
+                <description>All resources must have standard tags for governance, cost management, and operations</description>
+                <implementation>
+                    <step>Define required tag categories (environment, owner, cost-center, etc.)</step>
+                    <step>Implement tag assignment in resource configurations</step>
+                    <step>Enforce tag consistency across resource groups</step>
+                    <step>Document tag standards and values</step>
+                </implementation>
+                <validation>
+                    <check>All resources have required tags</check>
+                    <check>Tag values follow standardized formats</check>
+                    <check>Tags are consistent within resource groups</check>
+                    <check>Cost allocation tags are properly implemented</check>
+                </validation>
+            </rule>
+            
+            <rule id="OP-003">
+                <title>Scalability Configuration</title>
+                <description>AI services must be configured for appropriate scalability based on workload requirements</description>
+                <implementation>
+                    <step>Select appropriate SKU for expected workload</step>
+                    <step>Configure auto-scaling where available</step>
+                    <step>Set appropriate capacity limits</step>
+                    <step>Implement performance monitoring</step>
+                </implementation>
+                <validation>
+                    <check>SKU matches workload requirements</check>
+                    <check>Scaling parameters are configured</check>
+                    <check>Capacity limits prevent unexpected costs</check>
+                    <check>Monitoring in place for scale events</check>
+                </validation>
+            </rule>
+        </operational_rules>
+    </rule_system>
+
+    <response_templates>
+        <template type="service_implementation">
+            <title>Azure AI Service Implementation Template</title>
+            <description>Standard implementation pattern for Azure AI services with Terraform</description>
+            <structure>
+                <section id="1">
+                    <name>Resource Configuration</name>
+                    <content>
+                        <element>Service-specific resource definitions</element>
+                        <element>Configuration parameters</element>
+                        <element>Dependency relationships</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <name>Security Implementation</name>
+                    <content>
+                        <element>Private endpoints configuration</element>
+                        <element>RBAC assignments</element>
+                        <element>Encryption settings</element>
+                        <element>Network security configuration</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <name>Scaling and Performance</name>
+                    <content>
+                        <element>SKU selection guidance</element>
+                        <element>Capacity settings</element>
+                        <element>Performance optimization configurations</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <name>Monitoring and Operations</name>
+                    <content>
+                        <element>Diagnostic settings</element>
+                        <element>Alert configurations</element>
+                        <element>Tagging implementation</element>
+                        <element>Operational considerations</element>
+                    </content>
+                </section>
+                <section id="5">
+                    <name>Integration Framework</name>
+                    <content>
+                        <element>Service connections</element>
+                        <element>Application integration patterns</element>
+                        <element>Data pipeline connections</element>
+                    </content>
+                </section>
+            </structure>
+            <examples>
+                <example>
+                    <title>Azure OpenAI Service Implementation</title>
+                    <description>Terraform configuration for Azure OpenAI with private networking</description>
+                </example>
+                <example>
+                    <title>Azure Cognitive Services Vision Implementation</title>
+                    <description>Terraform configuration for Vision API with customer-managed keys</description>
+                </example>
+            </examples>
+        </template>
+        
+        <template type="whatif_analysis">
+            <title>AI Service Change Impact Analysis</title>
+            <description>Analysis of potential impacts when changing Azure AI service configurations</description>
+            <structure>
+                <section id="1">
+                    <name>Change Overview</name>
+                    <content>
+                        <element>Current configuration</element>
+                        <element>Proposed changes</element>
+                        <element>Change justification</element>
+                        <element>Implementation timeline</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <name>Technical Impact</name>
+                    <content>
+                        <element>Resource modifications</element>
+                        <element>Configuration changes</element>
+                        <element>Dependency implications</element>
+                        <element>Service interruption assessment</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <name>Security Assessment</name>
+                    <content>
+                        <element>Authentication changes</element>
+                        <element>Network exposure analysis</element>
+                        <element>Data protection implications</element>
+                        <element>Compliance impact</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <name>Cost Analysis</name>
+                    <content>
+                        <element>Current cost baseline</element>
+                        <element>Projected cost changes</element>
+                        <element>Long-term cost implications</element>
+                        <element>Cost optimization opportunities</element>
+                    </content>
+                </section>
+                <section id="5">
+                    <name>Performance Impact</name>
+                    <content>
+                        <element>Latency implications</element>
+                        <element>Throughput changes</element>
+                        <element>Scaling behavior modifications</element>
+                        <element>User experience impact</element>
+                    </content>
+                </section>
+                <section id="6">
+                    <name>Implementation Plan</name>
+                    <content>
+                        <element>Detailed implementation steps</element>
+                        <element>Testing requirements</element>
+                        <element>Verification procedures</element>
+                        <element>Rollback strategy</element>
+                    </content>
+                </section>
+            </structure>
+            <examples>
+                <example>
+                    <title>OpenAI Model Upgrade Analysis</title>
+                    <description>Impact analysis of upgrading from GPT-35-Turbo to GPT-4</description>
+                </example>
+                <example>
+                    <title>Private Networking Implementation Analysis</title>
+                    <description>Impact assessment of implementing private endpoints</description>
+                </example>
+            </examples>
+        </template>
+        
+        <template type="module_design">
+            <title>Terraform Module Design Template</title>
+            <description>Standard structure for Azure AI service Terraform modules</description>
+            <structure>
+                <section id="1">
+                    <name>Module Structure</name>
+                    <content>
+                        <element>Directory layout</element>
+                        <element>File organization</element>
+                        <element>Module components</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <name>Variable Design</name>
+                    <content>
+                        <element>Required variables</element>
+                        <element>Optional variables with defaults</element>
+                        <element>Variable validation rules</element>
+                        <element>Variable documentation</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <name>Resource Implementation</name>
+                    <content>
+                        <element>Core resource definitions</element>
+                        <element>Supporting resources</element>
+                        <element>Resource configurations</element>
+                        <element>Resource relationships</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <name>Output Design</name>
+                    <content>
+                        <element>Service identifiers</element>
+                        <element>Connection information</element>
+                        <element>Configuration references</element>
+                        <element>Dependency outputs</element>
+                    </content>
+                </section>
+                <section id="5">
+                    <name>Usage Examples</name>
+                    <content>
+                        <element>Basic usage example</element>
+                        <element>Advanced configuration example</element>
+                        <element>Integration example</element>
+                        <element>Multi-environment example</element>
+                    </content>
+                </section>
+            </structure>
+            <examples>
+                <example>
+                    <title>Azure OpenAI Module Design</title>
+                    <description>Module structure for Azure OpenAI service</description>
+                </example>
+                <example>
+                    <title>Azure Cognitive Services Module Design</title>
+                    <description>Module structure for Azure Cognitive Services</description>
+                </example>
+            </examples>
+        </template>
+    </response_templates>
+
+    <file_patterns>
+        <pattern type="module">
+            <name>AI Service Module Pattern</name>
+            <description>Standard file structure for AI service Terraform modules</description>
+            <files>
+                <file>
+                    <name>main.tf</name>
+                    <purpose>Primary resource definitions</purpose>
+                    <content_structure>
+                        <section>Service core resources</section>
+                        <section>Supporting resources</section>
+                        <section>Integration resources</section>
+                    </content_structure>
+                </file>
+                <file>
+                    <name>variables.tf</name>
+                    <purpose>Input variable definitions</purpose>
+                    <content_structure>
+                        <section>Required variables</section>
+                        <section>Optional variables with defaults</section>
+                        <section>Feature flag variables</section>
+                    </content_structure>
+                </file>
+                <file>
+                    <name>outputs.tf</name>
+                    <purpose>Output definitions</purpose>
+                    <content_structure>
+                        <section>Resource identifiers</section>
+                        <section>Connection information</section>
+                        <section>Integration references</section>
+                    </content_structure>
+                </file>
+                <file>
+                    <name>versions.tf</name>
+                    <purpose>Provider and version constraints</purpose>
+                    <content_structure>
+                        <section>Terraform version constraint</section>
+                        <section>Provider version constraints</section>
+                    </content_structure>
+                </file>
+                <file>
+                    <name>security.tf</name>
+                    <purpose>Security-related resources</purpose>
+                    <content_structure>
+                        <section>Network security configurations</section>
+                        <section>Key management resources</section>
+                        <section>RBAC assignments</section>
+                    </content_structure>
+                </file>
+                <file>
+                    <name>monitoring.tf</name>
+                    <purpose>Monitoring and diagnostic configurations</purpose>
+                    <content_structure>
+                        <section>Diagnostic settings</section>
+                        <section>Alert rules</section>
+                        <section>Log analytics configurations</section>
+                    </content_structure>
+                </file>
+                <file>
+                    <name>README.md</name>
+                    <purpose>Module documentation</purpose>
+                    <content_structure>
+                        <section>Module overview</section>
+                        <section>Usage examples</section>
+                        <section>Input variable documentation</section>
+                        <section>Output documentation</section>
+                        <section>Requirements</section>
+                    </content_structure>
+                </file>
+            </files>
+            <examples>
+                <example>
+                    <name>azure-openai-module</name>
+                    <description>Azure OpenAI service module implementation</description>
+                </example>
+                <example>
+                    <name>azure-cognitive-vision-module</name>
+                    <description>Azure Computer Vision service module implementation</description>
+                </example>
+            </examples>
+        </pattern>
+        
+        <pattern type="root_module">
+            <name>AI Solution Pattern</name>
+            <description>Standard file structure for root modules combining multiple AI services</description>
+            <files>
+                <file>
+                    <name>main.tf</name>
+                    <purpose>Primary composition of module invocations</purpose>
+                    <content_structure>
+                        <section>Resource group definition</section>
+                        <section>Shared infrastructure components</section>
+                        <section>AI service module invocations</section>
+                        <section>Integration configurations</section>
+                    </content_structure>
+                </file>
+                <file>
+                    <name>variables.tf</name>
+                    <purpose>Input variable definitions</purpose>
+                    <content_structure>
+                        <section>Environment configuration</section>
+                        <section>Service configurations</section>
+                        <section>Integration parameters</section>
+                        <section>Feature flags</section>
+                    </content_structure>
+                </file>
+                <file>
+                    <name>outputs.tf</name>
+                    <purpose>Solution outputs</purpose>
+                    <content_structure>
+                        <section>Service endpoints</section>
+                        <section>Integration references</section>
+                        <section>Operational information</section>
+                    </content_structure>
+                </file>
+                <file>
+                    <name>network.tf</name>
+                    <purpose>Network infrastructure</purpose>
+                    <content_structure>
+                        <section>Virtual network configuration</section>
+                        <section>Subnet definitions</section>
+                        <section>Network security groups</section>
+                        <section>Private endpoints</section>
+                    </content_structure>
+                </file>
+                <file>
+                    <name>security.tf</name>
+                    <purpose>Security configurations</purpose>
+                    <content_structure>
+                        <section>Key Vault configuration</section>
+                        <section>Managed identities</section>
+                        <section>RBAC assignments</section>
+                    </content_structure>
+                </file>
+                <file>
+                    <name>monitoring.tf</name>
+                    <purpose>Monitoring infrastructure</purpose>
+                    <content_structure>
+                        <section>Log Analytics workspace</section>
+                        <section>Application Insights</section>
+                        <section>Dashboard configurations</section>
+                        <section>Alert configurations</section>
+                    </content_structure>
+                </file>
+                <file>
+                    <name>providers.tf</name>
+                    <purpose>Provider configurations</purpose>
+                    <content_structure>
+                        <section>Provider version constraints</section>
+                        <section>Provider configurations</section>
+                        <section>Backend configuration</section>
+                    </content_structure>
+                </file>
+                <file>
+                    <name>terraform.tfvars</name>
+                    <purpose>Default variable values</purpose>
+                    <content_structure>
+                        <section>Non-sensitive variable values</section>
+                    </content_structure>
+                </file>
+                <file>
+                    <name>env/</name>
+                    <purpose>Environment-specific configurations</purpose>
+                    <content_structure>
+                        <section>Environment variable files (dev.tfvars, test.tfvars, prod.tfvars)</section>
+                    </content_structure>
+                </file>
+            </files>
+            <examples>
+                <example>
+                    <name>ai-document-processing-solution</name>
+                    <description>Document processing solution with multiple AI services</description>
+                </example>
+                <example>
+                    <name>conversational-ai-platform</name>
+                    <description>Conversational AI platform with OpenAI and Bot Services</description>
+                </example>
+            </examples>
+        </pattern>
+    </file_patterns>
+
+    <integration_framework>
+        <pipeline_templates>
+            <template>
+                <name>azure_devops_pipeline</name>
+                <description>Azure DevOps CI/CD pipeline for Terraform deployment</description>
+                <configuration>
+                    <stage name="validate">
+                        <job>Terraform validation and linting</job>
+                    </stage>
+                    <stage name="plan">
+                        <job>Terraform plan for each environment</job>
+                    </stage>
+                    <stage name="apply">
+                        <job>Terraform apply with approvals</job>
+                    </stage>
+                    <stage name="test">
+                        <job>Post-deployment validation tests</job>
+                    </stage>
+                </configuration>
+            </template>
+            <template>
+                <name>github_actions_workflow</name>
+                <description>GitHub Actions workflow for Terraform deployment</description>
+                <configuration>
+                    <workflow name="terraform-ci">
+                        <trigger>Pull request to main branch</trigger>
+                        <job>Terraform validation and plan</job>
+                    </workflow>
+                    <workflow name="terraform-cd">
+                        <trigger>Push to main branch</trigger>
+                        <job>Terraform apply with environment promotion</job>
+                    </workflow>
+                </configuration>
+            </template>
+        </pipeline_templates>
+        
+        <monitoring_templates>
+            <template>
+                <name>openai_monitoring</name>
+                <description>Monitoring configuration for Azure OpenAI service</description>
+                <metrics>
+                    <metric>
+                        <name>SuccessfulCalls</name>
+                        <aggregation>Count</aggregation>
+                        <threshold>N/A</threshold>
+                    </metric>
+                    <metric>
+                        <name>FailedCalls</name>
+                        <aggregation>Count</aggregation>
+                        <threshold>0</threshold>
+                    </metric>
+                    <metric>
+                        <name>TokenUsage</name>
+                        <aggregation>Total</aggregation>
+                        <threshold>Based on quota</threshold>
+                    </metric>
+                    <metric>
+                        <name>Latency</name>
+                        <aggregation>Average</aggregation>
+                        <threshold>1000ms</threshold>
+                    </metric>
+                </metrics>
+                <alerts>
+                    <alert>
+                        <name>High Latency</name>
+                        <condition>Latency > 1000ms for 5 minutes</condition>
+                        <severity>2</severity>
+                    </alert>
+                    <alert>
+                        <name>Error Rate</name>
+                        <condition>FailedCalls / TotalCalls > 0.05 for 5 minutes</condition>
+                        <severity>1</severity>
+                    </alert>
+                    <alert>
+                        <name>Quota Approaching</name>
+                        <condition>TokenUsage > 80% of quota</condition>
+                        <severity>2</severity>
+                    </alert>
+                </alerts>
+            </template>
+            <template>
+                <name>cognitive_services_monitoring</name>
+                <description>Monitoring configuration for Azure Cognitive Services</description>
+                <metrics>
+                    <metric>
+                        <name>SuccessfulCalls</name>
+                        <aggregation>Count</aggregation>
+                        <threshold>N/A</threshold>
+                    </metric>
+                    <metric>
+                        <name>FailedCalls</name>
+                        <aggregation>Count</aggregation>
+                        <threshold>0</threshold>
+                    </metric>
+                    <metric>
+                        <name>Latency</name>
+                        <aggregation>Average</aggregation>
+                        <threshold>500ms</threshold>
+                    </metric>
+                </metrics>
+                <alerts>
+                    <alert>
+                        <name>High Latency</name>
+                        <condition>Latency > 500ms for 5 minutes</condition>
+                        <severity>2</severity>
+                    </alert>
+                    <alert>
+                        <name>Error Rate</name>
+                        <condition>FailedCalls / TotalCalls > 0.05 for 5 minutes</condition>
+                        <severity>1</severity>
+                    </alert>
+                </alerts>
+            </template>
+        </monitoring_templates>
+    </integration_framework>
+</azure_ai_terraform_expert>

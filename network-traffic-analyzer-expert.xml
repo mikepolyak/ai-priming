@@ -1,0 +1,2652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<network_traffic_analyzer_expert version="1.0">
+    <metadata>
+        <title>Network Traffic Analyzer Expert System</title>
+        <description>Comprehensive framework for analyzing network traffic using Wireshark and Fiddler with detailed knowledge of export formats</description>
+        <version>1.0.0</version>
+        <last_updated>2025-04-20</last_updated>
+        <author>Network Protocol Analysis Team</author>
+        <changelog>
+            <entry version="1.0.0" date="2025-04-20">
+                <change>Initial system creation</change>
+                <change>Comprehensive protocol analysis framework</change>
+                <change>Detailed export format specifications</change>
+                <change>Wireshark and Fiddler integration patterns</change>
+                <change>Performance and security analysis methodologies</change>
+            </entry>
+        </changelog>
+        <compatibility>
+            <works_with>
+                <system>Wireshark 4.0+</system>
+                <system>Fiddler Everywhere 3.0+</system>
+                <system>Fiddler Classic 5.0+</system>
+                <system>TShark 4.0+</system>
+                <system>Network Security Monitoring Systems</system>
+                <system>Performance Monitoring Platforms</system>
+            </works_with>
+            <minimum_version>1.0.0</minimum_version>
+            <target_platforms>
+                <platform>Windows</platform>
+                <platform>macOS</platform>
+                <platform>Linux</platform>
+                <platform>Mobile Device Proxies</platform>
+                <platform>Cloud Network Analysis Systems</platform>
+            </target_platforms>
+        </compatibility>
+    </metadata>
+
+    <expertise>
+        <knowledge_structure>
+            <domain_fundamentals>
+                <network_protocols>
+                    <protocol_groups>
+                        <group name="transport_layer">
+                            <protocol>
+                                <name>TCP</name>
+                                <description>Transmission Control Protocol - connection-oriented transport protocol</description>
+                                <key_fields>
+                                    <field>Source Port</field>
+                                    <field>Destination Port</field>
+                                    <field>Sequence Number</field>
+                                    <field>Acknowledgment Number</field>
+                                    <field>Flags (SYN, ACK, FIN, RST, PSH, URG)</field>
+                                    <field>Window Size</field>
+                                </key_fields>
+                                <analysis_focus>
+                                    <item>3-way handshake</item>
+                                    <item>Connection termination</item>
+                                    <item>Retransmissions</item>
+                                    <item>Zero window conditions</item>
+                                    <item>Out-of-order segments</item>
+                                    <item>Keep-alive packets</item>
+                                </analysis_focus>
+                            </protocol>
+                            <protocol>
+                                <name>UDP</name>
+                                <description>User Datagram Protocol - connectionless transport protocol</description>
+                                <key_fields>
+                                    <field>Source Port</field>
+                                    <field>Destination Port</field>
+                                    <field>Length</field>
+                                    <field>Checksum</field>
+                                </key_fields>
+                                <analysis_focus>
+                                    <item>Datagram completeness</item>
+                                    <item>Checksum verification</item>
+                                    <item>Port usage patterns</item>
+                                    <item>Fragmentation handling</item>
+                                </analysis_focus>
+                            </protocol>
+                        </group>
+                        <group name="application_layer">
+                            <protocol>
+                                <name>HTTP</name>
+                                <description>Hypertext Transfer Protocol - web communication protocol</description>
+                                <key_fields>
+                                    <field>Method (GET, POST, etc.)</field>
+                                    <field>URI</field>
+                                    <field>Status Code</field>
+                                    <field>Headers</field>
+                                    <field>Body Content</field>
+                                    <field>Content-Type</field>
+                                </key_fields>
+                                <analysis_focus>
+                                    <item>Request/response pairing</item>
+                                    <item>Status code analysis</item>
+                                    <item>Header examination</item>
+                                    <item>Content validation</item>
+                                    <item>Performance timing</item>
+                                    <item>Compression usage</item>
+                                    <item>Authentication methods</item>
+                                </analysis_focus>
+                            </protocol>
+                            <protocol>
+                                <name>HTTPS/TLS</name>
+                                <description>HTTP over TLS - secure web communication</description>
+                                <key_fields>
+                                    <field>TLS Version</field>
+                                    <field>Cipher Suite</field>
+                                    <field>Certificate Chain</field>
+                                    <field>SNI (Server Name Indication)</field>
+                                    <field>Encrypted Application Data</field>
+                                </key_fields>
+                                <analysis_focus>
+                                    <item>Handshake completion</item>
+                                    <item>Certificate validation</item>
+                                    <item>Cipher suite security</item>
+                                    <item>Protocol version assessment</item>
+                                    <item>Session resumption</item>
+                                    <item>Decryption techniques</item>
+                                </analysis_focus>
+                            </protocol>
+                            <protocol>
+                                <name>DNS</name>
+                                <description>Domain Name System - name resolution protocol</description>
+                                <key_fields>
+                                    <field>Query Name</field>
+                                    <field>Record Type</field>
+                                    <field>Response Code</field>
+                                    <field>Answers</field>
+                                    <field>Authority Records</field>
+                                </key_fields>
+                                <analysis_focus>
+                                    <item>Resolution timing</item>
+                                    <item>Query/response matching</item>
+                                    <item>NXDOMAIN responses</item>
+                                    <item>DNS caching behavior</item>
+                                    <item>Record TTL analysis</item>
+                                    <item>DNSSEC validation</item>
+                                </analysis_focus>
+                            </protocol>
+                        </group>
+                    </protocol_groups>
+                </network_protocols>
+
+                <capture_methodologies>
+                    <methodology>
+                        <name>Interface Selection</name>
+                        <description>Choosing appropriate network interfaces for capture</description>
+                        <best_practices>
+                            <practice>Select interfaces closest to traffic of interest</practice>
+                            <practice>Use promiscuous mode for seeing all traffic on shared media</practice>
+                            <practice>Consider multiple interfaces for comprehensive visibility</practice>
+                            <practice>Use loopback for local application traffic</practice>
+                            <practice>Verify interface capabilities before long captures</practice>
+                        </best_practices>
+                    </methodology>
+                    <methodology>
+                        <name>Capture Filtering</name>
+                        <description>Using BPF syntax to optimize capture performance</description>
+                        <best_practices>
+                            <practice>Filter for specific hosts or networks when possible</practice>
+                            <practice>Exclude high-volume irrelevant traffic</practice>
+                            <practice>Balance filter complexity with performance</practice>
+                            <practice>Test filters on small captures before long-term use</practice>
+                            <practice>Document filters used for capture context</practice>
+                        </best_practices>
+                    </methodology>
+                    <methodology>
+                        <name>Packet Slicing</name>
+                        <description>Capturing partial packets to reduce storage requirements</description>
+                        <best_practices>
+                            <practice>Capture sufficient header data for analysis requirements</practice>
+                            <practice>Consider payload requirements before truncating</practice>
+                            <practice>Document slicing settings for analysis context</practice>
+                            <practice>Balance storage savings with analysis needs</practice>
+                        </best_practices>
+                    </methodology>
+                    <methodology>
+                        <name>Traffic Interception</name>
+                        <description>Methods for capturing traffic between other hosts</description>
+                        <best_practices>
+                            <practice>Use span/mirror ports when available</practice>
+                            <practice>Consider network taps for critical links</practice>
+                            <practice>Implement ARP spoofing carefully and ethically</practice>
+                            <practice>Configure transparent proxies appropriately</practice>
+                            <practice>Ensure proper authorization before interception</practice>
+                        </best_practices>
+                    </methodology>
+                </capture_methodologies>
+
+                <analysis_techniques>
+                    <technique>
+                        <name>Performance Analysis</name>
+                        <description>Methods for identifying network performance issues</description>
+                        <procedure>
+                            <step>Establish baseline metrics for normal operation</step>
+                            <step>Measure round-trip times and application response times</step>
+                            <step>Identify retransmissions and duplicate acknowledgments</step>
+                            <step>Analyze TCP window scaling and buffer sizes</step>
+                            <step>Examine throughput and utilization patterns</step>
+                            <step>Correlate application timing with network events</step>
+                        </procedure>
+                    </technique>
+                    <technique>
+                        <name>Error Detection</name>
+                        <description>Identifying and diagnosing network and protocol errors</description>
+                        <procedure>
+                            <step>Look for explicit error messages and codes</step>
+                            <step>Identify TCP resets and connection failures</step>
+                            <step>Analyze HTTP error status codes</step>
+                            <step>Examine DNS resolution failures</step>
+                            <step>Check for protocol violations and malformed packets</step>
+                            <step>Correlate errors across protocol layers</step>
+                        </procedure>
+                    </technique>
+                    <technique>
+                        <name>Security Analysis</name>
+                        <description>Techniques for identifying security issues in network traffic</description>
+                        <procedure>
+                            <step>Examine certificate validity and trust chains</step>
+                            <step>Identify weak encryption or cipher suites</step>
+                            <step>Look for clear-text credentials or sensitive data</step>
+                            <step>Detect unusual traffic patterns or protocols</step>
+                            <step>Analyze authentication mechanisms and failures</step>
+                            <step>Identify potential data exfiltration patterns</step>
+                        </procedure>
+                    </technique>
+                    <technique>
+                        <name>Protocol Conversation Analysis</name>
+                        <description>Following and analyzing complete protocol exchanges</description>
+                        <procedure>
+                            <step>Use conversation tracking to isolate specific exchanges</step>
+                            <step>Follow TCP streams to view complete sessions</step>
+                            <step>Correlate requests with responses</step>
+                            <step>Analyze transaction timing and sequencing</step>
+                            <step>Identify missing or duplicate messages</step>
+                            <step>Examine protocol state transitions</step>
+                        </procedure>
+                    </technique>
+                </analysis_techniques>
+
+                <export_formats>
+                    <format_group name="packet_capture_formats">
+                        <format>
+                            <name>PCAP</name>
+                            <description>Legacy libpcap capture format</description>
+                            <specifications>
+                                <spec>Global header with magic number and version</spec>
+                                <spec>Per-packet headers with timestamp and length</spec>
+                                <spec>Raw packet data including link-layer headers</spec>
+                                <spec>Limited to single interface per file</spec>
+                                <spec>Maximum 2GB file size (32-bit format)</spec>
+                            </specifications>
+                            <applications>
+                                <app>Long-term compatibility with older tools</app>
+                                <app>Smaller file size for basic captures</app>
+                                <app>Simpler format for programmatic processing</app>
+                            </applications>
+                            <limitations>
+                                <limitation>No support for name resolution</limitation>
+                                <limitation>No comments or annotations</limitation>
+                                <limitation>No interface information</limitation>
+                                <limitation>No custom block types</limitation>
+                                <limitation>Limited timestamp precision</limitation>
+                            </limitations>
+                        </format>
+                        <format>
+                            <name>PCAPNG</name>
+                            <description>Next-generation packet capture format</description>
+                            <specifications>
+                                <spec>Block-based structure with section header blocks</spec>
+                                <spec>Interface description blocks for multiple interfaces</spec>
+                                <spec>Enhanced packet blocks with interface mapping</spec>
+                                <spec>Name resolution blocks for host resolution</spec>
+                                <spec>Comment blocks for annotations</spec>
+                                <spec>Custom block types for extensions</spec>
+                            </specifications>
+                            <applications>
+                                <app>Comprehensive capture preservation</app>
+                                <app>Multi-interface captures</app>
+                                <app>Captures requiring annotations</app>
+                                <app>Advanced analysis needs</app>
+                            </applications>
+                            <limitations>
+                                <limitation>Larger file size than PCAP</limitation>
+                                <limitation>Not supported by all older tools</limitation>
+                                <limitation>More complex to process programmatically</limitation>
+                            </limitations>
+                        </format>
+                    </format_group>
+                    <format_group name="http_specific_formats">
+                        <format>
+                            <name>HAR</name>
+                            <description>HTTP Archive format (JSON-based)</description>
+                            <specifications>
+                                <spec>JSON structure with pages and entries</spec>
+                                <spec>Detailed timing information for each request</spec>
+                                <spec>Complete header and content preservation</spec>
+                                <spec>Cookie and query parameter storage</spec>
+                                <spec>Cache and redirect information</spec>
+                            </specifications>
+                            <applications>
+                                <app>Web application performance analysis</app>
+                                <app>Browser-based traffic examination</app>
+                                <app>Web development debugging</app>
+                                <app>Integration with web testing tools</app>
+                            </applications>
+                            <limitations>
+                                <limitation>HTTP/HTTPS only (no lower-level protocols)</limitation>
+                                <limitation>No raw packet data</limitation>
+                                <limitation>Limited networking details</limitation>
+                                <limitation>Browser-focused format</limitation>
+                            </limitations>
+                        </format>
+                        <format>
+                            <name>SAZ</name>
+                            <description>Session Archive Zip (Fiddler format)</description>
+                            <specifications>
+                                <spec>ZIP container with session metadata</spec>
+                                <spec>Raw request and response data preservation</spec>
+                                <spec>Session flags and timing information</spec>
+                                <spec>Comments and session annotations</spec>
+                                <spec>Fiddler-specific metadata</spec>
+                            </specifications>
+                            <applications>
+                                <app>Complete Fiddler session preservation</app>
+                                <app>Sharing Fiddler sessions with annotations</app>
+                                <app>Web application debugging</app>
+                                <app>HTTP(S) forensic analysis</app>
+                            </applications>
+                            <limitations>
+                                <limitation>Fiddler-specific format</limitation>
+                                <limitation>HTTP/HTTPS only (no lower-level protocols)</limitation>
+                                <limitation>Limited support in non-Fiddler tools</limitation>
+                            </limitations>
+                        </format>
+                    </format_group>
+                    <format_group name="generic_export_formats">
+                        <format>
+                            <name>CSV</name>
+                            <description>Comma-Separated Values for tabular data</description>
+                            <specifications>
+                                <spec>Text-based with comma-delimited fields</spec>
+                                <spec>Optional header row with column names</spec>
+                                <spec>One packet or session per row</spec>
+                                <spec>User-selectable fields for export</spec>
+                            </specifications>
+                            <applications>
+                                <app>Spreadsheet analysis</app>
+                                <app>Statistical processing</app>
+                                <app>Integration with data analysis tools</app>
+                                <app>Simple scripting and parsing</app>
+                            </applications>
+                            <limitations>
+                                <limitation>Loss of raw packet data</limitation>
+                                <limitation>Limited to selected fields only</limitation>
+                                <limitation>No hierarchical relationship preservation</limitation>
+                                <limitation>Potential issues with escaping special characters</limitation>
+                            </limitations>
+                        </format>
+                        <format>
+                            <name>XML</name>
+                            <description>Extensible Markup Language export format</description>
+                            <specifications>
+                                <spec>Hierarchical tag-based structure</spec>
+                                <spec>Packet details preserved in nested elements</spec>
+                                <spec>Protocol hierarchy maintained</spec>
+                                <spec>Attribute-based metadata</spec>
+                            </specifications>
+                            <applications>
+                                <app>Automated processing with XML tools</app>
+                                <app>Maintenance of protocol relationships</app>
+                                <app>Integration with XML-based systems</app>
+                                <app>XPath-based querying and filtering</app>
+                            </applications>
+                            <limitations>
+                                <limitation>Large file sizes</limitation>
+                                <limitation>More complex to parse than CSV</limitation>
+                                <limitation>No raw packet data preservation</limitation>
+                            </limitations>
+                        </format>
+                        <format>
+                            <name>JSON</name>
+                            <description>JavaScript Object Notation export format</description>
+                            <specifications>
+                                <spec>Structured object notation</spec>
+                                <spec>Hierarchical protocol representation</spec>
+                                <spec>Array-based packet sequence</spec>
+                                <spec>Name/value pairs for fields</spec>
+                            </specifications>
+                            <applications>
+                                <app>Web application integration</app>
+                                <app>Modern API integrations</app>
+                                <app>JavaScript processing</app>
+                                <app>Data visualization tools</app>
+                            </applications>
+                            <limitations>
+                                <limitation>No raw packet data</limitation>
+                                <limitation>Potentially large file sizes</limitation>
+                                <limitation>Limited standardization across tools</limitation>
+                            </limitations>
+                        </format>
+                    </format_group>
+                </export_formats>
+
+                <tool_specifics>
+                    <wireshark>
+                        <components>
+                            <component name="capture_engine">
+                                <description>System for capturing packets from network interfaces</description>
+                                <capabilities>
+                                    <capability>Interface enumeration and selection</capability>
+                                    <capability>Promiscuous and monitor mode support</capability>
+                                    <capability>BPF capture filter application</capability>
+                                    <capability>Multiple interface simultaneous capture</capability>
+                                    <capability>Remote capture support</capability>
+                                </capabilities>
+                            </component>
+                            <component name="dissector_framework">
+                                <description>Protocol parsing and interpretation system</description>
+                                <capabilities>
+                                    <capability>Hierarchical protocol decoding</capability>
+                                    <capability>Field extraction and interpretation</capability>
+                                    <capability>Protocol detection and heuristics</capability>
+                                    <capability>Custom dissector plugins</capability>
+                                    <capability>Lua-based dissector extensions</capability>
+                                </capabilities>
+                            </component>
+                            <component name="display_filter_engine">
+                                <description>System for filtering displayed packets</description>
+                                <capabilities>
+                                    <capability>Rich expression-based syntax</capability>
+                                    <capability>Field-level filtering</capability>
+                                    <capability>Logical operators and comparisons</capability>
+                                    <capability>Protocol-specific filters</capability>
+                                    <capability>Display filter macros and profiles</capability>
+                                </capabilities>
+                            </component>
+                            <component name="statistics_tools">
+                                <description>Analysis and visualization components</description>
+                                <capabilities>
+                                    <capability>Protocol hierarchy statistics</capability>
+                                    <capability>Conversation tracking and analysis</capability>
+                                    <capability>Endpoint statistics and mapping</capability>
+                                    <capability>I/O graphs for visualization</capability>
+                                    <capability>Service response time analysis</capability>
+                                    <capability>Expert information system</capability>
+                                </capabilities>
+                            </component>
+                        </components>
+                        <cli_interface>
+                            <tool>
+                                <name>tshark</name>
+                                <description>Command-line version of Wireshark</description>
+                                <key_functions>
+                                    <function>Headless packet capture</function>
+                                    <function>Scriptable analysis</function>
+                                    <function>Pipeline integration</function>
+                                    <function>Format conversion</function>
+                                    <function>Statistical analysis</function>
+                                </key_functions>
+                            </tool>
+                            <tool>
+                                <name>editcap</name>
+                                <description>Utility for editing capture files</description>
+                                <key_functions>
+                                    <function>Time range extraction</function>
+                                    <function>Packet selection</function>
+                                    <function>Format conversion</function>
+                                    <function>File splitting</function>
+                                </key_functions>
+                            </tool>
+                            <tool>
+                                <name>mergecap</name>
+                                <description>Utility for merging capture files</description>
+                                <key_functions>
+                                    <function>Chronological merging</function>
+                                    <function>Format standardization</function>
+                                    <function>Multi-file consolidation</function>
+                                </key_functions>
+                            </tool>
+                        </cli_interface>
+                    </wireshark>
+                    <fiddler>
+                        <components>
+                            <component name="proxy_engine">
+                                <description>Core HTTP/HTTPS proxy functionality</description>
+                                <capabilities>
+                                    <capability>HTTP/HTTPS traffic interception</capability>
+                                    <capability>Certificate generation and installation</capability>
+                                    <capability>Mobile device proxy configuration</capability>
+                                    <capability>Request and response inspection</capability>
+                                    <capability>Traffic modification on-the-fly</capability>
+                                </capabilities>
+                            </component>
+                            <component name="autoresponder">
+                                <description>Automated response generation system</description>
+                                <capabilities>
+                                    <capability>URL pattern matching</capability>
+                                    <capability>Custom response creation</capability>
+                                    <capability>Performance simulation</capability>
+                                    <capability>Conditional rule execution</capability>
+                                    <capability>Resource substitution</capability>
+                                </capabilities>
+                            </component>
+                            <component name="fiddlerscript">
+                                <description>Scripting system for customization</description>
+                                <capabilities>
+                                    <capability>JScript/C# based customization</capability>
+                                    <capability>Event-based request/response handling</capability>
+                                    <capability>Custom UI extensions</capability>
+                                    <capability>Automated analysis rules</capability>
+                                    <capability>Traffic manipulation capabilities</capability>
+                                </capabilities>
+                            </component>
+                            <component name="inspectors">
+                                <description>Specialized viewers for HTTP content</description>
+                                <capabilities>
+                                    <capability>JSON/XML formatting and validation</capability>
+                                    <capability>Image and media viewers</capability>
+                                    <capability>Header and cookie inspection</capability>
+                                    <capability>Auth token analysis</capability>
+                                    <capability>Web form decoder</capability>
+                                </capabilities>
+                            </component>
+                        </components>
+                        <session_handling>
+                            <capability>
+                                <name>Session Saving</name>
+                                <description>Preserving HTTP/HTTPS sessions</description>
+                                <features>
+                                    <feature>SAZ (Session Archive Zip) format</feature>
+                                    <feature>Complete request/response preservation</feature>
+                                    <feature>Session flags and annotations</feature>
+                                    <feature>Timing information</feature>
+                                </features>
+                            </capability>
+                            <capability>
+                                <name>Breakpoints</name>
+                                <description>Pausing traffic for inspection/modification</description>
+                                <features>
+                                    <feature>Request and response breakpoints</feature>
+                                    <feature>Conditional breaking rules</feature>
+                                    <feature>Header and body modification</feature>
+                                    <feature>Request/response flow control</feature>
+                                </features>
+                            </capability>
+                            <capability>
+                                <name>Filters</name>
+                                <description>Filtering session display</description>
+                                <features>
+                                    <feature>Host and URL filtering</feature>
+                                    <feature>Content type filtering</feature>
+                                    <feature>Status code filtering</feature>
+                                    <feature>Header and body content filtering</feature>
+                                </features>
+                            </capability>
+                        </session_handling>
+                    </fiddler>
+                </tool_specifics>
+
+                <decryption_techniques>
+                    <technique>
+                        <name>HTTPS Proxy</name>
+                        <description>Man-in-the-middle proxy for TLS inspection</description>
+                        <implementation>
+                            <step>Generate and install trusted root certificate</step>
+                            <step>Configure browser/system to trust certificate</step>
+                            <step>Set up proxy settings in client</step>
+                            <step>Intercept HTTPS connections</step>
+                            <step>Perform on-the-fly decryption and re-encryption</step>
+                        </implementation>
+                        <limitations>
+                            <limitation>Certificate pinning can prevent interception</limitation>
+                            <limitation>Requires certificate installation on clients</limitation>
+                            <limitation>Some applications may reject proxy certificates</limitation>
+                            <limitation>Modern TLS security features may prevent interception</limitation>
+                        </limitations>
+                        <tools>
+                            <tool>Fiddler (built-in capability)</tool>
+                            <tool>Wireshark with SSLKEYLOGFILE</tool>
+                            <tool>mitmproxy</tool>
+                            <tool>Charles Proxy</tool>
+                        </tools>
+                    </technique>
+                    <technique>
+                        <name>TLS Key Logging</name>
+                        <description>Extracting session keys from TLS clients</description>
+                        <implementation>
+                            <step>Configure SSLKEYLOGFILE environment variable</step>
+                            <step>Direct compatible browsers/applications to write keys</step>
+                            <step>Configure Wireshark to use key log file</step>
+                            <step>Capture encrypted traffic normally</step>
+                            <step>Apply automatic decryption during analysis</step>
+                        </implementation>
+                        <limitations>
+                            <limitation>Only works with supporting applications</limitation>
+                            <limitation>Requires access to client configuration</limitation>
+                            <limitation>Not supported on all platforms</limitation>
+                            <limitation>May have security implications on shared systems</limitation>
+                        </limitations>
+                        <tools>
+                            <tool>Wireshark</tool>
+                            <tool>Chrome/Firefox/Edge browsers</tool>
+                            <tool>Many open-source TLS applications</tool>
+                        </tools>
+                    </technique>
+                    <technique>
+                        <name>Private Key Decryption</name>
+                        <description>Using server private keys for decryption</description>
+                        <implementation>
+                            <step>Obtain server private key (must have legitimate access)</step>
+                            <step>Configure analysis tool with key information</step>
+                            <step>Capture encrypted traffic</step>
+                            <step>Apply key during analysis for decryption</step>
+                        </implementation>
+                        <limitations>
+                            <limitation>Does not work with Perfect Forward Secrecy (PFS)</limitation>
+                            <limitation>Requires access to private key (security concern)</limitation>
+                            <limitation>Not viable for third-party services</limitation>
+                            <limitation>Limited to specific TLS configurations</limitation>
+                        </limitations>
+                        <tools>
+                            <tool>Wireshark</tool>
+                            <tool>TShark</tool>
+                            <tool>Various commercial analysis tools</tool>
+                        </tools>
+                    </technique>
+                </decryption_techniques>
+            </domain_fundamentals>
+
+            <best_practices>
+                <capture_optimization>
+                    <item>Use capture filters to reduce file size and processing overhead</item>
+                    <item>Select appropriate capture interfaces based on traffic path</item>
+                    <item>Configure appropriate buffer sizes for capturing high-volume traffic</item>
+                    <item>Implement ring buffers for long-term captures</item>
+                    <item>Use packet slicing when full packet data is unnecessary</item>
+                    <item>Set appropriate capture file size limits and rotation policies</item>
+                    <item>Choose optimal capture points in the network</item>
+                    <item>Document capture configuration for analysis context</item>
+                    <item>Consider hardware requirements for high-speed captures</item>
+                    <item>Use multiple targeted captures instead of single large captures when possible</item>
+                </capture_optimization>
+                
+                <analysis_methodology>
+                    <item>Establish baseline performance metrics before troubleshooting</item>
+                    <item>Follow systematic top-down analysis approach (application to network)</item>
+                    <item>Use appropriate display filters to focus analysis</item>
+                    <item>Correlate symptoms with specific protocol behaviors</item>
+                    <item>Examine timing relationships between related packets</item>
+                    <item>Compare problematic captures with known-good baselines</item>
+                    <item>Verify protocol compliance and standard adherence</item>
+                    <item>Document findings systematically with evidence</item>
+                    <item>Create reproducible analysis workflows for similar issues</item>
+                    <item>Isolate variables when troubleshooting complex issues</item>
+                </analysis_methodology>
+                
+                <security_practices>
+                    <item>Sanitize sensitive data before sharing captures</item>
+                    <item>Implement secure storage for packet captures</item>
+                    <item>Use secure channels for transferring capture files</item>
+                    <item>Document chain of custody for forensic captures</item>
+                    <item>Handle decryption keys with appropriate security controls</item>
+                    <item>Obtain proper authorization before capturing traffic</item>
+                    <item>Maintain compliance with privacy regulations and policies</item>
+                    <item>Implement access controls for analysis tools and captures</item>
+                    <item>Remove credentials and sensitive data before archiving</item>
+                    <item>Consider legal and ethical implications of traffic analysis</item>
+                </security_practices>
+                
+                <tool_configuration>
+                    <item>Maintain updated dissectors and analysis capabilities</item>
+                    <item>Configure color rules for visual pattern recognition</item>
+                    <item>Optimize column layouts for efficient analysis</item>
+                    <item>Create and use specialized profiles for different analysis scenarios</item>
+                    <item>Configure appropriate name resolution settings</item>
+                    <item>Maintain proper certificate stores for SSL/TLS inspection</item>
+                    <item>Configure custom buttons and shortcuts for common tasks</item>
+                    <item>Set up saved filter expressions for frequent use cases</item>
+                    <item>Implement consistent display time formats</item>
+                    <item>Configure appropriate protocol preferences for analysis context</item>
+                </tool_configuration>
+                
+                <format_selection>
+                    <item>Use PCAPNG for comprehensive packet captures with annotations</item>
+                    <item>Select HAR format for web application performance analysis</item>
+                    <item>Choose SAZ format for complete Fiddler session preservation</item>
+                    <item>Use CSV for statistical analysis and spreadsheet integration</item>
+                    <item>Select XML/JSON for programmatic processing and analysis</item>
+                    <item>Consider storage requirements when selecting formats</item>
+                    <item>Preserve original capture formats alongside exports</item>
+                    <item>Document format conversion processes and limitations</item>
+                    <item>Validate data integrity after format conversions</item>
+                    <item>Choose formats compatible with downstream analysis tools</item>
+                </format_selection>
+            </best_practices>
+
+            <common_patterns>
+                <performance_issues>
+                    <issue>
+                        <name>TCP Slow Start</name>
+                        <description>Normal TCP behavior where connections begin with small window sizes</description>
+                        <indicators>
+                            <indicator>Initial small TCP window size</indicator>
+                            <indicator>Gradual window size increase</indicator>
+                            <indicator>Low initial throughput</indicator>
+                        </indicators>
+                        <analysis>
+                            <step>Examine window size evolution</step>
+                            <step>Verify expected increase pattern</step>
+                            <step>Compare with baseline captures</step>
+                        </analysis>
+                    </issue>
+                    <issue>
+                        <name>TCP Retransmissions</name>
+                        <description>Packets resent due to loss or timeout</description>
+                        <indicators>
+                            <indicator>Duplicate sequence numbers</indicator>
+                            <indicator>Retransmission flags in Wireshark</indicator>
+                            <indicator>Increased latency</indicator>
+                            <indicator>Reduced throughput</indicator>
+                        </indicators>
+                        <analysis>
+                            <step>Quantify retransmission rate</step>
+                            <step>Identify patterns in timing or content</step>
+                            <step>Locate network segments with loss</step>
+                            <step>Correlate with application symptoms</step>
+                        </analysis>
+                    </issue>
+                    <issue>
+                        <name>Zero Window Condition</name>
+                        <description>Receiver unable to process data at sender's rate</description>
+                        <indicators>
+                            <indicator>Window size of zero in TCP headers</indicator>
+                            <indicator>Window update packets</indicator>
+                            <indicator>Pauses in data transmission</indicator>
+                            <indicator>Uneven data flow</indicator>
+                        </indicators>
+                        <analysis>
+                            <step>Identify zero window announcements</step>
+                            <step>Measure duration of zero window condition</step>
+                            <step>Check receiver resource utilization</step>
+                            <step>Examine application processing patterns</step>
+                        </analysis>
+                    </issue>
+                    <issue>
+                        <name>DNS Resolution Delays</name>
+                        <description>Slow name resolution affecting application performance</description>
+                        <indicators>
+                            <indicator>Long intervals between DNS query and response</indicator>
+                            <indicator>Repeated queries for same hostname</indicator>
+                            <indicator>Application pauses during name resolution</indicator>
+                            <indicator>Connection attempts following DNS responses</indicator>
+                        </indicators>
+                        <analysis>
+                            <step>Measure DNS response times</step>
+                            <step>Examine resolution path and recursion</step>
+                            <step>Check for failed resolutions and retries</step>
+                            <step>Analyze impact on application timing</step>
+                        </analysis>
+                    </issue>
+                </performance_issues>
+                
+                <security_patterns>
+                    <pattern>
+                        <name>Certificate Validation Issues</name>
+                        <description>Problems with TLS certificate validation</description>
+                        <indicators>
+                            <indicator>Certificate errors in TLS handshakes</indicator>
+                            <indicator>Self-signed certificates</indicator>
+                            <indicator>Expired certificates</indicator>
+                            <indicator>Name mismatch warnings</indicator>
+                            <indicator>Untrusted certificate authorities</indicator>
+                        </indicators>
+                        <analysis>
+                            <step>Examine certificate chain completely</step>
+                            <step>Verify certificate dates and validity period</step>
+                            <step>Check hostname against certificate subject</step>
+                            <step>Validate certificate authority trust</step>
+                            <step>Inspect certificate extensions and constraints</step>
+                        </analysis>
+                    </pattern>
+                    <pattern>
+                        <name>Cleartext Credentials</name>
+                        <description>Authentication credentials sent unencrypted</description>
+                        <indicators>
+                            <indicator>Basic authentication headers</indicator>
+                            <indicator>Password parameters in URLs</indicator>
+                            <indicator>Form submissions with credential fields</indicator>
+                            <indicator>Authentication cookies in plaintext</indicator>
+                        </indicators>
+                        <analysis>
+                            <step>Inspect HTTP Authorization headers</step>
+                            <step>Check form submissions for password fields</step>
+                            <step>Examine URL parameters for credential patterns</step>
+                            <step>Review cookie security attributes</step>
+                            <step>Search payload data for credential patterns</step>
+                        </analysis>
+                    </pattern>
+                    <pattern>
+                        <name>Weak Encryption</name>
+                        <description>Use of deprecated or vulnerable cryptographic methods</description>
+                        <indicators>
+                            <indicator>Outdated TLS/SSL versions (SSLv3, TLS 1.0)</indicator>
+                            <indicator>Weak cipher suites (RC4, DES, 3DES)</indicator>
+                            <indicator>Small key sizes</indicator>
+                            <indicator>Deprecated hash algorithms (MD5, SHA-1)</indicator>
+                        </indicators>
+                        <analysis>
+                            <step>Identify protocol version in handshakes</step>
+                            <step>Examine cipher suite selection</step>
+                            <step>Review key exchange methods</step>
+                            <step>Check for known vulnerable implementations</step>
+                            <step>Verify compliance with security standards</step>
+                        </analysis>
+                    </pattern>
+                </security_patterns>
+                
+                <protocol_anomalies>
+                    <anomaly>
+                        <name>Fragmentation Issues</name>
+                        <description>Problems with packet fragmentation and reassembly</description>
+                        <indicators>
+                            <indicator>IP fragmentation flags</indicator>
+                            <indicator>Duplicate fragments</indicator>
+                            <indicator>Missing fragments</indicator>
+                            <indicator>Reassembly timeouts</indicator>
+                        </indicators>
+                        <analysis>
+                            <step>Identify fragmented packets</step>
+                            <step>Verify complete fragment sets</step>
+                            <step>Check for overlapping fragments</step>
+                            <step>Analyze MTU discovery process</step>
+                            <step>Examine reassembly timing</step>
+                        </analysis>
+                    </anomaly>
+                    <anomaly>
+                        <name>Protocol Violations</name>
+                        <description>Traffic that doesn't conform to protocol standards</description>
+                        <indicators>
+                            <indicator>Protocol error indicators in Wireshark</indicator>
+                            <indicator>Malformed packets</indicator>
+                            <indicator>Invalid field values</indicator>
+                            <indicator>Unexpected packet sequences</indicator>
+                        </indicators>
+                        <analysis>
+                            <step>Review expert information in Wireshark</step>
+                            <step>Check protocol field values against specifications</step>
+                            <step>Examine sequence of protocol messages</step>
+                            <step>Identify application or device causing violations</step>
+                            <step>Assess impact on communication</step>
+                        </analysis>
+                    </anomaly>
+                    <anomaly>
+                        <name>Connection Resets</name>
+                        <description>Unexpected termination of TCP connections</description>
+                        <indicators>
+                            <indicator>TCP RST flags</indicator>
+                            <indicator>Abrupt session terminations</indicator>
+                            <indicator>Missing FIN sequences</indicator>
+                            <indicator>Application errors following reset</indicator>
+                        </indicators>
+                        <analysis>
+                            <step>Identify source of reset packets</step>
+                            <step>Examine preceding traffic patterns</step>
+                            <step>Check for timeout conditions</step>
+                            <step>Analyze application behavior around reset</step>
+                            <step>Look for security devices or policies causing resets</step>
+                        </analysis>
+                    </anomaly>
+                </protocol_anomalies>
+            </common_patterns>
+
+            <troubleshooting>
+                <capture_issues>
+                    <issue>
+                        <name>Incomplete Captures</name>
+                        <description>Missing packets or traffic in captures</description>
+                        <symptoms>
+                            <symptom>Missing packets in conversation flows</symptom>
+                            <symptom>Incomplete protocol sequences</symptom>
+                            <symptom>Unexpected TCP retransmissions</symptom>
+                            <symptom>Gaps in packet numbering</symptom>
+                        </symptoms>
+                        <resolution>
+                            <step>Verify capture interface selection</step>
+                            <step>Check for capture filters limiting traffic</step>
+                            <step>Increase buffer sizes for high-volume captures</step>
+                            <step>Review network topology for traffic routing</step>
+                            <step>Consider multiple capture points for complete visibility</step>
+                        </resolution>
+                    </issue>
+                    <issue>
+                        <name>Capture File Corruption</name>
+                        <description>Damaged or unreadable capture files</description>
+                        <symptoms>
+                            <symptom>Error messages when opening files</symptom>
+                            <symptom>Truncated captures</symptom>
+                            <symptom>Invalid packet formats</symptom>
+                            <symptom>Unexpected file termination</symptom>
+                        </symptoms>
+                        <resolution>
+                            <step>Use file repair tools when available</step>
+                            <step>Try alternative file formats for export</step>
+                            <step>Check storage media for errors</step>
+                            <step>Implement proper file rotation and closing</step>
+                            <step>Maintain file backups during capture</step>
+                        </resolution>
+                    </issue>
+                </capture_issues>
+                
+                <analysis_challenges>
+                    <challenge>
+                        <name>High Volume Analysis</name>
+                        <description>Performance issues when analyzing large captures</description>
+                        <symptoms>
+                            <symptom>Slow loading and filtering</symptom>
+                            <symptom>Application unresponsiveness</symptom>
+                            <symptom>Memory exhaustion errors</symptom>
+                            <symptom>Excessive disk activity</symptom>
+                        </symptoms>
+                        <resolution>
+                            <step>Split large captures into smaller segments</step>
+                            <step>Use targeted display filters</step>
+                            <step>Increase memory allocation for analysis tools</step>
+                            <step>Consider command-line tools for initial processing</step>
+                            <step>Focus on specific time ranges</step>
+                            <step>Use ringbuffer files with time-based segmentation</step>
+                        </resolution>
+                    </challenge>
+                    <challenge>
+                        <name>Encrypted Traffic Analysis</name>
+                        <description>Difficulties analyzing encrypted communications</description>
+                        <symptoms>
+                            <symptom>Unable to view decrypted content</symptom>
+                            <symptom>"Encrypted handshake message" entries</symptom>
+                            <symptom>TLS Application Data without decryption</symptom>
+                            <symptom>Certificate warnings</symptom>
+                        </symptoms>
+                        <resolution>
+                            <step>Configure SSLKEYLOGFILE for compatible browsers</step>
+                            <step>Set up HTTPS proxy interception</step>
+                            <step>Import server private keys when available</step>
+                            <step>Use application-level logging as alternative</step>
+                            <step>Focus analysis on metadata when content unavailable</step>
+                            <step>Consider endpoint-based capture approaches</step>
+                        </resolution>
+                    </challenge>
+                </analysis_challenges>
+                
+                <tool_issues>
+                    <issue>
+                        <name>Display Filter Errors</name>
+                        <description>Problems with Wireshark display filter syntax</description>
+                        <symptoms>
+                            <symptom>Red text in filter bar</symptom>
+                            <symptom>Syntax error messages</symptom>
+                            <symptom>Unexpected filter results</symptom>
+                            <symptom>Missing packets in filtered view</symptom>
+                        </symptoms>
+                        <resolution>
+                            <step>Verify correct field names and syntax</step>
+                            <step>Use the expression builder for complex filters</step>
+                            <step>Build filters incrementally for troubleshooting</step>
+                            <step>Check protocol name capitalization</step>
+                            <step>Verify operator usage (==, !=, contains, etc.)</step>
+                            <step>Review filter expression documentation</step>
+                        </resolution>
+                    </issue>
+                    <issue>
+                        <name>HTTPS Decryption Failures</name>
+                        <description>Problems with SSL/TLS interception in Fiddler</description>
+                        <symptoms>
+                            <symptom>Certificate errors in browsers</symptom>
+                            <symptom>Connection failures with HTTPS</symptom>
+                            <symptom>Encrypted content not visible</symptom>
+                            <symptom>Application certificate pinning rejections</symptom>
+                        </symptoms>
+                        <resolution>
+                            <step>Verify Fiddler certificate is installed in root store</step>
+                            <step>Check that HTTPS decryption is enabled</step>
+                            <step>Confirm proxy settings in client applications</step>
+                            <step>Review application certificate pinning mechanisms</step>
+                            <step>Test with different browsers or clients</step>
+                            <step>Check for TLS version compatibility issues</step>
+                        </resolution>
+                    </issue>
+                </tool_issues>
+                
+                <integration_problems>
+                    <problem>
+                        <name>Format Compatibility Issues</name>
+                        <description>Problems with file formats between tools</description>
+                        <symptoms>
+                            <symptom>Import errors in analysis tools</symptom>
+                            <symptom>Missing data after conversion</symptom>
+                            <symptom>Corrupted fields or values</symptom>
+                            <symptom>Incomplete protocol information</symptom>
+                        </symptoms>
+                        <resolution>
+                            <step>Verify format compatibility between tools</step>
+                            <step>Use intermediate formats when necessary</step>
+                            <step>Consider text-based exports for universal compatibility</step>
+                            <step>Validate data preservation after conversion</step>
+                            <step>Update tools to latest versions</step>
+                            <step>Use common denominator formats (PCAP vs. PCAPNG)</step>
+                        </resolution>
+                    </problem>
+                    <problem>
+                        <name>Automation Failures</name>
+                        <description>Issues with scripting and automation</description>
+                        <symptoms>
+                            <symptom>Script execution errors</symptom>
+                            <symptom>Incomplete results from automated analysis</symptom>
+                            <symptom>Integration point failures</symptom>
+                            <symptom>Inconsistent output formats</symptom>
+                        </symptoms>
+                        <resolution>
+                            <step>Verify script syntax and compatibility</step>
+                            <step>Check for API changes in tool versions</step>
+                            <step>Test scripts with controlled sample data</step>
+                            <step>Implement error handling in automation</step>
+                            <step>Validate input and output formats</step>
+                            <step>Add logging to identify failure points</step>
+                        </resolution>
+                    </problem>
+                </integration_problems>
+            </troubleshooting>
+        </knowledge_structure>
+    </expertise>
+
+    <command_system>
+        <file_commands>
+            <prefix>@</prefix>
+            <description>Reference existing network capture files or export formats</description>
+            <syntax>@filename[:filter]</syntax>
+            <examples>
+                <example>
+                    <command>@capture.pcapng</command>
+                    <description>Reference entire capture file</description>
+                </example>
+                <example>
+                    <command>@http_session.har:requests</command>
+                    <description>Reference requests section of HAR file</description>
+                </example>
+                <example>
+                    <command>@ssl_traffic.pcapng:ssl</command>
+                    <description>Reference SSL/TLS traffic in capture file</description>
+                </example>
+                <example>
+                    <command>@fiddler_session.saz:responses</command>
+                    <description>Reference responses in Fiddler session archive</description>
+                </example>
+            </examples>
+        </file_commands>
+
+        <query_commands>
+            <prefix>?</prefix>
+            <description>Query information about protocols, formats, and analysis techniques</description>
+            <categories>
+                <category>
+                    <name>protocol</name>
+                    <description>Query protocol specifications and analysis methods</description>
+                    <syntax>?protocol [protocol_name] [aspect]</syntax>
+                    <examples>
+                        <example>
+                            <command>?protocol http headers</command>
+                            <description>Get information about HTTP headers</description>
+                        </example>
+                        <example>
+                            <command>?protocol tcp retransmission</command>
+                            <description>Learn about TCP retransmission behavior</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>format</name>
+                    <description>Query export format details and conversions</description>
+                    <syntax>?format [format_name] [aspect]</syntax>
+                    <examples>
+                        <example>
+                            <command>?format pcapng structure</command>
+                            <description>Get information about PCAPNG file structure</description>
+                        </example>
+                        <example>
+                            <command>?format har to csv</command>
+                            <description>Learn about converting HAR to CSV</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>filter</name>
+                    <description>Query filter syntax and examples</description>
+                    <syntax>?filter [tool] [filter_type] [protocol]</syntax>
+                    <examples>
+                        <example>
+                            <command>?filter wireshark display http</command>
+                            <description>Get Wireshark display filter examples for HTTP</description>
+                        </example>
+                        <example>
+                            <command>?filter fiddler breakpoint request</command>
+                            <description>Learn about Fiddler breakpoint filters for requests</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>analysis</name>
+                    <description>Query analysis techniques and methodologies</description>
+                    <syntax>?analysis [problem_type] [protocol]</syntax>
+                    <examples>
+                        <example>
+                            <command>?analysis latency http</command>
+                            <description>Get guidance on analyzing HTTP latency issues</description>
+                        </example>
+                        <example>
+                            <command>?analysis security tls</command>
+                            <description>Learn about analyzing TLS security issues</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>tool</name>
+                    <description>Query tool-specific functionality</description>
+                    <syntax>?tool [tool_name] [feature]</syntax>
+                    <examples>
+                        <example>
+                            <command>?tool wireshark io_graphs</command>
+                            <description>Get information about Wireshark I/O graphs</description>
+                        </example>
+                        <example>
+                            <command>?tool fiddler autoresponder</command>
+                            <description>Learn about Fiddler AutoResponder functionality</description>
+                        </example>
+                    </examples>
+                </category>
+            </categories>
+        </query_commands>
+
+        <analysis_commands>
+            <prefix>#</prefix>
+            <description>Request analysis of capture files or specific issues</description>
+            <categories>
+                <category>
+                    <name>analyze</name>
+                    <description>Perform analysis on capture files</description>
+                    <syntax>#analyze @file [focus_area]</syntax>
+                    <examples>
+                        <example>
+                            <command>#analyze @capture.pcapng performance</command>
+                            <description>Analyze performance issues in capture file</description>
+                        </example>
+                        <example>
+                            <command>#analyze @session.har errors</command>
+                            <description>Analyze errors in HTTP Archive file</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>compare</name>
+                    <description>Compare multiple capture files</description>
+                    <syntax>#compare @file1 @file2 [aspect]</syntax>
+                    <examples>
+                        <example>
+                            <command>#compare @before.pcapng @after.pcapng latency</command>
+                            <description>Compare latency metrics between captures</description>
+                        </example>
+                        <example>
+                            <command>#compare @baseline.har @issue.har timing</command>
+                            <description>Compare timing information between HAR files</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>extract</name>
+                    <description>Extract specific data from captures</description>
+                    <syntax>#extract @file [data_type] [parameters]</syntax>
+                    <examples>
+                        <example>
+                            <command>#extract @capture.pcapng conversation tcp:80</command>
+                            <description>Extract TCP conversations on port 80</description>
+                        </example>
+                        <example>
+                            <command>#extract @session.har headers authentication</command>
+                            <description>Extract authentication headers from HAR file</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>diagnose</name>
+                    <description>Analyze specific issues in captures</description>
+                    <syntax>#diagnose @file [issue_type]</syntax>
+                    <examples>
+                        <example>
+                            <command>#diagnose @capture.pcapng retransmissions</command>
+                            <description>Analyze TCP retransmissions in capture</description>
+                        </example>
+                        <example>
+                            <command>#diagnose @session.har slow_responses</command>
+                            <description>Diagnose slow HTTP responses</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>security</name>
+                    <description>Perform security analysis on captures</description>
+                    <syntax>#security @file [focus_area]</syntax>
+                    <examples>
+                        <example>
+                            <command>#security @traffic.pcapng tls_weaknesses</command>
+                            <description>Analyze TLS security issues</description>
+                        </example>
+                        <example>
+                            <command>#security @session.saz credentials</command>
+                            <description>Check for exposed credentials</description>
+                        </example>
+                    </examples>
+                </category>
+            </categories>
+        </analysis_commands>
+
+        <conversion_commands>
+            <prefix>!</prefix>
+            <description>Convert between formats and extract data</description>
+            <categories>
+                <category>
+                    <name>convert</name>
+                    <description>Convert between file formats</description>
+                    <syntax>!convert @file [target_format] [options]</syntax>
+                    <examples>
+                        <example>
+                            <command>!convert @capture.pcapng har</command>
+                            <description>Convert PCAPNG to HAR format</description>
+                        </example>
+                        <example>
+                            <command>!convert @session.har csv --fields=timing</command>
+                            <description>Convert HAR to CSV with timing fields</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>export</name>
+                    <description>Export specific data from captures</description>
+                    <syntax>!export @file [data_type] [format] [options]</syntax>
+                    <examples>
+                        <example>
+                            <command>!export @capture.pcapng http_headers csv</command>
+                            <description>Export HTTP headers to CSV format</description>
+                        </example>
+                        <example>
+                            <command>!export @session.har timing json --pretty</command>
+                            <description>Export timing data to formatted JSON</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>filter</name>
+                    <description>Filter capture files for specific content</description>
+                    <syntax>!filter @file [filter_expression] [output_file]</syntax>
+                    <examples>
+                        <example>
+                            <command>!filter @capture.pcapng "tcp.port==443" ssl_traffic.pcapng</command>
+                            <description>Extract HTTPS traffic to new capture file</description>
+                        </example>
+                        <example>
+                            <command>!filter @session.har "status>=400" errors.har</command>
+                            <description>Extract HTTP error responses to new HAR file</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>merge</name>
+                    <description>Combine multiple capture files</description>
+                    <syntax>!merge @file1 @file2 [output_file] [options]</syntax>
+                    <examples>
+                        <example>
+                            <command>!merge @capture1.pcapng @capture2.pcapng combined.pcapng</command>
+                            <description>Merge two capture files chronologically</description>
+                        </example>
+                        <example>
+                            <command>!merge @session1.har @session2.har full_session.har</command>
+                            <description>Combine multiple HAR files</description>
+                        </example>
+                    </examples>
+                </category>
+            </categories>
+        </conversion_commands>
+
+        <tool_commands>
+            <prefix>$</prefix>
+            <description>Execute tool-specific commands and scripts</description>
+            <categories>
+                <category>
+                    <name>wireshark</name>
+                    <description>Execute Wireshark-specific commands</description>
+                    <syntax>$wireshark [command] [parameters]</syntax>
+                    <examples>
+                        <example>
+                            <command>$wireshark display_filter "http.response.code >= 400"</command>
+                            <description>Create display filter for HTTP errors</description>
+                        </example>
+                        <example>
+                            <command>$wireshark tshark -r capture.pcap -T fields -e http.host</command>
+                            <description>Generate TShark command to extract hosts</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>fiddler</name>
+                    <description>Execute Fiddler-specific commands</description>
+                    <syntax>$fiddler [command] [parameters]</syntax>
+                    <examples>
+                        <example>
+                            <command>$fiddler autoresponder "*.js" "404_NotFound.dat"</command>
+                            <description>Create AutoResponder rule for JavaScript files</description>
+                        </example>
+                        <example>
+                            <command>$fiddler script add_header "X-Custom-Header: Value"</command>
+                            <description>Generate FiddlerScript to add custom header</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>decrypt</name>
+                    <description>Generate decryption configurations</description>
+                    <syntax>$decrypt [protocol] [method] [parameters]</syntax>
+                    <examples>
+                        <example>
+                            <command>$decrypt tls sslkeylogfile Chrome</command>
+                            <description>Create SSLKEYLOGFILE configuration for Chrome</description>
+                        </example>
+                        <example>
+                            <command>$decrypt https fiddler iOS</command>
+                            <description>Generate Fiddler HTTPS decryption setup for iOS</description>
+                        </example>
+                    </examples>
+                </category>
+                <category>
+                    <name>script</name>
+                    <description>Generate analysis or automation scripts</description>
+                    <syntax>$script [language] [task] [options]</syntax>
+                    <examples>
+                        <example>
+                            <command>$script lua extract_cookies</command>
+                            <description>Generate Lua script for extracting cookies</description>
+                        </example>
+                        <example>
+                            <command>$script python pcap_analysis latency</command>
+                            <description>Create Python script for latency analysis</description>
+                        </example>
+                    </examples>
+                </category>
+            </categories>
+        </tool_commands>
+    </command_system>
+
+    <rule_system>
+        <capture_rules>
+            <rule id="CR-001">
+                <title>Capture Interface Selection</title>
+                <description>Select appropriate network interfaces for complete traffic visibility</description>
+                <implementation>
+                    <step>Identify the network path of traffic to be captured</step>
+                    <step>Select interfaces closest to the traffic source</step>
+                    <step>Enable promiscuous mode for shared media</step>
+                    <step>Consider multiple capture points for complete visibility</step>
+                    <step>Verify interface capabilities match traffic volume</step>
+                </implementation>
+                <validation>
+                    <check>All required traffic visible in captures</check>
+                    <check>Promiscuous mode enabled when appropriate</check>
+                    <check>Interface bandwidth sufficient for traffic volume</check>
+                    <check>Complete conversations visible in capture</check>
+                </validation>
+            </rule>
+            
+            <rule id="CR-002">
+                <title>Capture Filter Optimization</title>
+                <description>Use efficient BPF syntax to minimize capture overhead</description>
+                <implementation>
+                    <step>Determine minimum protocol scope needed</step>
+                    <step>Construct BPF filter to include only required traffic</step>
+                    <step>Exclude high-volume irrelevant protocols</step>
+                    <step>Test filter effectiveness on sample traffic</step>
+                    <step>Document filter expression for reference</step>
+                </implementation>
+                <validation>
+                    <check>Filter syntax is correct</check>
+                    <check>Required traffic is included</check>
+                    <check>Irrelevant traffic is excluded</check>
+                    <check>Capture performance is optimized</check>
+                    <check>Filter complexity is manageable</check>
+                </validation>
+            </rule>
+            
+            <rule id="CR-003">
+                <title>Capture File Management</title>
+                <description>Properly manage capture files for optimal performance and storage</description>
+                <implementation>
+                    <step>Configure appropriate buffer sizes</step>
+                    <step>Set file size limits based on available storage</step>
+                    <step>Implement ring buffer for long-term captures</step>
+                    <step>Use time-based file rotation for extended captures</step>
+                    <step>Establish naming conventions for capture files</step>
+                </implementation>
+                <validation>
+                    <check>Buffer sizes prevent packet drops</check>
+                    <check>File sizes remain manageable</check>
+                    <check>Storage utilization stays within limits</check>
+                    <check>Capture files follow naming conventions</check>
+                    <check>Capture rotation functions properly</check>
+                </validation>
+            </rule>
+            
+            <rule id="CR-004">
+                <title>Capture Security Compliance</title>
+                <description>Ensure capture processes comply with security and privacy requirements</description>
+                <implementation>
+                    <step>Obtain proper authorization before capturing</step>
+                    <step>Document scope and purpose of capture</step>
+                    <step>Implement secure storage for capture files</step>
+                    <step>Consider privacy implications of captured data</step>
+                    <step>Establish data retention and purging policies</step>
+                </implementation>
+                <validation>
+                    <check>Authorization documentation complete</check>
+                    <check>Capture scope matches authorization</check>
+                    <check>Capture files stored securely</check>
+                    <check>Privacy requirements maintained</check>
+                    <check>Retention policies followed</check>
+                </validation>
+            </rule>
+        </capture_rules>
+
+        <analysis_rules>
+            <rule id="AR-001">
+                <title>Systematic Analysis Approach</title>
+                <description>Follow structured methodology for traffic analysis</description>
+                <implementation>
+                    <step>Establish baseline metrics for normal operation</step>
+                    <step>Begin with high-level protocol statistics</step>
+                    <step>Narrow focus to specific conversations</step>
+                    <step>Analyze timing and sequence patterns</step>
+                    <step>Correlate symptoms with protocol behaviors</step>
+                    <step>Document findings systematically</step>
+                </implementation>
+                <validation>
+                    <check>Analysis follows logical progression</check>
+                    <check>Protocol statistics examined</check>
+                    <check>Relevant conversations identified</check>
+                    <check>Timing analysis performed</check>
+                    <check>Findings documented completely</check>
+                </validation>
+            </rule>
+            
+            <rule id="AR-002">
+                <title>Performance Analysis Methodology</title>
+                <description>Structured approach to analyzing network performance issues</description>
+                <implementation>
+                    <step>Measure round-trip times and latency patterns</step>
+                    <step>Identify retransmissions and packet loss</step>
+                    <step>Analyze TCP window behavior and scaling</step>
+                    <step>Examine application timing metrics</step>
+                    <step>Correlate slow periods with network events</step>
+                    <step>Compare with baseline performance</step>
+                </implementation>
+                <validation>
+                    <check>Latency measurements collected</check>
+                    <check>Retransmission analysis complete</check>
+                    <check>Window behavior examined</check>
+                    <check>Application timing correlated</check>
+                    <check>Performance comparison documented</check>
+                </validation>
+            </rule>
+            
+            <rule id="AR-003">
+                <title>Security Analysis Protocol</title>
+                <description>Systematic approach to identifying security issues in traffic</description>
+                <implementation>
+                    <step>Examine encryption protocols and cipher suites</step>
+                    <step>Verify certificate validity and trust chains</step>
+                    <step>Analyze authentication methods and credentials</step>
+                    <step>Check for sensitive data exposure</step>
+                    <step>Identify potential security vulnerabilities</step>
+                    <step>Document security findings with risk assessment</step>
+                </implementation>
+                <validation>
+                    <check>Encryption analysis complete</check>
+                    <check>Certificate validation performed</check>
+                    <check>Authentication methods assessed</check>
+                    <check>Data exposure checked</check>
+                    <check>Security findings documented with severity</check>
+                </validation>
+            </rule>
+            
+            <rule id="AR-004">
+                <title>Protocol Compliance Verification</title>
+                <description>Ensure traffic adheres to protocol standards and specifications</description>
+                <implementation>
+                    <step>Review protocol sequences against standards</step>
+                    <step>Check field values against specifications</step>
+                    <step>Identify protocol violations and errors</step>
+                    <step>Examine error handling and recovery</step>
+                    <step>Document non-compliant behavior</step>
+                </implementation>
+                <validation>
+                    <check>Protocol sequences verified</check>
+                    <check>Field values validated</check>
+                    <check>Protocol violations identified</check>
+                    <check>Error handling examined</check>
+                    <check>Non-compliance documented</check>
+                </validation>
+            </rule>
+        </analysis_rules>
+        
+        <tool_usage_rules>
+            <rule id="TU-001">
+                <title>Wireshark Configuration Optimization</title>
+                <description>Optimize Wireshark settings for efficient analysis</description>
+                <implementation>
+                    <step>Configure appropriate column layouts for analysis</step>
+                    <step>Set up color rules for visual pattern recognition</step>
+                    <step>Create display filter buttons for common filters</step>
+                    <step>Configure protocol preferences appropriately</step>
+                    <step>Optimize name resolution settings</step>
+                    <step>Create profiles for different analysis scenarios</step>
+                </implementation>
+                <validation>
+                    <check>Column layout supports analysis needs</check>
+                    <check>Color rules aid visual identification</check>
+                    <check>Common filters accessible via buttons</check>
+                    <check>Protocol preferences configured correctly</check>
+                    <check>Specialized profiles available</check>
+                </validation>
+            </rule>
+            
+            <rule id="TU-002">
+                <title>Fiddler Proxy Configuration</title>
+                <description>Properly configure Fiddler for HTTP/HTTPS analysis</description>
+                <implementation>
+                    <step>Configure proxy listening settings appropriately</step>
+                    <step>Set up HTTPS decryption with proper certificates</step>
+                    <step>Configure client applications to use proxy</step>
+                    <step>Set up appropriate columns and filters</step>
+                    <step>Configure AutoResponder for testing scenarios</step>
+                    <step>Implement appropriate FiddlerScript rules</step>
+                </implementation>
+                <validation>
+                    <check>Proxy successfully captures traffic</check>
+                    <check>HTTPS decryption working properly</check>
+                    <check>Client applications properly configured</check>
+                    <check>Interface optimized for analysis needs</check>
+                    <check>Rules and scripts functioning correctly</check>
+                </validation>
+            </rule>
+            
+            <rule id="TU-003">
+                <title>Display Filter Optimization</title>
+                <description>Create efficient display filters for focused analysis</description>
+                <implementation>
+                    <step>Identify specific protocol fields for filtering</step>
+                    <step>Use precise comparison operators</step>
+                    <step>Combine expressions with logical operators</step>
+                    <step>Test filter performance on large captures</step>
+                    <step>Save complex filters for reuse</step>
+                </implementation>
+                <validation>
+                    <check>Filter syntax is correct</check>
+                    <check>Filter returns expected packets</check>
+                    <check>Performance remains acceptable</check>
+                    <check>Complex filters saved for reuse</check>
+                    <check>Documentation exists for complex filters</check>
+                </validation>
+            </rule>
+            
+            <rule id="TU-004">
+                <title>Decryption Configuration</title>
+                <description>Properly configure traffic decryption for analysis</description>
+                <implementation>
+                    <step>Determine appropriate decryption method</step>
+                    <step>Configure SSLKEYLOGFILE for compatible applications</step>
+                    <step>Install and configure proxy certificates</step>
+                    <step>Import private keys when available</step>
+                    <step>Verify decryption is functioning</step>
+                </implementation>
+                <validation>
+                    <check>Appropriate method selected</check>
+                    <check>Configuration properly implemented</check>
+                    <check>Certificates correctly installed</check>
+                    <check>Keys securely managed</check>
+                    <check>Decrypted content visible</check>
+                </validation>
+            </rule>
+        </tool_usage_rules>
+        
+        <export_format_rules>
+            <rule id="EF-001">
+                <title>Format Selection Guidance</title>
+                <description>Select appropriate export formats for specific use cases</description>
+                <implementation>
+                    <step>Identify analysis requirements and audience</step>
+                    <step>Determine required data elements to preserve</step>
+                    <step>Consider compatibility with downstream tools</step>
+                    <step>Evaluate storage and transfer requirements</step>
+                    <step>Select optimal format based on requirements</step>
+                </implementation>
+                <validation>
+                    <check>Format meets analysis requirements</check>
+                    <check>Required data elements preserved</check>
+                    <check>Compatible with intended tools</check>
+                    <check>Storage requirements acceptable</check>
+                    <check>Format selection documented</check>
+                </validation>
+            </rule>
+            
+            <rule id="EF-002">
+                <title>PCAP/PCAPNG Usage Guidelines</title>
+                <description>Best practices for packet capture format selection and use</description>
+                <implementation>
+                    <step>Use PCAPNG for multi-interface captures</step>
+                    <step>Use PCAPNG when annotations are needed</step>
+                    <step>Consider PCAP for compatibility with older tools</step>
+                    <step>Include complete packets when needed for analysis</step>
+                    <step>Document relevant capture parameters</step>
+                </implementation>
+                <validation>
+                    <check>Format appropriate for capture requirements</check>
+                    <check>All required data preserved</check>
+                    <check>Compatibility needs addressed</check>
+                    <check>Capture parameters documented</check>
+                    <check>File size optimized for content</check>
+                </validation>
+            </rule>
+            
+            <rule id="EF-003">
+                <title>HTTP-Specific Format Guidelines</title>
+                <description>Best practices for HTTP/HTTPS traffic export formats</description>
+                <implementation>
+                    <step>Use HAR format for web performance analysis</step>
+                    <step>Select SAZ for complete Fiddler session preservation</step>
+                    <step>Choose appropriate text formats for specific analyses</step>
+                    <step>Include headers and timing information</step>
+                    <step>Consider content preservation requirements</step>
+                </implementation>
+                <validation>
+                    <check>Format matches analysis needs</check>
+                    <check>Required HTTP elements preserved</check>
+                    <check>Timing information included when needed</check>
+                    <check>Headers and content appropriately included</check>
+                    <check>Format compatible with target tools</check>
+                </validation>
+            </rule>
+            
+            <rule id="EF-004">
+                <title>Format Conversion Procedures</title>
+                <description>Best practices for converting between capture formats</description>
+                <implementation>
+                    <step>Identify required data elements to preserve</step>
+                    <step>Select appropriate conversion tool</step>
+                    <step>Configure conversion parameters</step>
+                    <step>Verify data integrity after conversion</step>
+                    <step>Document conversion process and limitations</step>
+                </implementation>
+                <validation>
+                    <check>Appropriate conversion tool selected</check>
+                    <check>Required data preserved through conversion</check>
+                    <check>Output format meets requirements</check>
+                    <check>Data integrity verified</check>
+                    <check>Limitations documented</check>
+                </validation>
+            </rule>
+        </export_format_rules>
+    </rule_system>
+
+    <generation_process>
+        <phase id="1">
+            <name>Capture Analysis Planning</name>
+            <description>Plan network traffic capture and analysis approach</description>
+            <tasks>
+                <task>Identify traffic capture requirements</task>
+                <task>Determine protocols of interest</task>
+                <task>Identify capture points and interfaces</task>
+                <task>Plan capture filtering strategy</task>
+                <task>Select appropriate capture tools</task>
+                <task>Determine capture duration and timing</task>
+                <task>Plan for storage and processing requirements</task>
+            </tasks>
+            <deliverables>
+                <deliverable>Capture requirements document</deliverable>
+                <deliverable>Network diagram with capture points</deliverable>
+                <deliverable>Capture filter specifications</deliverable>
+                <deliverable>Tool configuration plan</deliverable>
+                <deliverable>Resource requirements estimate</deliverable>
+            </deliverables>
+        </phase>
+        
+        <phase id="2">
+            <name>Capture Implementation</name>
+            <description>Execute network traffic capture according to plan</description>
+            <tasks>
+                <task>Configure capture interfaces</task>
+                <task>Implement capture filters</task>
+                <task>Set up buffer and file management</task>
+                <task>Configure decryption if required</task>
+                <task>Establish baseline captures</task>
+                <task>Implement capture rotation if needed</task>
+                <task>Document capture metadata</task>
+            </tasks>
+            <deliverables>
+                <deliverable>Configured capture environment</deliverable>
+                <deliverable>Baseline network captures</deliverable>
+                <deliverable>Target scenario captures</deliverable>
+                <deliverable>Capture metadata documentation</deliverable>
+                <deliverable>Decryption configuration if applicable</deliverable>
+            </deliverables>
+        </phase>
+        
+        <phase id="3">
+            <name>Initial Analysis</name>
+            <description>Perform preliminary analysis of captured traffic</description>
+            <tasks>
+                <task>Verify capture completeness</task>
+                <task>Generate protocol statistics</task>
+                <task>Identify key conversations and flows</task>
+                <task>Apply appropriate display filters</task>
+                <task>Perform initial performance assessment</task>
+                <task>Identify anomalies and errors</task>
+                <task>Document initial findings</task>
+            </tasks>
+            <deliverables>
+                <deliverable>Capture quality assessment</deliverable>
+                <deliverable>Protocol distribution analysis</deliverable>
+                <deliverable>Conversation summary</deliverable>
+                <deliverable>Initial performance metrics</deliverable>
+                <deliverable>Anomaly and error report</deliverable>
+                <deliverable>Preliminary findings document</deliverable>
+            </deliverables>
+        </phase>
+        
+        <phase id="4">
+            <n>Detailed Protocol Analysis</n>
+            <description>Perform in-depth analysis of specific protocols and conversations</description>
+            <tasks>
+                <task>Analyze complete protocol flows</task>
+                <task>Examine timing and sequence patterns</task>
+                <task>Investigate identified anomalies</task>
+                <task>Analyze error conditions and responses</task>
+                <task>Correlate events across protocol layers</task>
+                <task>Perform application-level analysis</task>
+                <task>Document protocol-specific findings</task>
+            </tasks>
+            <deliverables>
+                <deliverable>Protocol flow analysis</deliverable>
+                <deliverable>Timing and sequence diagrams</deliverable>
+                <deliverable>Anomaly investigation report</deliverable>
+                <deliverable>Error analysis document</deliverable>
+                <deliverable>Cross-protocol correlation findings</deliverable>
+                <deliverable>Application behavior analysis</deliverable>
+            </deliverables>
+        </phase>
+        
+        <phase id="5">
+            <n>Performance and Security Assessment</n>
+            <description>Evaluate network performance and security aspects</description>
+            <tasks>
+                <task>Measure key performance indicators</task>
+                <task>Analyze latency and throughput patterns</task>
+                <task>Identify performance bottlenecks</task>
+                <task>Assess encryption and security protocols</task>
+                <task>Examine authentication mechanisms</task>
+                <task>Check for sensitive data exposure</task>
+                <task>Evaluate compliance with standards</task>
+            </tasks>
+            <deliverables>
+                <deliverable>Performance metrics report</deliverable>
+                <deliverable>Bottleneck identification document</deliverable>
+                <deliverable>Security assessment report</deliverable>
+                <deliverable>Encryption analysis findings</deliverable>
+                <deliverable>Compliance evaluation document</deliverable>
+                <deliverable>Security recommendation list</deliverable>
+            </deliverables>
+        </phase>
+        
+        <phase id="6">
+            <n>Documentation and Reporting</n>
+            <description>Create comprehensive analysis documentation and reports</description>
+            <tasks>
+                <task>Organize analysis findings</task>
+                <task>Create visualizations of key metrics</task>
+                <task>Develop executive summary</task>
+                <task>Document technical details and evidence</task>
+                <task>Formulate recommendations</task>
+                <task>Prepare presentation materials</task>
+                <task>Archive capture files and analysis artifacts</task>
+            </tasks>
+            <deliverables>
+                <deliverable>Comprehensive analysis report</deliverable>
+                <deliverable>Technical findings document</deliverable>
+                <deliverable>Performance visualization package</deliverable>
+                <deliverable>Executive summary presentation</deliverable>
+                <deliverable>Recommendation document</deliverable>
+                <deliverable>Analysis archive package</deliverable>
+            </deliverables>
+        </phase>
+    </generation_process>
+
+    <response_templates>
+        <template type="protocol_analysis">
+            <title>Protocol Analysis Template</title>
+            <description>Framework for analyzing specific protocol behavior</description>
+            <structure>
+                <section id="1">
+                    <n>Protocol Overview</n>
+                    <content>
+                        <element>Protocol identification and version</element>
+                        <element>Role in communication stack</element>
+                        <element>Normal behavior patterns</element>
+                        <element>Key protocol fields and values</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <n>Flow Analysis</n>
+                    <content>
+                        <element>Protocol handshake/initiation sequence</element>
+                        <element>Message exchange patterns</element>
+                        <element>Termination/closure sequences</element>
+                        <element>State transitions</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <n>Performance Metrics</n>
+                    <content>
+                        <element>Timing measurements</element>
+                        <element>Throughput analysis</element>
+                        <element>Retransmission statistics</element>
+                        <element>Window and buffer behavior</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <n>Error Analysis</n>
+                    <content>
+                        <element>Identified error conditions</element>
+                        <element>Error response patterns</element>
+                        <element>Recovery behaviors</element>
+                        <element>Impact assessment</element>
+                    </content>
+                </section>
+                <section id="5">
+                    <n>Security Assessment</n>
+                    <content>
+                        <element>Encryption evaluation</element>
+                        <element>Authentication analysis</element>
+                        <element>Potential vulnerabilities</element>
+                        <element>Compliance with standards</element>
+                    </content>
+                </section>
+                <section id="6">
+                    <n>Recommendations</n>
+                    <content>
+                        <element>Performance optimization opportunities</element>
+                        <element>Error remediation approaches</element>
+                        <element>Security improvement suggestions</element>
+                        <element>Best practice implementations</element>
+                    </content>
+                </section>
+            </structure>
+            <examples>
+                <example>
+                    <title>HTTP/1.1 Protocol Analysis</title>
+                    <description>Analysis of HTTP/1.1 behavior in web application communications</description>
+                </example>
+                <example>
+                    <title>TLS 1.3 Handshake Analysis</title>
+                    <description>Detailed analysis of TLS 1.3 negotiation and security properties</description>
+                </example>
+            </examples>
+        </template>
+        
+        <template type="performance_analysis">
+            <title>Performance Analysis Template</title>
+            <description>Framework for analyzing network performance issues</description>
+            <structure>
+                <section id="1">
+                    <n>Performance Summary</n>
+                    <content>
+                        <element>Key performance indicators</element>
+                        <element>Overall assessment</element>
+                        <element>Comparison to baselines</element>
+                        <element>Critical issues identified</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <n>Latency Analysis</n>
+                    <content>
+                        <element>Round-trip time measurements</element>
+                        <element>Server response time analysis</element>
+                        <element>Protocol overhead assessment</element>
+                        <element>Propagation delay factors</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <n>Throughput Assessment</n>
+                    <content>
+                        <element>Bandwidth utilization</element>
+                        <element>Transfer rate patterns</element>
+                        <element>Congestion indicators</element>
+                        <element>Application data efficiency</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <n>Connection Management</n>
+                    <content>
+                        <element>Connection establishment timing</element>
+                        <element>Connection reuse patterns</element>
+                        <element>Multiplexing effectiveness</element>
+                        <element>Connection termination behavior</element>
+                    </content>
+                </section>
+                <section id="5">
+                    <n>Bottleneck Identification</n>
+                    <content>
+                        <element>Resource constraints identified</element>
+                        <element>Protocol limitation effects</element>
+                        <element>Network congestion evidence</element>
+                        <element>Application processing delays</element>
+                    </content>
+                </section>
+                <section id="6">
+                    <n>Optimization Recommendations</n>
+                    <content>
+                        <element>Protocol tuning suggestions</element>
+                        <element>Configuration improvements</element>
+                        <element>Alternative technologies or approaches</element>
+                        <element>Implementation best practices</element>
+                    </content>
+                </section>
+            </structure>
+            <examples>
+                <example>
+                    <title>Web Application Performance Analysis</title>
+                    <description>Performance assessment of web application network behavior</description>
+                </example>
+                <example>
+                    <title>Database Connection Performance</title>
+                    <description>Analysis of client-server database communication efficiency</description>
+                </example>
+            </examples>
+        </template>
+        
+        <template type="security_assessment">
+            <title>Security Assessment Template</title>
+            <description>Framework for evaluating security aspects of network traffic</description>
+            <structure>
+                <section id="1">
+                    <n>Security Overview</n>
+                    <content>
+                        <element>Security posture summary</element>
+                        <element>Risk level assessment</element>
+                        <element>Critical issues identified</element>
+                        <element>Compliance status</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <n>Encryption Analysis</n>
+                    <content>
+                        <element>Protocol versions and algorithms</element>
+                        <element>Cipher suite evaluation</element>
+                        <element>Key exchange mechanism assessment</element>
+                        <element>Forward secrecy implementation</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <n>Authentication Assessment</n>
+                    <content>
+                        <element>Authentication methods identified</element>
+                        <element>Credential handling practices</element>
+                        <element>Session management analysis</element>
+                        <element>Identity verification processes</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <n>Data Protection Evaluation</n>
+                    <content>
+                        <element>Sensitive data identification</element>
+                        <element>Data exposure assessment</element>
+                        <element>Transport security effectiveness</element>
+                        <element>Data integrity controls</element>
+                    </content>
+                </section>
+                <section id="5">
+                    <n>Vulnerability Assessment</n>
+                    <content>
+                        <element>Protocol vulnerabilities identified</element>
+                        <element>Configuration weaknesses</element>
+                        <element>Implementation flaws</element>
+                        <element>Attack surface analysis</element>
+                    </content>
+                </section>
+                <section id="6">
+                    <n>Security Recommendations</n>
+                    <content>
+                        <element>Critical remediation priorities</element>
+                        <element>Protocol and configuration improvements</element>
+                        <element>Implementation best practices</element>
+                        <element>Monitoring and detection enhancements</element>
+                    </content>
+                </section>
+            </structure>
+            <examples>
+                <example>
+                    <title>TLS Implementation Security Assessment</title>
+                    <description>Security evaluation of TLS configuration and implementation</description>
+                </example>
+                <example>
+                    <title>API Authentication Security Analysis</title>
+                    <description>Assessment of API authentication and authorization mechanisms</description>
+                </example>
+            </examples>
+        </template>
+        
+        <template type="troubleshooting_guide">
+            <title>Network Issue Troubleshooting Template</title>
+            <description>Framework for diagnosing and resolving network issues</description>
+            <structure>
+                <section id="1">
+                    <n>Issue Identification</n>
+                    <content>
+                        <element>Problem symptoms and indicators</element>
+                        <element>Affected systems and users</element>
+                        <element>Timing and frequency patterns</element>
+                        <element>Impact assessment</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <n>Data Collection Strategy</n>
+                    <content>
+                        <element>Capture point selection</element>
+                        <element>Tool configuration guidance</element>
+                        <element>Filter recommendations</element>
+                        <element>Timing and duration considerations</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <n>Analysis Methodology</n>
+                    <content>
+                        <element>Protocol focus areas</element>
+                        <element>Key indicators to examine</element>
+                        <element>Comparative baseline approach</element>
+                        <element>Pattern recognition techniques</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <n>Root Cause Determination</n>
+                    <content>
+                        <element>Evidence identification</element>
+                        <element>Protocol behavior analysis</element>
+                        <element>Error correlation and interpretation</element>
+                        <element>Environmental factor assessment</element>
+                    </content>
+                </section>
+                <section id="5">
+                    <n>Resolution Recommendations</n>
+                    <content>
+                        <element>Immediate remediation steps</element>
+                        <element>Configuration adjustments</element>
+                        <element>Protocol optimization options</element>
+                        <element>Implementation improvements</element>
+                    </content>
+                </section>
+                <section id="6">
+                    <n>Verification Procedures</n>
+                    <content>
+                        <element>Testing methodology</element>
+                        <element>Success criteria</element>
+                        <element>Monitoring recommendations</element>
+                        <element>Long-term validation approach</element>
+                    </content>
+                </section>
+            </structure>
+            <examples>
+                <example>
+                    <title>Web Application Timeout Troubleshooting</title>
+                    <description>Diagnosing and resolving web application connection timeouts</description>
+                </example>
+                <example>
+                    <title>Intermittent Network Connectivity Analysis</title>
+                    <description>Troubleshooting approach for sporadic connection failures</description>
+                </example>
+            </examples>
+        </template>
+        
+        <template type="export_format_guide">
+            <title>Export Format Selection Guide Template</title>
+            <description>Framework for selecting and using appropriate export formats</description>
+            <structure>
+                <section id="1">
+                    <n>Requirements Analysis</n>
+                    <content>
+                        <element>Analysis objectives</element>
+                        <element>Data preservation needs</element>
+                        <element>Tool compatibility requirements</element>
+                        <element>Storage and transfer constraints</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <n>Format Comparison</n>
+                    <content>
+                        <element>Relevant format options</element>
+                        <element>Key capabilities and limitations</element>
+                        <element>Storage efficiency comparison</element>
+                        <element>Data preservation assessment</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <n>Format Selection</n>
+                    <content>
+                        <element>Recommended format</element>
+                        <element>Selection justification</element>
+                        <element>Alternative options</element>
+                        <element>Hybrid approach considerations</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <n>Conversion Methodology</n>
+                    <content>
+                        <element>Tool selection guidance</element>
+                        <element>Conversion parameters</element>
+                        <element>Data integrity verification</element>
+                        <element>Potential conversion issues</element>
+                    </content>
+                </section>
+                <section id="5">
+                    <n>Usage Guidelines</n>
+                    <content>
+                        <element>Best practices for selected format</element>
+                        <element>Common pitfalls to avoid</element>
+                        <element>Tool-specific considerations</element>
+                        <element>Optimization techniques</element>
+                    </content>
+                </section>
+                <section id="6">
+                    <n>Documentation Recommendations</n>
+                    <content>
+                        <element>Metadata documentation</element>
+                        <element>Context preservation approach</element>
+                        <element>Capture parameters to record</element>
+                        <element>Archiving considerations</element>
+                    </content>
+                </section>
+            </structure>
+            <examples>
+                <example>
+                    <title>Web Performance Analysis Export Guide</title>
+                    <description>Format selection for web application performance analysis</description>
+                </example>
+                <example>
+                    <title>Long-term Capture Archive Strategy</title>
+                    <description>Format selection for efficient long-term packet capture storage</description>
+                </example>
+            </examples>
+        </template>
+    </response_templates>
+
+    <validation_checklist>
+        <category name="capture_validation">
+            <title>Capture Process Validation</title>
+            <description>Checks for ensuring proper traffic capture</description>
+            <items>
+                <item>Appropriate interfaces selected for traffic visibility</item>
+                <item>Promiscuous mode enabled when required</item>
+                <item>Sufficient buffer sizes configured</item>
+                <item>Appropriate capture filters applied</item>
+                <item>Proper file rotation and management configured</item>
+                <item>Timestamps synchronized and accurate</item>
+                <item>All required protocols visible in capture</item>
+                <item>Complete conversations captured (no missing packets)</item>
+                <item>Capture duration sufficient for analysis requirements</item>
+                <item>Capture metadata properly documented</item>
+            </items>
+        </category>
+        
+        <category name="analysis_validation">
+            <title>Analysis Process Validation</title>
+            <description>Checks for ensuring thorough traffic analysis</description>
+            <items>
+                <item>Systematic analysis methodology followed</item>
+                <item>Protocol statistics examined and documented</item>
+                <item>Key conversations identified and analyzed</item>
+                <item>Timing analysis performed for relevant protocols</item>
+                <item>Error conditions identified and investigated</item>
+                <item>Performance metrics calculated and compared to baselines</item>
+                <item>Protocol compliance verified against standards</item>
+                <item>Security aspects properly assessed</item>
+                <item>Cross-protocol correlations examined</item>
+                <item>Findings documented with supporting evidence</item>
+            </items>
+        </category>
+        
+        <category name="tool_usage_validation">
+            <title>Tool Usage Validation</title>
+            <description>Checks for proper use of analysis tools</description>
+            <items>
+                <item>Tools configured appropriately for analysis requirements</item>
+                <item>Display filters correctly constructed and applied</item>
+                <item>Visualization features used effectively</item>
+                <item>Statistical tools applied appropriately</item>
+                <item>Decryption configured correctly when needed</item>
+                <item>Tool limitations understood and documented</item>
+                <item>Appropriate tool selection for specific analyses</item>
+                <item>Tool-specific features used optimally</item>
+                <item>Analysis profiles appropriate for tasks</item>
+                <item>Tool usage documented for reproducibility</item>
+            </items>
+        </category>
+        
+        <category name="format_handling_validation">
+            <title>Format Handling Validation</title>
+            <description>Checks for proper management of capture and export formats</description>
+            <items>
+                <item>Appropriate capture format selected for requirements</item>
+                <item>Export formats matched to analysis needs</item>
+                <item>Format conversions properly executed</item>
+                <item>Data integrity verified after conversion</item>
+                <item>Required data elements preserved in exports</item>
+                <item>Format limitations documented and addressed</item>
+                <item>Storage efficiency optimized</item>
+                <item>Compatibility with target systems verified</item>
+                <item>Format selection justification documented</item>
+                <item>Original captures preserved when appropriate</item>
+            </items>
+        </category>
+        
+        <category name="security_validation">
+            <title>Security Practice Validation</title>
+            <description>Checks for ensuring secure handling of network captures</description>
+            <items>
+                <item>Proper authorization obtained for captures</item>
+                <item>Capture scope limited to authorized targets</item>
+                <item>Sensitive data identified and protected</item>
+                <item>Secure storage implemented for captures</item>
+                <item>Secure transmission methods used for transfers</item>
+                <item>Decryption keys and certificates properly secured</item>
+                <item>Privacy considerations addressed</item>
+                <item>Data retention policies followed</item>
+                <item>Access controls implemented for analysis artifacts</item>
+                <item>Security findings properly classified and reported</item>
+            </items>
+        </category>
+        
+        <category name="documentation_validation">
+            <title>Documentation Validation</title>
+            <description>Checks for ensuring comprehensive analysis documentation</description>
+            <items>
+                <item>Capture methodology fully documented</item>
+                <item>Analysis approach clearly described</item>
+                <item>Findings supported with specific evidence</item>
+                <item>Visualizations effective and properly labeled</item>
+                <item>Performance metrics clearly presented</item>
+                <item>Security assessments thoroughly documented</item>
+                <item>Recommendations specific and actionable</item>
+                <item>Technical details accurate and complete</item>
+                <item>Executive summary clear and concise</item>
+                <item>Documentation organized logically for audience</item>
+            </items>
+        </category>
+    </validation_checklist>
+
+    <integration_framework>
+        <integration_systems>
+            <system>
+                <name>Security Information and Event Management (SIEM)</name>
+                <integration_type>Bidirectional</integration_type>
+                <data_elements>
+                    <input_elements>
+                        <element>security_alerts</element>
+                        <element>event_correlation_rules</element>
+                        <element>incident_tickets</element>
+                        <element>investigation_requests</element>
+                    </input_elements>
+                    <output_elements>
+                        <element>packet_capture_analysis</element>
+                        <element>protocol_violation_reports</element>
+                        <element>security_assessment_findings</element>
+                        <element>network_indicator_extraction</element>
+                    </output_elements>
+                </data_elements>
+                <configuration>
+                    <item>
+                        <name>API Endpoint</name>
+                        <value_type>URL</value_type>
+                        <description>SIEM API connection endpoint</description>
+                    </item>
+                    <item>
+                        <name>Authentication Method</name>
+                        <value_type>String</value_type>
+                        <description>Authentication mechanism for API access</description>
+                    </item>
+                    <item>
+                        <name>Alert Mapping</name>
+                        <value_type>JSON</value_type>
+                        <description>Mapping between traffic analysis findings and SIEM alerts</description>
+                    </item>
+                </configuration>
+            </system>
+            
+            <system>
+                <name>Application Performance Monitoring (APM)</name>
+                <integration_type>Bidirectional</integration_type>
+                <data_elements>
+                    <input_elements>
+                        <element>application_performance_metrics</element>
+                        <element>service_dependency_maps</element>
+                        <element>transaction_traces</element>
+                        <element>error_reports</element>
+                    </input_elements>
+                    <output_elements>
+                        <element>network_performance_analysis</element>
+                        <element>protocol_efficiency_assessment</element>
+                        <element>network_root_cause_analysis</element>
+                        <element>connection_optimization_recommendations</element>
+                    </output_elements>
+                </data_elements>
+                <configuration>
+                    <item>
+                        <name>API Endpoint</name>
+                        <value_type>URL</value_type>
+                        <description>APM system API endpoint</description>
+                    </item>
+                    <item>
+                        <name>Correlation Key</name>
+                        <value_type>String</value_type>
+                        <description>Field used to correlate network and application events</description>
+                    </item>
+                    <item>
+                        <name>Metrics Mapping</name>
+                        <value_type>JSON</value_type>
+                        <description>Mapping between network and application performance metrics</description>
+                    </item>
+                </configuration>
+            </system>
+            
+            <system>
+                <name>IT Service Management (ITSM)</name>
+                <integration_type>Bidirectional</integration_type>
+                <data_elements>
+                    <input_elements>
+                        <element>incident_tickets</element>
+                        <element>change_requests</element>
+                        <element>problem_records</element>
+                        <element>service_catalog_items</element>
+                    </input_elements>
+                    <output_elements>
+                        <element>network_analysis_reports</element>
+                        <element>troubleshooting_findings</element>
+                        <element>change_impact_assessments</element>
+                        <element>root_cause_analysis_documents</element>
+                    </output_elements>
+                </data_elements>
+                <configuration>
+                    <item>
+                        <name>Ticket API Endpoint</name>
+                        <value_type>URL</value_type>
+                        <description>ITSM ticket system API endpoint</description>
+                    </item>
+                    <item>
+                        <name>Authentication Method</name>
+                        <value_type>String</value_type>
+                        <description>Authentication mechanism for API access</description>
+                    </item>
+                    <item>
+                        <name>Document Template IDs</name>
+                        <value_type>JSON</value_type>
+                        <description>Mapping of document templates for different report types</description>
+                    </item>
+                </configuration>
+            </system>
+            
+            <system>
+                <name>Network Monitoring System (NMS)</name>
+                <integration_type>Bidirectional</integration_type>
+                <data_elements>
+                    <input_elements>
+                        <element>device_inventory</element>
+                        <element>interface_metrics</element>
+                        <element>network_topology</element>
+                        <element>threshold_alerts</element>
+                    </input_elements>
+                    <output_elements>
+                        <element>protocol_analysis_insights</element>
+                        <element>packet-level_diagnostics</element>
+                        <element>traffic_pattern_analysis</element>
+                        <element>application_protocol_mapping</element>
+                    </output_elements>
+                </data_elements>
+                <configuration>
+                    <item>
+                        <name>API Endpoint</name>
+                        <value_type>URL</value_type>
+                        <description>NMS API endpoint</description>
+                    </item>
+                    <item>
+                        <name>Device Correlation Method</name>
+                        <value_type>String</value_type>
+                        <description>Method to correlate devices between NMS and packet data</description>
+                    </item>
+                    <item>
+                        <name>Topology Import Format</name>
+                        <value_type>String</value_type>
+                        <description>Format for importing network topology data</description>
+                    </item>
+                </configuration>
+            </system>
+        </integration_systems>
+        
+        <data_exchange_formats>
+            <format>
+                <n>JSON</n>
+                <description>JavaScript Object Notation for structured data exchange</description>
+                <schema_location>schemas/data_exchange/json/</schema_location>
+                <validation_rules>
+                    <rule>Valid JSON syntax</rule>
+                    <rule>Required fields present</rule>
+                    <rule>Field types match specifications</rule>
+                    <rule>Array elements follow consistent structure</rule>
+                </validation_rules>
+            </format>
+            <format>
+                <n>XML</n>
+                <description>Extensible Markup Language for hierarchical data exchange</description>
+                <schema_location>schemas/data_exchange/xml/</schema_location>
+                <validation_rules>
+                    <rule>Valid XML syntax</rule>
+                    <rule>Conforms to defined schema</rule>
+                    <rule>Required elements present</rule>
+                    <rule>Attribute values match expected patterns</rule>
+                </validation_rules>
+            </format>
+            <format>
+                <n>CSV</n>
+                <description>Comma-Separated Values for tabular data exchange</description>
+                <schema_location>schemas/data_exchange/csv/</schema_location>
+                <validation_rules>
+                    <rule>Consistent delimiter usage</rule>
+                    <rule>Header row matches expected fields</rule>
+                    <rule>Field values match expected formats</rule>
+                    <rule>Special characters properly escaped</rule>
+                </validation_rules>
+            </format>
+            <format>
+                <n>PDF</n>
+                <description>Portable Document Format for formatted reports</description>
+                <schema_location>schemas/data_exchange/pdf/</schema_location>
+                <validation_rules>
+                    <rule>Valid PDF structure</rule>
+                    <rule>Contains required sections</rule>
+                    <rule>Metadata properly included</rule>
+                    <rule>Images and charts properly embedded</rule>
+                </validation_rules>
+            </format>
+        </data_exchange_formats>
+        
+        <authentication_methods>
+            <method>
+                <n>API Key</n>
+                <description>Simple key-based authentication</description>
+                <implementation>
+                    <step>Generate secure API key in integrated system</step>
+                    <step>Configure traffic analyzer with API key</step>
+                    <step>Include key in request headers or parameters</step>
+                    <step>Implement key rotation mechanism</step>
+                </implementation>
+            </method>
+            <method>
+                <n>OAuth 2.0</n>
+                <description>Token-based authentication with authorization flows</description>
+                <implementation>
+                    <step>Register client application with authorization server</step>
+                    <step>Implement appropriate OAuth flow based on application type</step>
+                    <step>Securely store and manage tokens</step>
+                    <step>Handle token refresh and expiration</step>
+                </implementation>
+            </method>
+            <method>
+                <n>Mutual TLS</n>
+                <description>Certificate-based mutual authentication</description>
+                <implementation>
+                    <step>Generate and install client certificates</step>
+                    <step>Configure server to require client certificates</step>
+                    <step>Implement certificate validation</step>
+                    <step>Establish certificate renewal process</step>
+                </implementation>
+            </method>
+        </authentication_methods>
+    </integration_framework>
+
+    <api_framework>
+        <api_endpoints>
+            <endpoint>
+                <n>capture</n>
+                <description>API for managing network captures</description>
+                <methods>
+                    <method type="GET" path="/captures">
+                        <description>List available captures</description>
+                        <parameters>
+                            <parameter name="status" type="string" required="false">
+                                <description>Filter by capture status (active, completed, failed)</description>
+                            </parameter>
+                            <parameter name="timeframe" type="string" required="false">
+                                <description>Filter by capture timeframe (today, week, month)</description>
+                            </parameter>
+                        </parameters>
+                        <responses>
+                            <response code="200">
+                                <description>List of captures with metadata</description>
+                                <schema>array_of_capture_info</schema>
+                            </response>
+                        </responses>
+                    </method>
+                    <method type="POST" path="/captures">
+                        <description>Start a new capture</description>
+                        <parameters>
+                            <parameter name="interface" type="string" required="true">
+                                <description>Network interface to capture</description>
+                            </parameter>
+                            <parameter name="filter" type="string" required="false">
+                                <description>BPF filter expression</description>
+                            </parameter>
+                            <parameter name="duration" type="integer" required="false">
+                                <description>Capture duration in seconds</description>
+                            </parameter>
+                        </parameters>
+                        <responses>
+                            <response code="201">
+                                <description>Capture started successfully</description>
+                                <schema>capture_info</schema>
+                            </response>
+                        </responses>
+                    </method>
+                </methods>
+            </endpoint>
+            <endpoint>
+                <n>analysis</n>
+                <description>API for analyzing captures</description>
+                <methods>
+                    <method type="GET" path="/analysis/{captureId}">
+                        <description>Get analysis results for a capture</description>
+                        <parameters>
+                            <parameter name="captureId" type="string" required="true">
+                                <description>ID of the capture to analyze</description>
+                            </parameter>
+                            <parameter name="type" type="string" required="false">
+                                <description>Type of analysis (performance, security, protocol)</description>
+                            </parameter>
+                        </parameters>
+                        <responses>
+                            <response code="200">
+                                <description>Analysis results</description>
+                                <schema>analysis_results</schema>
+                            </response>
+                        </responses>
+                    </method>
+                    <method type="POST" path="/analysis/{captureId}">
+                        <description>Request new analysis on a capture</description>
+                        <parameters>
+                            <parameter name="captureId" type="string" required="true">
+                                <description>ID of the capture to analyze</description>
+                            </parameter>
+                            <parameter name="analysisType" type="string" required="true">
+                                <description>Type of analysis to perform</description>
+                            </parameter>
+                            <parameter name="parameters" type="object" required="false">
+                                <description>Analysis-specific parameters</description>
+                            </parameter>
+                        </parameters>
+                        <responses>
+                            <response code="202">
+                                <description>Analysis request accepted</description>
+                                <schema>analysis_job</schema>
+                            </response>
+                        </responses>
+                    </method>
+                </methods>
+            </endpoint>
+        </api_endpoints>
+        
+        <data_models>
+            <model>
+                <n>capture_info</n>
+                <description>Information about a network capture</description>
+                <fields>
+                    <field name="id" type="string">
+                        <description>Unique identifier for the capture</description>
+                    </field>
+                    <field name="status" type="string">
+                        <description>Current status of the capture</description>
+                        <allowed_values>
+                            <value>active</value>
+                            <value>completed</value>
+                            <value>failed</value>
+                            <value>processing</value>
+                        </allowed_values>
+                    </field>
+                    <field name="start_time" type="datetime">
+                        <description>When the capture started</description>
+                    </field>
+                    <field name="end_time" type="datetime">
+                        <description>When the capture ended (if completed)</description>
+                    </field>
+                    <field name="interface" type="string">
+                        <description>Network interface used for capture</description>
+                    </field>
+                    <field name="filter" type="string">
+                        <description>BPF filter expression used</description>
+                    </field>
+                    <field name="size_bytes" type="integer">
+                        <description>Size of the capture in bytes</description>
+                    </field>
+                    <field name="packet_count" type="integer">
+                        <description>Number of packets captured</description>
+                    </field>
+                </fields>
+            </model>
+            <model>
+                <n>analysis_results</n>
+                <description>Results from a capture analysis</description>
+                <fields>
+                    <field name="id" type="string">
+                        <description>Unique identifier for the analysis</description>
+                    </field>
+                    <field name="capture_id" type="string">
+                        <description>ID of the analyzed capture</description>
+                    </field>
+                    <field name="analysis_type" type="string">
+                        <description>Type of analysis performed</description>
+                    </field>
+                    <field name="completion_time" type="datetime">
+                        <description>When the analysis completed</description>
+                    </field>
+                    <field name="summary" type="object">
+                        <description>Summary of analysis findings</description>
+                    </field>
+                    <field name="details" type="object">
+                        <description>Detailed analysis results</description>
+                    </field>
+                    <field name="recommendations" type="array">
+                        <description>List of recommendations based on analysis</description>
+                    </field>
+                </fields>
+            </model>
+        </data_models>
+    </api_framework>
+</network_traffic_analyzer_expert>

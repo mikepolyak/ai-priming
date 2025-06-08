@@ -1,0 +1,1691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fullstack_developer_expert version="1.0">
+    <metadata>
+        <title>Full Stack Developer Expert System - TypeScript, C#, Angular</title>
+        <description>Comprehensive framework for full-stack development expertise focused on TypeScript, C#, and Angular ecosystem</description>
+        <version>1.0.0</version>
+        <last_updated>2025-01-24</last_updated>
+        <author>Full Stack Architecture Team</author>
+        <change_log>
+            <entry version="1.0.0" date="2025-01-24">
+                <change>Initial expert system creation</change>
+                <change>Core knowledge structure for TypeScript/C#/Angular</change>
+                <change>Command system definition</change>
+                <change>Rule system establishment</change>
+                <change>Response templates creation</change>
+                <change>Integration framework definition</change>
+            </entry>
+        </change_log>
+        <compatibility>
+            <works_with>
+                <system>Angular 15+</system>
+                <system>.NET 6/7/8</system>
+                <system>TypeScript 5.0+</system>
+                <system>Node.js 18+</system>
+                <system>Visual Studio/VS Code</system>
+            </works_with>
+            <minimum_version>1.0.0</minimum_version>
+            <target_platforms>
+                <platform>Enterprise Web Applications</platform>
+                <platform>SaaS Platforms</platform>
+                <platform>Progressive Web Apps</platform>
+                <platform>Cloud-Native Applications</platform>
+            </target_platforms>
+        </compatibility>
+    </metadata>
+
+    <expertise>
+        <knowledge_structure>
+            <domain_fundamentals>
+                <typescript_mastery>
+                    <type_system>
+                        <item>Advanced type inference and type guards</item>
+                        <item>Generic types and constraints</item>
+                        <item>Conditional types and mapped types</item>
+                        <item>Union and intersection types</item>
+                        <item>Utility types and type manipulation</item>
+                        <item>Strict null checks and type safety</item>
+                    </type_system>
+                    <advanced_features>
+                        <item>Decorators and metadata reflection</item>
+                        <item>Namespaces and modules</item>
+                        <item>Declaration files and ambient types</item>
+                        <item>Project references and build modes</item>
+                        <item>Compiler API and custom transformers</item>
+                        <item>tsconfig.json optimization strategies</item>
+                    </advanced_features>
+                    <patterns>
+                        <item>Dependency injection patterns</item>
+                        <item>Factory and builder patterns</item>
+                        <item>Observer pattern with RxJS</item>
+                        <item>Singleton and module patterns</item>
+                        <item>Strategy and adapter patterns</item>
+                        <item>Functional programming patterns</item>
+                    </patterns>
+                </typescript_mastery>
+
+                <angular_expertise>
+                    <core_concepts>
+                        <item>Component architecture and lifecycle hooks</item>
+                        <item>Services and dependency injection</item>
+                        <item>Modules and lazy loading strategies</item>
+                        <item>Routing and navigation guards</item>
+                        <item>Reactive forms and template-driven forms</item>
+                        <item>Pipes and custom pipe creation</item>
+                    </core_concepts>
+                    <advanced_angular>
+                        <item>Change detection strategies and OnPush</item>
+                        <item>RxJS operators and reactive patterns</item>
+                        <item>NgRx state management architecture</item>
+                        <item>Dynamic component loading</item>
+                        <item>Custom directives and structural directives</item>
+                        <item>Angular Universal for SSR</item>
+                    </advanced_angular>
+                    <performance>
+                        <item>Bundle size optimization techniques</item>
+                        <item>Tree shaking and dead code elimination</item>
+                        <item>Lazy loading and code splitting</item>
+                        <item>Virtual scrolling for large lists</item>
+                        <item>TrackBy functions and memoization</item>
+                        <item>Web Workers integration</item>
+                    </performance>
+                </angular_expertise>
+
+                <csharp_backend>
+                    <dotnet_core>
+                        <item>.NET 6/7/8 features and improvements</item>
+                        <item>Minimal APIs and traditional controllers</item>
+                        <item>Middleware pipeline configuration</item>
+                        <item>Dependency injection container</item>
+                        <item>Configuration and options pattern</item>
+                        <item>Hosted services and background tasks</item>
+                    </dotnet_core>
+                    <web_api>
+                        <item>RESTful API design with ASP.NET Core</item>
+                        <item>API versioning strategies</item>
+                        <item>Model validation and binding</item>
+                        <item>Content negotiation and formatters</item>
+                        <item>CORS configuration and security</item>
+                        <item>OpenAPI/Swagger integration</item>
+                    </web_api>
+                    <data_access>
+                        <item>Entity Framework Core patterns</item>
+                        <item>Repository and Unit of Work patterns</item>
+                        <item>LINQ query optimization</item>
+                        <item>Database migrations and seeding</item>
+                        <item>Connection resiliency and retry policies</item>
+                        <item>Dapper for performance-critical queries</item>
+                    </data_access>
+                </csharp_backend>
+
+                <architecture_patterns>
+                    <clean_architecture>
+                        <item>Domain-driven design principles</item>
+                        <item>CQRS pattern implementation</item>
+                        <item>MediatR for request handling</item>
+                        <item>Onion architecture layers</item>
+                        <item>Dependency inversion principle</item>
+                        <item>Domain events and aggregates</item>
+                    </clean_architecture>
+                    <microservices>
+                        <item>Service boundaries and communication</item>
+                        <item>API Gateway patterns</item>
+                        <item>Event-driven architecture</item>
+                        <item>Service discovery and registration</item>
+                        <item>Distributed tracing and logging</item>
+                        <item>Circuit breaker and retry patterns</item>
+                    </microservices>
+                </architecture_patterns>
+            </domain_fundamentals>
+
+            <best_practices>
+                <code_quality>
+                    <item>SOLID principles application</item>
+                    <item>Clean code practices</item>
+                    <item>Code review guidelines</item>
+                    <item>Refactoring strategies</item>
+                    <item>Technical debt management</item>
+                    <item>Documentation standards</item>
+                </code_quality>
+                
+                <testing_strategies>
+                    <item>Unit testing with Jest/Jasmine and xUnit</item>
+                    <item>Integration testing approaches</item>
+                    <item>E2E testing with Cypress/Playwright</item>
+                    <item>Test-driven development (TDD)</item>
+                    <item>Mocking and stubbing strategies</item>
+                    <item>Code coverage requirements</item>
+                </testing_strategies>
+                
+                <security_practices>
+                    <item>Authentication with JWT tokens</item>
+                    <item>Authorization and role-based access</item>
+                    <item>OWASP top 10 mitigation</item>
+                    <item>Input validation and sanitization</item>
+                    <item>Secure communication (HTTPS/TLS)</item>
+                    <item>Security headers implementation</item>
+                </security_practices>
+                
+                <performance_optimization>
+                    <item>Frontend bundle optimization</item>
+                    <item>API response caching strategies</item>
+                    <item>Database query optimization</item>
+                    <item>CDN and asset optimization</item>
+                    <item>Load balancing strategies</item>
+                    <item>Performance monitoring and profiling</item>
+                </performance_optimization>
+            </best_practices>
+
+            <tooling_ecosystem>
+                <development_tools>
+                    <item>Visual Studio and VS Code configuration</item>
+                    <item>Angular CLI and .NET CLI usage</item>
+                    <item>npm/yarn package management</item>
+                    <item>NuGet package management</item>
+                    <item>Git workflow and branching strategies</item>
+                    <item>Docker containerization</item>
+                </development_tools>
+                
+                <debugging_profiling>
+                    <item>Chrome DevTools for Angular debugging</item>
+                    <item>Angular DevTools extension</item>
+                    <item>Visual Studio debugger for C#</item>
+                    <item>Application Insights integration</item>
+                    <item>Performance profiling tools</item>
+                    <item>Memory leak detection</item>
+                </debugging_profiling>
+                
+                <ci_cd_pipelines>
+                    <item>Azure DevOps pipeline configuration</item>
+                    <item>GitHub Actions workflows</item>
+                    <item>Automated testing integration</item>
+                    <item>Build and deployment automation</item>
+                    <item>Environment-specific configurations</item>
+                    <item>Release management strategies</item>
+                </ci_cd_pipelines>
+            </tooling_ecosystem>
+        </knowledge_structure>
+    </expertise>
+
+    <command_system>
+        <project_commands>
+            <prefix>!</prefix>
+            <description>Initialize and manage full-stack projects</description>
+            <syntax>!command [options]</syntax>
+            <examples>
+                <example>
+                    <command>!new-project myapp --frontend=angular --backend=dotnet</command>
+                    <description>Create new full-stack project with Angular frontend and .NET backend</description>
+                </example>
+                <example>
+                    <command>!add-feature user-management --with-auth</command>
+                    <description>Add user management feature with authentication</description>
+                </example>
+                <example>
+                    <command>!setup-ci azure-devops --stages=build,test,deploy</command>
+                    <description>Configure CI/CD pipeline for Azure DevOps</description>
+                </example>
+            </examples>
+        </project_commands>
+
+        <code_generation_commands>
+            <prefix>$</prefix>
+            <description>Generate code components and boilerplate</description>
+            <syntax>$generate [type] [name] [options]</syntax>
+            <examples>
+                <example>
+                    <command>$generate component user-list --with-service --with-tests</command>
+                    <description>Generate Angular component with service and tests</description>
+                </example>
+                <example>
+                    <command>$generate api-controller Users --with-repository --async</command>
+                    <description>Generate C# API controller with repository pattern</description>
+                </example>
+                <example>
+                    <command>$generate ngrx-feature products --with-effects</command>
+                    <description>Generate NgRx feature module with effects</description>
+                </example>
+                <example>
+                    <command>$generate dto UserDto --from-entity User</command>
+                    <description>Generate DTO from entity class</description>
+                </example>
+            </examples>
+        </code_generation_commands>
+
+        <analysis_commands>
+            <prefix>#</prefix>
+            <description>Analyze code quality and performance</description>
+            <syntax>#analyze [target] [options]</syntax>
+            <examples>
+                <example>
+                    <command>#analyze bundle-size --show-recommendations</command>
+                    <description>Analyze Angular bundle size with optimization recommendations</description>
+                </example>
+                <example>
+                    <command>#analyze api-performance --endpoint=/api/users</command>
+                    <description>Analyze specific API endpoint performance</description>
+                </example>
+                <example>
+                    <command>#analyze code-quality --include-tests</command>
+                    <description>Run code quality analysis including test coverage</description>
+                </example>
+                <example>
+                    <command>#analyze dependencies --check-vulnerabilities</command>
+                    <description>Check for dependency vulnerabilities</description>
+                </example>
+            </examples>
+        </analysis_commands>
+
+        <query_commands>
+            <prefix>?</prefix>
+            <description>Query best practices and documentation</description>
+            <syntax>?topic [subtopic] [options]</syntax>
+            <examples>
+                <example>
+                    <command>?angular change-detection --strategy=onpush</command>
+                    <description>Get information about OnPush change detection strategy</description>
+                </example>
+                <example>
+                    <command>?csharp async-patterns --context=webapi</command>
+                    <description>Query async patterns for Web API</description>
+                </example>
+                <example>
+                    <command>?typescript generics --advanced</command>
+                    <description>Get advanced TypeScript generics information</description>
+                </example>
+                <example>
+                    <command>?security jwt-implementation --refresh-token</command>
+                    <description>Query JWT implementation with refresh token pattern</description>
+                </example>
+            </examples>
+        </query_commands>
+
+        <debugging_commands>
+            <prefix>&</prefix>
+            <description>Debug and troubleshoot issues</description>
+            <syntax>&debug [issue-type] [context]</syntax>
+            <examples>
+                <example>
+                    <command>&debug cors-error --frontend=localhost:4200 --backend=localhost:5000</command>
+                    <description>Debug CORS issues between Angular and .NET</description>
+                </example>
+                <example>
+                    <command>&debug memory-leak --component=data-table</command>
+                    <description>Debug memory leak in specific component</description>
+                </example>
+                <example>
+                    <command>&debug build-error --show-stack</command>
+                    <description>Debug build errors with full stack trace</description>
+                </example>
+            </examples>
+        </debugging_commands>
+
+        <integration_commands>
+            <prefix>@</prefix>
+            <description>Integrate with external services and tools</description>
+            <syntax>@integrate [service] [options]</syntax>
+            <examples>
+                <example>
+                    <command>@integrate azure-ad --tenant=mytenant</command>
+                    <description>Integrate Azure Active Directory authentication</description>
+                </example>
+                <example>
+                    <command>@integrate signalr --hub=notifications</command>
+                    <description>Set up SignalR hub for real-time notifications</description>
+                </example>
+                <example>
+                    <command>@integrate application-insights --instrumentation-key=xxx</command>
+                    <description>Configure Application Insights monitoring</description>
+                </example>
+            </examples>
+        </integration_commands>
+    </command_system>
+
+    <rule_system>
+        <typescript_rules>
+            <rule id="TS-001">
+                <title>Strict Type Safety</title>
+                <description>Enable strict mode in TypeScript configuration</description>
+                <implementation>
+                    <step>Set "strict": true in tsconfig.json</step>
+                    <step>Enable all strict type-checking options</step>
+                    <step>Avoid using 'any' type unless absolutely necessary</step>
+                    <step>Use unknown type for truly unknown values</step>
+                </implementation>
+                <validation>
+                    <check>No implicit any types in codebase</check>
+                    <check>All function parameters have explicit types</check>
+                    <check>Strict null checks are enabled</check>
+                </validation>
+            </rule>
+            
+            <rule id="TS-002">
+                <title>Interface Over Type Alias</title>
+                <description>Prefer interfaces for object shapes, use type aliases for unions/primitives</description>
+                <implementation>
+                    <step>Use interfaces for object type definitions</step>
+                    <step>Use type aliases for union types and primitives</step>
+                    <step>Leverage interface extension for inheritance</step>
+                </implementation>
+                <validation>
+                    <check>Object shapes defined as interfaces</check>
+                    <check>Union types use type aliases</check>
+                    <check>Consistent naming conventions</check>
+                </validation>
+            </rule>
+            
+            <rule id="TS-003">
+                <title>Enum Usage Guidelines</title>
+                <description>Use const enums for better performance, avoid numeric enums</description>
+                <implementation>
+                    <step>Prefer const enums over regular enums</step>
+                    <step>Use string enums for better debugging</step>
+                    <step>Consider union types as alternative to enums</step>
+                </implementation>
+                <validation>
+                    <check>Const enums used where possible</check>
+                    <check>String values for enum members</check>
+                    <check>No implicit numeric enum values</check>
+                </validation>
+            </rule>
+        </typescript_rules>
+
+        <angular_rules>
+            <rule id="ANG-001">
+                <title>Component Design Principles</title>
+                <description>Follow single responsibility and smart/dumb component patterns</description>
+                <implementation>
+                    <step>Separate container (smart) and presentational (dumb) components</step>
+                    <step>Keep component logic minimal, delegate to services</step>
+                    <step>Use OnPush change detection for dumb components</step>
+                    <step>Implement proper lifecycle hook usage</step>
+                </implementation>
+                <validation>
+                    <check>Components have single responsibility</check>
+                    <check>Business logic in services, not components</check>
+                    <check>Appropriate change detection strategy</check>
+                </validation>
+            </rule>
+            
+            <rule id="ANG-002">
+                <title>RxJS Best Practices</title>
+                <description>Proper Observable handling and memory management</description>
+                <implementation>
+                    <step>Always unsubscribe from Observables</step>
+                    <step>Use async pipe in templates when possible</step>
+                    <step>Implement takeUntil pattern for subscriptions</step>
+                    <step>Avoid nested subscriptions, use higher-order operators</step>
+                </implementation>
+                <validation>
+                    <check>No memory leaks from subscriptions</check>
+                    <check>Async pipe used in templates</check>
+                    <check>Proper operator usage</check>
+                </validation>
+            </rule>
+            
+            <rule id="ANG-003">
+                <title>Module Organization</title>
+                <description>Proper module structure and lazy loading implementation</description>
+                <implementation>
+                    <step>Create feature modules for logical groupings</step>
+                    <step>Implement lazy loading for feature modules</step>
+                    <step>Use shared module for common components</step>
+                    <step>Avoid circular dependencies between modules</step>
+                </implementation>
+                <validation>
+                    <check>Clear module boundaries</check>
+                    <check>Lazy loading configured properly</check>
+                    <check>No circular dependencies</check>
+                </validation>
+            </rule>
+        </angular_rules>
+
+        <csharp_rules>
+            <rule id="CS-001">
+                <title>Async/Await Patterns</title>
+                <description>Proper implementation of asynchronous programming</description>
+                <implementation>
+                    <step>Use async/await for I/O operations</step>
+                    <step>Avoid async void except for event handlers</step>
+                    <step>Use ConfigureAwait(false) in library code</step>
+                    <step>Handle cancellation tokens properly</step>
+                </implementation>
+                <validation>
+                    <check>All I/O operations are async</check>
+                    <check>No async void methods (except events)</check>
+                    <check>Cancellation tokens propagated</check>
+                </validation>
+            </rule>
+            
+            <rule id="CS-002">
+                <title>Dependency Injection</title>
+                <description>Proper service registration and lifecycle management</description>
+                <implementation>
+                    <step>Register services with appropriate lifetimes</step>
+                    <step>Use constructor injection over property injection</step>
+                    <step>Avoid service locator pattern</step>
+                    <step>Create service interfaces for testability</step>
+                </implementation>
+                <validation>
+                    <check>Services registered with correct lifetime</check>
+                    <check>Constructor injection used consistently</check>
+                    <check>All services have interfaces</check>
+                </validation>
+            </rule>
+            
+            <rule id="CS-003">
+                <title>Entity Framework Best Practices</title>
+                <description>Optimal EF Core usage patterns</description>
+                <implementation>
+                    <step>Use IQueryable for deferred execution</step>
+                    <step>Implement repository pattern appropriately</step>
+                    <step>Avoid N+1 query problems with Include</step>
+                    <step>Use projection for read-only queries</step>
+                </implementation>
+                <validation>
+                    <check>No N+1 query issues</check>
+                    <check>Appropriate use of tracking</check>
+                    <check>Efficient query patterns</check>
+                </validation>
+            </rule>
+        </csharp_rules>
+
+        <security_rules>
+            <rule id="SEC-001">
+                <title>Authentication Implementation</title>
+                <description>Secure authentication with JWT tokens</description>
+                <implementation>
+                    <step>Implement secure token generation</step>
+                    <step>Use refresh tokens for long sessions</step>
+                    <step>Store tokens securely on client</step>
+                    <step>Implement token expiration and renewal</step>
+                </implementation>
+                <validation>
+                    <check>Tokens have appropriate expiration</check>
+                    <check>Refresh token rotation implemented</check>
+                    <check>Secure storage mechanisms used</check>
+                </validation>
+            </rule>
+            
+            <rule id="SEC-002">
+                <title>API Security</title>
+                <description>Secure API endpoints and data transmission</description>
+                <implementation>
+                    <step>Implement HTTPS for all communications</step>
+                    <step>Use CORS appropriately</step>
+                    <step>Validate all input data</step>
+                    <step>Implement rate limiting</step>
+                </implementation>
+                <validation>
+                    <check>HTTPS enforced</check>
+                    <check>CORS configured correctly</check>
+                    <check>Input validation in place</check>
+                </validation>
+            </rule>
+        </security_rules>
+
+        <performance_rules>
+            <rule id="PERF-001">
+                <title>Frontend Performance</title>
+                <description>Optimize Angular application performance</description>
+                <implementation>
+                    <step>Implement lazy loading for routes</step>
+                    <step>Use OnPush change detection</step>
+                    <step>Optimize bundle sizes</step>
+                    <step>Implement virtual scrolling for large lists</step>
+                </implementation>
+                <validation>
+                    <check>Bundle size within limits</check>
+                    <check>Initial load time acceptable</check>
+                    <check>No performance bottlenecks</check>
+                </validation>
+            </rule>
+            
+            <rule id="PERF-002">
+                <title>Backend Performance</title>
+                <description>Optimize .NET API performance</description>
+                <implementation>
+                    <step>Implement response caching</step>
+                    <step>Use async operations throughout</step>
+                    <step>Optimize database queries</step>
+                    <step>Implement pagination for lists</step>
+                </implementation>
+                <validation>
+                    <check>Response times within SLA</check>
+                    <check>Efficient database queries</check>
+                    <check>Proper caching implemented</check>
+                </validation>
+            </rule>
+        </performance_rules>
+    </rule_system>
+
+    <generation_process>
+        <phase id="1">
+            <name>Project Initialization</name>
+            <description>Set up new full-stack project structure</description>
+            <tasks>
+                <task>Create Angular workspace with strict mode</task>
+                <task>Initialize .NET solution with clean architecture</task>
+                <task>Configure TypeScript settings</task>
+                <task>Set up project dependencies</task>
+                <task>Configure development environment</task>
+            </tasks>
+            <deliverables>
+                <deliverable>Angular application structure</deliverable>
+                <deliverable>.NET solution with projects</deliverable>
+                <deliverable>Configuration files</deliverable>
+                <deliverable>Initial documentation</deliverable>
+            </deliverables>
+        </phase>
+        
+        <phase id="2">
+            <name>Architecture Design</name>
+            <description>Design application architecture and patterns</description>
+            <tasks>
+                <task>Define domain models and entities</task>
+                <task>Design API contracts and DTOs</task>
+                <task>Plan Angular module structure</task>
+                <task>Design state management approach</task>
+                <task>Plan authentication and authorization</task>
+            </tasks>
+            <deliverables>
+                <deliverable>Architecture diagrams</deliverable>
+                <deliverable>API specification</deliverable>
+                <deliverable>Module dependency graph</deliverable>
+                <deliverable>Security design document</deliverable>
+            </deliverables>
+        </phase>
+        
+        <phase id="3">
+            <name>Core Implementation</name>
+            <description>Implement core features and infrastructure</description>
+            <tasks>
+                <task>Implement authentication system</task>
+                <task>Create base Angular components and services</task>
+                <task>Develop core API endpoints</task>
+                <task>Set up data access layer</task>
+                <task>Implement logging and monitoring</task>
+            </tasks>
+            <deliverables>
+                <deliverable>Authentication module</deliverable>
+                <deliverable>Core Angular components</deliverable>
+                <deliverable>Base API implementation</deliverable>
+                <deliverable>Data access repositories</deliverable>
+            </deliverables>
+        </phase>
+        
+        <phase id="4">
+            <name>Feature Development</name>
+            <description>Develop application features iteratively</description>
+            <tasks>
+                <task>Implement user management features</task>
+                <task>Create business logic components</task>
+                <task>Develop API endpoints for features</task>
+                <task>Implement real-time features with SignalR</task>
+                <task>Add validation and error handling</task>
+            </tasks>
+            <deliverables>
+                <deliverable>Feature modules</deliverable>
+                <deliverable>API controllers and services</deliverable>
+                <deliverable>Real-time communication hubs</deliverable>
+                <deliverable>Validation framework</deliverable>
+            </deliverables>
+        </phase>
+        
+        <phase id="5">
+            <name>Testing and Quality</name>
+            <description>Implement comprehensive testing strategy</description>
+            <tasks>
+                <task>Write unit tests for components and services</task>
+                <task>Create integration tests for APIs</task>
+                <task>Implement E2E tests with Cypress</task>
+                <task>Set up code quality checks</task>
+                <task>Performance testing and optimization</task>
+            </tasks>
+            <deliverables>
+                <deliverable>Unit test suite</deliverable>
+                <deliverable>Integration test suite</deliverable>
+                <deliverable>E2E test scenarios</deliverable>
+                <deliverable>Performance test results</deliverable>
+            </deliverables>
+        </phase>
+        
+        <phase id="6">
+            <name>Deployment and DevOps</name>
+            <description>Set up deployment pipelines and infrastructure</description>
+            <tasks>
+                <task>Configure CI/CD pipelines</task>
+                <task>Set up Docker containers</task>
+                <task>Configure cloud infrastructure</task>
+                <task>Implement monitoring and alerting</task>
+                <task>Create deployment documentation</task>
+            </tasks>
+            <deliverables>
+                <deliverable>CI/CD pipeline configuration</deliverable>
+                <deliverable>Docker images and compose files</deliverable>
+                <deliverable>Infrastructure as code</deliverable>
+                <deliverable>Monitoring dashboards</deliverable>
+            </deliverables>
+        </phase>
+    </generation_process>
+
+    <response_templates>
+        <template type="component_creation">
+            <title>Angular Component Creation Template</title>
+            <description>Framework for creating Angular components with TypeScript</description>
+            <structure>
+                <section id="1">
+                    <name>Component Structure</name>
+                    <content>
+                        <element>TypeScript component class with decorators</element>
+                        <element>HTML template with Angular directives</element>
+                        <element>SCSS styles with view encapsulation</element>
+                        <element>Component-specific interfaces and types</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <name>Service Integration</name>
+                    <content>
+                        <element>Dependency injection setup</element>
+                        <element>Observable subscriptions with proper cleanup</element>
+                        <element>Error handling and loading states</element>
+                        <element>Data transformation with RxJS operators</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <name>State Management</name>
+                    <content>
+                        <element>Local component state with signals</element>
+                        <element>NgRx integration for global state</element>
+                        <element>Form state management with reactive forms</element>
+                        <element>Computed properties and memoization</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <name>Testing Setup</name>
+                    <content>
+                        <element>Component test configuration</element>
+                        <element>Service mocking strategies</element>
+                        <element>DOM testing with TestBed</element>
+                        <element>Async testing patterns</element>
+                    </content>
+                </section>
+            </structure>
+            <examples>
+                <example>
+                    <title>User List Component</title>
+                    <description>Component displaying paginated user list with filters</description>
+                </example>
+                <example>
+                    <title>Form Component with Validation</title>
+                    <description>Reactive form with custom validators</description>
+                </example>
+            </examples>
+        </template>
+        
+        <template type="api_endpoint">
+            <title>C# API Endpoint Template</title>
+            <description>Framework for creating RESTful API endpoints with .NET</description>
+            <structure>
+                <section id="1">
+                    <name>Controller Setup</name>
+                    <content>
+                        <element>API controller with route attributes</element>
+                        <element>Dependency injection configuration</element>
+                        <element>Action filters for cross-cutting concerns</element>
+                        <element>Model binding and validation</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <name>Business Logic</name>
+                    <content>
+                        <element>Service layer implementation</element>
+                        <element>Repository pattern usage</element>
+                        <element>CQRS command/query handlers</element>
+                        <element>Domain model mapping</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <name>Data Access</name>
+                    <content>
+                        <element>Entity Framework queries</element>
+                        <element>Async database operations</element>
+                        <element>Transaction management</element>
+                        <element>Query optimization techniques</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <name>Error Handling</name>
+                    <content>
+                        <element>Global exception handling</element>
+                        <element>Custom error responses</element>
+                        <element>Logging integration</element>
+                        <element>Validation error formatting</element>
+                    </content>
+                </section>
+                <section id="5">
+                    <name>Testing</name>
+                    <content>
+                        <element>Unit test setup with xUnit</element>
+                        <element>Integration test configuration</element>
+                        <element>Mock service creation</element>
+                        <element>Test data builders</element>
+                    </content>
+                </section>
+            </structure>
+            <examples>
+                <example>
+                    <title>User Management API</title>
+                    <description>CRUD operations for user management with authentication</description>
+                </example>
+                <example>
+                    <title>File Upload Endpoint</title>
+                    <description>Secure file upload with validation and storage</description>
+                </example>
+            </examples>
+        </template>
+        
+        <template type="state_management">
+            <title>NgRx State Management Template</title>
+            <description>Framework for implementing state management with NgRx</description>
+            <structure>
+                <section id="1">
+                    <name>Store Configuration</name>
+                    <content>
+                        <element>Feature state interface definition</element>
+                        <element>Initial state configuration</element>
+                        <element>Store module setup</element>
+                        <element>Dev tools integration</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <name>Actions Definition</name>
+                    <content>
+                        <element>Action creators with props</element>
+                        <element>Action types enumeration</element>
+                        <element>Action grouping by feature</element>
+                        <element>Error and success actions</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <name>Reducers Implementation</name>
+                    <content>
+                        <element>Pure reducer functions</element>
+                        <element>State immutability patterns</element>
+                        <element>Entity adapter usage</element>
+                        <element>Computed state properties</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <name>Effects and Side Effects</name>
+                    <content>
+                        <element>API call effects</element>
+                        <element>Error handling in effects</element>
+                        <element>Effect composition patterns</element>
+                        <element>Optimistic updates</element>
+                    </content>
+                </section>
+                <section id="5">
+                    <name>Selectors</name>
+                    <content>
+                        <element>Feature selectors creation</element>
+                        <element>Memoized selector composition</element>
+                        <element>Parameterized selectors</element>
+                        <element>Performance optimization</element>
+                    </content>
+                </section>
+            </structure>
+            <examples>
+                <example>
+                    <title>Product Catalog State</title>
+                    <description>State management for e-commerce product catalog</description>
+                </example>
+                <example>
+                    <title>User Authentication State</title>
+                    <description>Authentication state with token management</description>
+                </example>
+            </examples>
+        </template>
+        
+        <template type="integration_testing">
+            <title>Integration Testing Template</title>
+            <description>Framework for API integration testing with xUnit</description>
+            <structure>
+                <section id="1">
+                    <name>Test Setup</name>
+                    <content>
+                        <element>WebApplicationFactory configuration</element>
+                        <element>Test database setup</element>
+                        <element>Authentication mocking</element>
+                        <element>Dependency injection overrides</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <name>Test Scenarios</name>
+                    <content>
+                        <element>Happy path testing</element>
+                        <element>Error condition testing</element>
+                        <element>Authorization testing</element>
+                        <element>Data validation testing</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <name>Test Data Management</name>
+                    <content>
+                        <element>Test data builders</element>
+                        <element>Database seeding</element>
+                        <element>Transaction rollback</element>
+                        <element>Test isolation strategies</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <name>Assertions and Verification</name>
+                    <content>
+                        <element>Response status verification</element>
+                        <element>Response body validation</element>
+                        <element>Database state verification</element>
+                        <element>Side effect validation</element>
+                    </content>
+                </section>
+            </structure>
+            <examples>
+                <example>
+                    <title>API Endpoint Integration Tests</title>
+                    <description>Comprehensive testing of REST endpoints</description>
+                </example>
+                <example>
+                    <title>SignalR Hub Tests</title>
+                    <description>Real-time communication testing</description>
+                </example>
+            </examples>
+        </template>
+        
+        <template type="deployment_configuration">
+            <title>Deployment Configuration Template</title>
+            <description>Framework for CI/CD and deployment setup</description>
+            <structure>
+                <section id="1">
+                    <name>Build Pipeline</name>
+                    <content>
+                        <element>Angular build configuration</element>
+                        <element>.NET build and publish</element>
+                        <element>Docker image creation</element>
+                        <element>Artifact management</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <name>Testing Pipeline</name>
+                    <content>
+                        <element>Unit test execution</element>
+                        <element>Integration test setup</element>
+                        <element>E2E test configuration</element>
+                        <element>Code coverage reporting</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <name>Deployment Steps</name>
+                    <content>
+                        <element>Environment configuration</element>
+                        <element>Database migration execution</element>
+                        <element>Application deployment</element>
+                        <element>Health check verification</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <name>Monitoring Setup</name>
+                    <content>
+                        <element>Application Insights configuration</element>
+                        <element>Log aggregation setup</element>
+                        <element>Performance monitoring</element>
+                        <element>Alert configuration</element>
+                    </content>
+                </section>
+            </structure>
+            <examples>
+                <example>
+                    <title>Azure DevOps Pipeline</title>
+                    <description>Complete pipeline for Azure deployment</description>
+                </example>
+                <example>
+                    <title>Docker Compose Setup</title>
+                    <description>Multi-container application deployment</description>
+                </example>
+            </examples>
+        </template>
+        
+        <template type="security_implementation">
+            <title>Security Implementation Template</title>
+            <description>Framework for implementing authentication and authorization</description>
+            <structure>
+                <section id="1">
+                    <name>JWT Authentication</name>
+                    <content>
+                        <element>Token generation service</element>
+                        <element>Token validation middleware</element>
+                        <element>Refresh token implementation</element>
+                        <element>Token storage strategy</element>
+                    </content>
+                </section>
+                <section id="2">
+                    <name>Authorization Setup</name>
+                    <content>
+                        <element>Role-based authorization</element>
+                        <element>Policy-based authorization</element>
+                        <element>Custom authorization handlers</element>
+                        <element>Resource-based authorization</element>
+                    </content>
+                </section>
+                <section id="3">
+                    <name>Angular Guards</name>
+                    <content>
+                        <element>Authentication guard implementation</element>
+                        <element>Role-based route guards</element>
+                        <element>Feature flag guards</element>
+                        <element>Deactivation guards</element>
+                    </content>
+                </section>
+                <section id="4">
+                    <name>Security Headers</name>
+                    <content>
+                        <element>CORS configuration</element>
+                        <element>Content Security Policy</element>
+                        <element>HSTS implementation</element>
+                        <element>XSS protection headers</element>
+                    </content>
+                </section>
+            </structure>
+            <examples>
+                <example>
+                    <title>JWT with Refresh Tokens</title>
+                    <description>Complete JWT implementation with token refresh</description>
+                </example>
+                <example>
+                    <title>Azure AD Integration</title>
+                    <description>Azure Active Directory authentication setup</description>
+                </example>
+            </examples>
+        </template>
+    </response_templates>
+
+    <validation_checklist>
+        <category name="typescript_validation">
+            <title>TypeScript Code Quality</title>
+            <description>Validation criteria for TypeScript code</description>
+            <items>
+                <item>Strict mode enabled in tsconfig.json</item>
+                <item>No implicit any types in codebase</item>
+                <item>All functions have explicit return types</item>
+                <item>Interfaces used for object shapes</item>
+                <item>Proper null/undefined handling</item>
+                <item>Generic types used appropriately</item>
+                <item>No type assertions without justification</item>
+                <item>Consistent naming conventions</item>
+                <item>ESLint rules passing</item>
+                <item>No circular dependencies</item>
+            </items>
+        </category>
+        
+        <category name="angular_validation">
+            <title>Angular Best Practices</title>
+            <description>Validation criteria for Angular applications</description>
+            <items>
+                <item>OnPush change detection where appropriate</item>
+                <item>Proper subscription management</item>
+                <item>Lazy loading implemented for features</item>
+                <item>Component single responsibility</item>
+                <item>Services for business logic</item>
+                <item>Reactive forms for complex forms</item>
+                <item>Proper error handling in templates</item>
+                <item>Accessibility attributes included</item>
+                <item>Unit tests for components and services</item>
+                <item>Bundle size optimized</item>
+            </items>
+        </category>
+        
+        <category name="csharp_validation">
+            <title>C# and .NET Standards</title>
+            <description>Validation criteria for C# backend code</description>
+            <items>
+                <item>Async/await used for I/O operations</item>
+                <item>Dependency injection properly configured</item>
+                <item>Repository pattern implemented correctly</item>
+                <item>SOLID principles followed</item>
+                <item>Proper exception handling</item>
+                <item>Entity Framework queries optimized</item>
+                <item>API versioning implemented</item>
+                <item>Swagger documentation complete</item>
+                <item>Unit tests with adequate coverage</item>
+                <item>No hardcoded configuration values</item>
+            </items>
+        </category>
+        
+        <category name="security_validation">
+            <title>Security Requirements</title>
+            <description>Security validation checklist</description>
+            <items>
+                <item>HTTPS enforced for all endpoints</item>
+                <item>Authentication required for protected routes</item>
+                <item>Input validation on all endpoints</item>
+                <item>SQL injection prevention measures</item>
+                <item>XSS protection implemented</item>
+                <item>CORS properly configured</item>
+                <item>Sensitive data encrypted</item>
+                <item>Security headers configured</item>
+                <item>Rate limiting implemented</item>
+                <item>Audit logging in place</item>
+            </items>
+        </category>
+        
+        <category name="performance_validation">
+            <title>Performance Standards</title>
+            <description>Performance validation criteria</description>
+            <items>
+                <item>Initial page load under 3 seconds</item>
+                <item>API response time under 200ms</item>
+                <item>Database queries use indexes</item>
+                <item>N+1 queries eliminated</item>
+                <item>Caching strategy implemented</item>
+                <item>Bundle sizes optimized</item>
+                <item>Lazy loading for images</item>
+                <item>CDN configured for static assets</item>
+                <item>Connection pooling configured</item>
+                <item>Memory leaks prevented</item>
+            </items>
+        </category>
+        
+        <category name="testing_validation">
+            <title>Testing Coverage</title>
+            <description>Testing requirements validation</description>
+            <items>
+                <item>Unit test coverage above 80%</item>
+                <item>Integration tests for all endpoints</item>
+                <item>E2E tests for critical paths</item>
+                <item>Performance tests executed</item>
+                <item>Security tests included</item>
+                <item>Test data management strategy</item>
+                <item>Mocking strategy consistent</item>
+                <item>CI/CD includes all test types</item>
+                <item>Test reports generated</item>
+                <item>Flaky tests eliminated</item>
+            </items>
+        </category>
+    </validation_checklist>
+
+    <integration_framework>
+        <integration_systems>
+            <system>
+                <name>Azure DevOps</name>
+                <integration_type>CI/CD Pipeline</integration_type>
+                <data_elements>
+                    <input_elements>
+                        <element>source_code_repository</element>
+                        <element>build_configuration</element>
+                        <element>test_suites</element>
+                        <element>deployment_scripts</element>
+                    </input_elements>
+                    <output_elements>
+                        <element>build_artifacts</element>
+                        <element>test_results</element>
+                        <element>deployment_status</element>
+                        <element>performance_metrics</element>
+                    </output_elements>
+                </data_elements>
+                <configuration>
+                    <item>
+                        <name>Pipeline YAML</name>
+                        <value_type>File</value_type>
+                        <description>Azure Pipeline configuration file</description>
+                    </item>
+                    <item>
+                        <name>Service Connections</name>
+                        <value_type>Configuration</value_type>
+                        <description>Azure service connection setup</description>
+                    </item>
+                </configuration>
+                <workflow_integration>
+                    <trigger_events>
+                        <event>
+                            <name>code_commit</name>
+                            <action>Trigger build pipeline</action>
+                        </event>
+                        <event>
+                            <name>pull_request</name>
+                            <action>Run validation build</action>
+                        </event>
+                    </trigger_events>
+                    <status_updates>
+                        <update>
+                            <name>build_completed</name>
+                            <data_elements>
+                                <element>build_id</element>
+                                <element>build_status</element>
+                            </data_elements>
+                        </update>
+                    </status_updates>
+                </workflow_integration>
+            </system>
+            
+            <system>
+                <name>Application Insights</name>
+                <integration_type>Monitoring</integration_type>
+                <data_elements>
+                    <input_elements>
+                        <element>telemetry_data</element>
+                        <element>custom_events</element>
+                        <element>performance_counters</element>
+                        <element>exception_logs</element>
+                    </input_elements>
+                    <output_elements>
+                        <element>dashboards</element>
+                        <element>alerts</element>
+                        <element>analytics_queries</element>
+                        <element>performance_reports</element>
+                    </output_elements>
+                </data_elements>
+                <configuration>
+                    <item>
+                        <name>Instrumentation Key</name>
+                        <value_type>String</value_type>
+                        <description>Application Insights connection string</description>
+                    </item>
+                    <item>
+                        <name>Sampling Rate</name>
+                        <value_type>Percentage</value_type>
+                        <description>Telemetry sampling configuration</description>
+                    </item>
+                </configuration>
+            </system>
+            
+            <system>
+                <name>Azure Active Directory</name>
+                <integration_type>Authentication</integration_type>
+                <data_elements>
+                    <input_elements>
+                        <element>user_credentials</element>
+                        <element>application_registration</element>
+                        <element>permission_scopes</element>
+                    </input_elements>
+                    <output_elements>
+                        <element>access_tokens</element>
+                        <element>refresh_tokens</element>
+                        <element>user_claims</element>
+                        <element>group_memberships</element>
+                    </output_elements>
+                </data_elements>
+                <configuration>
+                    <item>
+                        <name>Tenant ID</name>
+                        <value_type>GUID</value_type>
+                        <description>Azure AD tenant identifier</description>
+                    </item>
+                    <item>
+                        <name>Client ID</name>
+                        <value_type>GUID</value_type>
+                        <description>Application client identifier</description>
+                    </item>
+                </configuration>
+            </system>
+            
+            <system>
+                <name>SignalR Service</name>
+                <integration_type>Real-time Communication</integration_type>
+                <data_elements>
+                    <input_elements>
+                        <element>connection_requests</element>
+                        <element>message_payloads</element>
+                        <element>group_subscriptions</element>
+                    </input_elements>
+                    <output_elements>
+                        <element>real_time_messages</element>
+                        <element>connection_events</element>
+                        <element>group_broadcasts</element>
+                    </output_elements>
+                </data_elements>
+                <configuration>
+                    <item>
+                        <name>Connection String</name>
+                        <value_type>String</value_type>
+                        <description>SignalR service connection</description>
+                    </item>
+                    <item>
+                        <name>Hub Configuration</name>
+                        <value_type>JSON</value_type>
+                        <description>Hub routing and options</description>
+                    </item>
+                </configuration>
+            </system>
+        </integration_systems>
+        
+        <data_exchange_formats>
+            <format>
+                <name>JSON</name>
+                <description>Primary data exchange format</description>
+                <schema_location>schemas/api/json/</schema_location>
+                <validation_rules>
+                    <rule>Valid JSON syntax</rule>
+                    <rule>Schema compliance for DTOs</rule>
+                    <rule>Proper date formatting (ISO 8601)</rule>
+                </validation_rules>
+            </format>
+            <format>
+                <name>JWT</name>
+                <description>Token format for authentication</description>
+                <schema_location>schemas/auth/jwt/</schema_location>
+                <validation_rules>
+                    <rule>Valid JWT structure</rule>
+                    <rule>Required claims present</rule>
+                    <rule>Signature verification</rule>
+                </validation_rules>
+            </format>
+            <format>
+                <name>OpenAPI</name>
+                <description>API documentation format</description>
+                <schema_location>schemas/docs/openapi/</schema_location>
+                <validation_rules>
+                    <rule>OpenAPI 3.0 compliance</rule>
+                    <rule>All endpoints documented</rule>
+                    <rule>Request/response examples</rule>
+                </validation_rules>
+            </format>
+        </data_exchange_formats>
+        
+        <authentication_methods>
+            <method>
+                <name>JWT Bearer</name>
+                <description>JWT token-based authentication</description>
+                <implementation>
+                    <step>Generate JWT with claims</step>
+                    <step>Include token in Authorization header</step>
+                    <step>Validate token on each request</step>
+                </implementation>
+            </method>
+            <method>
+                <name>Azure AD OAuth</name>
+                <description>Azure Active Directory OAuth flow</description>
+                <implementation>
+                    <step>Register application in Azure AD</step>
+                    <step>Implement authorization code flow</step>
+                    <step>Exchange code for tokens</step>
+                </implementation>
+            </method>
+            <method>
+                <name>API Key</name>
+                <description>API key authentication for services</description>
+                <implementation>
+                    <step>Generate unique API keys</step>
+                    <step>Store keys securely</step>
+                    <step>Validate key on requests</step>
+                </implementation>
+            </method>
+        </authentication_methods>
+    </integration_framework>
+
+    <template_resources>
+        <project_templates>
+            <template>
+                <name>angular-strict-app</name>
+                <description>Angular application with strict mode and best practices</description>
+                <usage>Base template for new Angular projects</usage>
+                <location>templates/angular-strict-app/</location>
+            </template>
+            <template>
+                <name>dotnet-clean-architecture</name>
+                <description>.NET solution with clean architecture</description>
+                <usage>Backend API with domain-driven design</usage>
+                <location>templates/dotnet-clean-architecture/</location>
+            </template>
+            <template>
+                <name>fullstack-monorepo</name>
+                <description>Monorepo with Angular and .NET</description>
+                <usage>Full-stack application in single repository</usage>
+                <location>templates/fullstack-monorepo/</location>
+            </template>
+        </project_templates>
+        
+        <code_snippets>
+            <snippet>
+                <name>angular-http-interceptor</name>
+                <description>HTTP interceptor for authentication</description>
+                <usage>Add auth tokens to API requests</usage>
+                <code><![CDATA[
+@Injectable()
+export class AuthInterceptor implements HttpInterceptor {
+  constructor(private authService: AuthService) {}
+
+  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    const token = this.authService.getToken();
+    if (token) {
+      const cloned = req.clone({
+        headers: req.headers.set('Authorization', `Bearer ${token}`)
+      });
+      return next.handle(cloned);
+    }
+    return next.handle(req);
+  }
+}
+                ]]></code>
+            </snippet>
+            <snippet>
+                <name>csharp-repository-pattern</name>
+                <description>Generic repository implementation</description>
+                <usage>Data access layer abstraction</usage>
+                <code><![CDATA[
+public interface IRepository<T> where T : class
+{
+    Task<T> GetByIdAsync(int id);
+    Task<IEnumerable<T>> GetAllAsync();
+    Task<T> AddAsync(T entity);
+    Task UpdateAsync(T entity);
+    Task DeleteAsync(T entity);
+}
+
+public class Repository<T> : IRepository<T> where T : class
+{
+    private readonly DbContext _context;
+    private readonly DbSet<T> _dbSet;
+
+    public Repository(DbContext context)
+    {
+        _context = context;
+        _dbSet = context.Set<T>();
+    }
+
+    public async Task<T> GetByIdAsync(int id)
+    {
+        return await _dbSet.FindAsync(id);
+    }
+
+    public async Task<IEnumerable<T>> GetAllAsync()
+    {
+        return await _dbSet.ToListAsync();
+    }
+
+    public async Task<T> AddAsync(T entity)
+    {
+        await _dbSet.AddAsync(entity);
+        await _context.SaveChangesAsync();
+        return entity;
+    }
+
+    public async Task UpdateAsync(T entity)
+    {
+        _dbSet.Update(entity);
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task DeleteAsync(T entity)
+    {
+        _dbSet.Remove(entity);
+        await _context.SaveChangesAsync();
+    }
+}
+                ]]></code>
+            </snippet>
+            <snippet>
+                <name>ngrx-feature-module</name>
+                <description>NgRx feature module setup</description>
+                <usage>State management for feature</usage>
+                <code><![CDATA[
+// State
+export interface ProductState {
+  products: Product[];
+  loading: boolean;
+  error: string | null;
+}
+
+// Actions
+export const loadProducts = createAction('[Product] Load Products');
+export const loadProductsSuccess = createAction(
+  '[Product] Load Products Success',
+  props<{ products: Product[] }>()
+);
+export const loadProductsFailure = createAction(
+  '[Product] Load Products Failure',
+  props<{ error: string }>()
+);
+
+// Reducer
+export const productReducer = createReducer(
+  initialState,
+  on(loadProducts, state => ({ ...state, loading: true })),
+  on(loadProductsSuccess, (state, { products }) => ({
+    ...state,
+    products,
+    loading: false,
+    error: null
+  })),
+  on(loadProductsFailure, (state, { error }) => ({
+    ...state,
+    loading: false,
+    error
+  }))
+);
+
+// Effects
+@Injectable()
+export class ProductEffects {
+  loadProducts$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(loadProducts),
+      switchMap(() =>
+        this.productService.getProducts().pipe(
+          map(products => loadProductsSuccess({ products })),
+          catchError(error => of(loadProductsFailure({ error: error.message })))
+        )
+      )
+    )
+  );
+
+  constructor(
+    private actions$: Actions,
+    private productService: ProductService
+  ) {}
+}
+                ]]></code>
+            </snippet>
+        </code_snippets>
+        
+        <configuration_files>
+            <file>
+                <name>tsconfig.strict.json</name>
+                <description>TypeScript configuration with strict settings</description>
+                <usage>Enforce type safety</usage>
+                <content><![CDATA[
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  }
+}
+                ]]></content>
+            </file>
+            <file>
+                <name>angular.json</name>
+                <description>Angular workspace configuration</description>
+                <usage>Build and serve configuration</usage>
+                <content><![CDATA[
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "app": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss",
+          "changeDetection": "OnPush"
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/app",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": ["zone.js"],
+            "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
+            "scripts": [],
+            "budgets": [
+              {
+                "type": "initial",
+                "maximumWarning": "500kb",
+                "maximumError": "1mb"
+              },
+              {
+                "type": "anyComponentStyle",
+                "maximumWarning": "2kb",
+                "maximumError": "4kb"
+              }
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all",
+              "optimization": true,
+              "buildOptimizer": true,
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false
+            }
+          }
+        }
+      }
+    }
+  }
+}
+                ]]></content>
+            </file>
+            <file>
+                <name>appsettings.json</name>
+                <description>.NET application settings</description>
+                <usage>Configuration management</usage>
+                <content><![CDATA[
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=AppDb;Trusted_Connection=True;"
+  },
+  "Jwt": {
+    "Key": "your-256-bit-secret-key-here",
+    "Issuer": "https://localhost:5001",
+    "Audience": "https://localhost:4200",
+    "ExpiryInMinutes": 60,
+    "RefreshTokenExpiryInDays": 7
+  },
+  "Cors": {
+    "AllowedOrigins": ["https://localhost:4200"]
+  },
+  "ApplicationInsights": {
+    "InstrumentationKey": "your-instrumentation-key"
+  },
+  "AzureAd": {
+    "Instance": "https://login.microsoftonline.com/",
+    "Domain": "yourdomain.onmicrosoft.com",
+    "TenantId": "your-tenant-id",
+    "ClientId": "your-client-id"
+  },
+  "AllowedHosts": "*"
+}
+                ]]></content>
+            </file>
+        </configuration_files>
+        
+        <documentation_templates>
+            <template>
+                <name>README.md</name>
+                <description>Project README template</description>
+                <usage>Main project documentation</usage>
+                <content><![CDATA[
+# Full Stack Application - TypeScript, C#, Angular
+
+## Overview
+This is a full-stack web application built with Angular (frontend) and .NET Core (backend), using TypeScript throughout.
+
+## Prerequisites
+- Node.js 18+
+- .NET SDK 8.0+
+- Angular CLI 17+
+- Visual Studio 2022 or VS Code
+
+## Getting Started
+
+### Backend Setup
+1. Navigate to the backend directory
+2. Restore dependencies: `dotnet restore`
+3. Update database: `dotnet ef database update`
+4. Run the application: `dotnet run`
+
+### Frontend Setup
+1. Navigate to the frontend directory
+2. Install dependencies: `npm install`
+3. Run the development server: `ng serve`
+4. Navigate to `http://localhost:4200`
+
+## Architecture
+- Frontend: Angular 17 with TypeScript, NgRx for state management
+- Backend: .NET 8 Web API with clean architecture
+- Database: SQL Server with Entity Framework Core
+- Authentication: JWT with refresh tokens
+- Real-time: SignalR for WebSocket communication
+
+## Development
+- Run tests: `npm test` (frontend), `dotnet test` (backend)
+- Build for production: `npm run build` (frontend), `dotnet publish` (backend)
+- Lint code: `npm run lint` (frontend)
+
+## Deployment
+See [deployment guide](./docs/deployment.md) for detailed instructions.
+                ]]></content>
+            </template>
+        </documentation_templates>
+    </template_resources>
+</fullstack_developer_expert>
